@@ -2,9 +2,8 @@
 
 <script id="instagram-template" type="text/template">
   {% raw %}
-    <div class="instagram-item">
-      <a class="instagram-image-container" target="_blank" href="{{link}}" rel="ig" title="{{caption}}" style="background-image: url({{image}}); ">
-        
+    <div class="loop_part">
+      <a class="instagram-image-container" target="_blank" href="{{link}}" rel="ig" title="{{caption}}">
         <img class="instagram-image" src="{{image}}" />
       </a>
     </div>
@@ -12,60 +11,58 @@
 </script>
 
 <div class="homepage-section instagram-feed no-fouc index-section" data-section-id="{{ section.id }}" data-section-type="instagram">
-  <section id="index-social" class="row">
+  <section>
+        <div class="as-see-on-part">
+            <div class="container-fluid">
+                <div class="ppp">
+                    <div class="heading-part">
+                        {% if section.settings.heading != blank %}
+                          <h2>{{ section.settings.heading | escape }}</h2>
+                        {% endif %}
+                        {% if section.settings.text != blank %}
+                          <div class="copy">{{ section.settings.text }}</div>
+                        {% endif %}
+                    </div>
 
-    {% if section.settings.heading != blank or section.settings.text != blank%}
+                    {% assign token = section.settings.instagram_access_token %}
+                    {% capture userid %}
+                    {{- token | truncate: 9, "" -}}
+                    {% endcapture %}
+                    <div class="as-see-part-slider">
+                      {% if section.settings.instagram_access_token != blank %}
+                      {% comment %}
+                        <div class="flexslider instafeed-mob-slider">
+                          <ul id="instafeed-{{ section.id }}" class="slides" data-access-token="{{ token }}"></ul>
+                        </div>
+                      {% endcomment %}
+                      <div id="instafeed-{{ section.id }}" class="instafeed-mob-slider" data-access-token="{{ token }}"></div>
+                      {% else %}
 
-    <div class="text-box">
-      {% if section.settings.heading != blank %}
-      <h2>{{ section.settings.heading | escape }}</h2>
-      {% endif %}
+                      {% include 'onboard-instagram' %}
+                      {% endif %}
+                    </div>
 
-      {% if section.settings.text != blank %}
-      <div class="copy">{{ section.settings.text }}</div>
-      {% endif %}
-
-      {% comment %} CTA {% endcomment %}
-
-      {% if section.settings.cta_text != blank %}
-      <div class="cta">
-        {% if section.settings.link != blank %}<a href="{{ section.settings.link }}" target="_blank">{% endif %}
-          <span>{{ section.settings.cta_text }}</span> {% include 'svg-icon-caret-right' %}
-        {% if section.settings.link != blank %}</a>{% endif %}
-      </div>
-      {% endif %}
-
-    </div><!-- .text-box -->
-
-    {% endif %}
-
-    <div class="clear"></div>
-
-    {% assign token = section.settings.instagram_access_token %}
-    {% capture userid %}
-    {{- token | truncate: 9, "" -}}
-    {% endcapture %}
-
-    <div class="instagram-user-feed">
-
-      {% if section.settings.instagram_access_token != blank %}
-      <div id="instafeed-{{ section.id }}" data-access-token="{{ token }}"></div>
-      {% else %}
-
-      {% include 'onboard-instagram' %}
-      {% endif %}
-
-    </div>
-  </section>
+                    {% comment %} CTA {% endcomment %}                   
+                    {% if section.settings.cta_text != blank and section.settings.link != blank %}
+                    <div class="cta">
+                      <a href="{{ section.settings.link }}" target="_blank" class="black_butt">
+                        <span>{{ section.settings.cta_text }}</span>
+                      </a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 
 <style>
   .instagram-image-container {
     display: block;
-    height: 0;
-    padding-bottom: 100%;
     overflow: hidden;
-    margin-bottom: 15px;
+    margin: 0px !important;
+    padding: 0px;
+    height: 100%;
   }
 </style>
 

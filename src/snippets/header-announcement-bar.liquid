@@ -1,14 +1,7 @@
-<div id="top-bar-bg" {% if section.settings.num_of_promo_banners == "2" %} class="double-promo"{% endif %}>
-  <div id="bg-1"></div>
-  <div id="bg-2"></div>
-</div>
-
-<div id="top-bar" {% if section.settings.full_width_header %} class="gridlock-fluid"{% endif %}>
-  {% if section.settings.full_width_header %}<div class="row">{% endif %}
-  <div class="row">
-
-    {% comment %} ..:: ONE PROMO BANNER ::.. {% endcomment %}
-    {%- if section.settings.num_of_promo_banners == "1" -%}
+<div id="top-bar" class="top_discount_part">
+  {% comment %} {% if section.settings.full_width_header %}<div class="row">{% endif %} {% endcomment %}
+  {%- if section.settings.num_of_promo_banners == "1" -%}
+    {% comment %} ..:: PROMO BANNER ::.. {% endcomment %}
       <div id="single-promo-wrapper" class="desktop-12 tablet-6 mobile-3">
         
         {%- if section.settings.announcement_link_one -%}
@@ -18,10 +11,11 @@
         {%- endif -%}
 
       </div>
-    {%- endif -%}
+  {% comment %} {% if section.settings.full_width_header %}</div>{% endif %} {% endcomment %}
+  {%- endif -%}
+  
 
-
-    {% comment %} ..:: TWO PROMO BANNER ::.. {% endcomment %}
+  {% comment %} ..:: TWO PROMO BANNER ::.. {% endcomment %}
     {%- if section.settings.num_of_promo_banners == "2" -%}
       <div id="double-promo-wrapper">
 
@@ -53,7 +47,4 @@
 
       </div>
     {%- endif -%}
-
-  </div>
-  {% if section.settings.full_width_header %}</div>{% endif %}
 </div>

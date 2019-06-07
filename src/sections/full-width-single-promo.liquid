@@ -32,7 +32,7 @@
         {% if block.settings.link != blank %}</a>{% endif %}
 
           {% comment %} :: HEADER - TEXT :: {% endcomment %}
-          <div class="text-promo-content text-on-images  align-promo-text-{{ block.settings.text_align }}">
+          <div class="text-promo-content text-on-images align-promo-text-{{ block.settings.text_align }}">
             {% if block.settings.heading_text != blank %}
               <h1 class="heading-text">{{ block.settings.heading_text | escape }}</h1>
             {% endif %}
@@ -122,8 +122,8 @@
 
 {% schema %}
   {
-    "name": "Twin Promos",
-    "max_blocks": 2,
+    "name": "Full-with Single Promo",
+    "max_blocks": 1,
     "settings": [
       {
         "type": "checkbox",
@@ -131,8 +131,6 @@
         "label": "Enable Full-Width"
       }    
     ],
-
-
     "blocks": [
       {
         "type": "text_block",
@@ -192,8 +190,6 @@
               }
             ]
           },
-
-
           {
             "type": "header",
             "content": "-- CTA Button --"
@@ -277,12 +273,9 @@
 
     "presets": [
       {
-        "name": "Twin Promos",
+        "name": "Full-with Single Promo",
         "category": "Image",
         "blocks": [
-            {
-              "type": "text_block"
-            },
             {
               "type": "text_block"
             }

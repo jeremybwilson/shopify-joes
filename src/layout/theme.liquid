@@ -41,7 +41,8 @@
 
   <!-- CSS
 ================================================== -->
-  {{ 'stylesheet.css' | asset_url | stylesheet_tag }}
+{% comment %}  {{ 'stylesheet.css' | asset_url | stylesheet_tag }} {% endcomment %}
+
   {{ 'font-awesome.css' | asset_url | stylesheet_tag }}
   {{ 'queries.css' | asset_url | stylesheet_tag }}
   {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
@@ -56,6 +57,7 @@
 
   <!-- JS
 ================================================== -->
+  {{ 'jquery-2.2.4.min.js' | asset_url | script_tag }}
   {{ 'vendor.js' | asset_url | script_tag }}
   {{ 'theme.js' | asset_url | script_tag }}
 
@@ -64,7 +66,6 @@
   <!-- {{ 'jquery-2.2.4.min.js' | asset_url | script_tag }} -->
   <!-- {{ "eventemitter3.min.js" | asset_url | script_tag }} -->
   <!-- {{ 'slick.min.js' | asset_url | script_tag }} -->
-  <!-- {{ 'theme.js' | asset_url | script_tag }} -->
   {{ 'option_selection.js' | shopify_asset_url | script_tag }}
   <!-- {{ 'jquery.fs.shifter.js' | asset_url | script_tag }} -->
 
@@ -90,10 +91,10 @@
     {% include 'script-loyalty-lion' %}
   {% endif %}
 
-  {% comment %} :: Wishlist King App :: {% endcomment %}
+  {% comment %} :: Wishlist King App :: 
   {% if settings.app_wk_enabled %}
     {% include 'appmate-wishlist-king' %}
-  {% endif %}
+  {% endif %}{% endcomment %}
 
   {% comment %} :: Product Reviews :: {% endcomment %}
   {% comment %}{% include 'pr-review-master-script' %}{% endcomment %}
@@ -103,10 +104,10 @@
     {% include 'shoprunner-logic', isCheckout: false %}
   {% endif %}
 
-  {% comment %} :: Borderfree :: {% endcomment %}
+  {% comment %} :: Borderfree :: 
   {% if settings.borderfree_enabled %}
     {% include 'borderfree-script' %}
-  {% endif %}
+  {% endif %} {% endcomment %}
 
 
 
@@ -134,9 +135,9 @@
   {{ content_for_header }}
 </head>
 
-<body class="bfx-price-container bfx-remove-element-container template-{{ template.name }} gridlock shifter {% if template contains 'product' %}product{% elsif template contains 'collection' %}collection{% else %}{{ template }}{% endif %}">
+<body class="template-{{ template.name }} gridlock shifter {% if template contains 'product' %}product{% elsif template contains 'collection' %}collection{% else %}{{ template }}{% endif %}">
   {% include 'script-google-tag-body' %}
-  {% include 'timber-cart' %}
+  {% comment %} {% include 'timber-cart' %} {% endcomment %}
 
   {% comment %} :: PAGE CONTAINER - Classes :: {% endcomment %}
   {%- capture containerClasses -%}
@@ -219,7 +220,7 @@
   <!-- Global Components
   ================================================== -->
   {% include 'cookie-banner' %}
-  {% include 'newsletter-popup' %}
+  {% comment %} {% include 'newsletter-popup' %} {% endcomment %}
   {% include 'react-discounts' %}
 
   {% comment %} CURRENTLY UNUSED - Was making invisible scroll-to-top click regions
