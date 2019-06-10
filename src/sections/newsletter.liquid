@@ -1,72 +1,61 @@
-<div id="newsletter-social" class="newsletter-{{ section.id }}" data-section-id="{{ section.id }}" 
-  data-section-type="newsletter-social">
-  
-  <div class="newsletter-wrapper">
-    <div class="newsletter-inner">
-      <header>
-        {% unless section.settings.heading == blank %}
-          <h2 class="newsletter-heading">{{ section.settings.heading }}</h2>
-        {% endunless %}
-        {% unless section.settings.newsletter_subheading == blank %}
-          <h3 class="newsletter-subheading">
-            {{ section.settings.newsletter_subheading }}
-          </h3>
-        {% endunless %}
-      </header>
-
-      <form id="footer-newsletter">
-        <input class="form-control" type="email" id="email" name="email" placeholder="{{ section.settings.newsletter_placeholder }}">
-        <label id="button-footer-newsletter-submit" for="footer-newsletter-submit">
-          <input id="footer-newsletter-submit" type="submit" value="Subscribe">
-          {% include 'svg-icon-caret-right-submit' %}
-        </label>
-      </form>
-      <div id="newsletter-form--response">
-        <span id="newsletter-error-response" style="display:none;">{{ section.settings.newsletter_error }}</span>
-        <span id="newsletter-success-response" style="display:none;">
-        {{ section.settings.newsletter_success }}</span>
+<section id="newsletter-social" class="newsletter-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="newsletter-subscribe">
+  <div class="container-fluid">
+      <div class="newsletter-part-new">
+          <div class="sign-up-last-part">
+              <h4>{{ section.settings.heading }}</h4>
+              <form id="footer-newsletter">
+                  <div class="men-women-category">
+                    {{ section.settings.newsletter_subheading }}
+                    <label class="custom-radio">Women's
+                      <input type="radio" checked="checked" name="signup_for" value="women" id="signup_for">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="custom-radio">Men's
+                      <input type="radio" name="signup_for" value="men" id="signup_for">
+                      <span class="checkmark"></span>
+                    </label>
+                </div>
+                <input class="form-filed" type="email" id="email" name="Email" placeholder="{{ section.settings.newsletter_placeholder }}">
+                <label id="button-footer-newsletter-submit" for="footer-newsletter-submit">
+                  <input class="subscribe-button" id="footer-newsletter-submit" type="submit" value="Subscribe">
+                  {% comment %} {% include 'svg-icon-caret-right-submit' %} {% endcomment %}
+                </label>
+              </form>
+              <div id="newsletter-form--response">
+                <span id="newsletter-error-response" style="display:none;">{{ section.settings.newsletter_error }}</span>
+                <span id="newsletter-success-response" style="display:none;">
+                {{ section.settings.newsletter_success }}</span>
+              </div>
+          </div>
       </div>
+  </div>
+</section>
 
-    </div><!-- .newsletter-inner -->
-  </div><!-- .newsletter-wrapper -->
-
-  <div class="social-wrapper">
-    <div class="social-inner">
-      {% unless section.settings.social_heading == blank %}
-        <h4 class="section-title">{{ section.settings.social_heading }}</h4>
-      {% endunless %}
-      <ul id="social-icons" class="desktop-4 tablet-2 mobile-3">
-        {% include 'social-icons' %}
-      </ul><!-- #social-icons -->
-    </div><!-- .social-inner -->    
-  </div><!-- .social-wrapper -->
-
-</div><!-- #newsletter-social -->
 {% schema %}
 {
-   "name":"Newsletter & Social",
+   "name":"Newsletter",
    "settings":[
     {
      "type": "paragraph",
      "content": "Any customers who sign up will have an account created for them in Shopify. [View customers](/admin/customers?query=&accepts_marketing=1)"
     },
     {
-      "type": "text",
+      "type": "richtext",
       "id": "heading",
       "label": "Heading",
-      "default": "Subscribe to our newsletter"
+      "default": "<p>SIGN UP & RECEIVE $25 OFF YOUR FIRST ORDER!</p>"
     },
     {
       "type": "richtext",
       "id": "newsletter_subheading",
-      "label": "Subheading",
-      "default": "<p>Signup for our newsletter to stay up to date on sales and events.</p>"
+      "label": "Radio Select Text",
+      "default": "<p>I want updates for:</p>"
     },
     {
       "type": "text",
       "id": "newsletter_placeholder",
       "label": "Placeholder Text",
-      "default": "Enter Your Email Address"
+      "default": "Email Address"
     },
     { 
       "type": "text",
@@ -79,17 +68,7 @@
       "id": "newsletter_success",
       "label": "Success Text",
       "default": "<p>You have successfully joined our newsletter</p>"
-    },
-    {
-      "type": "text",
-      "id": "social_heading",
-      "label": "Social - Heading",
-      "default": "Connect With Us"
     }
-   ],
-   "presets": [{
-      "name": "Newsletter & Social",
-      "category": "Promotional"
-    }]
+   ]
 }
 {% endschema %}

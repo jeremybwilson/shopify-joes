@@ -1,126 +1,106 @@
 @charset "UTF-8";
 
-.instagram-feed {
-  margin-bottom: 0;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  background-image: url({{ 'bg-home-instagram-mobile.jpg' | asset_url }});
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  text-align: center;
+/*as-seen-on*/ 
+.heading-part{
+  margin-bottom:$mb-20;
+  h2{
+    @include headin-black;
+  }
+  p{
+    @include suv-headin-light;
+  }
+  b{font-weight:$bold;}
+}
 
-  @include mq('tablet-and-up') {
-    padding-top: 115px;
-    padding-bottom: 145px;
-    background-image: url({{ 'bg-home-instagram.jpg' | asset_url }});
+
+.as-see-part-slider{ 
+  overflow:hidden;
+
+  .loop-part{
+
+   width: 33%;
+   display: inline-block;
+   
+   &:first-child img{padding-right:24px;}
+   &:nth-child(2) img{padding: 0 10px;}
+   &:last-child img{padding-left: 22px;}
+
+ 
+   img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    height: 348px;
+   }
+
   }
 
-  // text box
-
-  .text-box {
-    max-width: 360px;
-    margin: 0 auto 35px;
-
-    @include mq('tablet-and-up') {
-      margin-bottom: 45px;
-    }
+  .slick-arrow {
+    display: none !important;
+  }
+  .slick-slide {
+      display: inline-block;
   }
 
-  h2 {
-    margin-bottom: 15px;
-    color: {{ settings.homepage_instagram_header }};
-    @include fontDim(22px,22px,.04em);
-    font-weight: $font-weight--black;
-    text-transform: uppercase;
-    
-    @include mq('tablet-and-up') {
-      @include fontSize(42px);
-      letter-spacing: 0;
-    }
+  .slick-active{
+     padding-left:7px !important;
+  
+  }
+  .slick-current{
+     padding-right:7px !important; padding-left: 0px !important;
+  }
 
-    &:after {
+
+  .slick-dots{
+    margin:10px auto 0 auto;
+    width: fit-content;
+    line-height: 18px;
+
+    button {
       display: none;
     }
-  }
-  .copy {
-    @include mq('tablet-and-up') {
-      margin-top: 12px;
-    }
-    p {
-      color: {{ settings.homepage_instagram_text }};
-      font-weight: $font-weight--bold;
-      @include fontDim(14px,22px,0);
 
-      @include mq('tablet-and-up') {
-        @include fontDim(16px,26px,0);
-      }
-    }
-  }
-  .cta {
-    display: inherit;
-    margin-top: 12px;
-    @include fontDim(13px,13px,.06em);
-    font-weight:  $font-weight--bold;
-    text-transform: uppercase;
-
-    @include mq('tablet-and-up') {
-      margin-top: 15px;
-      @include fontSize(16px);
-    }
-
-    a {
-      color: {{ settings.homepage_instagram_text }};
-      text-decoration: none;
-      letter-spacing: inherit;
-    }
-
-    svg {
+    li {
       width: 10px;
       height: 10px;
-      margin-left: 4px;
-
-      @include mq('tablet-and-up') {
-        width: 12px;
-        height: 12px;
-      }
-
-      * {
-        fill: {{ settings.homepage_instagram_text }};
-      }
+      background-color: #979797;
+      border-radius: 50%;
+      display: inline-block;
+      margin: 0 10px;
     }
-    a:hover svg * {
-      fill: {{ settings.homepage_instagram_text }};
+
+    .slick-active {
+    background-color: #000;
     }
+
   }
-
-  // item
-
-  .instagram-user-feed {
-    & > div {
-      @include flexbox;
-      @include flex-wrap(wrap);
-    }
-  }
-
-  .instagram-item {    
-    width: 50%;
-    padding: 5px;
-
-    @include mq('tablet-and-up') {
-      width: 25%;
-      padding: 3px;
-    }
-
-    img {
-      opacity: 0;
-    }
-  }
-
-  .instagram-image-container {
-    margin-bottom: 0;
-    background-size: cover;
-    background-position: center center;
-  }
-
 }
+.bold{font-weight:$bold;}
+.as-see-on-part {
+   margin:$margin-tb-100;
+}
+
+.black-button {
+  @include black-button;
+  margin: 35px auto 0px auto;
+  display:inline-block;
+}
+
+.as-see-on-part .cta{text-align:center;}
+
+.as-see-on-part .slick-dots {
+    display: none;
+}
+
+#instafeed-home-instagram_feed{
+   height: 348px;
+}
+
+@include mq('lap-and-up'){
+    .page-wrap .index-sections .index-section{
+       margin-bottom:0px !important;
+    }
+}
+
+/*as-seen-on*/

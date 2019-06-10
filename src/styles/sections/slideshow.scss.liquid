@@ -1,13 +1,25 @@
 @charset "UTF-8";
 
 .slideshow-section {
-  margin-bottom: 0;
+  display: inline-block;
+  width: 100%;
 
-
+  img.slideshow-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      max-height: 698px;
+      min-height: 698px;
+      overflow: hidden;
+  }
 
   /* IMAGE HOLDER : For lazy loading images
    * ------------------------------------------ */
   .box-ratio {
+    
+    padding-bottom:0px !important;
+
     &.slideshow__image__mobile {
       @include mq('tablet-and-up') {
         display: none;
@@ -23,7 +35,7 @@
 
 
   /* TEXT BOX : Wrapper around text portion
-   * ------------------------------------------ */
+   * ------------------------------------------ */  
   .flex-caption {
     @include flexbox;
     @include justify-content(center);
@@ -57,7 +69,7 @@
       &.caption-theme-white, // Legacy name support
       &.caption-theme-dark {
         .buttons-row {
-          right: -5px;
+          right:0px;
 
           > .cta:last-child.show-lines--right,
           > .cta:last-child.show-lines--both {
@@ -78,26 +90,13 @@
       display: inline-block;
       padding: 0;
       max-width: 700px;
-      text-align: center;
-
-      @include mq( 'lap-and-up' ) {
-        padding: 10px 20px;
-      }
     }    
   }
 
   /* HEADING : Primary text for slide
    * ------------------------------------------ */
   .slide-title {
-    border-bottom: 0 !important;
-    font-weight: $font-weight--medium;
-    @include fontSize( 30px );
-    text-transform: uppercase;
-    letter-spacing: 8px; 
-
-    @include mq('lap-and-up') {
-      @include fontSize( 30px );
-    }
+    @include banner-up-head-text-font;
 
     &:after {
       display: none !important;
@@ -107,14 +106,7 @@
   /* SUB-HEADING : Smaller text under header
    * ------------------------------------------ */
   .caption {
-    margin-top: 5px;
-    padding-right: 5px;
-    font-weight: $font-weight--medium;
-    @include fontDim(14px,22px,0);
-
-    @include mq('lap-and-up') {
-      @include fontDim(16px,26px,0);
-    }
+    @include banner-paragraph-text-white;
   }
 
   /* BUTTONS : CTA Button in text box
@@ -124,12 +116,17 @@
     @include inline-flex;
     margin-top: 5px;
     width: 100%;
-
+   
     > .cta {
       margin: 0;
 
       &:not(:first-child) {
         margin-left: 15px;
+        
+        @include mq( 'phone' ) {
+           margin-left:0px;
+        }
+
       }
 
       // CTA LINES : Hidden by default
@@ -203,8 +200,8 @@
       display: none;
     }
 
-    @include mq('lap-and-up') {
-      bottom: 55px;
+    @include mq('phone') {
+      display:none;
     }
 
     .hide-pagination & {
@@ -229,12 +226,12 @@
       @include flexbox;
       @include justify-content(center);
       position: relative;
-      padding: 10px;
-      background: $color--white;
       color: $color--accent-1;
       font-weight: $font-weight--black;
       @include fontDim(14px,14px,0);
       text-align: center;
+      background-color: transparent;
+      padding: 0 0;
 
       @include mq('lap-and-up') {
         @include fontSize(14px);
@@ -243,8 +240,181 @@
       span {
         display: inline;
         text-align: center;
-        margin: 0 2px;
+        margin: 0 8px;
+        text-indent: -9999px;
+        width: 8px;
+        height: 8px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+      }
+
+      span.flexslider--current-slide {
+         background-color: #fff;
       }
     }
   }
+}
+
+
+a {
+    text-decoration: none !important;
+}
+
+#shopify-section-home-hero_slideshow .homepage-section.slideshow-section.index-section {
+    margin-bottom: 0px;
+}
+
+#shopify-section-home-hero_slideshow {
+
+  max-height: 698px;
+
+    .flex-caption {
+      padding: 0 0;
+      bottom: auto;
+      top:50%;
+      
+      @include mq('phone'){
+         left: 0;
+         right: 0;
+      }
+  }
+
+  .slideshow-section .main-slider-loop .buttons-row .white-button{
+     @include white-button;
+     transition: none !important;
+     padding:0px;
+  }
+  .slideshow-section .buttons-row {
+      margin-top: 0px;
+  }
+}
+
+/*home-banner-arrow-dots*/
+.flex-control-paging {
+    z-index: 999;
+    position: absolute;
+    padding: 0 0;
+    height: 8px;
+    bottom: 38px;
+    width: 100%;
+    text-align: center;
+}
+
+.homepage-section.slideshow-section {
+    position: relative; 
+}
+
+.slideshow-section .slider--nav svg {
+    width: 31px;
+    height: 30px;
+    margin-top:0px;
+}
+
+.slideshow-section .slider--nav {
+    max-width: 100% !important;
+    bottom: auto !important;
+    top: 50.3%;
+    padding: 0 42px;
+    height: 0;
+}    
+
+.flex-control-paging a {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 0px;
+    border-radius: 50%;
+    padding: 0px !important;
+    margin: 0px !important;
+    text-indent: -9999px;
+    display: inline-block;
+}
+
+.flex-control-paging a.flex-active {
+    background-color: #fff;
+}
+
+.flex-control-paging li {
+    list-style: none !important;
+    display: inline-block;
+    margin: 0 8px;
+}
+
+
+/*home-banner-arrow-dots*/
+
+
+
+/**/
+.banner-image-mobile {
+    display: none;
+}
+
+.right-banner-img {
+    width: calc(100% - 41.8%);
+    display: inline-block;
+    object-position:center;
+    object-fit:cover;
+
+    img{
+      width:100%;
+      height:100%;
+      object-position:center;
+      object-fit:cover;
+    }
+
+    .box-ratio{padding-bottom:0px !important; height:100%;}
+}
+
+.banner-text-box-wrap {
+    max-width: 41.8%;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+#shopify-section-collection-template .collection-banner .banner-text-box-wrap .banner-text-box.text-center {
+    margin: 0 0 !important;
+    padding: 40px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.collection-banner{
+    flex-direction: row-reverse;
+    width: 100% !important;
+    display: flex;
+    height: 586px;
+    width: calc(100% - 50px);
+    overflow: hidden;
+    padding:$padding-left-right;
+}
+
+.banner-header{
+  @include banner-head;
+  line-height: 1.2;
+      
+}
+
+.banner-body{
+  @include banner-paragraph;
+  max-width:70%;
+}
+
+.banner-content-plp {
+    margin: 0 0 !important;
+    padding: 40px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #000;
+
 }

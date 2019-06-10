@@ -1,32 +1,11 @@
-body.cart {
-  #content {
-    max-width: 1200px;
-    padding-top: 80px;
-    padding-left: 15px;
-    padding-right: 15px;
-
-    @include mq('tablet-and-up') {
-      padding-top: 100px;
-    }
-  }
-  #breadcrumb {
-    display: none;
-
-    @include mq('tablet-and-up') {
-      display: inherit;
-    }
-  }
-}
 #shopping-cart {
+  margin:0px;
   h2 {
-    @include h2;
-    color: $color--primary-1;
-    @include fontSize(20px);
-    text-align: center;
+    @include headin-black;
+    margin-bottom: 25px;
 
     @include mq('tablet-and-up') {
       text-align: left;
-      @include fontSize(24px);
     }
   }
 }
@@ -50,11 +29,8 @@ body.cart {
         }
 
         label {
-          color: $color--primary-1;
-          @include fontDim(14px,14px,.025em);
-          font-weight: $font-weight--bold;
+          @include h4-head;
           text-transform: uppercase;
-
         }
       }
     }
@@ -101,30 +77,38 @@ th.cart--remove {
   }
 }
 .cart-image {
-  margin-left: -15px;
+  margin-left:0px;
   margin-right: 10px;
 
-  @include mq('tablet-and-up') {
-    margin-right: 20px;
+  img{
+    width: 100%;
+    max-height: 120px;
+    min-height: 120px;
+    object-fit: cover;
+    object-position: center;
+
+       @include mq('phone') {
+          max-height: 100px;
+          min-height: 100px;
+       }
   }
 }
 .cart-title {
-  color: $color--primary-1;
-  @include fontDim(14px,18px,.025em);
-  font-weight: $font-weight--black;
+  @include banner-paragraph-text-white;
+  color:$black-color;
   text-align: left;
   width: 90%;
+  text-transform:uppercase;
 
   @include mq('tablet-and-up') {
-    @include fontSize(16px);
-    width: auto;
-    text-align: center;
-    
+    width: auto;    
   }
+
+   @include mq('phone') {
+      font-size:$font-14-mo;
+   }
 }
 .cart-remove {
-  @include h7;
-  color: $color--primary-1;
   text-transform: uppercase;
 
   @include mq('phone') {
@@ -132,13 +116,15 @@ th.cart--remove {
     @include justify-content(flex-start);
     @include order(5);
     width: 100%;
-    @include fontSize(9px);
   }
 
   a {
+    @include banner-paragraph-text-white;
+    color:$black-color;
     @include mq('phone') {
       margin-left: auto;
-      margin-right: auto;      
+      margin-right: auto;   
+      font-size:$font-14-mo;
     }
   }
 
@@ -153,16 +139,13 @@ th.cart--remove {
 .cart-price,
 .cart-quantity,
 .cart--total-price {
-  color: $color--primary-2;
-  @include fontDim(14px,14px,.025em);
+  @include banner-paragraph-text-white;
+  color:$black-color;
 
   @include mq('phone') {
     @include flexbox;
-    @include align-items(center);    
-  }
-
-  @include mq('tablet-and-up') {
-    @include fontSize(16px);
+    @include align-items(center);
+    font-size:$font-14-mo;    
   }
 }
 .cart-price {
@@ -197,6 +180,14 @@ th.cart--remove {
     margin-bottom: 0;
     text-indent: 0;
     text-align: center;
+    @include banner-paragraph-text-white;
+    color:$black-color;
+    border:$border-grey-1;
+
+      @include mq('phone') {
+        font-size:$font-14-mo; 
+        margin: 0px auto 10px auto;
+      }
   }
 }
 
@@ -218,33 +209,51 @@ th.cart--remove {
 
 #basket-right {
   h4 {
-    color: $color--primary-1;
-
     .subtotal-header {
       margin-right: 5em;
-      font-weight: $font-weight--medium;
     }
-    .money {
-      @include fontSize(20px);
+  }
+}
 
-      @include mq('tablet-and-up') {
-        @include fontSize(22px);
+/**/
+#basket-right{
+  margin: 0 0;
+  width:100%;
+  
+    h4{
+      @include h4-head;
+      display:flex;
+      margin: 15px 0;
+
+      @include mq('phone'){
+         font-size:$font-14-mo;
       }
+      
+      span{
+         flex:1;
+         padding:10px;
+         font-weight:$bold !important;
+         text-transform:uppercase;
+         text-align: left;
+      }
+
+      span#cart-page-price{text-align:right;}
     }
-  }
-}
 
-.button#update-cart {
-  background-color: $color--primary-1;
-
-  &:hover {
-    background-color: $color--primary-1;
-  }
-}
-.button#checkout {
-  background-color: $color--accent-1;
-
-  &:hover {
-    background-color: $color--primary-1;
-  }
+    #update-cart{
+      @include subscribe-button;
+        @include mq('phone'){
+          margin-top:0px;
+          max-width: 108px;
+          float: left;
+        }
+    }
+    .bfx-checkout{
+      @include primery-button;
+      float:right;
+        @include mq('phone'){
+          margin-top:0px;
+          max-width: 108px;
+        }
+    }
 }

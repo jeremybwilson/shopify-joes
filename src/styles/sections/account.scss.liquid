@@ -6,10 +6,70 @@
   }
 }
 
+.large_form {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 25px;
+
+    @include mq('phone'){
+       margin-bottom: 20px;
+       line-height: 20px;
+    }
+}
+
+#forgot_password {
+    display: inline-block;
+    width: 100%;
+    margin-top: 25px;
+
+    a{
+       @include suv-headin-light;
+       text-transform: uppercase;
+
+       @include mq('phone'){
+          font-size:$font-14-mo;
+       }
+    }
+}
+
+.account-page {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 89px;
+    
+    @include mq('phone'){
+       margin-bottom:60px;
+    }
+
+    #template {
+       margin: 0 0 !important;
+       width: 45%;
+
+       @include mq('phone'){
+          width:100%;   
+          padding-bottom:60px;
+       }
+
+       #customer {
+            margin: 0 0 !important;
+       }
+    }
+
+    #create-customer {
+        margin: 0 0 !important;
+        float: right;
+        width: 45%;
+
+        @include mq('phone'){
+          width:100%;   
+        }
+    }
+}
+
 #customer-wrapper {
   h2 {
-    @include h3;
-    color: $color--primary-1;
+    @include headin-black;
+    margin-bottom: 25px;
   }
   h5 {
     @include h5;
@@ -19,8 +79,12 @@
     font-weight: 700;
   }
   label {
-    @include h7;
-    color: $color--gray-1;
+    @include suv-headin-light;
+    text-transform: uppercase;
+
+    @include mq('phone'){
+          font-size:$font-14-mo;
+    }
   }
   input[type="text"],
   input[type="email"],
@@ -51,12 +115,9 @@
     }
 }
   .button {
-    background: $color--accent-1;
-    color: $color--white;
-
-    &:hover {
-      background: $color--primary-1;
-    }
+     @include subscribe-button;
+     letter-spacing: 0.3px;
+     margin-bottom:$mb-0;
   }
   #customer_orders {
     @include mq('phone') {
@@ -69,17 +130,14 @@
     width: 100%;
     text-align: center;
 
-    h3 {
-      font-size: 1.375rem;
-      color: $color--accent-1;
-      text-transform: uppercase;
-      letter-spacing: .1em;
+    h2 {
+      @include headin-black;
     }
     p {
-      font-size: 16px;
+      @include black-paragraph-13-font;
     }
     hr {
-       margin: 25px 0;
+       margin:30px 0;
     }
   }
 }

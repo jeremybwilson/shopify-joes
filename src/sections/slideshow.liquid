@@ -20,7 +20,7 @@
           <ul class="slides">
             {% for block in section.blocks %}
 
-              <li id="slide--{{ block.id }}"
+              <li class="main-slider-loop" id="slide--{{ block.id }}"
                 data-block-id="{{ block.id }}"
                 class="slide--{{ block.id }} slide_image align-text--{{ block.settings.caption_text_align }}"
                 data-flexslider-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
@@ -43,7 +43,7 @@
                       {% endif %}
 
                       {% assign desktop_img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
-                      <img class="slideshow__image slideshow__image__{{ block.id }} lazyload lazyload-fade" 
+                      <img class="slideshow-image slideshow__image__{{ block.id }} lazyload lazyload-fade" 
                         data-src="{{ desktop_img_url }}" 
                         data-sizes="auto"
                         data-parent-fit="cover"
@@ -51,7 +51,7 @@
                     </picture>
 
                     <noscript>
-                      <img src="{{ block.settings.image | img_url: '1024x' }}" alt="{{ block.settings.image.alt | escape }}" class="slideshow__image slideshow__image--{{ block.id }}">
+                      <img src="{{ block.settings.image | img_url: '1024x' }}" alt="{{ block.settings.image.alt | escape }}" class="slideshow-image slideshow__image--{{ block.id }}">
                     </noscript>
                   </div>
                   <!-- End of .box-ratio -->
@@ -99,18 +99,18 @@
                 {% endif %}
 
                 {% comment %} :: CAPTION BLOCK :: {% endcomment %}
-                <div class="flex-caption slide-{{ block.id }} 
+                <div class="flex-caption text-on-images slide-{{ block.id }} 
                   caption-box-align-{{ block.settings.caption_horizontal }} 
                   caption-text-align-{{ block.settings.caption_text_align }}
                   caption-theme-{{ block.settings.caption_color_scheme }}">
 
                   <div class="caption-inners">
                     {% if block.settings.heading != blank %}
-                      <h2 class="slide-title">{{ block.settings.heading }}</h2>
+                      <h1 class="slide-title">{{ block.settings.heading }}</h1>
                     {% endif %}
                     
                     {% if block.settings.subheading != blank %}
-                      <p class="caption">{{ block.settings.subheading }}</p>
+                      <h6 class="caption">{{ block.settings.subheading }}</h6>
                     {% endif %}
 
                     {% comment %} :: CTA BUTTONS :: {% endcomment %}
@@ -119,12 +119,11 @@
 
                         {% comment %} :: BUTTON #1 :: {% endcomment %}
                         <div class="cta show-lines--{{ block.settings.cta_one_line }}" id="cta-one-{{ block.id }}">
-                          <a href="{{ block.settings.cta_one_link }}">
+                          <a class="white-button" href="{{ block.settings.cta_one_link }}">
 
                             {% comment %}
                               :: CTA LINES + TEXT :: 
                                 - Lines always present for flex item alignment behavior, invisible unless enabled {% endcomment %}
-                            <div class="cta-line-left"></div>
                             {{ block.settings.cta_one_button_text }}
                             <div class="cta-line-right"></div>
                           </a>
@@ -135,14 +134,12 @@
 
                           {% comment %} :: BUTTON #2 :: {% endcomment %}
                           <div class="cta show-lines--{{ block.settings.cta_two_line }}" id="cta-two-{{ block.id }}">
-                            <a href="{{ block.settings.cta_two_link }}" class="{{ buttonWrapClasses }}">
+                            <a class="white-button" href="{{ block.settings.cta_two_link }}" class="{{ buttonWrapClasses }}">
                               
                               {% comment %}
                                 :: CTA LINES + TEXT :: 
                                   - Lines always present for flex item alignment behavior, invisible unless enabled {% endcomment %}
-                              <div class="cta-line-left"></div>
                               {{ block.settings.cta_two_button_text }}
-                              <div class="cta-line-right"></div>
                             </a>
                           </div>
                         {% endif %}
@@ -168,8 +165,22 @@
                   {% else %}
                     background: {{ bg_color | color_modify: 'alpha', caption_opacity }};
                   {% endif %}
+                  text-align: {{ block.settings.caption_text_align }};
                 }
-
+                {% if block.settings.caption_horizontal == 'center' %}
+                .flex-caption.slide-{{ block.id }}.caption-box-align-center{
+                  left: 0 !important;
+                  right: 0;
+                }
+                {% elsif block.settings.caption_horizontal == 'right'%}
+                .flex-caption.slide-{{ block.id }}.caption-box-align-right{
+                  right: 13%;
+                }
+                {% else %}
+                .flex-caption.slide-{{ block.id }}.caption-box-align-left{
+                  left: 13%;
+                }
+                {% endif %}
 
                 {% comment %} :: COLOR SCHEME STYLING :: {% endcomment %}
                 {% assign color_scheme = block.settings.caption_color_scheme %}
@@ -239,11 +250,7 @@
             <a href="#" class="flex-prev">
               {% include 'svg-icon-arrow-left' %}
             </a>
-            <div class="pagination">
-              <span class="flexslider--current-slide"></span>
-              <span class="slash">/</span>
-              <span class="flexslider--total-slides"></span>
-            </div>
+            
             <a href="#" class="flex-next">
               {% include 'svg-icon-arrow-right' %}
             </a>
@@ -486,7 +493,7 @@
           "unit": "%",
           "label": "Vertical Box Position",
           "info": "*Check mobile & desktop to ensure no text clipping occurs.",
-          "default": 50
+          "default": 44
         },
 
 

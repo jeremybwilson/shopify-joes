@@ -17,8 +17,8 @@ var bcSfFilterSettings = {
 var bcSfFilterTemplate = {
 
     // Grid Template
-    'productGridItemHtml':  '<div id="{{itemProductId}}" class="product-index {{itemGridWidthClass}}" data-alpha="{{itemTitle}}" data-price="{{itemPriceAttr}}">' +
-                                '<div class="prod-container">' +
+    'productGridItemHtml':  '<div id="{{itemProductId}}" class="product-index product" data-alpha="{{itemTitle}}" data-price="{{itemPriceAttr}}">' +
+                                '<div class="product-images">' +
                                     '{{itemBadge}}' +
                                     '<div class="prod-image">' +
                                         '<a href="{{itemUrl}}" title="{{itemTitle}}">' +
@@ -29,7 +29,7 @@ var bcSfFilterTemplate = {
                                     '</div>' +
                                 '</div>' +
 
-                                '<div class="product-info">' +
+                                '<div class="product-detail">' +
                                     '{{itemQuickview}}' +
                                     '<a class="product-title-wrap" href="{{itemUrl}}"> ' +
                                         '{{itemVendor}}' +
@@ -101,17 +101,6 @@ BCSfFilter.prototype.buildProductGridItem = function(data, index, totalProduct) 
 
     // TEMPLATE : Create unique tpl instance
     var itemHtml = bcSfFilterTemplate.productGridItemHtml;
-
-
-    // CSS GRID : Add itemGridWidthClass to match row config
-    var itemGridWidthClass = '';
-    switch (bcSfFilterConfig.custom.products_per_row) {
-        case 2: itemGridWidthClass = 'desktop-6 tablet-3 mobile-half'; break;
-        case 3: itemGridWidthClass = 'desktop-4 tablet-2 mobile-half'; break;
-        case 4: itemGridWidthClass = 'desktop-3 tablet-2 mobile-half'; break;
-        default: break;
-    }
-    itemHtml = itemHtml.replace(/{{itemGridWidthClass}}/g, itemGridWidthClass);
 
 
     // BADGE : ITEM TYPE : Add Item Badge (Required Tags : item_badge_text_SOMETHING + item_badge_shape_SOMETHING)

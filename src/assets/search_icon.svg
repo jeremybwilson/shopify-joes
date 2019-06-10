@@ -1,11 +1,11 @@
-<svg class="icon icon-search search-button" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-        <polygon id="search-polygon" points="0 0 12 0 12 16 0 16"></polygon>
-    </defs>
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="search-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Slice</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="search-black" transform="translate(9.000000, 9.000000) scale(-1, 1) translate(-9.000000, -9.000000) " fill="#000000" fill-rule="nonzero">
-            <g id="search">
+            <g id="Asset-1">
                 <g id="Layer_2">
                     <g id="obj">
                         <path d="M17.4407143,17.8103571 C17.3417001,17.811036 17.2466258,17.771615 17.1771429,17.7010714 L13.4775,14.0046429 C13.3319947,13.859051 13.3319947,13.6230918 13.4775,13.4775 C13.5468687,13.4078185 13.6411407,13.3686455 13.7394643,13.3686455 C13.8377878,13.3686455 13.9320599,13.4078185 14.0014286,13.4775 L17.7010714,17.1771429 C17.7707529,17.2465115 17.809926,17.3407836 17.809926,17.4391071 C17.809926,17.5374307 17.7707529,17.6317028 17.7010714,17.7010714 C17.6327892,17.771435 17.5387612,17.8109036 17.4407143,17.8103571 L17.4407143,17.8103571 Z" id="Shape"></path>

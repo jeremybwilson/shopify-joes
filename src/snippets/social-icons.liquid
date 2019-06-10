@@ -1,6 +1,7 @@
 {% if settings.facebook_url != blank %}
   <li>
     <a href="{{ settings.facebook_url }}" target="_blank">
+     <i class="fa fa-facebbok fa-2x"></i>
       {% include 'svg-icon-facebook' %}
     </a>
   </li>
@@ -14,18 +15,18 @@
     </li>
 {% endif %}
 
-{% if settings.youtube_url != blank %}
+{% if settings.twittername != blank %}
   <li>
-    <a href="{{ settings.youtube_url }}" target="_blank">
-      {% include 'svg-icon-youtube' %}
+    <a href="{{ settings.twittername }}" target="_blank">
+      {% include 'svg-icon-twitter' %}
     </a>
   </li>
 {% endif %}
 
-{% if settings.twittername != blank %}
+{% if settings.youtube_url != blank %}
   <li>
-    <a href="{{ settings.twittername }}" target="_blank">
-      <i class="fa fa-twitter fa-2x"></i>
+    <a href="{{ settings.youtube_url }}" target="_blank">
+      {% include 'svg-icon-youtube' %}
     </a>
   </li>
 {% endif %}
@@ -53,4 +54,3 @@
     </a>
   </li>
 {% endif %}
-

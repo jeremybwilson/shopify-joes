@@ -1,5 +1,382 @@
 //Sample :  $sample-color: {{ settings.dotted_color }};
 
+
+$black-color:#000;
+$white-color:#fff;
+$light-black:#4A4A4A;
+$back-gray:#f6f5f6;
+
+/*hover*/
+$hover-333333:#333333;
+
+$font-11:11px;
+$font-12:12px;
+$font-13:13px;
+$font-14:14px;
+$font-15:15px;
+$font-16:16px;
+$font-18:18px;
+$font-30:32px;
+$font-50:50px;
+
+$font-9-mo:9px;
+$font-11-mo:11px;
+$font-14-mo:14px;
+$font-15-mo:15px;
+$font-18-mo:18px;
+$font-32-mo:32px;
+$font-10-mo:10px;
+$font-21-mo:21px;
+
+
+$weight-light:200;
+$weight-normal:normal;
+$bold:bold;
+$weight-500:500;
+
+$padding-left-right:0px 50px;
+$padding-left-right-mobile:0px 17px;
+$padding-left-right-mobile25:0px 25px;
+$padding-left-right-mobile15:0px 15px;
+$padding-left-right-mobile22:0px 22px;
+
+
+@mixin padding-left-right-mobile15{
+  padding:0 15px;
+}
+@mixin tablet-to-lapto-padding-left-right-mobile50{
+  padding:0 50px;
+}
+
+
+$mb-0:0px;
+$mt-8:8px;
+$mt-30:30px;
+$mb-10:10px;
+$margin-le-ri-auto:0px auto;
+$margin-tb-100:100px 0px 90px 0;
+$margin-tb-65-mo:65px 0px 65px 0;
+$mb-20:20px;
+
+
+$float-left:left;
+$full-width:100%;
+
+
+$flex-1:1;
+$field-border-color:#979797;
+
+$line-hight:18px;  
+
+$border-grey-1:1px solid #E2E2E2;
+
+
+$container-fluid-width:1115px;
+@mixin container{
+  max-width:1115px !important;
+}
+
+
+/*banner-up-text*/
+@mixin banner-up-text{
+    position: absolute;
+    bottom:0px;
+    padding:53px 50px;
+    
+    @media #{$mobile} {
+       padding:38px 15px;
+    }    
+}
+
+@mixin banner-up-head-text-font{
+    font-size:$font-30;
+    font-weight:$bold;
+    letter-spacing:0px;
+    margin-bottom: 0px;
+    color:$white-color;
+    line-height:35px;
+    text-transform:uppercase;
+}
+
+@mixin banner-paragraph-text-white{
+    font-size:$font-16;
+    color:$white-color;
+    letter-spacing:0px;
+    margin-bottom: 0px;
+    line-height:19px;
+    font-weight:$weight-normal;
+}
+/*banner-up-text*/
+
+
+
+/*as-seen-on*/
+@mixin suv-headin-light{
+    font-size:$font-16;
+    color:$black-color;
+    font-weight:$weight-normal;
+    letter-spacing:0px;
+    margin-bottom: 0px;
+} 
+
+
+@mixin h4-head{
+    font-size:$font-18;
+    color:$black-color;
+    font-weight:$bold;
+    letter-spacing:0px;
+    margin-bottom: 0px;
+    line-height:22px;
+    text-transform:uppercase;
+
+    @include mq('phone'){font-size:$font-12;}    
+} 
+
+
+
+@mixin headin-black{
+    font-size:27px;
+    color:$black-color;
+    font-weight:$bold;
+    letter-spacing:0.2px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    @include mq('phone'){font-size:$font-21-mo;}
+}  
+/*as-seen-on*/
+
+
+/*h5-head*/
+
+    @mixin h5-heading{
+        font-size:$font-15;
+        color:$black-color;
+        font-weight:$bold;
+        letter-spacing:0px;
+        margin-bottom: 6px;
+        line-height:19px;
+        text-transform:uppercase;
+    }
+
+/*h5-head*/
+
+
+/*button*/
+@mixin black-button{
+    min-width: 145px;
+    height: 35px;
+    border: 1px solid $black-color;
+    text-align: center;
+    line-height: 34px;
+    font-size:$font-12;
+    color:$black-color;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration:none !important;
+
+    &:hover{
+    
+       background-color:$black-color;
+       color:$white-color;
+
+    }
+
+    @include mq('phone'){margin:20px auto 0px auto;}
+}
+
+@mixin white-button{
+    min-width: 145px;
+    max-width: 145px;
+    height: 35px;
+    border: 1px solid $white-color;
+    text-align: center;
+    line-height: 34px;
+    font-size:$font-12;
+    font-weight: $weight-light;
+    text-transform: uppercase;
+    letter-spacing:0px;
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none !important;
+    opacity: 1;
+
+    &:hover{
+       background-color:$white-color;
+       color:$black-color;
+       opacity: 1;
+    }
+}
+
+
+@mixin subscribe-button{
+    min-width: 163px;
+    height: 48px;
+    background-color: $black-color;
+    color:$white-color;
+    text-align: center;
+    line-height: 43px;
+    border: 0px !important;
+    font-size:$font-15;
+    font-weight:$bold;
+    letter-spacing:0px;
+
+    &:hover{
+      color:$white-color;
+      background-color:$hover-333333;
+    }
+    
+    @include mq('phone'){
+       min-width: 108px;
+       height: 35px;
+       line-height:32px;
+       font-size:$font-11-mo;
+       margin-top:30px;
+    }
+}
+
+
+@mixin primery-button{
+    min-width: 163px;
+    height: 48px;
+    border:1px solid $black-color;
+    background-color:$white-color;
+    text-align: center;
+    line-height: 43px;
+    font-size:$font-15;
+    font-weight:$bold;
+    letter-spacing:0px;
+    color:$black-color; 
+
+    &:hover{
+      color:$white-color !important;
+      background-color:$black-color !important;
+    }
+    
+    @include mq('phone'){
+       min-width: 108px;
+       height: 35px;
+       line-height:32px;
+       font-size:$font-11-mo;
+       margin-top:30px;
+    }
+}
+
+
+@mixin quick-view-button{
+    min-width: 145px;
+    max-width: 145px;
+    height: 35px;
+    text-align: center;
+    line-height:12px;
+    font-size:$font-12;
+    font-weight: $weight-light;
+    text-transform: uppercase;
+    letter-spacing:0px;
+    margin-top: 15px;
+    text-decoration: none !important;
+    opacity: 1;
+    color:$white-color;
+    background-color:$black-color;
+    border-radius:0px;
+
+    &:hover{
+       background-color:$hover-333333;
+       color:$white-color;
+       opacity: 1;
+    }
+}
+
+
+@mixin back-black-medi-butt-load-more-pro{
+    background-color:$black-color;
+    color:$white-color !important;
+    font-size:$font-11;
+    margin-top: 58px;
+    cursor: pointer;
+    margin-bottom: 89px;
+
+    &:hover{
+       background-color:transparent !important;
+       color:$black-color !important;
+    }
+}
+
+/*button*/
+
+
+/*paragraph-font-seam*/
+
+@mixin black-paragraph-13-font{
+    font-size:$font-13;
+    color:$black-color;
+    font-weight:$weight-normal;
+    line-height:16px;
+    letter-spacing: 0;
+}
+
+@mixin black-paragraph-14-font{
+    font-size:$font-14;
+    color:$black-color;
+    font-weight:$weight-normal;
+    line-height:16px;
+    letter-spacing: 0;
+    
+}
+
+@mixin paragraph-font{
+    font-size:$font-12;
+    color:$black-color;
+    font-weight:$weight-normal;
+    letter-spacing:0px;
+    line-height:16px;
+}
+
+/*paragraph-font-seam*/
+
+
+/*banner*/
+@mixin banner-head{
+    font-size:$font-50;
+    font-weight:$weight-normal;
+    color:$white-color;
+}
+
+@mixin banner-paragraph{
+    font-size:$font-14;
+    color:$white-color;
+    line-height:20px;
+    font-weight:$weight-normal;
+}
+/*banner*/
+
+
+/*End of new SCSS*/
+
+
+/*selectar*/
+@mixin product-filter-select{
+    @include black-paragraph-13-font;
+    text-transform: uppercase;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 0px;
+    border-bottom: 1px solid #000;
+    border-radius: 0px;
+    background-color: transparent !important;
+    position: relative;
+    top: 1px;
+    padding: 6px 20px 4px 6px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    -o-text-overflow: '';
+    text-overflow: '';
+    min-width: 82px;
+}
+/*selectar*/
+
+
+
 // BRAND COLORS
 $color--primary-1: #000000;  // Main Coloration of Primary Elements
 $color--primary-2: #000000;  // Second Main Color (Lets use this for Headers?)
@@ -394,7 +771,18 @@ $button--alt-border-hover: {{ settings.alt_button_border_width }}px solid {{ set
 /* MIXIN : MEDIA QUERIES
  *    EX : @include mq( 'lap-and-up' ) { CODE }
  * ------------------------------------------------------------------------- */
+
+
+$laptop-up: "only screen and (max-width :1260px) and (min-width :1200px)";
+$laptop: "only screen and (max-width :1199px)";
+$tablet: "only screen and (max-width :1023px)";
+$mobile: "only screen and (max-width :767px)";
+$mobile-potrait: "only screen and (max-width :567px)";
+
+$mobile-potrait-small:   "screen and (max-width: 480px)";
+$mobile-potrait:   "screen and (max-width: 567px)";
 $phone:            "screen and (max-width: 767px)";
+$mobile-landscap:  "screen and (min-width: 480px) and (max-width: 1023px)";
 $tablet:           "screen and (min-width: 768px) and (max-width: 1023px)";
 $phone-and-tablet: "screen and (max-width: 1023px)";
 $tablet-and-up:    "screen and (min-width: 768px)";
@@ -404,6 +792,8 @@ $lap:              "screen and (min-width: 1024px) and (max-width: 1219px)";
 $lap-and-up:       "screen and (min-width: 1024px)";
 $desk-and-up:      "screen and (min-width: 1220px)";
 $lap-and-desk:     "screen and (min-width: 1024px) and (max-width: 1679px)";
+$laptop:           "screen and (max-width: 1199px)";
+$laptop-up:        "screen and (max-width: 1260px) and (min-width: 1200px)";
 $wide-and-up:      "screen and (min-width: 1680px)";
 $retina:           "(-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi)";
 
@@ -416,7 +806,33 @@ $retina:           "(-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi)
     @media #{$tablet} {
       @content;
     }
-  } @else if $alias == "phone-and-tablet" {
+  } 
+  @else if $alias == "mobile-landscap" {
+    @media #{$mobile-landscap} {
+      @content;
+    }
+  } 
+  @else if $alias == "mobile-potrait-small" {
+    @media #{$mobile-potrait-small} {
+      @content;
+    }
+  } 
+  @else if $alias == "mobile-potrait" {
+    @media #{$mobile-potrait} {
+      @content;
+    }
+  } 
+  @else if $alias == "laptop-up" {
+    @media #{$laptop-up} {
+      @content;
+    }
+  } 
+  @else if $alias == "laptop" {
+    @media #{$laptop} {
+      @content;
+    }
+  } 
+  @else if $alias == "phone-and-tablet" {
     @media #{$phone-and-tablet} {
       @content;
     }

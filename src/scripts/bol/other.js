@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     // HEADER STUFF : Once header is done we can probably move this into the header section component
     (function () {
-        $(".has_sub_menu").hover(function () {
+        $(".has-sub-menu").hover(function () {
             $(this).attr('aria-expanded', function (index, attr) {
                 return attr == 'false' ? true : 'false';
             });

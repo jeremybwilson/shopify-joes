@@ -1,0 +1,28 @@
+<div class="col-md-3 col-sm-4 col-xs-12 footer-part">
+        <div class="social-inner">
+          {% unless section.settings.social_heading == blank %}
+            <h4 class="section-title">{{ section.settings.social_heading }}</h4>
+          {% endunless %}
+          <ul id="social-icons" class="social_icon">
+            {% include 'social-icons' %}
+          </ul><!-- #social-icons -->
+        </div><!-- .social-inner -->    
+      </div><!-- .social-wrapper -->
+
+{% schema %}
+    {
+    "name": "Social Links",
+    "settings": [
+    {
+      "type": "text",
+      "id": "social_heading",
+      "label": "Social - Heading",
+      "default": "Connect With Us"
+    }],
+    "presets": [{
+      "name": "Social Links",
+      "category": "Social media"
+    }]
+  }
+  {% endschema %}
+  

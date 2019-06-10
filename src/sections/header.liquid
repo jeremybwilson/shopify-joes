@@ -2,130 +2,122 @@
   data-section-id="{{ section.id }}" 
   data-section-type="header-section" 
   data-swap-rate="{{ section.settings.announcement_swap_rate }}">
-  
-  {% comment %} ..:: PROMO BANNER PORTION ("Announcements") ::.. {% endcomment %}
-  {%- if section.settings.show_announcement_text -%}
-    {% include 'header-announcement-bar' %}
-  {%- endif -%}
-
 
   {% comment %} ..:: NAVIGATION PORTION ::.. {% endcomment %}
   {%- capture wrapperClasses -%}
-    {% if section.settings.full_width_header %} gridlock-fluid {% endif %}
+    {% if section.settings.full_width_header %} header_back_main {% endif %}
     {% if settings.nav_transparent_landing %} transparent-landing {% endif %}
   {%- endcapture -%}
 
   <header id="nav-bar-wrapper" class="{{ wrapperClasses }}">
-    {% if section.settings.full_width_header %}<div class="row">{% endif %}
 
+    {% comment %} ..:: PROMO BANNER PORTION ("Announcements") ::.. {% endcomment %}
+    {%- if section.settings.show_announcement_text -%}
+      {% include 'header-announcement-bar' %}
+    {%- endif -%}
+    
     {% comment %} ..:: NAV-BAR : BG + NAV-ITEMS WRAPPER ::.. {% endcomment %}
-    <div id="nav-bar-bg"></div>
-    <div id="nav-bar" class="row">
+    <div id="nav-bar" class="header-back">
+      {% comment %} ..:: NAV : LEFT CONTENT ::.. {% endcomment %}
+      {% if section.settings.show_header_left_text %}
+        {%- if section.settings.header_left_url -%}
+          <p class="shipping-left"><a href="{{ section.settings.header_left_url }}">{{ section.settings.header_left_text }}</a></p>
+        {%- else -%}
+          <p class="shipping-left">{{section.settings.header_left_text}}</p>
+        {%- endif -%}
+      {% endif %}
 
       {% comment %} ..:: NAV : BRAND LOGO ::.. {% endcomment %}
-      <div id="nav-logo">
+      <div class="logo-part" id="nav-logo">
           <a href="/">
-            {% include 'svg-icon-header-logo' %}
+            {% include 'header-logo' %}
           </a>
       </div>
-      <div id="nav-logo-backing"></div>
-
 
       {% comment %} ..:: NAV : ACCOUNT + CART + SEARCH (Right Elements) ::.. {% endcomment %}
-      <div id="nav-user">
-        <ul id="nav-user-list"> 
+      <ul class="right-search-cart-part"> 
+        {% comment %} ..:: SEARCH ::.. {% endcomment %}
+        {% if section.settings.show_search %}
+          <li class="nav-item nav-search">
+            {% include 'nav-search-input' %}
+          </li>
+        {% endif %}
 
-          {% comment %} ..:: SITE PICKER : (US, UK, EU, CAN) ::.. {% endcomment %}
+        <li class="nav-item nav-account nav-account-text-mode">
+            <a href="/account/login">
+                <div class="account-text">SUBSCRIBE</div>
+            </a>
+          </li>
+
+        {% comment %} ..:: ACCOUNT ::.. {% endcomment %}
+        {% if shop.customer_accounts_enabled %}
+          <li class="nav-item nav-account {% if section.settings.account_icon == 'text' %}nav-account-text-mode{% endif %}">
+            {% include 'nav-account-item' %}
+          </li>
+        {% endif %}
+
+        {% comment %} ..:: WISHLIST ::.. {% endcomment %}
+        {% if section.settings.show_wishlist %}
+          <li class="nav-item nav-wishlist">
+            {% comment %} :: Wishlist King App :: 
+            {% if settings.app_wk_enabled %}
+              <!-- include 'wishlist-link' -->
+            {% else %}
+              
+              
+            {% endif %}{% endcomment %}
+            {% comment %} :: Heart Icon Placeholder :: {% endcomment %}
+            {% include 'svg-icon-heart' %}
+          </li>
+        {% endif %}
+        
+        {% comment %} ..:: CART ::.. {% endcomment %}
+        <li class="nav-item nav-cart">
+          <a href="/cart" {% if settings.ajax_cart_method == 'drawer' %} class="site-header__cart-toggle js-drawer-open-right" aria-controls="CartDrawer" aria-expanded="false" {% endif %}>
+            {% if section.settings.cart_icon == 'cart' %}
+              {% include 'svg-icon-cart' %}
+              
+            {% elsif section.settings.cart_icon == 'bag' %}
+              {% include 'svg-icon-shopping-bag' %}
+              
+            {% elsif section.settings.cart_icon == 'text' %}
+              <div class="icon icon-cart-text">{{ section.settings.cart_icon_text_value }}</div>
+            {% endif %}
+            <span class="cart-count {% if cart.item_count == 0 %}hidden-count{% endif %}">({{ cart.item_count }})</span>
+          </a>
+        </li>
+        
+        {% comment %} ..:: SITE PICKER : (US, UK, EU, CAN) ::.. {% endcomment %}
           {% if section.settings.show_site_picker %}
             <li class="nav-item nav-sites">
               {% include 'sites-picker' %}
             </li>
           {% endif %}
 
-
-          {% comment %} ..:: BORDER FREE - Nav Button ::.. {% endcomment %}
-          {% if settings.borderfree_enabled %}
-            <li id="nav-item-borderfree" class="nav-item nav-borderfree"></li>
-          {% endif %}
-
-          {% comment %} ..:: ACCOUNT ::.. {% endcomment %}
-          {% if shop.customer_accounts_enabled %}
-            <li class="nav-item nav-account {% if section.settings.account_icon == 'text' %}nav-account-text-mode{% endif %}">
-              {% include 'nav-account-item' %}
-            </li>
-          {% endif %}
-
-
-          {% comment %} ..:: SEARCH ::.. {% endcomment %}
-          {% if section.settings.show_search %}
-            <li class="nav-item nav-search">
-              {% include 'svg-icon-search' %}
-            </li>
-          {% endif %}
-
-
           {% comment %} ..:: CURRENCY PICKER (DISABLED) ::.. {% endcomment %}
           {% if settings.show_multiple_currencies %}
             <li class="nav-item nav-currency">{% include 'currencies-picker' %}</li>
           {% endif %}
 
-
-          {% comment %} ..:: WISHLIST ::.. {% endcomment %}
-          {% if section.settings.show_wishlist %}
-            <li class="nav-item nav-wishlist">
-              
-              {% comment %} :: Wishlist King App :: {% endcomment %}
-              {% if settings.app_wk_enabled %}
-                <!-- include 'wishlist-link' -->
-
-              {% else %}
-                {% comment %} :: Heart Icon Placeholder :: {% endcomment %}
-                {% include 'svg-icon-heart' %}
-              {% endif %}
-
-            </li>
-          {% endif %}
-
-
-          {% comment %} ..:: CART ::.. {% endcomment %}
-          <li class="nav-item nav-cart">
-            <a href="/cart" {% if settings.ajax_cart_method == 'drawer' %} class="site-header__cart-toggle js-drawer-open-right" aria-controls="CartDrawer" aria-expanded="false" {% endif %}>
-              
-              {% if section.settings.cart_icon == 'cart' %}
-                {% include 'svg-icon-cart' %}
-              
-              {% elsif section.settings.cart_icon == 'bag' %}
-                {% include 'svg-icon-shopping-bag' %}
-              
-              {% elsif section.settings.cart_icon == 'text' %}
-                <div class="icon icon-cart-text">{{ section.settings.cart_icon_text_value }}</div>
-              {% endif %}
-
-              <span class="cart-count {% if cart.item_count == 0 %}hidden-count{% endif %}">({{ cart.item_count }})</span>
-            </a>
-          </li>
-
         </ul>
-      </div>
 
       {% comment %} ..:: NAV : SITE-COLLECTIONS (Left Elements) ::.. {% endcomment %}
-      <div id="nav-collections">
+      <div id="nav-collections" class="header-menu font-only-menu-type">
         {% include 'icon-nav-mobile-menu' %}
         {% include 'navigation' %}
-        {% include 'mobile-navigation' %}
+        {% comment %} {% include 'mobile-navigation' %} {% endcomment %}
       </div>
-
     </div>
 
 
-    {% comment %} :: SEARCH INPUT :: Appears when user clicks search button on nav {% endcomment %}
+    {% comment %} :: SEARCH INPUT :: Appears when user clicks search button on nav 
     {% if section.settings.show_search %}
       <div id="nav-search-bar-wrapper">
         {% include 'nav-search-input' %}
       </div>
-    {% endif %}
+    {% endif %}{% endcomment %}
 
-    {% comment %} ..:: BORDER-FREE - Modal (injected via borderfree-script.liquid snippet) ::.. {% endcomment %}
+    {% comment %} ..:: BORDER-FREE - Modal (injected via borderfree-script.liquid snippet) ::.. 
     {% if settings.borderfree_enabled %}
       <div id="nav-modal-borderfree">
         <div id="nav-modal-borderfree-close">
@@ -133,15 +125,8 @@
           <div class='bar-two'></div>
         </div>
       </div>
-    {% endif %}
-
-    {% if section.settings.full_width_header %}</div>{% endif %}
+    {% endif %}{% endcomment %}
   </header>
-
-  
-
-
-
   <style>
     #top-bar, #top-bar-bg {
       height: {{ section.settings.announcement_height }}px;
@@ -162,9 +147,9 @@
       font-weight: {{ section.settings.cart_weight }};
     }
 
-    nav {
+    {% comment %} nav {
        line-height: {{ section.settings.nav_height }}px;
-    }
+    } {% endcomment %}
 
     {% if section.settings.megamenu_full_width %}
       .megamenu {
@@ -194,8 +179,6 @@
     }
   </style>
 </div>
-
-
 
 
 {% schema %}
@@ -237,24 +220,24 @@
       {
         "type": "text",
         "id": "announcement_text_one",
-        "label": "Announcement Text - #1",
-        "default": "<div class='bold'>FREE SHIPPING</div> ON ORDERS $50 OR MORE"
+        "label": "#1 Announcement Text",
+        "default": "Sign up & Receive $25 off your first order"
       },
       {
         "type": "url",
         "id": "announcement_link_one",
-        "label": "Announcement Link - #1"
+        "label": "#1 Announcement Link"
       },
       {
         "type": "text",
         "id": "announcement_text_two",
-        "label": "Announcement Text - #2",
+        "label": "#2 Announcement Text",
         "default": "<div class='bold'>40% OFF YOUR PURCHASE.</div>NO CODE NEEDED."
       },
       {
         "type": "url",
         "id": "announcement_link_two",
-        "label": "Announcement Link - #2"
+        "label": "#2 Announcement Link"
       },
       {
         "type":      "range",
@@ -280,49 +263,36 @@
 
       {
         "type": "header",
+        "content": "Nav left Content"
+      },
+      {
+        "type": "checkbox",
+        "default": true,
+        "id": "show_header_left_text",
+        "label": "Show Left side text in header"
+      },
+
+      {
+        "type": "text",
+        "id": "header_left_text",
+        "label": "Left side Text - Header",
+        "default": "Free U.S Shipping!"
+      },
+      {
+        "type": "url",
+        "id": "header_left_url",
+        "label": "Left side text Link"
+      },
+
+      {
+        "type": "header",
         "content": "Logo"
       },
       {
-        "type": "range",
-        "id": "logo_size",
-        "min": 12,
-        "max": 36,
-        "step": 1,
-        "unit": "px",
-        "label": "Logo text size",
-        "default": 18
+        "type": "image_picker",
+        "id": "logo_image",
+        "label": "Select Logo Image"
       },
-      {
-        "type": "select",
-        "id": "logo_transform",
-        "label": "Logo text case",
-        "options": [
-          {
-            "value": "uppercase",
-            "label": "Uppercase"
-          },
-          {
-            "value": "none",
-            "label": "Normal"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "id": "logo_weight",
-        "label": "Logo text weight",
-        "options": [
-          {
-            "value": "normal",
-            "label": "Normal"
-          },
-          {
-            "value": "bold",
-            "label": "Bold"
-          }
-        ]
-      },
-
 
       {
         "type": "header",
