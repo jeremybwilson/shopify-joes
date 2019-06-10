@@ -1,11 +1,10 @@
 //Sample :  $sample-color: {{ settings.dotted_color }};
 
 
-$blck-color:#000;
+$black-color:#000;
 $white-color:#fff;
-$light-blck:#4A4A4A;
+$light-black:#4A4A4A;
 $back-gray:#f6f5f6;
-
 
 /*hover*/
 $hover-333333:#333333;
@@ -36,16 +35,16 @@ $bold:bold;
 $weight-500:500;
 
 $padding-left-right:0px 50px;
-$padding-left-right-mobil:0px 17px;
-$padding-left-right-mobil25:0px 25px;
-$padding-left-right-mobil15:0px 15px;
-$padding-left-right-mobil22:0px 22px;
+$padding-left-right-mobile:0px 17px;
+$padding-left-right-mobile25:0px 25px;
+$padding-left-right-mobile15:0px 15px;
+$padding-left-right-mobile22:0px 22px;
 
 
-@mixin padding-left-right-mobil15{
+@mixin padding-left-right-mobile15{
   padding:0 15px;
 }
-@mixin tablet-to-lapto-padding-left-right-mobil50{
+@mixin tablet-to-lapto-padding-left-right-mobile50{
   padding:0 50px;
 }
 
@@ -114,7 +113,7 @@ $container-fluid-width:1115px;
 /*as-seen-on*/
 @mixin suv-headin-light{
     font-size:$font-16;
-    color:$blck-color;
+    color:$black-color;
     font-weight:$weight-normal;
     letter-spacing:0px;
     margin-bottom: 0px;
@@ -123,7 +122,7 @@ $container-fluid-width:1115px;
 
 @mixin h4-head{
     font-size:$font-18;
-    color:$blck-color;
+    color:$black-color;
     font-weight:$bold;
     letter-spacing:0px;
     margin-bottom: 0px;
@@ -137,7 +136,7 @@ $container-fluid-width:1115px;
 
 @mixin headin-black{
     font-size:27px;
-    color:$blck-color;
+    color:$black-color;
     font-weight:$bold;
     letter-spacing:0.2px;
     margin-bottom: 6px;
@@ -151,7 +150,7 @@ $container-fluid-width:1115px;
 
     @mixin h5-heading{
         font-size:$font-15;
-        color:$blck-color;
+        color:$black-color;
         font-weight:$bold;
         letter-spacing:0px;
         margin-bottom: 6px;
@@ -163,21 +162,21 @@ $container-fluid-width:1115px;
 
 
 /*button*/
-@mixin black-butt{
+@mixin black-button{
     min-width: 145px;
     height: 35px;
-    border: 1px solid $blck-color;
+    border: 1px solid $black-color;
     text-align: center;
     line-height: 34px;
     font-size:$font-12;
-    color:$blck-color;
+    color:$black-color;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     text-decoration:none !important;
 
     &:hover{
     
-       background-color:$blck-color;
+       background-color:$black-color;
        color:$white-color;
 
     }
@@ -185,7 +184,7 @@ $container-fluid-width:1115px;
     @include mq('phone'){margin:20px auto 0px auto;}
 }
 
-@mixin white-butt{
+@mixin white-button{
     min-width: 145px;
     max-width: 145px;
     height: 35px;
@@ -203,16 +202,16 @@ $container-fluid-width:1115px;
 
     &:hover{
        background-color:$white-color;
-       color:$blck-color;
+       color:$black-color;
        opacity: 1;
     }
 }
 
 
-@mixin subscribe-butt{
+@mixin subscribe-button{
     min-width: 163px;
     height: 48px;
-    background-color: $blck-color;
+    background-color: $black-color;
     color:$white-color;
     text-align: center;
     line-height: 43px;
@@ -236,21 +235,21 @@ $container-fluid-width:1115px;
 }
 
 
-@mixin primery-butt{
+@mixin primery-button{
     min-width: 163px;
     height: 48px;
-    border:1px solid $blck-color;
+    border:1px solid $black-color;
     background-color:$white-color;
     text-align: center;
     line-height: 43px;
     font-size:$font-15;
     font-weight:$bold;
     letter-spacing:0px;
-    color:$blck-color; 
+    color:$black-color; 
 
     &:hover{
       color:$white-color !important;
-      background-color:$blck-color !important;
+      background-color:$black-color !important;
     }
     
     @include mq('phone'){
@@ -263,7 +262,7 @@ $container-fluid-width:1115px;
 }
 
 
-@mixin quick-view-butt{
+@mixin quick-view-button{
     min-width: 145px;
     max-width: 145px;
     height: 35px;
@@ -277,7 +276,7 @@ $container-fluid-width:1115px;
     text-decoration: none !important;
     opacity: 1;
     color:$white-color;
-    background-color:$blck-color;
+    background-color:$black-color;
     border-radius:0px;
 
     &:hover{
@@ -289,7 +288,7 @@ $container-fluid-width:1115px;
 
 
 @mixin back-black-medi-butt-load-more-pro{
-    background-color:$blck-color;
+    background-color:$black-color;
     color:$white-color !important;
     font-size:$font-11;
     margin-top: 58px;
@@ -298,7 +297,7 @@ $container-fluid-width:1115px;
 
     &:hover{
        background-color:transparent !important;
-       color:$blck-color !important;
+       color:$black-color !important;
     }
 }
 
@@ -307,17 +306,17 @@ $container-fluid-width:1115px;
 
 /*peregraph-font-seam*/
 
-@mixin blck-peregraph-13-font{
+@mixin black-peregraph-13-font{
     font-size:$font-13;
-    color:$blck-color;
+    color:$black-color;
     font-weight:$weight-normal;
     line-height:16px;
     letter-spacing: 0;
 }
 
-@mixin blck-peregraph-14-font{
+@mixin black-peregraph-14-font{
     font-size:$font-14;
-    color:$blck-color;
+    color:$black-color;
     font-weight:$weight-normal;
     line-height:16px;
     letter-spacing: 0;
@@ -326,7 +325,7 @@ $container-fluid-width:1115px;
 
 @mixin peregraph-font{
     font-size:$font-12;
-    color:$blck-color;
+    color:$black-color;
     font-weight:$weight-normal;
     letter-spacing:0px;
     line-height:16px;
@@ -356,7 +355,7 @@ $container-fluid-width:1115px;
 
 /*selectar*/
 @mixin product-filter-select{
-    @include blck-peregraph-13-font;
+    @include black-peregraph-13-font;
     text-transform: uppercase;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;

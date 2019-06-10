@@ -6,7 +6,7 @@
       {% if section.blocks %}          
           {% for block in section.blocks %}
             {% assign menu = linklists[block.settings.menu_id] %} 
-            <div class="col-md-2 col-xs-12 col-sm-4 responsiv_footer_part">
+            <div class="col-md-2 col-xs-12 col-sm-4 footer-part">
               <nav>
                 {% comment %} :: TITLE : Basic title if no nested menus inside footer :: {% endcomment %}
                 {% if menu.levels < 2 and block.settings.show_headings %}
@@ -48,12 +48,12 @@
           {% endfor %}   
       {% endif %}
 
-      <div class="col-md-3 col-sm-4 col-xs-12 responsiv_footer_part">
+      <div class="col-md-3 col-sm-4 col-xs-12 footer-part">
         <div class="social-inner">
           {% unless section.settings.social_heading == blank %}
             <h4 class="section-title">{{ section.settings.social_heading }}</h4>
           {% endunless %}
-          <ul id="social-icons" class="social_icon">
+          <ul id="social-icons" class="social-icon">
             {% include 'social-icons' %}
           </ul><!-- #social-icons -->
         </div><!-- .social-inner -->    

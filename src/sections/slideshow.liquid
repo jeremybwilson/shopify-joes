@@ -20,7 +20,7 @@
           <ul class="slides">
             {% for block in section.blocks %}
 
-              <li class="main-slider-lopp" id="slide--{{ block.id }}"
+              <li class="main-slider-loop" id="slide--{{ block.id }}"
                 data-block-id="{{ block.id }}"
                 class="slide--{{ block.id }} slide_image align-text--{{ block.settings.caption_text_align }}"
                 data-flexslider-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
@@ -43,7 +43,7 @@
                       {% endif %}
 
                       {% assign desktop_img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
-                      <img class="slideshow__image slideshow__image__{{ block.id }} lazyload lazyload-fade" 
+                      <img class="slideshow-image slideshow__image__{{ block.id }} lazyload lazyload-fade" 
                         data-src="{{ desktop_img_url }}" 
                         data-sizes="auto"
                         data-parent-fit="cover"
@@ -51,7 +51,7 @@
                     </picture>
 
                     <noscript>
-                      <img src="{{ block.settings.image | img_url: '1024x' }}" alt="{{ block.settings.image.alt | escape }}" class="slideshow__image slideshow__image--{{ block.id }}">
+                      <img src="{{ block.settings.image | img_url: '1024x' }}" alt="{{ block.settings.image.alt | escape }}" class="slideshow-image slideshow__image--{{ block.id }}">
                     </noscript>
                   </div>
                   <!-- End of .box-ratio -->
@@ -119,7 +119,7 @@
 
                         {% comment %} :: BUTTON #1 :: {% endcomment %}
                         <div class="cta show-lines--{{ block.settings.cta_one_line }}" id="cta-one-{{ block.id }}">
-                          <a class="white-butt" href="{{ block.settings.cta_one_link }}">
+                          <a class="white-button" href="{{ block.settings.cta_one_link }}">
 
                             {% comment %}
                               :: CTA LINES + TEXT :: 
@@ -134,7 +134,7 @@
 
                           {% comment %} :: BUTTON #2 :: {% endcomment %}
                           <div class="cta show-lines--{{ block.settings.cta_two_line }}" id="cta-two-{{ block.id }}">
-                            <a class="white-butt" href="{{ block.settings.cta_two_link }}" class="{{ buttonWrapClasses }}">
+                            <a class="white-button" href="{{ block.settings.cta_two_link }}" class="{{ buttonWrapClasses }}">
                               
                               {% comment %}
                                 :: CTA LINES + TEXT :: 

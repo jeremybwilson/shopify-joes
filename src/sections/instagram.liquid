@@ -2,7 +2,7 @@
 
 <script id="instagram-template" type="text/template">
   {% raw %}
-    <div class="loop_part">
+    <div class="loop-part">
       <a class="instagram-image-container" target="_blank" href="{{link}}" rel="ig" title="{{caption}}">
         <img class="instagram-image" src="{{image}}" />
       </a>
@@ -14,7 +14,7 @@
   <section>
         <div class="as-see-on-part">
             <div class="container-fluid">
-                <div class="ppp">
+                <div class="newsletter-homepage">
                     <div class="heading-part">
                         {% if section.settings.heading != blank %}
                           <h2>{{ section.settings.heading | escape }}</h2>
@@ -45,7 +45,7 @@
                     {% comment %} CTA {% endcomment %}                   
                     {% if section.settings.cta_text != blank and section.settings.link != blank %}
                     <div class="cta">
-                      <a href="{{ section.settings.link }}" target="_blank" class="black_butt">
+                      <a href="{{ section.settings.link }}" target="_blank" class="black-button">
                         <span>{{ section.settings.cta_text }}</span>
                       </a>
                     </div>

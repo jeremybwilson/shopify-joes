@@ -13,7 +13,7 @@ footer {
     margin-top: 89px;
     max-height: 333px;
 
-    .social_icon .icon {
+    .social-icon .icon {
        width: 20px;
     }
 
@@ -22,7 +22,7 @@ footer {
         display: flex;
         flex-wrap: wrap;
     }
-    .responsiv_footer_part {
+    .footer-part {
         width: 17%;
         display: inline-block;
 
@@ -30,7 +30,7 @@ footer {
     }
 
     @media #{$mobile} {
-       padding:$padding-left-right-mobil25;
+       padding:$padding-left-right-mobile25;
        padding-top:25px;
        margin-top:65px;
     }
@@ -42,7 +42,7 @@ footer {
 
     h4{   
       font-size: $font-12;
-      color:$blck-color;
+      color:$black-color;
       margin-bottom:6px;
       font-weight:$bold;
       text-transform:uppercase; 
@@ -63,7 +63,7 @@ footer {
 
       a{
         font-size: $font-12;
-        color:$blck-color;
+        color:$black-color;
         margin-bottom:$mb-0;
         text-decoration:none !important;  
         text-transform: uppercase; 
@@ -72,7 +72,7 @@ footer {
       }
     }
 
-    .social_icon li{ 
+    .social-icon li{ 
       display: inline-block;
       margin: 0 10px;
 
@@ -84,7 +84,7 @@ footer {
 
 .cpyright {
     font-size:$font-12;
-    color:$light-blck;
+    color:$light-black;
     font-weight:$weight-light;
     letter-spacing: 0.1px;
     margin: 25px 0 46px 0;
@@ -105,15 +105,15 @@ footer {
 
 @media #{$tablet} {
    /*footer*/
-   .responsiv_footer_part {max-width: 26% !important; flex: 1 1 26% !important;}
-   .responsiv_footer_part:nth-child(2) {flex: 1 1 18% !important; max-width: 18% !important;}
+   .footer_part {max-width: 26% !important; flex: 1 1 26% !important;}
+   .footer_part:nth-child(2) {flex: 1 1 18% !important; max-width: 18% !important;}
    /*footer*/
 }
 
 @media #{$mobile} {
   /*footer*/
-     .responsiv_footer_part {max-width:100% !important; flex: 1 1 100% !important; margin-bottom:25px;}
-     .responsiv_footer_part:nth-child(2) {flex: 1 1 100% !important; max-width:100% !important;}
+     .footer_part {max-width:100% !important; flex: 1 1 100% !important; margin-bottom:25px;}
+     .footer_part:nth-child(2) {flex: 1 1 100% !important; max-width:100% !important;}
    /*footer*/
 }
 

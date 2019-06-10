@@ -3,7 +3,7 @@
   {% comment %} :: FULL-WIDTH WRAPPING ELEMENTS :: {% endcomment %}
   {% if section.settings.full_width %}<div class="gridlock-fluid twin-promos-full-width">{% endif %}
 
-  <div class="row homepage-section no-fouc promo-wrapper men_women_jeans_part">
+  <div class="row homepage-section no-fouc promo-wrapper men-women-jeans-part">
     {% case section.blocks.size %}
       {% when 1 %}
         {%- assign image_size = '900x' -%}
@@ -46,7 +46,7 @@
             {% if block.settings.cta_text != blank %}
               <div class="cta cta-accent-mark-{{ block.settings.cta_accent_mark }} cta-type-{{ block.settings.cta_type }}">
                 
-                {% if block.settings.link != blank %}<a class="white-butt" href="{{ block.settings.link }}">{% endif %}
+                {% if block.settings.link != blank %}<a class="white-button" href="{{ block.settings.link }}">{% endif %}
                   <div class="cta-line-left"></div>
                   <span>{{ block.settings.cta_text }}</span>
                   <div class="cta-line-right"></div>

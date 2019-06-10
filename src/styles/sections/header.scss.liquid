@@ -17,7 +17,7 @@ ul{padding:0 0px; margin: 0px;}
    @include container;
    
    @include mq('laptop'){
-      @include padding-left-right-mobil15;
+      @include padding-left-right-mobile15;
    }
 }
 
@@ -44,7 +44,7 @@ body.cart #breadcrumb{
     margin: $margin-le-ri-auto;
 
     @include mq('laptop'){
-        padding:$padding-left-right-mobil15;
+        padding:$padding-left-right-mobile15;
     }
 }
 
@@ -63,11 +63,11 @@ body.cart #breadcrumb{
    @include mq('phone'){
       text-align: center;
       margin: 10px 0 10px 0;
-      @include padding-left-right-mobil15;
+      @include padding-left-right-mobile15;
    }
 
    a,span{
-     @include blck-peregraph-13-font;
+     @include black-peregraph-13-font;
      text-transform: uppercase;
    }
 
@@ -88,8 +88,8 @@ body.cart #breadcrumb{
 }
 
 
-.top_discount_part {
-    //background-color: $blck-color;
+.top-discount-part {
+    //background-color: $black-color;
     text-align: center;
     max-height: 35px;
 
@@ -98,10 +98,10 @@ body.cart #breadcrumb{
     }  
 
    #single-promo-wrapper, .promo-banner.one{
-      background-color: {{ settings.announcement_bg_one}}; //$blck-color;
+      background-color: {{ settings.announcement_bg_one}}; //$black-color;
    }
    .promo-banner.two{
-      background-color: {{ settings.announcement_bg_two}}; //$blck-color;
+      background-color: {{ settings.announcement_bg_two}}; //$black-color;
    }
 
     a{
@@ -138,7 +138,7 @@ body.cart #breadcrumb{
 
 #nav{display:block;}
 
-.header_back {
+.header-back {
     display: flex;
     align-items:flex-start;
     flex-wrap: wrap;
@@ -148,14 +148,14 @@ body.cart #breadcrumb{
     background-color: {{ settings.header_background }}; //$white-color;
     border-bottom: $border-grey-1;
 
-    .geader_left{
+    .shipping-left{
 	     flex:$flex-1;
   	   text-transform: uppercase;
   	   margin-bottom:$mb-0;	
        line-height:16px;
       
         a{
-            @include blck-peregraph-13-font;
+            @include black-peregraph-13-font;
             
             @include mq('laptop'){
                 font-size: $font-12;
@@ -164,7 +164,7 @@ body.cart #breadcrumb{
 
     }
 
-    .logo_part{
+    .logo-part{
 
         flex:$flex-1;
 
@@ -179,7 +179,7 @@ body.cart #breadcrumb{
         }
     }
 
-    .right_search_cart_part{
+    .right-search-cart-part{
 
         flex:$flex-1;
         text-align: right;
@@ -208,23 +208,13 @@ body.cart #breadcrumb{
            &:last-child{
              margin-right:0px;
            }
-          
-           .dekstop_lap_none {
-    			    display: none;
-              width:20px;
-              cursor:pointer;
-
-              img {
-                  width: 100%;
-              }
-    		   }
 
            @include mq('laptop'){
               margin: 0 5px;
            }
 
   		    a{
-  		     @include blck-peregraph-13-font;
+  		     @include black-peregraph-13-font;
            margin-bottom:$mb-0;
   		     text-decoration:none !important;	 
            text-transform: uppercase; 
@@ -248,7 +238,7 @@ body.cart #breadcrumb{
 }
 
 
-.Search_button {
+.Search-button {
     width: 20px;
     height:18px;
     padding: 0 0;
@@ -269,7 +259,7 @@ body.cart #breadcrumb{
 	    object-position: center;
 	}
 }
-.search_header {
+.search-header {
     border: 0px;
     border-bottom: 1px solid $field-border-color;
     line-height: 18px;
@@ -284,7 +274,7 @@ body.cart #breadcrumb{
     }
 }
 
-.not_fill_like {
+.not-fill-like {
     max-width: 14px;
     width:14px;
 
@@ -294,7 +284,7 @@ body.cart #breadcrumb{
     }
 }
 
-.has_sub_menu {
+.has-sub-menu {
     .megamenu {
         position: absolute;
         width: 100%;
@@ -350,7 +340,7 @@ body.cart #breadcrumb{
 }
 
 
-.header_menu {
+.header-menu {
    flex: 1 1 100%; 
    text-align: center; 
    margin-top: 18px;
@@ -364,7 +354,7 @@ body.cart #breadcrumb{
       position:relative;
    }
    
-   .has_sub_menu:hover {    
+   .has-sub-menu:hover {    
       .megamenu{
          display:block;
       }
@@ -392,7 +382,7 @@ body.cart #breadcrumb{
     .icon-bar {
       width: 100%;
       height: 1px;
-      background-color:$blck-color;
+      background-color:$black-color;
       display: inline-block;
       position: absolute;
       top: 0;
@@ -410,7 +400,7 @@ body.cart #breadcrumb{
    }
 }
 
-.font_only_menu_type { 
+.font-only-menu-type { 
    li {
     list-style: none;
     display: inline-block;
@@ -418,7 +408,7 @@ body.cart #breadcrumb{
    }
 
    a{
-    @include blck-peregraph-13-font;
+    @include black-peregraph-13-font;
     margin-bottom: 0px;
     text-decoration: none !important;
     text-transform: uppercase;
@@ -461,7 +451,7 @@ body.cart #breadcrumb{
 }
 
 @include mq('phone'){
-   .search_bar{
+   .search-bar{
       top: 33px;
       margin-right: 5px;
       

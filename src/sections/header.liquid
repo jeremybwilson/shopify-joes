@@ -17,25 +17,25 @@
     {%- endif -%}
     
     {% comment %} ..:: NAV-BAR : BG + NAV-ITEMS WRAPPER ::.. {% endcomment %}
-    <div id="nav-bar" class="header_back">
+    <div id="nav-bar" class="header-back">
       {% comment %} ..:: NAV : LEFT CONTENT ::.. {% endcomment %}
       {% if section.settings.show_header_left_text %}
         {%- if section.settings.header_left_url -%}
-          <p class="geader_left peregraph_font"><a href="{{ section.settings.header_left_url }}">{{ section.settings.header_left_text }}</a></p>
+          <p class="shipping-left"><a href="{{ section.settings.header_left_url }}">{{ section.settings.header_left_text }}</a></p>
         {%- else -%}
-          <p class="geader_left peregraph_font">{{section.settings.header_left_text}}</p>
+          <p class="shipping-left">{{section.settings.header_left_text}}</p>
         {%- endif -%}
       {% endif %}
 
       {% comment %} ..:: NAV : BRAND LOGO ::.. {% endcomment %}
-      <div class="logo_part" id="nav-logo">
+      <div class="logo-part" id="nav-logo">
           <a href="/">
             {% include 'header-logo' %}
           </a>
       </div>
 
       {% comment %} ..:: NAV : ACCOUNT + CART + SEARCH (Right Elements) ::.. {% endcomment %}
-      <ul class="right_search_cart_part"> 
+      <ul class="right-search-cart-part"> 
         {% comment %} ..:: SEARCH ::.. {% endcomment %}
         {% if section.settings.show_search %}
           <li class="nav-item nav-search">
@@ -102,7 +102,7 @@
         </ul>
 
       {% comment %} ..:: NAV : SITE-COLLECTIONS (Left Elements) ::.. {% endcomment %}
-      <div id="nav-collections" class="header_menu font_only_menu_type">
+      <div id="nav-collections" class="header-menu font-only-menu-type">
         {% include 'icon-nav-mobile-menu' %}
         {% include 'navigation' %}
         {% comment %} {% include 'mobile-navigation' %} {% endcomment %}
