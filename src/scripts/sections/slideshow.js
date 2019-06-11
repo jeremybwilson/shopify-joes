@@ -14,7 +14,7 @@ theme.Slideshow = (function() {
             animation: 'fade',
             slideshowSpeed: speed,
             animationSpeed: 600,
-            controlNav: false,
+            controlNav: true,
             pauseOnHover: true,
             pauseOnAction: true,
             nextText: '',

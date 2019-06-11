@@ -12,6 +12,11 @@
       max-height: 698px;
       min-height: 698px;
       overflow: hidden;
+
+       @include mq('phone'){
+          height:614px;
+          min-height:100%;
+       }
   }
 
   /* IMAGE HOLDER : For lazy loading images
@@ -90,6 +95,14 @@
       display: inline-block;
       padding: 0;
       max-width: 700px;
+
+      @include mq( 'lap-and-up' ) {
+        padding:0px 0px;
+      }
+
+      @include mq( 'phone' ) {
+        text-align:center !important;
+      }
     }    
   }
 
@@ -107,6 +120,10 @@
    * ------------------------------------------ */
   .caption {
     @include banner-paragraph-text-white;
+
+    @include mq( 'phone' ) {
+       text-align:center !important;
+    }
   }
 
   /* BUTTONS : CTA Button in text box
@@ -117,6 +134,11 @@
     margin-top: 5px;
     width: 100%;
    
+    @include mq( 'phone' ) {
+        width: 100%;
+        display: inherit !important;
+    }
+
     > .cta {
       margin: 0;
 
@@ -268,14 +290,18 @@ a {
 
   max-height: 698px;
 
+   @include mq('phone'){
+      max-height: 614px;
+   }
+
     .flex-caption {
       padding: 0 0;
       bottom: auto;
-      top:50%;
       
       @include mq('phone'){
          left: 0;
          right: 0;
+         top:42.7%;
       }
   }
 
@@ -295,7 +321,7 @@ a {
     position: absolute;
     padding: 0 0;
     height: 8px;
-    bottom: 38px;
+    bottom: 43px;
     width: 100%;
     text-align: center;
 }
@@ -313,7 +339,7 @@ a {
 .slideshow-section .slider--nav {
     max-width: 100% !important;
     bottom: auto !important;
-    top: 50.3%;
+    top: 49.5%;
     padding: 0 42px;
     height: 0;
 }    
@@ -382,6 +408,10 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+   
+    @include mq('phone'){
+            padding:20px;
+    }
 
 }
 
@@ -393,17 +423,48 @@ a {
     width: calc(100% - 50px);
     overflow: hidden;
     padding:$padding-left-right;
+   
+    @include mq('phone-and-tablet'){
+       height:400px;
+    }
+
+    @include mq('phone'){
+       height:250px;
+       @include padding-left-right-mobile15;
+    }
+
+    @include mq('mobile-potrait'){
+       height:130px;
+    }
+
 }
 
 .banner-header{
   @include banner-head;
   line-height: 1.2;
       
+      @include mq('phone-and-tablet'){
+         font-size:$font-32-mo;
+      }
+
+      @include mq('phone'){
+        font-size:$font-18-mo;
+      }
+
+      @include mq('mobile-potrait'){
+        font-size:$font-15-mo;
+      }
 }
 
 .banner-body{
   @include banner-paragraph;
   max-width:70%;
+    @include mq('phone-and-tablet'){
+       max-width:100%;
+    }
+    @include mq('phone'){
+        display:none;
+    }
 }
 
 .banner-content-plp {
@@ -416,5 +477,10 @@ a {
     justify-content: center;
     align-items: flex-start;
     background-color: #000;
+
+    p{
+       @include banner-paragraph;
+       max-width: 70%;
+    }
 
 }

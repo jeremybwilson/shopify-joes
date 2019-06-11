@@ -21,6 +21,7 @@ $font-50:50px;
 
 $font-9-mo:9px;
 $font-11-mo:11px;
+$font-12-mo:12px;
 $font-14-mo:14px;
 $font-15-mo:15px;
 $font-18-mo:18px;
@@ -54,7 +55,7 @@ $mt-8:8px;
 $mt-30:30px;
 $mb-10:10px;
 $margin-le-ri-auto:0px auto;
-$margin-tb-100:100px 0px 90px 0;
+$margin-tb-100:100px 0px 95px 0;
 $margin-tb-65-mo:65px 0px 65px 0;
 $mb-20:20px;
 
@@ -81,7 +82,7 @@ $container-fluid-width:1115px;
 @mixin banner-up-text{
     position: absolute;
     bottom:0px;
-    padding:53px 50px;
+    padding:58px 50px;
     
     @media #{$mobile} {
        padding:38px 15px;
@@ -117,6 +118,7 @@ $container-fluid-width:1115px;
     font-weight:$weight-normal;
     letter-spacing:0px;
     margin-bottom: 0px;
+    line-height:19px;
 } 
 
 
@@ -287,7 +289,7 @@ $container-fluid-width:1115px;
 }
 
 
-@mixin back-black-medi-butt-load-more-pro{
+@mixin back-black-medi-button-load-more-pro{
     background-color:$black-color;
     color:$white-color !important;
     font-size:$font-11;

@@ -93,8 +93,18 @@ body.cart #breadcrumb{
     text-align: center;
     max-height: 35px;
 
+    @include mq('phone'){
+       max-height:23px;  
+    }
+   
     #single-promo-wrapper{
        padding: 5px 0 6px 0;
+
+       @include mq('phone'){
+          line-height: 22px;
+          padding: 0px 0 1px 0;
+          max-height: 23px;
+       }
     }  
 
    #single-promo-wrapper, .promo-banner.one{
@@ -109,6 +119,8 @@ body.cart #breadcrumb{
       color: {{ settings.announcement_text_color}}; //$white-color;
       font-weight:$weight-light;
       text-decoration:none !important;
+
+      @include mq('phone'){font-size:$font-10-mo;}
     }
 
     #promo-arrow-left {
@@ -148,11 +160,25 @@ body.cart #breadcrumb{
     background-color: {{ settings.header_background }}; //$white-color;
     border-bottom: $border-grey-1;
 
+    @include mq('phone-and-tablet'){
+       display:inline-block;
+       width:100%;
+       padding-bottom: 15px;
+    }
+
+    @include mq('phone'){
+        padding:$padding-left-right-mobile; 
+        padding-top:20px;
+        display:inline-block;
+        width:100%;
+        padding-bottom: 14px;
+    }
+
     .shipping-left{
-	     flex:$flex-1;
-  	   text-transform: uppercase;
-  	   margin-bottom:$mb-0;	
-       line-height:16px;
+	  flex:$flex-1;
+  	  text-transform: uppercase;
+  	  margin-bottom:$mb-0;	
+          line-height:16px;
       
         a{
             @include black-paragraph-13-font;
@@ -161,6 +187,10 @@ body.cart #breadcrumb{
                 font-size: $font-12;
             }
         }
+      
+        @include mq('phone-and-tablet'){
+           display:none;
+        }
 
     }
 
@@ -168,13 +198,34 @@ body.cart #breadcrumb{
 
         flex:$flex-1;
 
+         @include mq('phone-and-tablet'){
+            flex: unset;
+            width: calc(100% - 171px);
+            display: inline-block;
+         }
+
+         @include mq('phone'){
+            width: calc(100% - 85px);
+         }
+
         img{
           max-width: 200px;
     	    margin: 0px auto !important;
     	    display: block;
 
+          @include mq('phone-and-tablet'){
+             position: relative;
+             right: -70px;
+          }
+
           @include mq('laptop'){
              max-width:160px;
+          }
+
+          @include mq('phone'){
+             max-width:116px;
+             position:relative;
+             right:-24px;
           }
         }
     }
@@ -190,11 +241,21 @@ body.cart #breadcrumb{
         position: relative;
         top:1px;
 
+        @include mq('phone-and-tablet'){
+           line-height:18px;
+           float:right;
+           flex:unset;
+        }
+
         li{
           display: inline-block;
           list-style: none !important;
           margin: 0 10px;
           line-height: 16px;
+
+          @include mq('laptop-up'){
+             margin: 0 9px;
+          }
 
           .icon.icon-cart-text {
              display: inline-block;
@@ -208,25 +269,65 @@ body.cart #breadcrumb{
            &:last-child{
              margin-right:0px;
            }
+          
+           .dekstop_lap_none {
+    	      display: none;
+              width:20px;
+              cursor:pointer;
+
+              @include mq('phone-and-tablet'){display:block;}
+              @include mq('phone'){width:18px;}
+
+              img {
+                  width: 100%;
+              }
+    		   }
 
            @include mq('laptop'){
               margin: 0 5px;
            }
 
-  		    a{
-  		     @include black-paragraph-13-font;
+           @include mq('phone'){
+              margin: 0 3px;
+           }
+
+           @include mq('phone-and-tablet'){
+             &:nth-child(2){
+                display:none;
+             }
+
+             &:nth-child(3){
+                display:none;
+             }
+
+             &:nth-child(4){
+                display:none;
+             }
+           }
+
+          a{
+           @include black-paragraph-13-font;
            margin-bottom:$mb-0;
-  		     text-decoration:none !important;	 
+           text-decoration:none !important;	 
            text-transform: uppercase; 
 
            @include mq('laptop'){
               font-size: $font-12;
            }
 
-  		    } 
+           @include mq('phone'){
+              font-size: $font-10-mo;
+           }
+
+          } 
         }
         
-        .nav-wishlist{line-height: 22px;}
+        .nav-wishlist{
+           line-height: 22px;
+           @include mq('laptop'){
+              line-height:18px;
+           }
+        }
  
     }
 }	
@@ -254,6 +355,10 @@ body.cart #breadcrumb{
       width:22px;
     }
 
+    @include mq('phone'){
+      width:13px;
+    }
+
     img {
 	    width: 100%;
 	    object-position: center;
@@ -268,9 +373,17 @@ body.cart #breadcrumb{
     font-size: $font-13;
     box-shadow: none !important;
     height: 16px;
+    background-color: transparent;
 
     @include mq('laptop'){
       max-width:70px;
+    }
+
+    @include mq('phone'){
+        max-width: 22px;
+        background-color: transparent;
+        border: 0px;
+        position: absolute;
     }
 }
 
@@ -284,7 +397,98 @@ body.cart #breadcrumb{
     }
 }
 
-.has-sub-menu {
+/*acodeant*/
+#nav-menu-mobile{
+  left:-100%;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+    position: absolute;
+    top: 84px;
+    z-index: 9999;
+    width: 100%;
+    background-color: #fff;
+    height: calc(100vh - 84px) !important;
+    overflow-y: auto;
+
+    @include mq('tablet'){
+      top: 116px;
+      height: calc(100vh - 116px) !important;
+    }
+}
+
+#nav-menu-mobile.mobile-nav-open{
+    left: 0;
+}
+.accordion-header.open:after {
+    display: none;
+}
+.accordion-header{
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:before{
+        content: "";
+        position: absolute;
+        width: 8px;
+        height: 2px;
+        background-color: #000;
+        right: 28px;
+        top: 25px;
+    }
+
+    &:after{
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 8px;
+        background-color: #000;
+        right: 31px;
+        top: 22px;
+    }
+}
+
+.accordion-content {
+    display: none;
+    background-color: #f9f9f9;
+}
+.nav-footer-item-mobile.nav-account.nav-account-text-mode {
+    padding: 18px 30px;
+    text-align: left;
+    border-bottom: 1px solid #d7d7d7;
+}
+.accordion-content ul {
+ li{ 
+    padding-left: 45px;
+      a {
+         font-weight: normal;
+      }
+  }
+
+  .accordion-content2 ul{ 
+     li{
+        padding-left: 65px;
+     }
+  }
+
+}
+
+
+.accordion-sub-header.accordion-toggle {
+    text-align: left;
+    padding: 13px 30px;
+    padding-left: 45px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 1px solid #d7d7d7;
+    font-size: 15px;
+}
+/*acodeant*/
+
+
+.has_sub_menu {
     .megamenu {
         position: absolute;
         width: 100%;
@@ -354,7 +558,7 @@ body.cart #breadcrumb{
       position:relative;
    }
    
-   .has-sub-menu:hover {    
+   .has_sub_menu:hover {    
       .megamenu{
          display:block;
       }
@@ -362,6 +566,19 @@ body.cart #breadcrumb{
       .submenu{
         display:block;
       }
+   }
+
+
+   @include mq('phone-and-tablet'){
+        flex:unset; 
+        margin:0px;
+        float: left;
+        
+        #myNavbar {
+            display:none;
+        }
+
+        .navbar-collapse.collapse.show{display:block !important;}
    }
 }
 
@@ -378,6 +595,10 @@ body.cart #breadcrumb{
     position: relative;
     padding: 0px;
     margin-bottom:0px;
+
+    @include mq('tablet'){
+       width:20px;
+    }
 
     .icon-bar {
       width: 100%;
@@ -396,6 +617,16 @@ body.cart #breadcrumb{
          top:10px;
       }
       
+      @include mq('tablet'){
+          &:nth-child(2){
+             top:6px;
+          }
+
+          &:nth-child(3){
+             top:12px;
+          }
+      }
+
     }
    }
 }
@@ -405,6 +636,14 @@ body.cart #breadcrumb{
     list-style: none;
     display: inline-block;
     padding: 0 7px 15px 7px;
+
+      @include mq('phone-and-tablet'){
+          text-align: left;
+          padding: 13px 30px;
+          display: block;
+          border-bottom: 1px solid #d7d7d7;
+          position:relative;
+      }
    }
 
    a{
@@ -412,6 +651,16 @@ body.cart #breadcrumb{
     margin-bottom: 0px;
     text-decoration: none !important;
     text-transform: uppercase;
+
+       @include mq('laptop'){
+         font-size:$font-12;
+       } 
+       
+       @include mq('phone-and-tablet'){
+          font-size: 15px;
+          font-weight: bold;
+       }
+
     }
 }
 
