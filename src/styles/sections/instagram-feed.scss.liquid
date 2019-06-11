@@ -2,14 +2,21 @@
 
 /*as-seen-on*/ 
 .heading-part{
-  margin-bottom:$mb-20;
+  margin-bottom:18px;
   h2{
     @include headin-black;
   }
   p{
     @include suv-headin-light;
+
+    @include mq('phone'){
+       font-size:$font-12-mo;
+       line-height: 16px;
+    }
   }
   b{font-weight:$bold;}
+
+   @include mq('phone'){margin-bottom:12px;}
 }
 
 
@@ -21,17 +28,32 @@
    width: 33%;
    display: inline-block;
    
-   &:first-child img{padding-right:24px;}
+   &:first-child img{padding-right:19px;}
    &:nth-child(2) img{padding: 0 10px;}
    &:last-child img{padding-left: 22px;}
 
+   @include mq('tablet'){
+      width: 32.9%;
+   }
+
+    @include mq('phone'){
+       width:100%;
+
+       &:first-child img{padding-right:0px;}
+       &:nth-child(2) img{padding: 0 0px;}
+       &:last-child img{padding-left:0px;}
+    }
  
    img{
     width: 100%;
     object-fit: cover;
     object-position: center;
     height: 100%;
-    height: 348px;
+    height: 349px;
+
+       @include mq('phone'){
+          height:296px; 
+       }
    }
 
   }
@@ -41,19 +63,30 @@
   }
   .slick-slide {
       display: inline-block;
+      
+      @include mq('mobile-landscap'){
+         width: 12.5% !important;
+      }
   }
 
   .slick-active{
      padding-left:7px !important;
+
+     @include mq('mobile-potrait-small'){
+        padding-left:0px !important;
+     }
   
   }
   .slick-current{
      padding-right:7px !important; padding-left: 0px !important;
+     @include mq('mobile-potrait-small'){
+        padding-right:0px !important;
+     }
   }
 
 
   .slick-dots{
-    margin:10px auto 0 auto;
+    margin:7px auto 0 auto;
     width: fit-content;
     line-height: 18px;
 
@@ -79,6 +112,7 @@
 .bold{font-weight:$bold;}
 .as-see-on-part {
    margin:$margin-tb-100;
+   @include mq('phone-and-tablet'){margin:24px 0px 68px 0;}
 }
 
 .black-button {
@@ -94,9 +128,15 @@
 }
 
 #instafeed-home-instagram_feed{
-   height: 348px;
+   height: 349px;
+   @include mq('phone-and-tablet'){height: 340px;}
 }
 
+@include mq('phone'){
+   .as-see-part-slider .loop_part{
+      img{padding:0px !important;  height: 294px;}
+   }
+}
 @include mq('lap-and-up'){
     .page-wrap .index-sections .index-section{
        margin-bottom:0px !important;

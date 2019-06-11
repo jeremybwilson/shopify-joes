@@ -8,7 +8,7 @@ theme.utils.filterUtils = require('./utils/filter-utils.js');
 theme.utils.productUtils = require('./utils/product-utils.js');
 theme.utils.cartUtils = require('./utils/cart-utils.js');
 theme.utils.emailUtils = require('./utils/email-utils.js');
-//require('./vendor/flexslider.min.js');
+
 // SECTIONS
 require('./sections/sections.js');
 require('./sections/instagram.js');

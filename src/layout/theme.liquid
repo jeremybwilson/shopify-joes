@@ -137,7 +137,7 @@
 
 <body class="template-{{ template.name }} gridlock shifter {% if template contains 'product' %}product{% elsif template contains 'collection' %}collection{% else %}{{ template }}{% endif %}">
   {% include 'script-google-tag-body' %}
-  {% comment %} {% include 'timber-cart' %} {% endcomment %}
+  {% include 'timber-cart' %} 
 
   {% comment %} :: PAGE CONTAINER - Classes :: {% endcomment %}
   {%- capture containerClasses -%}

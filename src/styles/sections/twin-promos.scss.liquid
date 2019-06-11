@@ -1,7 +1,9 @@
 @charset "UTF-8";
 /*men_women_part*/
 
-.twin-promos .men-women-jeans-part{margin-top:$mt-8; width:$full-width;  max-height: 650px;  margin-bottom: 0px; }
+.twin-promos .men-women-jeans-part{margin-top:$mt-8; width:$full-width;  max-height: 650px;  margin-bottom: 0px;
+   @include mq('phone'){margin-top: 5px;  max-height:100%; padding:0px;} 
+}
 
 .text-on-images{
     @include banner-up-text;
@@ -14,7 +16,6 @@
       @include banner-paragraph-text-white;
     }
 }
-
 
 #shopify-section-home-twin_promos .single-promo {
     margin: 0 0 !important;
@@ -36,6 +37,16 @@
                 max-height:650px;
                 min-height:650px;
                 overflow: hidden;
+                
+                @include mq('phone'){
+                   height:450px;
+                   min-height:100%;
+                }
+
+                @include mq('mobile-potrait'){
+                   height: 290px;
+                   min-height:100%;
+                }
             }
         }
 
@@ -56,6 +67,11 @@
 #shopify-section-home-twin_promos .row .desktop-6 {
     width: 50%;
     position: relative;
+
+     @include mq('phone'){
+        width:100%;
+        padding:0px;
+     }
 }
 
 #text-promo-home-twin_promos {
@@ -82,6 +98,11 @@
                 max-height: 754px;
                 min-height: 754px;
                 overflow: hidden;
+
+                @include mq('phone'){
+                   height:649px;
+                   min-height:100%;
+                }
             }
         }
 
@@ -107,5 +128,10 @@
     @include white-button;
 }
 
+@include mq('phone'){
+    #shopify-section-home-full_width_promo .text-on-images{padding-bottom: 100px;}
+    #shopify-section-home-twin_promos #promo-promo-right {margin-top: -3px !important;}
+    #shopify-section-home-full_width_promo {margin-top: -8px;}
+}
 
 /*men_women_part*/
