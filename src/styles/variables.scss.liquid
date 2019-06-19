@@ -77,6 +77,17 @@ $container-fluid-width:1115px;
   max-width:1115px !important;
 }
 
+@mixin main-container{
+  max-width:1440px !important;
+  margin-left:auto;
+  margin-right:auto;
+  padding:$padding-left-right;
+
+  @include mq('phone')  {
+     padding:$padding-left-right-mobile15;
+  }
+}
+
 
 /*banner-up-text*/
 @mixin banner-up-text{
