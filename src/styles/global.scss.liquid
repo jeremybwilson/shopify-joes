@@ -78,48 +78,6 @@ body > .page-wrap {
   }
 }
 
-// Breadcrumbs 
-#breadcrumb {
-  @include h8;
-  @include fontSize( 16px );
-  position: relative;
-  top: 57px;
-  left: 0;
-  margin: 0 auto;
-  padding-left: 20px;
-  z-index: 30;
-
-  @include mq( 'phone' ) {
-    width: 100vw;
-  }
-
-  @include mq( 'tablet-and-up' ) {
-    padding-left: 0;
-  }
-
-  @include mq( 'lap-and-up' ) {
-    top: 38px;
-  }
-
-  a {
-    color: $color--gray-2;
-    text-transform: capitalize;
-    text-decoration: none;
-  }
-
-  .separator {
-    color: $color--gray-2;
-  }
-
-  .page-title {
-    @include h7;
-
-    color: $color--text-1;
-    font-weight: $font-weight--bold;
-  }
-}
-
-
 .animate25 { transition: all 0.25s ease-in-out; }
 .animate50 { transition: all 0.50s ease-in-out; }
 
