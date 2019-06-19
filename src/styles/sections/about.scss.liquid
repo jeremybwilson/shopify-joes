@@ -1,7 +1,7 @@
 .about-us-inner-content {
     display: flex;
     align-items: center;
-    margin: 52px 0 136px 0;
+    margin: 52px 0 144px 0;
 
     @include mq('phone'){
       flex-direction: column;
@@ -24,7 +24,7 @@
        @include banner-up-head-text-font;
        color:$black-color;
        text-align: center;
-       margin-top: 8px;
+       margin-top:0px;
 
        @include mq('phone'){
           font-size:27px;
@@ -62,12 +62,24 @@
            width:100%;
         }
     }
+
+    .block.image-block {
+        width: 100%;
+        margin-right: 0px;
+    }
 }
 
-.aboutus{
-   @include container;
+.about #newsletter-social {
+    border-top:$border-grey-1;
+    padding-top: 79px;
 
-   @include mq('laptop'){
-      padding:0 10px;
-   }
+    @include mq('phone'){
+      padding-top: 55px;
+    }
 }
+
+.about #breadcrumb {
+    display: block;
+}
+
+

@@ -77,6 +77,15 @@ $container-fluid-width:1115px;
   max-width:1115px !important;
 }
 
+@mixin secound-container{
+  max-width:1145px !important;
+  padding:$padding-left-right-mobile15;
+
+  @include mq('mobile-potrait'){
+     padding:0 10px;
+  }
+}
+
 @mixin main-container{
   max-width:1440px !important;
   margin-left:auto;
