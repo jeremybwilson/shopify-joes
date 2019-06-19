@@ -1,9 +1,13 @@
 .template-page #content {
-  @include main-container;
+  @include make-container();
 }
 
 .about #content{
    @include secound-container;
+}
+
+.faq #content{
+   @include main-container;
 }
 
 .template-page #page {
