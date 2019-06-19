@@ -6,7 +6,7 @@
   }
 }
 
-.large_form {
+.large-form {
     width: 100%;
     display: inline-block;
     margin-bottom: 25px;
@@ -19,17 +19,36 @@
 
 #forgot_password {
     display: inline-block;
-    width: 100%;
-    margin-top: 25px;
+    float: right;
+    margin-top: 12px;
 
     a{
-       @include suv-headin-light;
-       text-transform: uppercase;
+        color: $color--accent-1;
+        text-decoration: underline !IMPORTANT;
+        font-size:$font-12;
+        text-transform: uppercase;
 
        @include mq('phone'){
-          font-size:$font-14-mo;
+          font-size:$font-11-mo;
        }
     }
+}
+
+.cancel_button{
+   @include primary-button;
+   display:inline-block;
+}
+
+.note{
+  @include black-paragraph-13-font;
+  margin-bottom:15px;
+  display:inline-block;
+  position: relative;
+  top: -2px;
+}
+
+.errors {
+    padding-left: 15px;
 }
 
 .account-page {
@@ -114,6 +133,10 @@
       background: $color--primary-1;
     }
 }
+  .secondary.button.subscribe-button{
+     display:inline-block;
+  }
+
   .button {
      @include subscribe-button;
      letter-spacing: 0.3px;
