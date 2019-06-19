@@ -33,6 +33,10 @@
   data-has-banner-mobile="{{ has_banner_mobile }}"
   data-transparent-landing="{{ section.settings.nav_transparent_landing }}">
 
+   {% comment %} :: BREADCRUMB - Inline breadcrumb for easier design accomodation ::{% endcomment %}
+        <div class="collection-breadcrumb-wrap grid-max-width">
+          {% include 'breadcrumb' %}
+        </div>
 
   {% comment %} :: BANNER IMAGE : Build banner header if one setup for this collection :: {% endcomment %}
   <div class="collection-full-width-wrap">
@@ -40,7 +44,6 @@
       {% include 'collection-banner-image', config: banner_config %}
     {% endif %}
   </div>
-
 
   {% comment %} :: GRID WIDTHS + PAGINATION LOOP:: {% endcomment %}
   {% case section.settings.grid %}
@@ -51,7 +54,6 @@
     {% when '4' or 4 %}
       {%- assign grid_item_width = 'desktop-3 tablet-2 mobile-half' -%}
   {% endcase %}
-
 
   {% comment %} :: GRID DISPLAY - Follows .row maximums using '.grid-max-width' :: {% endcomment %}
   <div class="collection-content-wrap">
@@ -70,15 +72,27 @@
         </div>
       {% endif %}
 
-
-      {% comment %} :: BREADCRUMB - Inline breadcrumb for easier design accomodation ::
-        <div class="collection-breadcrumb-wrap grid-max-width">
-          {% include 'breadcrumb' %}
-        </div>
-      {% endcomment %}
-
     </div>{% comment %} END : #collection-details {% endcomment %}
+    
+    {% comment %} :: FILTER SETS - toggle 3/4 snippet view :: {% endcomment %}
+    <div class="three-four-product-show-buton" id="three-pro-fou-pro-show-butt">
+       <label class="product-column-show">
+          <span class="checkmark three-part">
+             <span class="squer"></span>
+             <span class="squer"></span>
+             <span class="squer"></span>
+          </span>
+       </label>
 
+        <label class="product-column-show">
+            <span class="checkmark four-part active">
+                <span class="squer"></span>
+                <span class="squer"></span>
+                <span class="squer"></span>
+                <span class="squer"></span>
+            </span>
+        </label>  
+    </div> 
 
     {% comment %} :: FILTER SETS :: {% endcomment %}
     <div id="collection-filters">
@@ -88,10 +102,11 @@
 
         {% comment %} :: FILTER TOGGLE + HEADER :: Constrain wrap keeps it following max widths of grid row {% endcomment %}
         <div class="constrain-container grid-max-width">
-
-          {% comment %} :: FILTER + SORT TOGGLE WRAP :: {% endcomment %}
-          <div class="filter-toggle-wrap">
-
+          {% comment %} :: SORT + FILTER TOGGLE WRAP :: {% endcomment %}
+          <div class="filter-toggle-wrap">            
+            {% comment %} :: FILTER LABEL :: {% endcomment %}
+            <div id="filter-button-desktop" class="filter-label">Filter</div>
+            
             {% comment %} :: TOGGLE : Sort List :: {% endcomment %}
             <ul id="sortme" class="sort-options animate25">
               {% if section.settings.sort_by %}
@@ -101,24 +116,16 @@
           </div>
 
         </div>
-
-        {% comment %} :: FILTER SETS - JS Overwrites .filter-list-desktop div content :: {% endcomment %}
+        {% comment %} :: FILTER TOGGLE content Goes here {% endcomment %}
         <div class="filter-list-desktop-wrap">
-
-          {% comment %} :: FILTER LABEL :: {% endcomment %}
-          <h4 class="filter-label">FILTER</h4>
-
           {% comment %} :: FILTER SETS :: {% endcomment %}
           <div id="bc-sf-filter-tree-h" class="filter-list-desktop grid-max-width"></div>
-
-          {% comment %} :: Extra Clear Button :: Can move this elsewhere if needed somewhere - Use as reference
-            <div id="filter-clear-button-desktop" onClick="clearAllFilterOptions(event)">Clear Filters</div>
-          {% endcomment %}
+          {% comment %} Button for apply filter and clear filter{% endcomment %}
+          <div id="filter-clear-button-desktop" onClick="clearAllFilterOptions(event)">Clear Filters</div>
+          <button id="filter-apply-button-desktop">Apply</button>
         </div>
 
       </div>
-
-
 
       {% comment %} :: FILTER - Mobile Component :: {% endcomment %}
       <div id="filter-list-mobile-wrap">
@@ -140,15 +147,13 @@
     {% comment %} :: FILTER BG - Background when open (covers catalog contents) :: {% endcomment %}
     <div id="filter-bg-shadow"></div>
 
-
     {% comment %} :: PRODUCT LOOP :: {% endcomment %}
     <div id="collection-product-wrap" class="grid-max-width">
-      {%- assign product_limit = section.settings.grid | times: section.settings.rows -%}
+      {%- assign product_limit = section.settings.numrows -%}
       {% paginate collection.products by product_limit %}
 
-
         {% comment %} :: PRODUCT LIST - Render point for BC-SF-FILTER app :: {% endcomment %}
-        <div id="product-loop" data-bc-sort="{{ collection.sort_by }}"></div>
+        <div class="product-list-part" id="product-loop" data-bc-sort="{{ collection.sort_by }}"></div>
 
 
         {% comment %} :: PAGINATION :: {% endcomment %}
@@ -161,17 +166,12 @@
     </div>
   </div> {% comment %} END : .collection-content-wrap {% endcomment %}
 
-
   {% comment %} :: LOADING INDICATOR - Shows when new filters are applied :: {% endcomment %}
   <div id="collection-loading-bar">
     <div class="loading-bar-text">Applying Filters</div>
   </div>
 
 </div>{% comment %} END : Collection section {% endcomment %}
-
-
-
-
 
 <script>
   // Declare bcSfFilterConfig variable
@@ -210,6 +210,28 @@
       vendor_enable: {% if settings.vendor %} {{ settings.vendor | json }} {% else %} false {% endif %},
     }
   };
+
+  var header = document.getElementById("three-pro-fou-pro-show-butt");
+        var btns = header.getElementsByClassName("checkmark");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+
+        $('.three-part').click(function() {
+            if ($('.three-part').hasClass('active')) {
+                $('.product-list-part').addClass('three-part-show');
+            }
+        });
+
+        $('.four-part').click(function() {
+            if ($('.four-part').hasClass('active')) {
+                $('.product-list-part').removeClass('three-part-show');
+            }
+        });
 </script>
 
 
@@ -221,21 +243,12 @@
     "settings": [
       {
         "type": "range",
-        "id": "grid",
-        "min": 2,
-        "max": 4,
-        "step": 1,
-        "label": "Products per row",
-        "default": 3
-      },
-      {
-        "type": "range",
-        "id": "rows",
-        "min": 1,
-        "max": 10,
-        "step": 1,
+        "id": "numrows",
+        "min": 12,
+        "max": 120,
+        "step": 12,
         "label": "Rows of Products",
-        "default": 8
+        "default": 12
       },
       {
         "type": "checkbox",

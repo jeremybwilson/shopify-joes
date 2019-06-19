@@ -29,7 +29,7 @@ body.search {
 #search-template {
     position: relative;
     width: 100%;
-    margin: 75px 0 0;
+    margin: 30px 0 0;
     float: none;
 
     @include mq( 'lap-and-up' ) {
@@ -41,14 +41,12 @@ body.search {
      * ------------------------------------------------- */ 
     .search-title, 
     .bc-sf-search-result-number {
-        @include h6;
-        color: $color--primary-1;
-        position: relative;
-        left: $searchMobileGutter;
+        @include h5-heading;
+        padding:$padding-left-right;
     }
 
     .search-title {
-        @include fontSize( 20px );
+        @include headin-black;
     }
 
     #search-bar {
@@ -114,63 +112,59 @@ body.search {
 }
 
 
+/**/
+body.search {
+    display: inline-block;
+    width: 100%;
+}
+.button-wishlist-product {
+    display: none;
+}
+/**/
 
 
+/*search-on-result-popup*/
+
+.bc-sf-search-suggestion-product-sku {
+    display: none;
+}
+
+.bc-sf-search-suggestion-item>a{text-transform:uppercase; color:$black-color; line-height: 19px; letter-spacing: 0px; font-size: 15px;}
+.bc-sf-search-suggestion-header-view-all>a{color:$black-color !important;}
+.bc-sf-search-suggestion-no-result{@include black-paragraph-13-font;}
+.bc-sf-search-suggestion {
+   border-radius: 0px !important;
+   
+   .bc-sf-search-suggestion-product-title, .bc-sf-search-suggestion-product-vendor, .bc-sf-search-suggestion-product-price{
+        @include black-paragraph-13-font;
+        text-transform:capitalize;
+   }  
+
+}
+
+/**/
 
 
+.bc-sf-search-suggestion-mobile-top-panel .bc-sf-search-btn-close-suggestion:before{
+    content: "" !important;
+    background-image: url(../assets/search_icon.svg);
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
 
+}
 
+.bc-sf-search-btn-clear-suggestion:before{
+    content: "" !important;
+    background-image: url(../assets/cross.svg);
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.bc-sf-search-suggestion-mobile-top-panel #bc-sf-search-box-mobile{font-size: 16px !important;}
+.bc-sf-search-suggestion-wrapper {
+    position: fixed !important;
+}

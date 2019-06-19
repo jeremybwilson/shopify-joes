@@ -47,12 +47,12 @@ theme.Collection = (function() {
       });
 
       // DESKTOP - IF desktop filter is mocked as hidden panel that opens, use these to show whole panel + copy filters.scss.liquid from aqua
-      // ui.desktopFilterBtn.click( () => {
-      //   toggleFilterOpen();
-      // });
-      // ui.backingShadow.click( () => {
-      //   toggleFilterOpen();
-      // });
+      ui.desktopFilterBtn.click( () => {
+        toggleFilterOpen();
+      });
+      ui.backingShadow.click( () => {
+        toggleFilterOpen();
+      });
 
       // ATTACH : Apply All event
       theme.utils.filterUtils.init( '#shopify-section-collection-template' );

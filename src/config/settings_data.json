@@ -664,80 +664,6 @@
                     "products_per_row": 4
                 }
             },
-            "home-about_slideshow": {
-                "type": "slideshow",
-                "blocks": {
-                    "home-about_slideshow--slide-1": {
-                        "type": "image",
-                        "settings": {
-                            "image": "shopify:\/\/shop_images\/home-about_slideshow--desktop-1.jpg",
-                            "mobile_image": "shopify:\/\/shop_images\/home-about_slideshow--mobile-1.jpg",
-                            "image_link": "\/collections\/legacy\/audience_men",
-                            "heading": "Visit Us in NYC",
-                            "subheading": "965 Madison Ave at 75th Street",
-                            "caption_text_align": "center",
-                            "cta_one_link": "\/collections\/legacy\/audience_men",
-                            "cta_one_button_text": "LEARN MORE",
-                            "cta_one_line": "left",
-                            "cta_two_link": "",
-                            "cta_two_button_text": "",
-                            "cta_two_line": "none",
-                            "caption_color_scheme": "dark",
-                            "custom_slide_main_color": "#ffffff",
-                            "custom_slide_alt_color": "#164732",
-                            "caption_horizontal": "right",
-                            "caption_vertical": 50,
-                            "caption_background": "rgba(0,0,0,0)",
-                            "caption_opacity": "0.2"
-                        }
-                    }
-                },
-                "block_order": [
-                    "home-about_slideshow--slide-1"
-                ],
-                "settings": {
-                    "full_width": true,
-                    "show_nav_pagination": false,
-                    "slider_speed": 3
-                }
-            },
-            "home-feature_highlight_slideshow": {
-                "type": "slideshow",
-                "blocks": {
-                    "home-feature_highlight_slideshow--slide-1": {
-                        "type": "image",
-                        "settings": {
-                            "image": "shopify:\/\/shop_images\/home-feature_highlight_slideshow--desktop-1.jpg",
-                            "mobile_image": "shopify:\/\/shop_images\/home-feature_highlight_slideshow--mobile-1.jpg",
-                            "image_link": "\/collections\/legacy\/audience_men",
-                            "heading": "",
-                            "subheading": "When you see this symbol the shoe is engineered to be weatherproof & stain resistant",
-                            "caption_text_align": "center",
-                            "cta_one_link": "\/collections\/legacy\/audience_men",
-                            "cta_one_button_text": "LEARN MORE",
-                            "cta_one_line": "left",
-                            "cta_two_link": "",
-                            "cta_two_button_text": "",
-                            "cta_two_line": "none",
-                            "caption_color_scheme": "light",
-                            "custom_slide_main_color": "#ffffff",
-                            "custom_slide_alt_color": "#164732",
-                            "caption_horizontal": "center",
-                            "caption_vertical": 67,
-                            "caption_background": "rgba(0,0,0,0)",
-                            "caption_opacity": "0.2"
-                        }
-                    }
-                },
-                "block_order": [
-                    "home-feature_highlight_slideshow--slide-1"
-                ],
-                "settings": {
-                    "full_width": true,
-                    "show_nav_pagination": false,
-                    "slider_speed": 8
-                }
-            },
             "home-instagram_feed": {
                 "type": "instagram",
                 "settings": {
@@ -801,43 +727,6 @@
                 "settings": {
                     "about_text": "<h2>Choose Your Footwear<\/h2>\n<p>We have a variety of footwear to fit your marine lifestyle.<\/p>",
                     "about_text_color": "#e6e6e6"
-                }
-            },
-            "slideshow": {
-                "type": "slideshow",
-                "blocks": {
-                    "1537562942330": {
-                        "type": "image",
-                        "settings": {
-                            "image": "shopify:\/\/shop_images\/about-hero-desktop-slide-1.jpg",
-                            "mobile_image": "shopify:\/\/shop_images\/about-hero-mobile-slide-1.jpg",
-                            "image_link": "",
-                            "heading": "We Come From Alaska",
-                            "subheading": "Where nothing is forgiven and no compromise goes unpunished. <br> Where 50-foot seas swallow the slightest missteps.",
-                            "caption_text_align": "left",
-                            "cta_one_link": "",
-                            "cta_one_button_text": "Add a button",
-                            "cta_one_line": "none",
-                            "cta_two_link": "",
-                            "cta_two_button_text": "Add a button",
-                            "cta_two_line": "none",
-                            "caption_color_scheme": "white",
-                            "custom_slide_main_color": "#ffffff",
-                            "custom_slide_alt_color": "#164732",
-                            "caption_horizontal": "left",
-                            "caption_vertical": 50,
-                            "caption_background": "rgba(0,0,0,0)",
-                            "caption_opacity": "0.1"
-                        }
-                    }
-                },
-                "block_order": [
-                    "1537562942330"
-                ],
-                "settings": {
-                    "full_width": true,
-                    "show_nav_pagination": true,
-                    "slider_speed": 5
                 }
             },
             "columns-carousel": {

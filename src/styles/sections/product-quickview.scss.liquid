@@ -8,7 +8,7 @@
 .fancybox-quickview {
 	// Fancybox sucks at its job, it manually sets things when the box isn't fully loaded, slow devices will destroy this without hard sets. 
 	position: fixed !important;
-	width: 960px !important;
+	width:794px !important;
 	top: 50% !important;
 	left: 50% !important;
 	transform: translate( -50%, -50% );
@@ -18,9 +18,16 @@
 		display: none;
 	}
 
+	.fancybox-skin{
+	    padding: 61px 36px 33px 45px !important;
+	}
+
 	.fancybox-inner {
 		max-width: 960px;
 		width: 100% !important;
+        overflow-x: hidden !IMPORTANT;
+	    min-height: 526px;
+	    max-height: 526px;
 	}
 
 
@@ -33,12 +40,44 @@
 	}
 }
 
+.fancybox-overlay {
+  background: rgba(0,0,0,.5);
+}
+
+
 #product-quick-view {
-	padding: 40px 40px 40px 20px;
 	margin: 0;
-	overflow-x: hidden;
-	overflow-y: auto;
 	width: 100%;
+
+	.slick-arrow {
+	    background-color: transparent !important;
+	    text-indent: -9999px;
+	    padding: 3px 6px;
+	    height:5px;
+	    background-repeat: no-repeat;
+	    background-size: 10px;
+	    position: absolute;
+	    z-index: 999999;
+	    left:22px;
+	    background-image: url(../assets/arrow-down.svg);
+	    margin: 0px;
+	}
+
+	.slick-prev {
+	    top:-13px;
+        transform: rotate(180deg);
+	}
+
+	.slick-next{
+	    top:auto; 
+        bottom:-13px;
+	}
+
+	.thumbnail-slider{position:relative;}
+
+	.product-name{
+	   margin-bottom:0px;
+	}
 
 	#shopify-section-product-template {
 		margin-top: 0;
@@ -46,14 +85,16 @@
 		.product-details--top {
 			width: 100%;
 			margin: 0;
-			padding: 20px 0 40px;
+			padding:0px 0 0px;
 		}
 
 
 		// IMAGES : LEFT SIDE : Left side of UI modal that holds image viewer
 		#product-photos {
-			max-height: 470px;
-			width: 500px;
+			max-height:517px;
+			width:430px;
+			margin-left:0px;
+			margin-right: 30px;
 
 			.react-badge {
 				position: absolute;
@@ -62,11 +103,53 @@
 			}
 
 			.product-main-images {
-				position: relative;
-				top: 50px;
+				width: calc(100% - 60px);
+				margin: 0 0;
+			    top: 0;
+			    max-width:100%;
+			    height: 100%;
+			    overflow: hidden;
+			    object-fit: cover;
+			    object-position: center;
+
+				.product-image-container {
+				    padding-bottom: 0px !important;
+				}
+
+				a{
+			      width:100%;
+			      display:inline-block;
+			    }
+
+				.product-image {
+				        max-width:100%;
+					    object-fit: cover;
+					    object-position: center;
+					    overflow: hidden;
+					    min-height: 517px;
+					    height: 100%;
+					    width: 100%;
+				}
+			}
+
+			.thumbnail-slider{
+			      max-height: 525px;
 			}
 
 			#thumbnail-gallery {
+			     width:54px;
+                 margin:0px; 
+                 max-height: 525px;
+                 overflow: hidden;
+
+                 img {
+				    width: 100%;
+				    min-height:73px;
+				    object-fit: cover;
+				    object-position: center;
+				    max-height:73px;
+				 }
+
 				.bx-viewport {
 					height: 311px !important; // fancybox is an inline style nazi...
 				}
@@ -75,7 +158,7 @@
 
 		// DESCRIPTION : RIGHT SIDE : Right side of UI that houses product info and cart buttons
 		#product-right {
-			max-width: 301px; // 46px * 6 Size squares with 5px * 5 right margins (last doesn't have one)
+			max-width:251px; // 46px * 6 Size squares with 5px * 5 right margins (last doesn't have one)
 			margin-top: 20px;
 
 			#product-description {
@@ -83,52 +166,146 @@
 				padding: 0;
 				border: none;
 
-				h1 {
-					@include h6;
-					@include fontSize( 26px );
-					font-weight: $font-weight--black;
-					color: $color--primary-1;
-				    text-transform: uppercase;
-					letter-spacing: 0.2em; //Matches mock, seems big but what they approved lol
+				.product-color-name{
+				   @include black-paragraph-13-font;
+				   	text-transform: uppercase;
+                   margin: 12px 0 0 0;
+				}
+
+				h5{
+				  @include black-paragraph-13-font;	
+				  text-transform:uppercase;
+				}
+
+				h6{
+                  
+                   @include black-paragraph-13-font;	
+				   text-transform:uppercase;
+				   color:#9B9B9B;
+				}
+
+				.swatch-header {
+				    line-height: 19px;
+				    margin-bottom: 6px !important;
+				}
+
+				.product-number{
+				   display:none;
+				}
+
+				#product-price{
+				    @include black-paragraph-13-font;	
+				    text-transform:uppercase;
+				    margin: 23px 0;
 				}
 
 				.desc {
 					border: none;
 					padding: 0;
 					margin: 0;
+					display:none;
 				}
 
 				// SIZE SQUARES : Needed so it sits flush on right edge, 
 				// lots of important tags in stylesheet.css so don't wanna hurt anything potentially on PDP
 				#AddToCartForm {
 					.swatch.size {
-						width: calc( 100% + 5px ); // 100% + 5 so we can cheat the right margin to account for long and short size tags ("Youth 6" vs "5.5")
-
-						// Size : "5" or "5.5"
-						.swatch-element.short-label label {
-							width: 46px; //So half sizes = whole size boxes
-						}
-
-						// Size : "Youth 6" or "Wide 6"
-						.swatch-element.long-label label {
-							width: 97px; //So half sizes = whole size boxes
-						}
+						
 					}
 				}
 
 				// "View Full Details" Link
 				a.full-click {
-					@include h7;
-					@include fontSize( 16px );
-					color: $color--primary-1;
-					text-decoration: underline;
-					transition: color 0.25s ease-in-out;
-
+					@include black-paragraph-13-font;
+					color:#9B9B9B;
+					text-decoration: underline !important;
+ 
+                   
 					&:hover {
-						color: $color--accent-1;
+						color:$black-color;
 					}
 				}
 			}
 		}
 	}
+}
+
+
+.slick-list.draggable {
+    max-height: 489px;
+    margin: 15px 0 12px 0;
+    overflow: hidden;	
+}
+
+
+.swatch .swatch-element:last-child>label {
+    margin-right: 0;
+}
+
+.fancybox-overlay{z-index: 999999;}
+
+.product-main-image.selected {
+    display: block;
+}
+
+.fancybox-wrap.fancybox-desktop.fancybox-type-ajax.fancybox-quickview.fancybox-opened {z-index: 99999999;}
+
+
+.sku {
+  label{
+	@include black-paragraph-13-font;	
+	text-transform:uppercase;
+  }
+
+  .variant_sku{
+     @include black-paragraph-13-font;	
+     text-transform:uppercase;
+     color:$black-color;
+     margin-left: 0.5em;
+     color: #9B9B9B;
+  }
+
+  display:none;
+}
+
+.product-actions {
+    display: none;
+}
+
+.quanity-select{
+  label{
+	@include black-paragraph-13-font;	
+	text-transform:uppercase;
+  }
+
+  #quantity{
+     @include black-paragraph-13-font;	
+     text-transform:uppercase;
+     color:$black-color;
+     height:30px;
+     text-align:center;
+     max-width:80px;
+  }
+
+  display:none;	
+}
+
+.share-icons{
+   .share-text{
+      @include h5-heading;
+   }
+}
+
+#product-quick-view #shopify-section-product-template #product-right{margin-top:0px;}
+
+
+.share-icons .icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 3px;
+
+    path{
+       fill: #000;
+    }
 }

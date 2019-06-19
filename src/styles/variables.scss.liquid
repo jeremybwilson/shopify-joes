@@ -78,6 +78,18 @@ $container-fluid-width:1115px;
 }
 
 
+@mixin main-container{
+  max-width:1440px !important;
+  margin-left:auto;
+  margin-right:auto;
+  padding:$padding-left-right;
+
+  @include mq('phone')  {
+     padding:$padding-left-right-mobile15;
+  }
+}
+
+
 /*banner-up-text*/
 @mixin banner-up-text{
     position: absolute;
@@ -143,6 +155,7 @@ $container-fluid-width:1115px;
     letter-spacing:0.2px;
     margin-bottom: 6px;
     text-transform: uppercase;
+    line-height:30px;
     @include mq('phone'){font-size:$font-21-mo;}
 }  
 /*as-seen-on*/
@@ -237,7 +250,7 @@ $container-fluid-width:1115px;
 }
 
 
-@mixin primery-button{
+@mixin primary-button{
     min-width: 163px;
     height: 48px;
     border:1px solid $black-color;
@@ -289,17 +302,46 @@ $container-fluid-width:1115px;
 }
 
 
-@mixin back-black-medi-button-load-more-pro{
+@mixin filter-applay-button{
+    min-width: 175px;
+    max-width: 175px;
+    height:40px;
+    text-align: center;
+    line-height:12px;
+    font-size:$font-12;
+    font-weight: $bold;
+    text-transform: uppercase;
+    letter-spacing:0.82px;
+    text-decoration: none !important;
+    opacity: 1;
+    color:$white-color;
     background-color:$black-color;
-    color:$white-color !important;
-    font-size:$font-11;
-    margin-top: 58px;
-    cursor: pointer;
-    margin-bottom: 89px;
+    border-radius:0px;
 
     &:hover{
-       background-color:transparent !important;
-       color:$black-color !important;
+       background-color:$hover-333333;
+       color:$white-color;
+       opacity: 1;
+    }
+}
+
+
+@mixin back-black-medi-button-load-more-pro{
+    background-color:$black-color;
+    color:$white-color;
+    font-size:$font-11;
+    cursor: pointer;
+
+    min-width: 145px;
+    max-width: 100% !important;
+    display: inline-block;
+    max-height: 35px;
+    line-height: 14px;
+    letter-spacing: 0.45px;
+
+    &:hover{
+       color:$white-color;
+       background-color:$hover-333333;
     }
 }
 
@@ -374,6 +416,7 @@ $container-fluid-width:1115px;
     -o-text-overflow: '';
     text-overflow: '';
     min-width: 82px;
+    width: 82px;
 }
 /*selectar*/
 
@@ -785,6 +828,7 @@ $mobile-potrait-small:   "screen and (max-width: 480px)";
 $mobile-potrait:   "screen and (max-width: 567px)";
 $phone:            "screen and (max-width: 767px)";
 $mobile-landscap:  "screen and (min-width: 480px) and (max-width: 1023px)";
+$mobile-landscap-two:  "screen and (min-width:668px) and (max-width: 767px)";
 $tablet:           "screen and (min-width: 768px) and (max-width: 1023px)";
 $phone-and-tablet: "screen and (max-width: 1023px)";
 $tablet-and-up:    "screen and (min-width: 768px)";
@@ -811,6 +855,11 @@ $retina:           "(-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi)
   } 
   @else if $alias == "mobile-landscap" {
     @media #{$mobile-landscap} {
+      @content;
+    }
+  } 
+  @else if $alias == "mobile-landscap-two" {
+    @media #{$mobile-landscap-two} {
       @content;
     }
   } 

@@ -83,7 +83,7 @@
     <h5>{{ option_name }}</h5>
     
     {% comment %} :: HEADER - SELECTED OPTION :: {% endcomment %}
-    <h6 class="current-option">{{ current_variant[current_option] }}</h6>
+    <h6 class="current-option">{% if lowercase_option_name == 'size'%} Select your Size {% else %} {{ current_variant[current_option] }}{% endif %}</h6>
 
     {% comment %} :: HEADER - SIZE CHART :: {% endcomment %}
     {% if lowercase_option_name contains 'size' and template != 'product.quick' %}
@@ -148,7 +148,11 @@
       {% comment %} :: OPTION - SELECTED STATE :: {% endcomment %}
       {% assign checked = "" %}
       {% if current_variant[current_option] == value %}
-        {% assign checked = 'checked="checked"' %}
+        {% if lowercase_option_name != 'size'%}
+            {% assign checked = 'checked="checked"' %}
+        {% else %}
+            {% assign checked = '' %}
+        {% endif %}
       {% endif %}
 
       {% capture radio_button %}
@@ -156,7 +160,7 @@
           id="{{ option_id }}"
           type="radio"
           name="{{ lowercase_option_name }}" 
-          value="{{ value | escape }}" 
+          value="{{ value | escape }}"
           option-position="{{ option_position }}" 
           {{ checked }} />
       {% endcapture %}
@@ -168,7 +172,13 @@
 
       {% comment %} :: ITEM TEMPLATE :: (Uses 'regular' or 'color' snippet based on what type of option we're filling) {% endcomment %}
       {% if color_swatch_names contains lowercase_option_name %}
+        {% assign for_loop_index= forloop.index %}
         {% include 'option-picker-item--color' %}
+        {% if template == 'product.quick' %}
+            {% if forloop.length > 5 and forloop.last == true %}
+                <a class="show-more-product-color" href="javascript:void(0);">more colors</a>
+            {% endif %}
+        {% endif %}
       {% else %}
         {% include 'option-picker-item--regular' %}
       {% endif %}

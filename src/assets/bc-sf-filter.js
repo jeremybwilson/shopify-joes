@@ -20,17 +20,17 @@ var bcSfFilterTemplate = {
     'productGridItemHtml':  '<div id="{{itemProductId}}" class="product-index product" data-alpha="{{itemTitle}}" data-price="{{itemPriceAttr}}">' +
                                 '<div class="product-images">' +
                                     '{{itemBadge}}' +
-                                    '<div class="prod-image">' +
+                                    '<div class="product-image">' +
                                         '<a href="{{itemUrl}}" title="{{itemTitle}}">' +
                                         '<div class="reveal">' +
                                             '<img id="product-image-{{itemProductId}}" src="{{itemThumbUrl}}" alt="{{itemTitle}}" />' +
                                             '{{itemFlipImage}}' +
                                         '</div>' +
+                                        '{{itemQuickview}}' +
                                     '</div>' +
                                 '</div>' +
 
                                 '<div class="product-detail">' +
-                                    '{{itemQuickview}}' +
                                     '<a class="product-title-wrap" href="{{itemUrl}}"> ' +
                                         '{{itemVendor}}' +
                                         '<h3 class="product-title">{{itemTitle}}</h3>' +
@@ -159,13 +159,13 @@ BCSfFilter.prototype.buildProductGridItem = function(data, index, totalProduct) 
         itemPriceHtml += '<div class="was bfx-price">' + this.formatMoney(data.compare_at_price_min, this.moneyFormat) + '</div>';
 
     } else {
-        itemPriceHtml += '<div class="prod-price bfx-price">';
-
-        if (priceVaries) {
+        itemPriceHtml += '<div class="product-price bfx-price">';
+        itemPriceHtml += this.formatMoney(data.price_min, this.moneyFormat);
+        /*if (priceVaries) {
             itemPriceHtml += bcSfFilterConfig.label.from_price + ' ' + this.formatMoney(data.price_min, this.moneyFormat) + ' - ' + this.formatMoney(data.price_max, this.moneyFormat);
         } else {
             itemPriceHtml += this.formatMoney(data.price_min, this.moneyFormat);
-        }
+        }*/
 
         itemPriceHtml += '</div>';
     }

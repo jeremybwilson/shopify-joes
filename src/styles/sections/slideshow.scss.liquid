@@ -372,10 +372,6 @@ a {
 
 
 /**/
-.banner-image-mobile {
-    display: none;
-}
-
 .right-banner-img {
     width: calc(100% - 41.8%);
     display: inline-block;
@@ -391,6 +387,8 @@ a {
 
     .box-ratio{padding-bottom:0px !important; height:100%;}
 }
+
+.right-banner-img.collection-banner-full{width:$full-width;}
 
 .banner-text-box-wrap {
     max-width: 41.8%;
@@ -430,11 +428,11 @@ a {
 
     @include mq('phone'){
        height:250px;
-       @include padding-left-right-mobile15;
+       padding:0 10px;
     }
 
     @include mq('mobile-potrait'){
-       height:130px;
+       height:131px;
     }
 
 }
@@ -459,6 +457,10 @@ a {
 .banner-body{
   @include banner-paragraph;
   max-width:70%;
+    
+    @include mq('laptop'){
+       max-width:90%;
+    }
     @include mq('phone-and-tablet'){
        max-width:100%;
     }
