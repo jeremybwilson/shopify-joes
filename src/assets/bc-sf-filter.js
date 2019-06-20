@@ -290,7 +290,7 @@ BCSfFilter.prototype.buildProductGridItem = function(data, index, totalProduct) 
 
                 // SWATCH IMAGE : Build swatch image, fallback to color setting in case that fails
                 var colorName = slugify( colorObj.title ).replace( /-/gi, '_' ); //Replace slug dash for _ to support photo studio tool format
-                var swatchFileName = colorObj.sku + '_' + colorName + '.jpg';
+                var swatchFileName = colorObj.sku + '_' + colorName + '_sw.jpg';
                 var swatchImgUrl = bcSfFilterConfig.general.file_url.replace( 'swatch_url_source_do_not_remove.png', swatchFileName.toLowerCase() );
 
                 // SWATCH OBJ: Single swatch object for manifest
