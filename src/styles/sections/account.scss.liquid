@@ -22,6 +22,14 @@
     float: right;
     margin-top: 12px;
 
+    @include mq('tablet'){
+       width: 100%;
+    }
+
+    @include mq('phone'){
+       margin-top:32px;
+    }
+
     a{
         color: $color--accent-1;
         text-decoration: underline !IMPORTANT;
@@ -71,6 +79,9 @@
 
        #customer {
             margin: 0 0 !important;
+            @include mq('phone'){
+              width:100%;   
+            }
        }
     }
 

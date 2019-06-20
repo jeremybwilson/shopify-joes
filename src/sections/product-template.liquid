@@ -92,7 +92,7 @@
           {{ product.title }}
         </h2>
 
-        <p class="product-color-name">Cargo Colors // Rose Mint </P>
+        <p class="product-color-name">{% for tag in product.tags %}{% if tag contains 'subtitle_' %}{{ tag | split: 'subtitle_' | last }}{% endif %}{% endfor %} </P>
 
 
         <div id="product-details--wrapper" itemprop="offers" itemscope itemtype="http://schema.org/Offer">

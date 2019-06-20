@@ -21,7 +21,7 @@ ul{padding:0 0px; margin: 0px;}
    }
 }
 
-body.cart #content{
+.cart #content{
    @include container;  
    padding-top:0px;
    padding-bottom:89px;
@@ -29,8 +29,12 @@ body.cart #content{
      @include mq('phone'){
         padding-bottom:60px;
      }
+
+     @include mq('laptop'){
+        @include padding-left-right-mobile15;
+     }
 }
-body.cart #breadcrumb{
+.cart #breadcrumb{
   display:block;
 }
 
