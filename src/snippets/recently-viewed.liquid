@@ -21,8 +21,8 @@
 {% raw %}
 <script id="recently-viewed-product-template"  type="text/x-jquery-tmpl">
   <div class="product-car">
-    <div id="recently-product-${handle}" class="prod-container">
-      <div class="prod-image">
+    <div id="recently-product-${handle}" class="product-container">
+      <div class="product-image">
         <a href="${url}" class="cy">
           <img src="${Shopify.resizeImage(featured_image, "large")}" />
         </a>
@@ -37,7 +37,7 @@
             <div class="onsale"><span class="money">${Shopify.formatMoney(price)}</span></div>
             <div class="was"><span class="money">${Shopify.formatMoney(compare_at_price)}</span></div>
           {{else price > 0}}
-            <div class="prod-price"><span class="money">${Shopify.formatMoney(price)}</span></div>
+            <div class="product-price"><span class="money">${Shopify.formatMoney(price)}</span></div>
           {{/if}}
         </div>
       </div>

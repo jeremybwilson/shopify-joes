@@ -1,5 +1,7 @@
 #shopping-cart {
-  margin:0px;
+  
+  margin:0px; 
+
   h2 {
     @include headin-black;
     margin-bottom: 25px;
@@ -79,35 +81,39 @@ th.cart--remove {
 .cart-image {
   margin-left:0px;
   margin-right: 10px;
-
+  width:100%;
+  
   img{
     width: 100%;
-    max-height: 120px;
-    min-height: 120px;
+    max-height: 139px;
     object-fit: cover;
     object-position: center;
-
-       @include mq('phone') {
-          max-height: 100px;
-          min-height: 100px;
-       }
   }
 }
 .cart-title {
-  @include banner-paragraph-text-white;
+  @include h5-heading;
   color:$black-color;
   text-align: left;
   width: 90%;
   text-transform:uppercase;
 
   @include mq('tablet-and-up') {
-    width: auto;    
+    width: auto;
+    text-align:left;
+    
   }
-
-   @include mq('phone') {
-      font-size:$font-14-mo;
-   }
 }
+
+
+
+.shoprunner-indicator {
+    margin-top: 5px;
+    display: inline-block;
+    width: 100%;
+}
+
+
+
 .cart-remove {
   text-transform: uppercase;
 
@@ -119,12 +125,10 @@ th.cart--remove {
   }
 
   a {
-    @include banner-paragraph-text-white;
-    color:$black-color;
+    @include black-paragraph-14-font;
     @include mq('phone') {
       margin-left: auto;
-      margin-right: auto;   
-      font-size:$font-14-mo;
+      margin-right: auto;      
     }
   }
 
@@ -139,14 +143,13 @@ th.cart--remove {
 .cart-price,
 .cart-quantity,
 .cart--total-price {
-  @include banner-paragraph-text-white;
-  color:$black-color;
+  @include black-paragraph-14-font;
 
   @include mq('phone') {
     @include flexbox;
-    @include align-items(center);
-    font-size:$font-14-mo;    
+    @include align-items(center);    
   }
+
 }
 .cart-price {
   @include mq('phone') {
@@ -165,8 +168,7 @@ th.cart--remove {
   }
   .was {
     color: $color--primary-2;
-  }   
-
+  }
 }
 
 .cart-quantity {
@@ -180,14 +182,9 @@ th.cart--remove {
     margin-bottom: 0;
     text-indent: 0;
     text-align: center;
-    @include banner-paragraph-text-white;
-    color:$black-color;
+    @include black-paragraph-14-font;
     border:$border-grey-1;
 
-      @include mq('phone') {
-        font-size:$font-14-mo; 
-        margin: 0px auto 10px auto;
-      }
   }
 }
 
@@ -224,10 +221,6 @@ th.cart--remove {
       @include h4-head;
       display:flex;
       margin: 15px 0;
-
-      @include mq('phone'){
-         font-size:$font-14-mo;
-      }
       
       span{
          flex:1;
@@ -242,18 +235,9 @@ th.cart--remove {
 
     #update-cart{
       @include subscribe-button;
-        @include mq('phone'){
-          margin-top:0px;
-          max-width: 108px;
-          float: left;
-        }
     }
     .bfx-checkout{
-      @include primery-button;
+      @include primary-button;
       float:right;
-        @include mq('phone'){
-          margin-top:0px;
-          max-width: 108px;
-        }
     }
 }

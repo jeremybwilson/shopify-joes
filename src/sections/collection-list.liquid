@@ -21,7 +21,7 @@
       <div class="collection-index" data-alpha="{{ collection.title }}" {{ block.shopify_attributes }}>
         {% if block.settings.collection == blank %}
           <div class="product-index desktop-6 tablet-3 mobile-3">
-            <div class="prod-container">
+            <div class="product-container">
               {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
               {%- assign placeholder = 'collection-' | append: current -%}
               <div class="collection-image ci onboard">

@@ -150,7 +150,7 @@ theme.ProductGallery = function (context, events) {
       } else {
         $slideshow.slick({
           vertical: true,
-          arrows: false,
+          arrows: true,
           rows: 0, // 'slickFilter' will NOT WORK without this, since 1.8.0 been a bug with nesting divs it generates
           verticalSwiping: true,
           slidesToShow: 7,

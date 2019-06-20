@@ -32,19 +32,19 @@
   <script>
     $('#product-listing-{{ product.id }} .col-swatch li').each(function(){
 
-      var Original = $('#product-listing-{{ product.id }} .prod-image img').attr('data-original');
+      var Original = $('#product-listing-{{ product.id }} .product-image img').attr('data-original');
 
       $(this).hover(function() {
         var newImage = $(this).attr('data-href');
 
-        $( '#product-listing-{{ product.id }} .prod-image img' ).attr({
+        $( '#product-listing-{{ product.id }} .product-image img' ).attr({
           srcset: newImage
         });
 
         return false;
       },
       function(){
-        $( '#product-listing-{{ product.id }} .prod-image img' ).attr({
+        $( '#product-listing-{{ product.id }} .product-image img' ).attr({
           srcset: Original
         });
       });

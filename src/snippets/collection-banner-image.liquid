@@ -37,19 +37,20 @@
 
 {% comment %} :: BANNER WRAP :: {% endcomment %}
 <div class="collection-banner banner-{{ config.collection_handle }}">
+  
+  <div class="right-banner-img{% if config.banner_text_header == blank or config.banner_text_body == blank %} collection-banner-full{% endif %}">
+    {% comment %} :: BANNER IMAGE - Desktop :: {% endcomment %}
+    <img class="lazyload lazyload-fade banner-image-desktop"
+      data-src="{{ config.banner_image_desktop | img_url: '2000x' }}"
+      data-sizes="auto"
+      alt="{{ collection.title | escape }}'s Collection Banner Image"/>
 
-  {% comment %} :: BANNER IMAGE - Desktop :: {% endcomment %}
-  <img class="lazyload lazyload-fade banner-image-desktop"
-    data-src="{{ config.banner_image_desktop | img_url: '2000x' }}"
-    data-sizes="auto"
-    alt="{{ collection.title | escape }}'s Collection Banner Image"/>
-
-  {% comment %} :: BANNER IMAGE - Mobile :: {% endcomment %}
-  <img class="lazyload lazyload-fade banner-image-mobile"
-    data-src="{{ config.banner_image_mobile | img_url: '800x' }}"
-    data-sizes="auto"
-    alt="{{ collection.title | escape }}'s Collection Banner Image"/>
-
+    {% comment %} :: BANNER IMAGE - Mobile :: {% endcomment %}
+    <img class="lazyload lazyload-fade banner-image-mobile"
+      data-src="{{ config.banner_image_mobile | img_url: '800x' }}"
+      data-sizes="auto"
+      alt="{{ collection.title | escape }}'s Collection Banner Image"/>
+  </div>
 
   {% comment %} :: BANNER TEXT BOX :: {% endcomment %}
   {% if config.banner_text_header != blank or config.banner_text_body != blank %}
@@ -57,7 +58,7 @@
       data-constrain-width="{{ config.textbox_constrain }}"
       data-textbox-horizontal="{{ config.textbox_horizontal }}"
       data-textbox-vertical="{{ config.textbox_vertical }}">
-      <div class="banner-text-box text-{{ config.textbox_text_align }}">
+      <div class="banner-text-box banner-content-plp text-{{ config.textbox_text_align }}">
 
         {% comment %} :: HEADER :: {% endcomment %}
         {% if config.banner_text_header != blank %}
