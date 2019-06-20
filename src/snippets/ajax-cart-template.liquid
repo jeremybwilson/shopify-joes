@@ -71,10 +71,15 @@
                           <span>+</span>
                         </button>
                       </div>
-                      <a class="ajaxcart__remove" data-line="{{line}}">Remove</a>
 
                       {{!-- Shoprunner Badge Indicator --}}
                       <div name="sr_cartProductDiv" class="sr-eligibility-badge"></div>
+                      
+                      <div class="timber-cart-edit-remove">
+                      <a class="ajaxcart__edit" href="{{url}}">Edit</a>
+
+                      <a class="ajaxcart__remove" data-line="{{line}}">Remove</a>
+                      </div>       
                     </div>
                   </div>
                 {{/if}}
@@ -108,6 +113,8 @@
           <a href="/cart" class="cart__checkout" aria-label="checkout">
             <button class="cart__checkout">CART</button>
           </a>
+          <a href="#" class="payment-button paypal"></a>
+          <a href="#" class="payment-button amezon"></a>
           {% endraw %}
         {% else %}
           {% raw %}

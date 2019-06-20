@@ -36,6 +36,7 @@ var bcSfFilterTemplate = {
                                         '<h3 class="product-title">{{itemTitle}}</h3>' +
                                     '</a>' +
                                     '{{wishlistButton}}' +
+				    '<div class="product-swatch-wrap">{{jjeansSwatch}}</div>' +
                                     '<div class="product-price-wrap bfx-price">{{itemPrice}}</div>' +
                                     '{{itemSwatch}}' +
                                 '</div>' +
@@ -124,6 +125,15 @@ BCSfFilter.prototype.buildProductGridItem = function(data, index, totalProduct) 
 
         } else {
             itemHtml = itemHtml.replace(/{{itemBadge}}/g, '' ); //No badge, remove block
+        }
+
+        //Find subtitle_ and add to product list
+        var joesJeansSwatchTags = findTag('subtitle_');
+        if (joesJeansSwatchTags.length > 0) {
+            var findTag = JSON.stringify(joesJeansSwatchTags).replace('subtitle_', '');
+            itemHtml = itemHtml.replace(/{{jjeansSwatch}}/g, findTag.replace(/\[|\]|\"/g, ''));
+        } else {
+            itemHtml = itemHtml.replace(/{{jjeansSwatch}}/g, ''); //No badge, remove block
         }
     }
 
@@ -280,7 +290,7 @@ BCSfFilter.prototype.buildProductGridItem = function(data, index, totalProduct) 
 
                 // SWATCH IMAGE : Build swatch image, fallback to color setting in case that fails
                 var colorName = slugify( colorObj.title ).replace( /-/gi, '_' ); //Replace slug dash for _ to support photo studio tool format
-                var swatchFileName = colorObj.sku + '_' + colorName + '_sw.gif';
+                var swatchFileName = colorObj.sku + '_' + colorName + '_sw.jpg';
                 var swatchImgUrl = bcSfFilterConfig.general.file_url.replace( 'swatch_url_source_do_not_remove.png', swatchFileName.toLowerCase() );
 
                 // SWATCH OBJ: Single swatch object for manifest
