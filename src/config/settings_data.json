@@ -677,57 +677,17 @@
             "page-about-template": {
                 "type": "page-about-template",
                 "blocks": {
-                    "1539644589684": {
-                        "type": "text_block",
+                    "1560851184448": {
+                        "type": "image_picker",
                         "settings": {
-                            "module_image": "shopify:\/\/shop_images\/about-image-1.jpg",
-                            "module_html": "<p>We've earned the <strong>Respect, Loyalty and trust<\/strong> of people who can't afford to take trust lightly.<\/p>",
-                            "module_image_color_scheme": "light",
-                            "module_image_position_desktop": "image_right",
-                            "module_image_position_mobile": "image_top"
-                        }
-                    },
-                    "1539646800597": {
-                        "type": "text_block",
-                        "settings": {
-                            "module_image": "shopify:\/\/shop_images\/about-image-2.jpg",
-                            "module_html": "<p>We make essential gear <strong>engineered to withstand the world's toughest conditions<\/strong> and to protect people who put their lives on the line to live and work on the water.<\/p>",
-                            "module_image_color_scheme": "dark",
-                            "module_image_position_desktop": "image_left",
-                            "module_image_position_mobile": "image_top"
-                        }
-                    },
-                    "1539646807998": {
-                        "type": "text_block",
-                        "settings": {
-                            "module_image": "shopify:\/\/shop_images\/about-image-3.jpg",
-                            "module_html": "<p> We're part of a marine lifestyle that values <strong>authenticity, performance and hard work<\/strong> whether you \nfish to live or live to fish.<\/p>",
-                            "module_image_color_scheme": "light",
-                            "module_image_position_desktop": "image_right",
-                            "module_image_position_mobile": "image_top"
-                        }
-                    },
-                    "1539646813012": {
-                        "type": "text_block",
-                        "settings": {
-                            "module_image": "shopify:\/\/shop_images\/about-image-4.jpg",
-                            "module_html": "<p><strong>XTRATUF<\/strong> is chosen not only by fisherman on the Bering Sea, but by commercial, sport and water-enthusiasts everywhere.<\/p>",
-                            "module_image_color_scheme": "light",
-                            "module_image_position_desktop": "image_left",
-                            "module_image_position_mobile": "image_top"
+                            "about_image_desktop": "shopify:\/\/shop_images\/baby-hands-and-feet.jpg"
                         }
                     }
                 },
                 "block_order": [
-                    "1539644589684",
-                    "1539646800597",
-                    "1539646807998",
-                    "1539646813012"
+                    "1560851184448"
                 ],
-                "settings": {
-                    "about_text": "<h2>Choose Your Footwear<\/h2>\n<p>We have a variety of footwear to fit your marine lifestyle.<\/p>",
-                    "about_text_color": "#e6e6e6"
-                }
+                "settings": {}
             },
             "columns-carousel": {
                 "type": "columns-carousel",
@@ -795,113 +755,193 @@
                     "1542219298126": {
                         "type": "html",
                         "settings": {
-                            "title": "What's Important About Measurements?",
-                            "answer": "<h5>Tips for measurement<\/h5>\n        <ul>\n            <li>Measure your feet regularly as they can change shape and size over time.<\/li>\n            <li>Different styles use different lasts in construction, therefore sizing may vary with a new style.<\/li>\n            <li>Feet are 3-dimensional, any measuring device can only approximate your true size.<\/li>\n        <\/ul>",
+                            "title": "HOW DO I MAKE A PURCHASE?",
+                            "answer": "<p>Shopping at <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> is easy:<\/p>\n<ul>\n<li>Please <a href=\"\/account\/login\" alt=\"Click to register for a new account\">REGISTER<\/a> to a new account or <a href=\"\/account\/login\" alt=\"Click to login with an existing account\">LOGIN<\/a> to your existing account (NOTE: Returning visitor to the new site will have to re-LOGIN i.e. REGISTER) by using the <a href=\"\/account\/login\" alt=\"Click to login with an existing account\">SIGN IN<\/a> links at the top of any page. You can also use your Facebook, Google+, Amazon or PayPal account for Signing In.<\/li>\n<li>If you know what you are looking for, please Click the WOMEN, MEN, KIDS Links provided at the left of each page to reveal their subcategory links. You can also shop using our Jean FIT GUIDE section or SEARCH by key words using our SEARCH tool <i class=\"icon-search\"><\/i> provided at the top of each page.<\/li>\n<li>Once you have found an item that you would like to purchase, select your size and quantity then click on the 'ADD TO CART' button provided.<\/li>\n<li>To Review the items you have selected for purchase hover over the 'MY CART' link at the top of each page and click the VIEW BAG button. You can use the 'REMOVE ITEM' button to delete items from your shopping CART.<\/li>\n<li>Click on 'CHECKOUT' to complete your order.<\/li>\n<\/ul>",
                             "anchor": ""
                         }
                     },
                     "1542220082322": {
                         "type": "html",
                         "settings": {
-                            "title": "How To Find your Muck Boots Size?",
-                            "answer": "<h5>Tricks for measurement<\/h5>\n            <ul>\n                <li>Measure at the end of the day when your feet are at their largest.<\/li>\n                <li>Tools: ruler, pen, and a piece of paper.<\/li>\n                <li>Follow these steps:\n                    <ol>\n                        <li>Place the paper on the ground and stand on it with your weight slightly forward to make sure your foot is flat.<\/li>\n                        <li>Draw a line behind your heel and another line in front of your longest toe. It is common to have one foot longer than the other, so use the longer foot to measure.<\/li>\n                        <li>Measure the distance between lines in inches or centimeters.<\/li>\n                        <li>Find your measurement on the Muck Boot size chart to figure out the best. Round up if your size falls in between.<\/li>\n                    <\/ol>\n                <\/li>\n            <\/ul>",
+                            "title": "DO I NEED TO SET UP AN ACCOUNT TO PLACE AN ORDER?",
+                            "answer": "<p>No, you can shop at JOE'S as a GUEST without creating an account. However, registering your details will allow you to:<\/p>\n\n<ul>\n<li>Track your order and review past purchases<\/li>\n<li>Build a personal wish list<\/li>\n<li>Shop without entering your address details<\/li>\n<\/ul>",
                             "anchor": ""
                         }
                     },
                     "1542220259294": {
                         "type": "html",
                         "settings": {
-                            "title": "What makes these boots so great?",
-                            "answer": "<h5>It's all in the design. All MUCK® BOOTS are 100% waterproof keeping feet warm, dry and protected in harsh weather and messy working conditions.<\/h5>\n        <h5>The secret:<\/h5>\n            <ul>\n                <li>Our exclusive, self-insulating, waterproof NEOPRENE shell construction. The NEOPRENE bootie material acts as a \"neutral medium\" between inside and outside temperatures. Naturally lightweight, and very comfortable, the material keeps the foot and lower leg warm and protected in cold and wet conditions.<\/li>\n                <li>Natural rubber overlays act as a protective skin for the upper bootie. The upper has a triple-reinforced toe area and quadruple-reinforced heel area. The outsole is made of high abrasion natural rubber. The rubber in the boots will stay flexible for years.<\/li>\n            <\/ul>",
+                            "title": "I'VE FORGOTTEN MY PASSWORD?",
+                            "answer": "<p>If you have forgotten your password, click the <a href=\"\/account\/login\" alt=\"Click to retrieve for a forgotten password\">FORGOT PASSWORD<\/a> link in the Log In Window for instructions on resetting your Password.<\/p>",
                             "anchor": ""
                         }
                     },
                     "1542220285963": {
                         "type": "html",
                         "settings": {
-                            "title": "How are the boots sized?",
-                            "answer": "<p>Boots and shoes are available in whole sizes only, but will stretch to fit half sizes. There is a 15mm toe allowance built into the sizing. For men who are a 1\/2 size, order the next size up. For Women who are a 1\/2 size order the next size down.<\/p>\n        <p>Many of our best selling boots are built for men and women- we call them unisex sizing. Women should order 1 size down from the men's size shown. Our size charts will help you find the perfect fit.<\/p>\n\n            <div class=\"faq-size-charts-wrapper\">\n                <a href=\"\/pages\/size-chart\" target=\"_blank\">Men's Size Chart<\/a> | <a href=\"\/pages\/size-chart#size-chart--womens\" target=\"_blank\">Women's Size Chart<\/a> | <a href=\"\/pages\/size-chart#size-chart--kids\" target=\"_blank\">Kids Size Chart<\/a>\n            <\/div>",
+                            "title": "HOW DO I KNOW THAT THE PRODUCTS YOU SELL ARE AUTHENTIC?",
+                            "answer": "<p>We unconditionally guarantee that every item we sell is 100% authentic. Please note that we are unable to comment on the authenticity of any items not purchased from <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a>.<\/p>",
                             "anchor": ""
                         }
                     },
                     "1542220342731": {
                         "type": "html",
                         "settings": {
-                            "title": "Do the boots fit wide widths?",
-                            "answer": "<p>Yes. Our boots are made to standard widths, but the materials will stretch to fit widths up to a EEE. For narrow feet, we suggest wearing a thicker sock or putting in an additional sock liner to take up room.<\/p>",
+                            "title": "WHICH SIZE SHOULD I CHOOSE?",
+                            "answer": "<ul>\n<li><a href=\"#size-chart-modal\" data-toggle=\"modal\" data-tab-target=\"#size-chart-women\">women<\/a><\/li>\n<li><a href=\"#size-chart-modal\" data-toggle=\"modal\" data-tab-target=\"#size-chart-men\">men<\/a><\/li>\n<li><a href=\"#size-chart-modal\" data-toggle=\"modal\" data-tab-target=\"#size-chart-kids\">kids<\/a><\/li>\n<\/ul>",
                             "anchor": ""
                         }
                     },
                     "1542220365959": {
                         "type": "html",
                         "settings": {
-                            "title": "Are the collar and calf stiff?",
-                            "answer": "<p>No. The upper calf and topline areas are made of soft, flexible NEOPRENE and will stretch. With the flexible upper, the pant leg can be worn over or inside the boot. The collar material can be turned down to allow hands-free removal and vent humidity in warmer working conditions.<\/p>",
+                            "title": "HOW DO I KNOW IF AN ITEM IS IN STOCK?",
+                            "answer": "<p>All items are in stock unless the size or color is not displayed. Please be aware that even if an item is in your shopping cart, it can still be bought by another customer until you have completed your order.<\/p>",
                             "anchor": ""
                         }
                     },
                     "1542220387334": {
                         "type": "html",
                         "settings": {
-                            "title": "Should people wear thick socks?",
-                            "answer": "<p>It isn't necessary unless activities are planned for extreme, cold conditions. The NEOPRENE bootie material is rated sub-zero during active use and will effectively withstand freezing temperatures for up to one hour. Medium-weight athletic socks should provide the best fit. The upper will stretch to accommodate thicker socks.<\/p>",
+                            "title": "WHAT PAYMENT METHODS DOES JOE'S ACCEPT?",
+                            "answer": "<p>We accept Visa, MasterCard, American Express and Discover as well as Paypal. Please note that we do not accept any other methods of payment apart from those listed above.<\/p>",
                             "anchor": ""
                         }
                     },
                     "1542220434241": {
                         "type": "html",
                         "settings": {
-                            "title": "What are the benefits of NEOPRENE?",
-                            "answer": "<p>Work boots and hiking shoes typically use lofted insulations to resist cold temperatures. They are usually laminated to the whole shoe lining or glued into the toe area of a shoe or boot. It is not a waterproof material.<\/p>\n        <p>The NEOPRENE used in MUCK® BOOTS is both waterproof and self insulating. Our materials exceed the long-term effectiveness of waterproof membrane materials and provide greater insulating properties than all non-specialty temperature-control substrates.<\/p>",
+                            "title": "IS IT SAFE TO USE MY CREDIT CARD ONLINE AT JOE'S?",
+                            "answer": "<p>At JOE'S, your personal online security is important to us. We use the latest SSL encryption technology to store and safely transmit your personal and credit card information through our systems. All orders are processed through a secure checkout system provided by Authorize.net. Additionally, for your safety and protection, we will confirm that the billing address you provide matches the address on file with your credit card company.<\/p>",
                             "anchor": ""
                         }
                     },
                     "1542220460535": {
                         "type": "html",
                         "settings": {
-                            "title": "Do these boots allow your feet to breathe?",
-                            "answer": "<p>One of the most important and revolutionary features of The Original Muck Boot Company® footwear is the structured, Breathable Airmesh lining used in all our products. Airmesh is made up of thousands of tiny vertical fibers that allow air to circulate throughout the interior lining surfaces. Excess humidity and perspiration that might build up in the boot are quickly wicked away. This creates a comfortable environment for your feet that lasts for extended periods of use.<\/p>",
+                            "title": "DOES JOE'S SHIP TO POST OFFICE BOXES?",
+                            "answer": "<p>Again, please note that we are unable to deliver to Post Office boxes (PO Box in shipping address) at this time.<\/p>",
                             "anchor": ""
                         }
                     },
                     "1542220481622": {
                         "type": "html",
                         "settings": {
-                            "title": "How do you care for and clean these products?",
-                            "answer": "<p>The rubber shell and nylon upper are very durable and clean up easily with a spray of water or gentle scrubbing with soap and water. The rubber upper can be conditioned with wax polish, Armor All® or liquid detergent. It is not recommended to use conditioners on the outsole area. This may cause it to become slick in wet or icy conditions.<\/p>",
+                            "title": "DOES JOE'S SHIP TO HAWAII OR ALASKA?",
+                            "answer": "<p>Free shipping services and expedited shipping fees at checkout includes Hawaii &amp; Alaska using the USPS service. At this time, Joe's does not include a USPS Return Mailing Label for orders shipped to Alaska or Hawaii.<\/p>",
                             "anchor": ""
                         }
                     },
                     "1542220502350": {
                         "type": "html",
                         "settings": {
-                            "title": "Can the rubber be repaired if punctured?",
-                            "answer": "<p>Yes. The natural rubber can be repaired with sealant found in local hardware stores. We recommend Aquaseal® brand marine sealant. First, clean the punctured area thoroughly with mineral spirits. Then, apply the sealant over affected area and wipe to a thin film. The sealant should air dry for at least 24 hours.<\/p>",
+                            "title": "HOW MUCH TAX WILL I HAVE TO PAY?",
+                            "answer": "<p>Companies selling items on the Internet are subject to the same sales tax collection requirements as other retailers. Sales tax rates for <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> are obtained from a leading tax rate service provider.<\/p>\n<p><a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> reserves the right to apply sales tax where applicable. Specifically, items sold by <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> and shipped to destinations in the states of California, Illinois, New York, Florida, Texas, Washington, Nevada, Virginia, Massachusetts, Pennsylvania are subject to tax. The tax rate applied is calculated on the total selling price of each individual item in your shopping bag and will be the combined state and local rate for the shipping address of your order.<\/p>\n<p>No sales tax is charged when purchasing gift certificates though purchases paid with gift certificates will be subject to tax according to the shipping destination.<\/p>\n<p><strong>NOTE:<\/strong> Prices displayed on the website are exclusive of taxes. Additionally, JOE'S is not responsible for reporting or paying Use Tax to states.<\/p>",
                             "anchor": ""
                         }
                     },
                     "1542220523668": {
                         "type": "html",
                         "settings": {
-                            "title": "How Do I check My Order Status?",
-                            "answer": "<p>If you are a registered customer, you can access your order history by logging into your account using the credentials you used to create your account. You will find the “My Account” link located at the top of each page. Once you have accessed your account, you can click on the “Track Order” link for order status. If you are not a registered user, you can contact Customer Service at 855-377-BOOT (2668) by submitting an email via the Contact Us section on our site <a href=\"\/pages\/contact-us\"> here<\/a>. Customer Service hours are 7am to 11pm (PST\/PDT) Monday through Friday.<\/p>",
+                            "title": "DOES JOE'S SHIP TO MULTIPLE ADDRESSES?",
+                            "answer": "<p>Unfortunately, you may only ship to one address per order. If your order contains gifts or items that require shipping to multiple locations, you will need to place separate orders for each address.<\/p>",
                             "anchor": "orderstatus"
                         }
                     },
                     "1542220577233": {
                         "type": "html",
                         "settings": {
-                            "title": "Do you offer special discounts for active military troops and their families?",
-                            "answer": "<p>Muck Boots is proud to help outfit active troops and their families by offering a 25% discount. Discounts are currently available via phone orders only, please call our customer care center at 1-855-377-2668 for complete details.<\/p>",
+                            "title": "HOW SOON CAN I GET MY ORDER AND HOW MUCH WILL IT COST?",
+                            "answer": "<p>We offer different shipping options to meet your needs – as listed below:<\/p>\n\n<h6 class=\"text-center\">DOMESTIC SHIPPING COSTS &amp; METHODS (excludes Hawaii &amp; Alaska)<\/h6>\n<div class=\"table-responsive\">\n<table class=\"table-bordered text-center table-hover domestic-shipping-table\">\n<thead>\n<tr>\n<td style=\"padding: 5px;\">UPS Ground<\/td>\n<td style=\"padding: 5px;\">UPS 3-Day<\/td>\n<td style=\"padding: 5px;\">UPS 2-Day<\/td>\n<td style=\"padding: 5px;\">Overnight<\/td>\n<\/tr>\n<\/thead>\n<tbody>\n<tr>\n<td class=\"text-danger\"><strong>FREE<\/strong><\/td>\n<td>$15.00<\/td>\n<td>$20.00<\/td>\n<td>$30.00<\/td>\n<\/tr>\n<\/tbody>\n<\/table>\n<\/div>\n<p><\/p>\n<p>For UPS 3 day, UPS 2nd day and NEXT DAY delivery, please ensure you place your order before 3pm EST weekdays. All weekday (non-Holiday) orders placed before 3pm EST will ship that day* if your address is verified by 5pm EST. All orders from Mon-Fri (non-Holiday) placed after 3pm EST as well as all orders placed on Saturday and Sunday will be shipped the following business day once inventory is confirmed, address is verified and order is processed*.<\/p>\n<p>Orders will be delivered via UPS between 9am-5pm on weekdays only. Orders will not be delivered on national holidays. Processed and verified *orders placed on <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> can be expected to arrive within 7-10 business days* with UPS ground shipping method provided free of charge by <a href=\"\/\">JoesJeans.com<\/a>.<\/p>\n<p>Joe's does not deliver on Saturday, Sunday or Holidays.<\/p>\n<p>*Please note that your order will only be shipped once payment and delivery details have been verified and approved. Order cut-off times are provided as guidelines only, and do not take into account possible delays caused by verification. Shipping to other than the bill to address on any order may result in a delay. We cannot ship Paypal orders that have unconfirmed shipping addresses within the customers respective accounts. If an orders’ shipping address is not confirmed within a customers’ PayPal account within 96 hours of being placed at <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a>, those orders may be cancelled. Additionally, we reserve the right to ship at our discretion if an order's shipping address does not match the billing address.<\/p>\n<p>Questions? Call Toll Free: <a href=\"tel:+18775285637\" alt=\"Click to call customer service at 1.877.528.JOES\">1.877.528.JOES (5637)<\/a> | USA Hours of Operation: 6AM - 6PM PST, Monday - Sunday with the exception of New Year's Day and Christmas. Or email us at <a href=\"mailto:customerservice@shop.joesjeans.com\" alt=\"Click to e-mail customer service at customerservice@shop.joesjeans.com\">customerservice@shop.joesjeans.com<\/a>.<\/p>",
                             "anchor": "militarydiscount"
                         }
                     },
                     "1542220607549": {
                         "type": "html",
                         "settings": {
-                            "title": "Do you offer discounts for bulk orders?",
-                            "answer": "<p>Need Mucks for the whole crew? The Original Muck Boot Company® is happy to offer bulk discounts on large orders of boots and shoes. Discounts are currently available via phone orders only, please call our customer care center at 1-855-377-2668 for complete details.<\/p>",
+                            "title": "DO YOU SHIP TO MILITARY ADDRESSES?",
+                            "answer": "<p>For security reasons, we do not currently ship APO\/FPO addresses.<\/p>",
                             "anchor": "bulkdiscount"
+                        }
+                    },
+                    "1560849949295": {
+                        "type": "html",
+                        "settings": {
+                            "title": "DO YOU SHIP TO PO BOXES?",
+                            "answer": "<p>For security reasons, we do not currently ship to P.O. boxes.<\/p>",
+                            "anchor": ""
+                        }
+                    },
+                    "1560849977378": {
+                        "type": "html",
+                        "settings": {
+                            "title": "INTERNATIONAL SHIPPING",
+                            "answer": "<h6>Delivery Rates &amp; Services<\/h6>\n\n<p>JoesJeans.com currently ships to the following countries: Canada, United Kingdom, France, Mexico and Australia.<\/p>\n\n<h6>JoesJeans.com Expedited International Shipping Costs through UPS<\/h6>\n<p><\/p>\n\n<ul>\n<li>Canada 22.95 (USD)<\/li>\n<li>Australia 50.95 (USD)<\/li>\n<li>France 44.75 (USD)<\/li>\n<li>Germany 44.75 (USD)<\/li>\n<li>Mexico 40.45 (USD)<\/li>\n<li>UK 50.95 (USD)<\/li>\n<\/ul>\n<p>Your order will be delivered by UPS who will attempt to deliver the goods to you three (3) times. They will also leave a notice card after each delivery attempt to advise you what you can do to arrange the receipt of your package. Your signature will be required upon delivery.<\/p>\n<p>If you have any questions related to your delivery, please contact our Customer Care team.<\/p>\n<h6>Taxes and Duties<\/h6>\n<p><\/p>\n\n<ul>\n<li>All international orders may be subject to taxes and duties.<\/li>\n<li>Taxes and duties are still owed if the item is refused.<\/li>\n<li>We ship your package DDU, \"duties and taxes unpaid\", and we do not collect nor do we calculate the VAT, duties and\/or taxes during checkout.<\/li>\n<li>Any fees that are due will be collected upon delivery of the order.<\/li>\n<li>All applicable customs, taxes, import duties and collection fees are the responsibility of the customer (even if you refuse any shipments upon delivery).<\/li>\n<li>Customs authorities require that we state the value of your order directly on your package.<\/li>\n<li>Customs agents have the right to release or deny release of your package, and in rare cases, they may also delay delivery.<\/li>\n<li>Taxes and fees are based on many factors, including location, material, item value, etc.<\/li>\n<li>The amount of taxes due is determined solely by the government.<\/li>\n<li>Some countries may require additional fees paid Collect on Delivery (COD).<\/li>\n<li>If your order does require these additional charges, they must be paid by you in order for your package to clear customs.<\/li>\n<li>These fees are paid to the local carrier and are not collected by Joe's Jeans.<\/li>\n<li>Contact the customs office in the destination country for information about any applicable duties or taxes<\/li>\n<li>In the European Union, duties and taxes can be 30% or more of the total declared value of your order.<\/li>\n<\/ul>\n<h6>International Returns<\/h6>\n<p><\/p>\n<p>Your order will be delivered by UPS who will attempt to deliver the goods to you three (3) times. Please send items back to us at the address below using any trackable shipping method. Once we receive your package, we will promptly process your return. Please be sure that your package is insured and prepaid. Sorry, we cannot accept COD returns.<\/p>\n<p>If an order is placed on JoesJeans.com and then refused, you will be responsible for the original duties,taxes,shipping &amp; handling costs, as well as any duties, taxes and\/or customs charges that were incurred in shipping the package. These amounts will be subtracted from your merchandise refund.<\/p>\n<p>NOTE: Joe's Jeans has made every effort to minimize our international shipping charges. We only charge our cost for these services. We do not make any profit on our shipping services to international customers. Also, we are required by law to disclose the full value of the package contents and cannot alter this value. For further information on international customers, including our <a href=\"\/privacy\">Privacy Policy<\/a>, please visit our <a href=\"\/terms\">Terms and Conditions<\/a>.<\/p>",
+                            "anchor": ""
+                        }
+                    },
+                    "1560850144920": {
+                        "type": "html",
+                        "settings": {
+                            "title": "IS MY PACKAGE INSURED?",
+                            "answer": "<p>All items are insured against theft and accidental damage whilst in transit from JOE'S to the shipping address. Once your items have been delivered to the specified delivery address and signed for, they are no longer covered by insurance. If your box is damaged upon arrival, we recommend that you either refuse the delivery, or make a note when signing for it that you are accepting a damaged box.<\/p>",
+                            "anchor": ""
+                        }
+                    },
+                    "1560850188064": {
+                        "type": "html",
+                        "settings": {
+                            "title": "DO I NEED TO SIGN FOR MY ORDER?",
+                            "answer": "<p>Due to the high value of the goods that we sell, we require proof of delivery for orders over $500. This means we are unable to authorize packages to be delivered without a signature when the order is over $500.<\/p>",
+                            "anchor": ""
+                        }
+                    },
+                    "1560850275730": {
+                        "type": "html",
+                        "settings": {
+                            "title": "CAN I CHANGE MY SHIPPING ADDRESS AFTER MY ORDER HAS BEEN DISPATCHED?",
+                            "answer": "<p>We are unfortunately unable to redirect orders once your items have been dispatched. Therefore, please ensure you provide a suitable shipping address for the specified delivery times.<\/p>",
+                            "anchor": ""
+                        }
+                    },
+                    "1560850298547": {
+                        "type": "html",
+                        "settings": {
+                            "title": "HOW WILL I KNOW YOU RECEIVED MY ORDER & WHEN WILL PAYMENT BE DEDUCTED?",
+                            "answer": "<p>After you place your order, you will be sent an email confirming that it has been received. Your card will be debited at the time the order was placed. In the rare instance that any of the items you have ordered are not available, we will contact you by email and will only charge your credit card for the value of the items in stock.<\/p>",
+                            "anchor": ""
+                        }
+                    },
+                    "1560850354189": {
+                        "type": "html",
+                        "settings": {
+                            "title": "CAN I TRACK MY ORDER?",
+                            "answer": "<p>Once your order has been shipped, you will receive email confirmation of your shipping details and an UPS tracking number. If you have registered, you will be able to view and track the status of your shipment by signing in and selecting <a href=\"\/my-account\">My Account<\/a> followed by <a href=\"\/orders\/track\" alt=\"Click to track\/view your order\">TRACK\/VIEW<\/a> MY ORDERS.<\/p>",
+                            "anchor": ""
+                        }
+                    },
+                    "1560850375207": {
+                        "type": "html",
+                        "settings": {
+                            "title": "HOW DO I RETURN OR EXCHANGE AN ITEM?",
+                            "answer": "<p><strong>Holiday Returns Policy<\/strong><\/p>\n\n<p>We are sure that your loved ones will love their gifts, but just in case we have extended our 30-day return policy for the holidays to 60-days from the receipt of your order. This is applicable for all orders placed between November 15th, 2018 and December 25th, 2018.<\/p>\n<hr>\n<p><\/p>\n<p>Making a return or exchange purchased through<a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> is easy using our FREE collection service. <a href=\"\/\">JoesJeans.com<\/a> offers our customers within the continental United States the ultimate experience in shopping by giving you a pre-paid return label with every full price purchase! Whether you would like to exchange your item for another size or would like to receive a full refund you can be assured <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> is here to make your experience the best possible.<\/p>\n<p>To make a return or exchange purchased through <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> please follow the below instructions if your return is within 30 days of the receipt of your order.<\/p>\n<ul>\n<li>Your product(s) must be returned new, unused with all garment tags still attached and within thirty days of the receipt of your order. We are unable to accept merchandise which is not received with these specified conditions. Also, please remember to send all return\/exchanges directly to JOESJEANS ONLINE STORE, 19801 S. Santa Fe Ave., Rancho Dominguez, CA 90221.<\/li>\n<li>Exchanges can only be made for a different size of the item originally ordered through <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a>. If you wish to exchange your purchase from <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> for a completely new item or a different size, you will need to return it for a <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> credit and place a new order.<\/li>\n<li>To ensure that your return is adequately protected in transit, we recommend you send your items back to us in the original packaging provided.<\/li>\n<li>Please fill out the enclosed Return-Exchange form that was included with your order.<\/li>\n<li>To ensure that your return or exchange is received we recommend using the free UPS return label that is included in your package. If your return is not shipped by our UPS partner we cannot be responsible for tracking and receiving. For your reference please keep the UPS tracking number that is located on a sticker below the return label. This tracking number will allow you to confirm that your return or exchange was received by Joe's shipping department.<\/li>\n<li>Have your shipment picked up from your home or office simply by scheduling your pickup online at <a href=\"www.ups.com\" alt=\"Click to go to homepage of UPS\">UPS.com<\/a> or by calling <a href=\"tel:1-800-742-5877\" alt=\"Click to call UPS customer service at 1-800-PICK-UPS\"> 1-800-PICK-UPS® (1-800-742-5877)<\/a>. UPS On-Call Pickup is available for same day pickup in most parts of the country. you may also schedule a pickup in advance for the next business day or later in the week.<\/li>\n<li>We will inspect and process your return. Your refund will be applied to your original method of payment within 14 business days of receipt to JOESJEANS ONLINE STORE, 19801 S. Santa Fe Ave., Rancho Dominguez, CA 90221. Posting to your credit card account could take an additional 10 days depending on your credit card company.<\/li>\n<li>You will receive email notification once your return has been received and processed.<\/li>\n<li>Items purchased at any of JOE'S brick and mortar stores including JOE'S full price retail stores, JOE'S Outlet stores or at over 1,200 retail doors carrying JOE'S Jeans products in the U.S. and abroad cannot be returned to <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a>. Please contact <a href=\"mailto:customerservice@JoesJeans.com\" alt=\"Click to email JOE'S Jeans customer service\">customerservice@joesjeans.com<\/a> or call please call Toll Free: <a href=\"tel:+18775285637\" alt=\"Click to call JOE'S Jeans customer service at 1-877-528-JOES\">1-877-528-JOES (5637)<\/a> regarding problems with items not purchased at <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a>.<\/li>\n<li>All promotional offers listed at <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> cannot be combined with any other offers or previous promotions and cannot be applied to previous purchases.<\/li>\n<\/ul>\n<p>Please note that items must be returned new, unused and with all garment tags still attached. All sale and markdown items are final sale and are not eligible for a free pre-paid return label. We are also unable to accept merchandise which is not received in the above specified conditions. Furthermore, to ensure that your return is adequately protected in transit, we recommend you send your items back to us in the original packaging provided. If you have any questions, concerns, or comments regarding JOE'S products or the <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> eShop, please call Toll Free: <a href=\"tel:+18775285637\" alt=\"Click to call JOE'S Jeans customer service toll free\">1-877-528-JOES (5637)<\/a> | USA 6AM - 6PM PST, Monday - Sunday except for New Year’s Day and Christmas or Email: <a href=\"mailto:customerservice@shop.joesjeans.com\" alt=\"Click to e-mail JOE'S Jeans Customer Service\">customerservice@shop.joesjeans.com<\/a>.<\/p>\n<p>*Free collection does not apply to items returned from a different country to the original shipping destination.<\/p>",
+                            "anchor": ""
+                        }
+                    },
+                    "1560850516906": {
+                        "type": "html",
+                        "settings": {
+                            "title": "WILL I BE REFUNDED THE FULL VALUE OF MY ORDER?",
+                            "answer": "<p>All correctly returned products purchased through <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> will either be refunded to the purchaser's credit card or JOE'S account, and will exclude any expedited shipping costs. All applicable sales taxes will be refunded. Outside the United States, customs duties and sales taxes are non-refundable. However, you may be able to recover these by contacting your local customs bureau directly.<\/p>",
+                            "anchor": ""
+                        }
+                    },
+                    "1560850537196": {
+                        "type": "html",
+                        "settings": {
+                            "title": "IS MY PERSONAL INFORMATION KEPT PRIVATE?",
+                            "answer": "<p>Please be assured that all the information you share with us is private and confidential. At no point will we share, rent or sell your personal information without your consent. To register at JOE'S, we will need to know your name, mailing address and email address. To process credit card orders online we also require your billing address, shipping address, telephone number, credit card number and expiration date. JOE'S only keeps a record of your transactions; your credit card details are not held on our website. Please note that JOE'S may also use the information you provide to inform you of new goods and services via email. If you prefer not to receive these emails, please send an email to <a href=\"mailto:unsubscribe@joesjeans.com\" alt=\"Click to send an e-mail to unsubscribe@joesjeans.com\">unsubscribe@joesjeans.com<\/a>. click here to read our <a href=\"\/privacy\" alt=\"Click to view JOE'S Jeans Privacy Policy\">PRIVACY POLICY<\/a> in full.<\/p>",
+                            "anchor": ""
                         }
                     }
                 },
@@ -919,12 +959,22 @@
                     "1542220502350",
                     "1542220523668",
                     "1542220577233",
-                    "1542220607549"
+                    "1542220607549",
+                    "1560849949295",
+                    "1560849977378",
+                    "1560850144920",
+                    "1560850188064",
+                    "1560850275730",
+                    "1560850298547",
+                    "1560850354189",
+                    "1560850375207",
+                    "1560850516906",
+                    "1560850537196"
                 ],
                 "settings": {
                     "anchor_top_offset": -100,
-                    "before_content": "<h1>FAQ<\/h1>",
-                    "after_content": "<div class=\"fineprint\">\n\t<p>AQUASEAL® is a registered symbol of the McNett Corporation<\/p>\n\t<p>ARMOR ALL® is a registered symbol of Armor All Products Company<\/p>\n<\/div>"
+                    "before_content": "<h1>FREQUENTLY ASKED QUESTIONS<\/h1>",
+                    "after_content": ""
                 }
             }
         },
