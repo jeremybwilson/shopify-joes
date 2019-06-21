@@ -11,8 +11,8 @@
   @include align-items(center);
   @include justify-content(space-between);
   border-bottom: 1px solid #ededed;
-  padding-bottom: 15px;
-  margin-bottom:10px;
+  padding:12px 0 8px 15px;
+  margin-bottom:0px;
 
   h3 {
     @include fontDim(18px,18px,0);
@@ -42,18 +42,28 @@
 
 // Product Item
 
+.ajaxcart__product .desktop-8 {
+    width: 55% !important;
+}
+
+.ajaxcart__product .grid__item.desktop-4 {
+    width: 40% !important;
+    margin: 0 5px 0 0px;
+}
+
 .ajaxcart__product {
-  
-    margin: 15px 0;
+    margin: 6px 0;
     border-bottom: solid 1px rgba(227,227,227,0.65);
-    padding: 15px 0;
+    padding:6px 0;
+
+    &:last-child{
+        border-color: transparent;
+    }
 
   img{    
-    max-width: 95%;
-    max-height: 120px;
-    min-height: 120px;
-    object-fit: cover;
-    object-position: center;
+    max-height: 139px;
+    max-width:100px;
+    width:100%;
   }
 
   p {
@@ -64,14 +74,20 @@
     strong.bfx-price{font-weight:$weight-normal;}
   }
 }
+
+.ajaxcart__qty {
+    display: none;
+}
+
 .ajaxcart__product-name {
-  @include black-paragraph-13-font;
+  @include h5-heading;
   text-transform:capitalize;
 }
 .ajaxcart__product-meta {
-  @include black-paragraph-13-font;
+  @include paragraph-font;
   text-transform:capitalize;
   display: block;
+  color:$light-black;
   margin-top: 4px;
 }
 
@@ -127,18 +143,34 @@
 
 }
 
+.ajaxcart__edit{
+  @include black-paragraph-13-font;
+  text-decoration:underline !important;
+  text-decoration: underline;
+  flex: 1;
+}
+
+.timber-cart-edit-remove {
+    display: flex;
+    align-items: baseline;
+    margin-top:6px;
+}
+
+
 .ajaxcart__remove {
   display: block;
   clear: both;
   cursor: pointer;
   text-decoration: underline;
   @include black-paragraph-13-font;
+  color:#9B9B9B;
+  text-decoration:underline !important;
 }
 
 .ajaxcart__inner {
-    height: calc(100vh - 220px);
+    height: calc(100vh - 307px);
     overflow-x: overlay;
-    margin-bottom: 25px;
+    margin-bottom:9px;
     margin-top:15px;
 
     @include mq('phone'){
@@ -153,20 +185,23 @@
   P{@include black-paragraph-13-font;}
   .ajaxcart__footer {
      width:$full-width !important;  
-
-     @include mq('phone'){
-        padding:0px;
-     }
+     padding-top: 13px;
+     border-top:$border-grey-1;
 
      p{
-       @include black-paragraph-13-font;
+       @include paragraph-font;
        color:$black-color;
-       margin: 0 0 10px 0;
+       margin: 0 0 15px 0;
+       color:$light-black;
      }
+
+      .text-center {
+        text-align: center;
+      }
     
       .cart-total-price, .cart-total-price{
         @include h5-heading;
-        margin: 0 0 10px 0;
+        margin: 0 0 7px 0;
       }
     
      .text-right.cart-total-price{text-align: right;}
@@ -175,19 +210,36 @@
 
 
 body ._SRD .srd_iconline{
-   .srd_msg{padding-left: 13px !important;}
+   .srd_msg{padding-left: 13px !important; @include paragraph-font; color:$light-black;}
    .srd_icon{
         background-size: 65px;
-        background-position-y: 4px;
+        background-position-y:3px;
         width: 11px !important;
+        height: 16px;
     }
 } 
 
+
+.payment-button{
+    max-width: 255px;
+    height: 40px;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center;
+    display: inline-block;
+    border-radius: 3px;
+}
+
+.paypal{background-image: url(../assets/paypal.png); background-size: 75px; background-color: #FEC439; margin-bottom: 2px;}
+.amezon{background-image: url(../assets/amezon.png); background-size: 100px; background-position-y: 12px; background-color: #F9D675;}
 // Checkout
 
 button.cart__checkout {
   @include subscribe-button;
   margin-top: 0px !important;
+  min-width:100%;
+  margin-bottom:8px;
+  letter-spacing: 1.02px;
 }
 
 
@@ -196,9 +248,9 @@ button.cart__checkout {
 .my-cart-popup {
     width: 100%;
     background-color: #fff;
-    max-width: 400px;
+    max-width:275px;
     height: 100%;
-    padding: 15px;
+    padding: 10px;
     position:fixed;
     right:-400px;
     top: 0;
@@ -209,10 +261,10 @@ button.cart__checkout {
 
     .ajaxcart.row {
         width: 100% !important;
+    }
 
-        @include mq('phone'){
-           padding:0px;
-        }
+    h5{
+      @include h5-heading;
     }
 
 }
@@ -230,14 +282,14 @@ button.cart__checkout {
     &:before{
       content: "";
       background-image: url(../assets/cross.svg);
-      width: 25px;
-      height: 25px;
+      width:11px;
+      height:11px;
       background-repeat: no-repeat;
-      background-size: 25px;
+      background-size:11px;
       z-index: 9999;
       position: absolute;
-      right: 0;
-      top: -14px;
+      right: 10px;
+      top: -13px;
     }
 }
 

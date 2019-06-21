@@ -38,15 +38,15 @@
   {% comment %} :: PREP : SIZE VALUE PREFIXER :: (Must add 0's to 1-digit sizes so liquid string sort works, 0's removed later in theme.js > ProductForm) {% endcomment %}
   {% include 'product-merger-util--size-handler' %}
 
-  {% if optionObj.position == 1 %}
+  {% if lowercaseName == "size" %}
     {% assign option1_name = optionObj.name %}
     {% assign option1_values = newValuesArray %}
 
-  {% elsif optionObj.position == 2 %}
+  {% elsif lowercaseName == "color" %}
     {% assign option2_name = optionObj.name %}
     {% assign option2_values = newValuesArray %}
 
-  {% elsif optionObj.position == 3 %}
+  {% elsif lowercaseName != "size" or lowercaseName != "color" %}
     {% assign option3_name = optionObj.name %}
     {% assign option3_values = newValuesArray %}
 

@@ -105,21 +105,15 @@
 .product {
   #content {
     h1 {
-      color: $color--primary-2;
-      @include fontDim(15px,16px,0);
-      font-weight: $font-weight--black;
-      text-align: center;
-      text-transform: uppercase;
+      @include headin-black;
 
       @include mq('phone') {
         display: none;
       }
+    }
 
-      @include mq('tablet-and-up') {
-        max-width: 400px;
-        @include fontDim(25px,34px,0);
-        text-align: left;
-      }
+    h5{
+       @include h5-heading;
     }
   }
 }
@@ -131,17 +125,15 @@
 
 #product-price {
   border-bottom: none;
-  color: $color--primary-2;
-  font-weight: $font-weight--bold;
-  @include fontDim(16px,16px,0);
-  text-align: center;
+  @include black-paragraph-13-font;
+  text-transform:uppercase;
+  font-weight:$weight-500;
 
   @include mq('phone') {
     display: none;
   }
 
   @include mq('tablet-and-up') {
-    @include fontSize(18px);
     text-align: left;
   }
 
@@ -220,10 +212,8 @@
       }
     }
     h3 {
-      margin-top: 3px;
-      color: $color--primary-1;
-      @include fontDim(14px,14px,0);
-      font-weight: $font-weight--black;
+      margin-top:0px;
+      @include black-paragraph-13-font;
       text-transform: uppercase;
 
       @include mq('tablet-and-up') {
@@ -477,7 +467,6 @@
   }
 
   .price {
-
     & > div {
       display: inline;
     }
@@ -489,3 +478,21 @@
     }
   }
 }
+
+
+
+/**/
+
+#product-right .product-name{
+  @include headin-black;
+}
+
+.swatch h5, .swatch .current-option, .size-chart--trigger{
+   @include black-paragraph-13-font;
+}
+
+#product-photos .product-image-container{
+  padding-bottom:0px !important;
+}
+
+

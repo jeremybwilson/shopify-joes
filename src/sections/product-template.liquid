@@ -1,17 +1,18 @@
-{% comment %}
-  :: MERGE SNIPPET ::
-    - Allows merging split products to single PDP
-  --------------------------------------------------------------------
-{% endcomment %}
-{% include 'product-merger--pdp' %}
+{%- capture section_settings -%}
+{
+  "disableAutoSelect": {{- section.settings.disable_auto_select | json -}},
+  "selectionTitle": {{- section.settings.selection_label | json -}}
+}
+{%- endcapture -%}
 
+{% assign has_audience = false %}
+{% for tag in product.tags %}
+  {% if tag contains 'audience_' %}
+    {% assign has_audience = true %}
+    {% break %}
+  {% endif %}
+{% endfor %}
 
-
-
-{% comment %}
-  :: BEGIN PRODUCT TEMPLATE ::
-  --------------------------------------------------------------------
-{% endcomment %}
 {% assign current_variant = product.selected_or_first_available_variant %}
 
 <div itemscope itemtype="http://schema.org/Product"
@@ -19,59 +20,42 @@
   class="product-page product-template"
   data-product-id="{{ product.id }}"
   data-section-id="{{ section.id }}"
-  data-section-type="product-section">
+  data-section-type="product-section"
+  data-section-settings='{{ section_settings }}'>
 
   <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
   <meta itemprop="image" content="{{ product.featured_image.src | img_url: '800x' }}">
 
+  {% comment %}
   {% unless template == 'product.quick' %}
     {% include 'product-mobile-header' %}
   {% endunless %}
+  {% endcomment %}
 
-  {% comment %} :: VIDEO - DATA BUILDER :: (Builds Liquid Vars for consumption by child UI components --> 'product-video--THING' ) {% endcomment %}
   {% include 'product-video--data' %}
 
   <div class="mobile-product-photos--wrapper">
-
-    {% comment %}
-      MOBILE PRODUCT PHOTOS
-      ----------------------------- {% endcomment %}
+    {% comment %} MOBILE PRODUCT PHOTOS {% endcomment %}
     <div id="mobile-product-photos" class="owl-carousel mobile-3">
       {%- if product.featured_image -%}
         {% include 'mobile-product-image-gallery' %}
-
       {%- else -%}
         {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
         {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
       {%- endif -%}
 
       {% comment %} :: MOBILE VIDEO PLAYER :: {% endcomment %}
-      {% if video_data != blank %}
-
+      {{ mobile_product_video }}          {% if video_data != blank %}
         {% comment %} :: VIDEO - ITERATE :: (Build an element for each set of video props in 'video_data' array) {% endcomment %}
         {% for video_props in video_data %}
-
           {% include 'product-video-util--props' %}
           {% include 'product-video--player-mobile' %}
-
         {% endfor %}
       {% endif %}
     </div>
-
-    <a class="mobile-product-carousel--prev">
-      {% include 'svg-icon-caret-left' %}
-    </a>
-
-    <a class="mobile-product-carousel--next">
-      {% include 'svg-icon-caret-right' %}
-    </a>
-
   </div>
 
-
-  {% comment %}
-    DESKTOP PHOTOS
-    ----------------------------- {% endcomment %}
+    {% comment %} DESKTOP PHOTOS {% endcomment %}
   <div class="row product-details--top">
     <div id="product-photos" class="{% if section.settings.related_products == 'right' %}desktop-5{% else %}desktop-6{% endif %} tablet-3 mobile-hide" data-product-gallery>
 
@@ -80,7 +64,6 @@
 
       {%- if product.featured_image -%}
         {% include 'product-image-gallery' %}
-
       {%- else -%}
         {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
         {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
@@ -105,33 +88,102 @@
           <h2>{{ product.vendor }}</h2>
         {% endif %}
 
-        <h1 class="product-name product-title-content" itemprop="name">
+        <h2 class="product-name  product-title-content" itemprop="name">
           {{ product.title }}
-        </h1>
+        </h2>
+
+        <p class="product-color-name">{% for tag in product.tags %}{% if tag contains 'subtitle_' %}{{ tag | split: 'subtitle_' | last }}{% endif %}{% endfor %} </P>
 
 
         <div id="product-details--wrapper" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
           <meta itemprop="priceCurrency" content="{{ shop.currency }}">
           <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
           {% capture product_form_config %}
+            
             {
-              "button": {{ 'products.product.add_to_cart' | t | json }},
-              "currency_switcher_enabled": {{ settings.show_multiple_currencies | json }},
-              "enable_history": true,
-              "hide_price_on_unavailable": false,
-              "money_format": {{ shop.money_format | json }},
-              "sold_out": {{ "products.product.sold_out" | t | json }},
-              "unavailable": {{ 'products.product.unavailable' | t | json }},
-              "variant_display_type": {{ section.settings.variant_display_type | json }}
-            }
+                "button": {{ 'products.product.add_to_cart' | t | json }},
+                "currency_switcher_enabled": {{ settings.show_multiple_currencies | json }},
+                "enable_history": true,
+                "hide_price_on_unavailable": false,
+                "money_format": {{ shop.money_format | json }},
+                "sold_out": {{ "products.product.sold_out" | t | json }},
+                "unavailable": {{ 'products.product.unavailable' | t | json }},
+                "variant_display_type": {{ section.settings.variant_display_type | json }}
+                }
           {% endcapture %}
+
           {% include 'product-form' %}
 
-          {% unless template == 'product.quick' %}
+          <div class="product-actions">
+            {% comment %} :: Social sharing :: {% endcomment %}
+            {% if section.settings.show_social %}
+              <div class="share-me product-action product-action--share">
+                <span class="share-me__label">Share</span>
+                <div class="share-me__social-sharing">
+                  {% include 'social', share_title: product.title, share_permalink: product.url, share_image: product %}
+                </div>
+              </div>
+            {% endif %}
 
-            {% comment %}
-              FREE SHIPPING & RETURNS
-              ----------------------------- {% endcomment %}
+            {% comment %} :: Sizing chart :: {% endcomment %}
+            {% if template != 'product.quick' and section.settings.size_chart_show and has_audience %}
+              <div class="product-action product-action--sizing-chart">
+                <a href="#size-chart--popup" class="fancybox size-chart--trigger">Size Chart</a>
+              </div>
+            {% endif %}
+          </div>
+
+          {% unless template == 'product.quick' %}
+            {% comment %} :: Product description :: '<!-- split -->' will not always be there =\ {% endcomment %}
+            {% if product.description != blank %}
+              <hr class="product-hr">
+              <div class="product-desc">
+                {% assign product_description = product.description | remove: '<ul></ul>' | split: '<!-- split -->' %}
+                {% assign top_description = product_description[0] | split: '•' | first %}
+                {% assign bottom_description = product_description[1] %}
+                <div class="product-desc__heading">Product Details</div>
+                <div class="product-desc__main">
+                  <div class="rte product-description-content">
+                    {{ top_description }}
+                  </div>
+                </div>
+
+                {% unless product.description contains '<!-- split -->' %}
+                  {% if product.description contains '•' %}
+                    {% assign bottom_description = blank %}
+                    {% assign bottom_description_holder = product_description[0] | split: '•' %}
+                    {% for b in bottom_description_holder %}
+                      {% unless forloop.first %}
+                        {% assign bottom_description = bottom_description | append: '•' | append: b %}
+                      {% endunless %}
+                    {% endfor %}
+                  {% endif %}
+                {% endunless %}
+
+                {% if bottom_description != blank %}
+                  <div id="read-more" class="product-desc__more">
+                    <div class="rte">
+                      {% comment %}{- We will build our own list -}{% endcomment %}
+                      {% assign product_specs = bottom_description | remove: '<ul>' | remove: '</ul>' | remove: '<li>' | remove: '</li>' | split: '•' %}
+                      <ul>
+                        {% for spec in product_specs %}
+                          {% if spec != blank %}
+                            {% comment %}{- Remove nonbreaking space -}{% endcomment %}
+                            <li>{{ spec | remove_first: ' ' }}</li>
+                          {% endif %}
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product-desc__read-wrapper">
+                    <a class="product-desc__read js-read-toggle" href="#" data-target="#read-more">Read More</a>
+                  </div>
+                {% endif %}
+              </div>
+            {% endif %}
+
+            {% comment %} FREE SHIPPING & RETURNS {% endcomment %}
+
             {% if section.settings.shipping_text != blank or settings.shoprunner_enabled %}
               <hr class="product-hr">
               <dl id="free-shipping--accordion">
@@ -144,19 +196,29 @@
                     {% include 'shoprunner-pdp' %}
 
                   {% else %}
-                    <dl id="free-shipping--accordion">
-                      <dt id="free-shipping--accordion-header">{% include 'svg-icon-shipping' %}<h3>{{ section.settings.shipping_header_text }}</h3><span class="opener">{% include 'svg-icon-caret-down' %}</span></dt>
-                      <dd id="free-shipping--accordion-content">{{ section.settings.shipping_text }}</dd>
-                    </dl><!-- .free-shipping--accordion -->
+                    <div class="shipping-text">{{ section.settings.shipping_text }}</div>
+
+                    {% if section.settings.shipping_learn_more_link != blank or section.settings.shipping_show_account_link %}
+                      <div class="free-shipping-links">
+                        {% if section.settings.shipping_learn_more_link != blank %}
+                          <a href="{{ section.settings.shipping_learn_more_link }}" class="free-shipping-link">Learn More</a>
+                        {% endif %}
+                        {% if section.settings.shipping_show_account_link %}
+                          <a href="/account" class="free-shipping-link">
+                            {% if customer %}
+                              My Account
+                            {% else %}
+                              Sign In
+                            {% endif %}
+                          </a>
+                        {% endif %}
+                      </div>
+                    {% endif %}
                   {% endif %}
                 </dd>
 
               </dl><!-- .free-shipping--accordion -->
               <hr class="product-hr">
-            {% endif %}
-
-            {% if section.settings.shipping_text != blank %}
-
             {% endif %}
 
           {% endunless %}
@@ -166,11 +228,6 @@
           <div class="zoom-box"></div>
         {% endif %}
 
-        {% if section.settings.show_social %}
-          <div class="desc">
-            {% include 'social' with product %}
-          </div>
-        {% endif %}
         {% if template == 'product.quick' %}
           <a href="{{ product.url | within_collection }}" class="full-click">{{ 'products.general.view_full' | t }}</a>
         {% endif %}
@@ -187,17 +244,23 @@
 
   </div><!-- .row -->
 
-  {% comment %} :: BIG DESCRIPTION :: Content rendered via js to accomodate merged PDP templates, initial load supplied by product user entered with {% endcomment %}
+  {% comment %} BIG GREEN DESCRIPTION {% endcomment %}
+
   <div class="clear"></div>
 
+  {% comment %}
   {% unless template == 'product.quick' %}
     <div class="product-description--area">
       <div class="row">
-        <h3>Description:</h3>
+        <h3>Description</h3>
 
         <div class="product-description--left">
-          <div class="rte product-description-content">{{ product.description }}</div>
+          <div class="rte">
+          {{ product.description }}
+          </div>
+
           {% include 'product-spec-icons' %}
+
         </div><!-- .--left -->
 
         <div id="product-description--mobile-dropdown">
@@ -208,12 +271,18 @@
             PRODUCT SPECS (BULLETS)
             -----------------------------
           {% endcomment %}
+
           <div class="product-description--specs">
+
             <div class="rte">
+              {{ product.description }}
+
               <ul>
-                <li>SKU <span class="product-sku">{{ current_variant.sku }}</span></li>
+                <li>SKU <span class="product-sku">{{ product.variants.first.sku }}</span></li>
               </ul>
+
             </div><!-- .rte -->
+
           </div><!-- .--specs -->
 
 
@@ -226,37 +295,60 @@
       </div><!-- .row -->
     </div>
   {% endunless %}
+  {% endcomment %}
 
   <div class="clear"></div>
   {% unless template == 'product.quick' %}
+  {% comment %} :: REVIEWS :: {% endcomment %}
+    <div class="row product-details--reviews">
+      <dl class="accordion accordion--product-review js-accordion">
+        <dt class="accordion__header js-accordion-toggle">
+          <h3>Ratings &amp; Reviews</h3><span class="opener">{% include 'svg-icon-caret-down' %}</span>
+        </dt>
+        <dd class="accordion__content js-accordion-content">
+          <hr class="product-hr product-hr--large product-pr-hr">
+          {% include 'yotpo-reviews' %}
+        </dd>
+      </dl>
+    </div>
+
     {% comment %} BOTTOM CONTENT {% endcomment %}
 
     {% if section.settings.related_products == 'bottom' %}
-      <div id="related" class="bottom-related">
-        {% include 'related-products' %}
+      <div class="row related-products">
+        <div id="related" class="bottom-related">
+          <hr class="product-hr product-hr--large">
+          {% include 'related-products' %}
+        </div>
       </div>
       <div class="clear"></div>
     {% endif %}
-
-    {% comment %} YOU MAY ALSO LIKE {% endcomment %}
 
     {% comment %} INSTAGRAM YOTPO FEED {% endcomment %}
 
     {% comment %} :: CAMPAIGN VIDEO :: {% endcomment %}
     {% include 'product-campaign-video' %}
 
+    {% comment %} YOU MAY ALSO LIKE {% endcomment %}
+    {% comment %}
+    <div style="max-width:1350px; margin:auto;" id="recommendify-similar-products" shop="{{ shop.domain }}" product="{{ product.id }}"></div>
+    {% endcomment %}
+
+
     {% comment %} :: RECENTLY VIEWED :: {% endcomment %}
-    {% include 'recently-viewed' %}
+    {% comment %} {% include 'recently-viewed' %} {% endcomment %}
 
-    {% comment %} :: REVIEWS :: {% endcomment %}
-    {% include 'yotpo-reviews' %}
-
+    {% include 'script-infinite-variant' %}
   {% endunless %}
 </div>
 
-{% comment %} :: SIZE CHART MODAL :: {% endcomment %}
-{% include 'product-size-chart' %}
+{% unless template == 'product.quick' %}
+  {% comment %} :: SIZE CHART MODAL :: {% endcomment %}
+  {% if section.settings.size_chart_show and has_audience %}
+    {% include 'product-size-chart' %}
+  {% endif %}
 
+{% endunless %}
 <style>
   {% if section.settings.thumbnails == 'right' %}
     .thumbnail-gallery {
@@ -301,16 +393,10 @@
       padding-right: 20px;
     }
   {% endif %}
-  {% if section.settings.show_sku == false %}
-    .variant-sku {
-      display: none;
-    }
-  {% endif %}
-  {% if section.settings.variant_display_type == 'swatches' %}
+  {% if section.settings.product_variants == 'swatches' %}
     .selector-wrapper {
       display: none;
     }
-
     .single-option-selector {
       opacity: 0;
       display: none;
@@ -410,6 +496,23 @@
       },
       {
         "type": "header",
+        "content": "Auto selection"
+      },
+      {
+        "type": "checkbox",
+        "id": "disable_auto_select",
+        "label": "Disable auto select",
+        "info": "Disables auto-selecting of the first available variant (Keeps first option). [Learn more](https://help.shopify.com/en/themes/customization/products/variants/how-to-add-a-pick-an-option-to-drop-downs)",
+        "type": "checkbox"
+      },
+      {
+        "type": "text",
+        "id": "selection_label",
+        "label": "Make a selection label",
+        "default": "Pick a size"
+      },
+      {
+        "type": "header",
         "content": "Product gallery"
       },
       {
@@ -498,6 +601,20 @@
         "label": "Shipping Text"
       },
       {
+        "type": "url",
+        "id": "shipping_learn_more_link",
+        "label": "Learn more link"
+      },
+      {
+        "type": "checkbox",
+        "id": "shipping_show_account_link",
+        "label": "Show account link"
+      },
+      {
+        "type": "header",
+        "content": "Social share"
+      },
+      {
         "type": "checkbox",
         "id": "show_social",
         "label": "Show social share icons",
@@ -506,6 +623,12 @@
       {
         "type": "header",
         "content": "Size Chart"
+      },
+      {
+        "type": "checkbox",
+        "id": "size_chart_show",
+        "label": "Show size chart",
+        "default": false
       },
       {
         "type": "text",

@@ -57,7 +57,7 @@
 {% assign sku_parts = option_sku | split: '-' %}
 {% assign sku_base = sku_parts | first | downcase %}
 {% assign clean_color_name = value | escape | replace: ' ', '_' | replace: '/', '_' | replace: '__', '_' | downcase %}
-{% capture swatch_file_name %}{{ sku_base }}_{{ clean_color_name }}_sw.gif{% endcapture %}
+{% capture swatch_file_name %}{{ option_sku }}_{{ clean_color_name }}.jpg{% endcapture %}
 {% assign swatch_img_url = 'swatch_url_source_do_not_remove.png' | file_url | replace: 'swatch_url_source_do_not_remove.png', swatch_file_name %}
 
 {% comment %} :: DATA : CLASS NAME BUILDER :: {% endcomment %}
@@ -67,11 +67,14 @@
     {% assign classes = 'swatch-element color soldout' %}
   {% endunless %}
 {% endcomment %}
-
-
+{% if template == 'product.quick' and for_loop_index > 5 %}
+    {% assign more_color_class=  ' hide-more-color' %}
+{% else %}
+    {% assign more_color_class=  '' %}
+{% endif %}
 
 {% comment %} :: TEMPLATE : COLOR - Body :: {% endcomment %}
-<div class="{{ classes }}" data-swatch-value="{{ value | esc }}">
+<div class="{{ classes }}{{ more_color_class }}" data-swatch-value="{{ value | esc }}">
   <div class="tooltip">{{ value }}</div>
   
   {{ radio_button }}

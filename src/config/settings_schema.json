@@ -51,13 +51,13 @@
                 "type": "color",
                 "id": "announcement_bg_one",
                 "label": "Announcement BG - #1",
-                "default": "#124431"
+                "default": "#000000"
             },
             {
                 "type": "color",
                 "id": "announcement_bg_two",
                 "label": "Announcement BG - #2",
-                "default": "#073322"
+                "default": "#757575"
             },
 
 
@@ -76,7 +76,7 @@
                 "type": "color",
                 "id": "header_background",
                 "label": "Background",
-                "default": "#fefffe"
+                "default": "#ffffff"
             },
             {
                 "type": "color",

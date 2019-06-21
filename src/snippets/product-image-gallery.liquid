@@ -55,7 +55,7 @@
         {% endif %}
 
         {% comment %} :: MAIN IMAGE :: {% endcomment %}
-        <img id="{{ product.id }}" class="product__image lazyload lazyload-fade"
+        <img id="{{ product.id }}" class="product-image lazyload lazyload-fade"
           src="{{ image | product_img_url: '300x' }}"
           data-src="{{ img_url }}"
           data-sizes="auto"

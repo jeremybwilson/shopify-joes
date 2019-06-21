@@ -1,6 +1,3 @@
-$swatchOutlineColor: {{ settings.react_swatch_outline_color }};
-
-
 // Styles for React-Swatches component
 .swatch-list,
 .swatch-spacer {
@@ -10,16 +7,27 @@ $swatchOutlineColor: {{ settings.react_swatch_outline_color }};
     position: relative;
     width: auto;
     max-width: 100%;
-    height: 40px;
-    margin: 10px 0;
+    height:auto;
+    margin:8px 0 0 0;
+
+    @include mq('mobile-potrait'){
+       margin: 3px 0 0 0;
+    }
 }
 
 .swatch-list {
 
     .swatch-item-wrap {
         position: relative;
-        width: 22px;
-        height: 22px;
+        width: 20px;
+        height: 20px;
+        margin-right: 3px;
+
+        @include mq('mobile-potrait'){
+           width: 9px;
+           height:9px;
+           margin-right: 3px;
+        }
 
         &:hover,
         &.active {
@@ -30,30 +38,35 @@ $swatchOutlineColor: {{ settings.react_swatch_outline_color }};
 
         .swatch-highlight {
             position: absolute;
-            width: 19px;
-            height: 19px;
-            border: 1px solid $swatchOutlineColor;
-            border-radius: 20px;
+            width: 20px;
+            height: 1px;
+            border: 1px solid $black-color;
+            border-radius: 0px;
             left: 50%;
-            top: 50%;
-            transform: translate( -50%, -50% );
+            top: auto;
+            transform: translate(-50%, -50%);
             opacity: 0;
             transition: opacity 0.25s ease-in-out;
+            z-index: 999;
+            bottom:-7px;
+
+            @include mq('mobile-potrait'){
+               width:9px;
+            }
         }
 
         .swatch-item {
             position: relative;
             left: 50%;
             top: 50%;
-            width: 13px;
-            height: 13px;
             transform: translate( -50%, -50% );
             background-color: #999999;
-            border-radius: 15px;
+            border-radius:0px;
             cursor: pointer;
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
+            height:20px;
 
             // STUBS, Don't use this fully
             &.red       { background-color: #e80076; }
@@ -63,6 +76,11 @@ $swatchOutlineColor: {{ settings.react_swatch_outline_color }};
             &.blue      { background-color: #0ff0ff; }
             &.indigo    { background-color: #5b07ff; }
             &.violet    { background-color: #ab07ff; }
+
+            @include mq('mobile-potrait'){
+               width:9px;
+               height:9px;
+            }
         }
     }
 }

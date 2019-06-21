@@ -1,298 +1,322 @@
-// COLLECTION.SCSS
-// -- sections/collection-template.liquid
+/*product*/
 
-/* COLLECTION: Core Variables
- * ---------------------------------------------- */
-$resultsTextColor: {{ settings.filter_text_color }};
+.product-list-part {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 0px 58px 0px;
+    @include main-container;
 
-
-/* COLLECTION: Main Styles 
- *    Various landing styles needed to see body class 
- *    changes, thus the high level wrapper. Most styles
- *    are a bit futher in at '#shopify-section-collection-template'
- * ----------------------------------------------------------------- */
-body.collection {
-    #content.row {
-        width: 100%; // Banner is full width, so moving the row wrapping inward
+    @include mq('phone'){
+       margin:0px 0px 38px 0px;
+       padding:0px 6px;
     }
 
-    #breadcrumb { 
-        top: 0;
-    }
-
-
-    /* TRANSPARENT LANDING : NAV SCROLLED DOWN (Sticky nav floats w/ scroll)
-     *      Adjust margins so transition to floating nav state is smooth
-     * ---------------------------------------------------------------------- */
-    &.nav-menu-stuck {
-        #shopify-section-collection-template .collection-template {
-
-            // TRANSPARENT LANDING ADJUSTMENTS : 
-            //      If Transparent Landing + Banner Present, adjust 
-            //      top margin so its under the transparent navbar during scrolling down so it doesn't jump 
-            &[data-transparent-landing='true'] {
-
-                // MOBILE BANNER : Prevent jumping on mobile scroll state transition
-                @include mq( 'phone-and-tablet' ){
-                    &[data-has-banner-mobile='true']  {
-                        margin-top: 0;
-                    }
-                }
-            }
-
-            // REGULAR LANDING ADJUSTMENTS : 
-            //      Adjust top margin so the transition to floating nav on scroll is smooth
-            &[data-transparent-landing='false'] {
-
-                // REGULAR LANDING : Mobile (Transparent Landing = Disabled)
-                @include mq( 'phone-and-tablet' ){
-                    margin-top: 50px;
-                }
-
-                // REGULAR LANDING : Desktop (Transparent Landing = Disabled)
-                @include mq( 'lap-and-up' ) {
-                    margin-top: 82px;
-                } 
-            }
-        }
-    }
-
-    /*  COLLECTION : Main styling block
-     * ---------------------------------------------- */
-    #shopify-section-collection-template {
-
-
-        /* COLLECTION : Primary wrapper around component
-         * ---------------------------------------------- */
-        .collection-template {
-            margin-top: 0; // Initial State before scrolling down (See above in "nav-menu-stuck" for scrolling adjustments)
-
-            
-            /* TRANSPARENT LANDING : INITIAL
-             *    If Transparent Landing Enabled + Banner Present, 
-             *    adjust top margins so banner under transparent navbar
-             * ---------------------------------------------------------- */
-            &[data-transparent-landing='true'] {
-                
-                // MOBILE BANNER : Present, adjust to under transparent nav
-                @include mq( 'phone-and-tablet' ){
-                    &[data-has-banner-mobile='true']  {
-                        margin-top: 30px;
-                    }
-                }
-
-                // DESKTOP BANNER : Present, adjust to under transparent nav
-                @include mq( 'lap-and-up' ) {
-                    &[data-has-banner-desktop='true']  {
-                        margin-top: 0; // I know it matches, 
-                    }
-                }   
-            }
-            
-
-            /* COLLECTION FULL-WIDTH WRAP : Keeps width of screen
-             * --------------------------------------------------- */
-             .collection-full-width-wrap {
-
-                /* COLLECTION BANNER : Header image and content
-                 * ---------------------------------------------- */
-                @import url('../snippets/collection-banner.scss.liquid');
-             }
-
-
-            /* COLLECTION CONTENT WRAP : Has max-width like a row
-             * NOTE : please dont' move the imports into here, as 
-             *        they both use & in their top levels
-             * --------------------------------------------------- */
-             .collection-content-wrap {
-                position: relative;
-                float: none;
-                margin: 0 auto;
-                min-height: 500px; // So the filter menu can fully expand in case user finds no results they can clear filters still
-
-                // COLLECTION DETAILS : Breadcrumb + Description
-                #collection-details {
-                    margin: 0 auto;
-
-                    .collection-breadcrumb-wrap {
-                        position: relative;
-                        padding: 20px 20px 15px;
-
-                        @include mq( 'lap-and-up' ) {
-                            position: absolute;
-                            padding: 40px 0 15px;
-                            max-width: 50%;
-                        }
-
-                        #breadcrumb {
-                            top: 0;
-                            width: 100%;
-                            text-align: center;
-                            padding: 0;
-                            margin: 0;
-
-                            @include mq( 'lap-and-up' ) {
-                                text-align: left;
-                            }
-                        }
-                    }
-                }
-
-             }
-
-            
-
-
-            /* COLLECTION : Product Grid + Item View
-             * ---------------------------------------------- */
-            #collection-product-wrap {
-                margin: 0 auto;
-                float: none;
-
-                @import url('../snippets/product-grid.scss.liquid');
-            }
-        }
+    .product {
         
-
-        /* FILTERS : Styling for filter sets
-         *    --> keep at this level, uses a few &.name inside
-         * -------------------------------------------------- */
-        @import url('../snippets/filters.scss.liquid');
-
-
-
-        /* LOADING INDICATOR : Filter Loading Indicator
-         * ---------------------------------------------- */
-        #collection-loading-bar {
-            position: fixed;
-            bottom: -30px;
-            width: 100vw;
-            height: 30px;
-            opacity: 0;
-            text-align: center;
-            pointer-events: none;
-            background: $color--accent-1;
-
-            .loading-bar-text {
-                position: absolute;
-                left: 50%;
-                bottom: 0;
-                transform: translateX( -50% );
-                color: $color--white;
-                font-weight: $font-weight--medium;
-                @include fontDim( 14px, 30px, 1px );
-
-                &:after {
-                    position: absolute;
-                    bottom: 0;
-                    left: 100%;
-                    height: 30px;
-                    content: ' ';
-                }
-            } 
+        .box-ratio{
+          padding-bottom:0px !important;
         }
 
-        &.applying-filters {
-            #collection-loading-bar {
-                bottom: 0;
-                opacity: 1;
+            margin: 0px 0.38% 30px 0px;
+            flex: 1;
+            position: relative;
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 24.71%;
 
-                .loading-bar-text:after {
-                    animation: 0.8s animatedDots 0s linear infinite; //Animates 3 dots, only when visiblelk
-                }
-            }
-        }
+              &:nth-child(4n) {
+                 margin-right: 0px !important;
+                 @include mq('phone-and-tablet'){
+                    margin-right:0.38% !important;
+                 }
+              }
+
+              @include mq('phone-and-tablet'){
+                flex-basis: 33%;
+              }
+            
+              @include mq('tablet'){
+                 &:nth-child(3n) {margin-right: 0px !important;}
+              }
+
+              @include mq('phone'){
+                 flex-basis: 49.50%;
+                 margin: 0px 5px 20px 0px;
+                 &:nth-child(2n) {margin-right: 0px !important;}
+              }
+
+              @include mq('mobile-potrait'){
+                 margin: 0px 3px 10px 0px;
+              }
+     }
+
+     button.button-wishlist-product {
+          background: transparent;
+          border: none;
+          outline: none;
+          position: absolute;
+          cursor: pointer;
+          height: 16px;
+          width: 16px;
+          padding: 0;
+          margin: 0;
+          right: 0;
+          top: 0;
+          display:none;
+      }
+}
 
 
-        /* PAGINATION : Pagination generated by filter app
-         * ------------------------------------------------ */
-        #pagination {
-            #bc-sf-filter-bottom-pagination {
-                color: $color--gray-2; // For ellipsis
+#collection-product-wrap {
+    margin: 0 0 !important;
+    width: 100%;
+}
 
-                // Number Elements
-                span,
-                a {
-                    @include fontSize( 16px );
-                    font-weight: $font-weight--book;
-                    background: transparent;
-                    color: $color--gray-2;
-                    position: relative;
-                    padding: 5px 10px;
-                    margin: 10px 5px;
-                    border: none;
-                }
+#collection-loading-bar {
+    display: none;
+}
 
-                // CURRENT PAGE #
-                .current {
-                    color: $color--text-1;
-                    font-weight: $font-weight--bold;
-                }
+.product-images {
+    width: 100% !important;
+    max-height: 462px;
+    overflow: hidden;
+    margin-bottom:27px;
+    position: relative;
 
-                // ARROWS - Left
-                .fa-angle-left:before {
-                    position: absolute;
-                    right: 50%;
-                    top: 50%;
-                    border-bottom: 4px solid transparent;
-                    border-right: 7px solid #000;
-                    border-top: 4px solid transparent;
-                    margin-top: -5px;
-                    content: ' ';
-                }
-                // ARROWS - Right
-                .fa-angle-right:before {
-                    position: absolute;
-                    right: 50%;
-                    top: 50%;
-                    border-bottom: 4px solid transparent;
-                    border-left: 7px solid #000;
-                    border-top: 4px solid transparent;
-                    margin-top: -5px;
-                    content: ' ';
-                }
-
-                // TOTAL PAGE COUNT
-                .count {
-                    display: none;
-                }
-            }
-        }   
+    @include mq('mobile-landscap-two'){
+      max-height:526px;
     }
-}
 
+    @include mq('phone'){
+      margin-bottom:7px;
+    }
 
-// LOADING ANIMATIONS : Animates the 3 dots while displayed
-@keyframes animatedDots {
-    0%  { content: ' '; }
-    25% { content: '.'; }
-    50% { content: '..'; }
-    75% { content: '...'; }
-    100%{ content: ' '; }
-}
-
-
-
-
-
-/* RESULTS COUNT : 
- *    # of results on a collection page, only shown
- *    when filters are present so only applies here.
- *
- *    (NOTE: #results-count in breadcrumbs.liquid)
- * ---------------------------------------------- */
-#results-count {
-    @include h7;
-    @include fontSize( 16px );
-    position: static;
-    top: auto;
-    color: $resultsTextColor; //Imported from filters.scss.liquid
-    font-weight: $font-weight--bold;
-
-    @include mq( 'lap-and-up' ) {
+    .hidden {
         position: absolute;
         top: 0;
-        right: 2px;
-        left: auto;
+        left: 0;
+        width: 100%;
+        display: none;
+    }
+    
+    &:hover .hidden{
+      display: block;
+    } 
+
+    img{
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       object-position: center;
     }
 }
+
+
+.three-part-show{ 
+    .product {
+      
+      margin: 0px 0.61% 30px 0px;
+      flex: 1;
+      position: relative;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis:32.92%;
+
+        &:nth-child(4n) {margin-right: 0.61% !important;}
+        &:nth-child(3n) {
+           margin-right: 0px !important;
+
+           @include mq('phone'){
+              margin-right:1% !important;
+           }
+        }
+
+        @include mq('phone'){
+           flex-basis: 49.5%;
+           margin-bottom:20px;
+           margin-right:1%;
+           &:nth-child(2n) {margin-right: 0px !important;}
+        }
+
+        @include mq('mobile-potrait'){
+            margin-bottom:10px;
+        }
+    }
+
+    .product-images {
+       max-height:615px;
+    }
+
+}
+
+.reveal {
+    position: relative;
+}
+
+.product-quickview{
+       @include quick-view-button;
+       left: 0;
+       right:14px;
+       margin: 0 auto;
+       bottom:45px;
+       top: auto;
+
+       @include mq('laptop'){
+          right:0;
+       }  
+
+       @include mq('phone-and-tablet'){
+          display:none !important;
+       }
+    }
+
+.product-detail{
+   
+    text-align: center;
+    max-width: 75%;
+    margin: 0px auto;
+
+    @include mq('phone-and-tablet'){max-width:85%;}
+    @include mq('phone'){max-width:100%;}
+
+
+    .product-price-wrap .bfx-price{
+       display:inline-block;
+       margin:0 4px;
+    }
+
+    p,h3,.product-price,.product-price-wrap .bfx-price,.product-swatch-wrap{
+      @include black-paragraph-13-font;
+      color:$light-black;
+      margin-bottom:4px;
+      
+      @include mq('mobile-potrait'){
+           font-size:$font-9-mo;
+           line-height: 11px;
+           margin-bottom: 0px;
+        }
+
+      a{
+        @include black-paragraph-13-font;
+        color:$light-black !important;
+
+        @include mq('mobile-potrait'){
+           font-size:$font-9-mo;
+           line-height: 11px;
+           margin-bottom: 0px;
+        }
+
+        &:after {
+            content: "//";
+            position: relative;
+            padding-right:1px;
+            margin-left: 4px;
+        }
+
+        &:last-child:after {
+            display:none;
+            margin-left: 0px !important;
+            padding-right: 0px !important;
+        }
+
+      }
+    }
+
+    .product-price-wrap.bfx-price {
+        line-height: 16px;
+
+        @include mq('mobile-potrait'){
+          line-height: 8px;
+        }
+    }
+}
+
+.was{
+      color:#777777 !important;
+      text-decoration: line-through !important;
+
+      .bfx-price {
+        color:#777777 !important;
+        text-decoration: line-through !important;
+      }
+}
+
+.product{
+
+   &:hover .product-quickview{
+      display:block;
+   }
+}
+
+#product-price.has-compare-price .product-price{color:$black-color !important; margin-right:4px;}
+
+.load-more {
+    width: 100%;
+}
+#bc-sf-filter-load-more {
+  padding:0px !important;
+  .bc-sf-filter-load-more-button{
+    @include back-black-medi-button-load-more-pro;
+    margin-bottom: 89px;
+
+    @include mq('phone'){
+      margin-bottom:65px;
+    }
+  }
+}
+
+
+/*product-show-dot*/
+.product-column-show {
+    position: relative;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 36px;
+    display: inline-block;
+    height: 11px;
+}
+
+.product-column-show .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+    width: 36px;
+    background-color: transparent;
+    display: flex;
+    border: 0px;
+
+    .squer {
+      width: 7.8px !important;
+      height: 10px !important;
+      background-color: #D8D8D8;
+      display: inline-block;
+      margin-right: 1px;
+  }
+}
+
+.product-column-show .checkmark.active .squer{
+    background-color: #000;
+}
+
+.three-four-product-show-buton {
+    text-align: right;
+    line-height: 10px;
+    margin-top: 26px;
+    padding:$padding-left-right;
+    position: relative;
+    z-index: 999;
+    display: inline-block;
+    width: 100%;
+
+    @include mq('phone-and-tablet'){display:none;}
+}
+/*product-show-dot*/
+
+/**/
