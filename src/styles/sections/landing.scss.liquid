@@ -15,9 +15,6 @@
   @include flex-direction(column);
   @include justify-content(flex-end);
 
-  margin-right: 27px;
-  margin-left: 27px;
-
   @include p;
   @include fontDim(14px,24px,0);
   @include fontSize(14px);
@@ -25,13 +22,17 @@
   @include mq( 'lap-and-up' ) {
     @include flex-direction(row);
   }
-  @include mq( 'desk-and-up' ) {
-    padding-left: 15%;
+  
+  margin-bottom: 89px;
+
+  @include mq('phone'){
+     margin-bottom:65px;
   }
 
   // SUBPAGE : Left-nav
 
   div.left-nav {
+    display:none;
     margin: 0 0 25px 0;
     @include mq( 'lap-and-up' ) {
       @include flex-basis(220px);
@@ -116,28 +117,23 @@
     }
 
     a {
-      color: $color--accent-1;
+      @include paragraph-font;
     }
   }
 
   p {
-    color: $color--primary-2;
-    @include fontDim(14px,24px,0);
-    margin-bottom: 20px;
-
-    @include mq( 'tablet-and-up' ) {
-      @include fontDim(16px,36px,0);
-    }
+     @include paragraph-font;
+     line-height:20px;
   }
   h1 {
-    @include h1;
-    color: $color--primary-1;
-    @include fontSize(22px);
-    text-transform: uppercase;
-    border-bottom: none;
+    @include banner-up-head-text-font;
+    color:$black-color;
+    text-align: center;
+    padding-bottom:17px;
 
-    @include mq("tablet-and-up") {
-      @include fontSize(30px);
+    @include mq('phone'){
+       font-size:27px;
+       padding-bottom:11px;
     }
   }
   h2 {
@@ -172,37 +168,68 @@
     }
   }
   h5 {
-    @include fontDim(17px,24px,0);
-    color: $color--primary-2;
-    margin: 15px 0;
-    @include mq("tablet-and-up") {
-      @include fontDim(25px,34px,0);
-    }
+     @include h5-heading;
   }
   table {
     margin-bottom: 30px;
   }
+  
+  .toggle-inner{
+     h6{
+        @include paragraph-font;
+        line-height:20px;
+        font-weight:$bold;
+        margin-bottom:12px;
+        text-transform: capitalize;
+        margin-top:20px;
+
+        &:first-child{
+          margin-top: 0px;
+        }
+     }
+  }
+
+  ul{
+      padding: 0 0px 10px 20px;
+      @include mq('phone'){
+        padding: 0 0px 10px 15px;
+      }
+  }
+
   ul > li {
     list-style: none;
-    color: $color--primary-2;
-    padding-bottom: 10px;
-    @include fontDim(14px,24px,0);
-
-    @include mq( 'tablet-and-up' ) {
-      @include fontDim(16px,36px,0);
-    }
+    @include paragraph-font;
+    line-height:20px;
+    color:$light-black;
+    position: relative;
+    padding-left:25px;
 
     &:before {
       content: "•";
-      color: $color--primary-1;
-      margin-right: 10px;
+      color:$light-black;
+      font-size: 32px;
+      position: absolute;
+      left: -2px;
+      top: -3px;
+    }
+  }
+  ol {
+    margin-top: 10px;
+    padding-left:20px;
+
+    @include mq('phone'){
+       padding-left:10px;
+       padding: 0 0px 0px 15px;
     }
   }
   ol > li {
     list-style-type: decimal;
-    content: " ";
-    padding-bottom: 10px;
-    padding-left: 40px;
+    content: " "; 
+    padding-bottom:0px;
+    padding-left:18px;
+    @include paragraph-font;
+    line-height:20px;
+    color:$light-black;
 
     &:last-child {
       padding-bottom: 0;

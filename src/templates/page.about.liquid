@@ -1,5 +1,9 @@
 <div class="about--wrapper">
-  {% section 'slideshow' %}
-  {% section 'page-about-template' %}
-  {% section 'columns-carousel' %}
+  <div id="page" class="desktop-12 tablet-6 mobile-3" data-section-id="{{ section.id }}">
+    <h1>{{ page.title }}</h1>
+    <div class="about-us-inner-content">
+        <div class="about-us-inner-left-content">{% section 'page-about-template' %}</div>
+        <div class="about-us-inner-right-content">{{ page.content }}</div>
+    </div>
+  </div>
 </div>

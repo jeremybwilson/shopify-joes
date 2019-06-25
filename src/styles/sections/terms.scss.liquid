@@ -1,0 +1,41 @@
+.terms{
+	footer.os-main-footer {
+	    display: none;
+	}
+
+	#page-container{
+	   margin-bottom:89px;
+
+	   .row{
+	        margin: 0 auto !IMPORTANT;
+		    width: 100% !important;
+		    padding: 0 0;
+	   }
+
+	   @include mq('phone'){
+	      margin-bottom:65px;
+	   }
+	}
+    
+    h1{
+      @include banner-up-head-text-font;
+	  text-align: center;
+	  padding-bottom: 17px;
+	  margin: 0 0 25px 0;
+	  color:$black-color;
+	  border-bottom:$border-grey-1;
+
+	  @include mq('phone'){
+	     font-size:27px;
+	  }
+    }
+
+	p{
+	  @include paragraph-font;
+	  margin-bottom:10px;
+      text-align: justify;
+	  a{
+	    @include paragraph-font;
+	  }
+	}
+}
