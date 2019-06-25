@@ -677,57 +677,17 @@
             "page-about-template": {
                 "type": "page-about-template",
                 "blocks": {
-                    "1539644589684": {
-                        "type": "text_block",
+                    "1560851184448": {
+                        "type": "image_picker",
                         "settings": {
-                            "module_image": "shopify:\/\/shop_images\/about-image-1.jpg",
-                            "module_html": "<p>We've earned the <strong>Respect, Loyalty and trust<\/strong> of people who can't afford to take trust lightly.<\/p>",
-                            "module_image_color_scheme": "light",
-                            "module_image_position_desktop": "image_right",
-                            "module_image_position_mobile": "image_top"
-                        }
-                    },
-                    "1539646800597": {
-                        "type": "text_block",
-                        "settings": {
-                            "module_image": "shopify:\/\/shop_images\/about-image-2.jpg",
-                            "module_html": "<p>We make essential gear <strong>engineered to withstand the world's toughest conditions<\/strong> and to protect people who put their lives on the line to live and work on the water.<\/p>",
-                            "module_image_color_scheme": "dark",
-                            "module_image_position_desktop": "image_left",
-                            "module_image_position_mobile": "image_top"
-                        }
-                    },
-                    "1539646807998": {
-                        "type": "text_block",
-                        "settings": {
-                            "module_image": "shopify:\/\/shop_images\/about-image-3.jpg",
-                            "module_html": "<p> We're part of a marine lifestyle that values <strong>authenticity, performance and hard work<\/strong> whether you \nfish to live or live to fish.<\/p>",
-                            "module_image_color_scheme": "light",
-                            "module_image_position_desktop": "image_right",
-                            "module_image_position_mobile": "image_top"
-                        }
-                    },
-                    "1539646813012": {
-                        "type": "text_block",
-                        "settings": {
-                            "module_image": "shopify:\/\/shop_images\/about-image-4.jpg",
-                            "module_html": "<p><strong>XTRATUF<\/strong> is chosen not only by fisherman on the Bering Sea, but by commercial, sport and water-enthusiasts everywhere.<\/p>",
-                            "module_image_color_scheme": "light",
-                            "module_image_position_desktop": "image_left",
-                            "module_image_position_mobile": "image_top"
+                            "about_image_desktop": "shopify:\/\/shop_images\/baby-hands-and-feet.jpg"
                         }
                     }
                 },
                 "block_order": [
-                    "1539644589684",
-                    "1539646800597",
-                    "1539646807998",
-                    "1539646813012"
+                    "1560851184448"
                 ],
-                "settings": {
-                    "about_text": "<h2>Choose Your Footwear<\/h2>\n<p>We have a variety of footwear to fit your marine lifestyle.<\/p>",
-                    "about_text_color": "#e6e6e6"
-                }
+                "settings": {}
             },
             "columns-carousel": {
                 "type": "columns-carousel",

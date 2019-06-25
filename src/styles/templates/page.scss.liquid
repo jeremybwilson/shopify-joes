@@ -2,8 +2,16 @@
    @include main-container;
 }
 
+.about #content{
+   @include secound-container;
+}
+
 .faq #content{
-	@include main-container;
+   @include main-container;
+}
+
+.terms #content{
+   @include secound-container;
 }
 
 .template-page #page {
@@ -13,4 +21,8 @@
 
 .template-page #breadcrumb {
   position: static;
+}
+
+#page {
+    width: 100%;
 }
