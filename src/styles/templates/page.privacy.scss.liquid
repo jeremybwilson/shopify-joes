@@ -1,0 +1,45 @@
+.privacy{
+	h1{
+	  @include banner-up-head-text-font;
+	  color:$black-color;
+	  text-align: center;
+      margin-top: 14px;
+      margin-bottom: 35px;
+
+      @include mq('phone'){
+        font-size:27px;
+        margin-top: 26px;
+        margin-bottom: 30px;
+      }
+	}
+
+	h6{
+	  @include paragraph-font;
+	  line-height:20px;
+	  margin-bottom:10px;
+	  font-weight:$bold;
+	}
+
+	p{
+	  @include paragraph-font;
+	  line-height:20px;
+	  margin-bottom:10px;
+	}
+
+	.privacy-content{
+	    margin-bottom:72px;
+
+	    @include mq('phone'){
+	        margin-bottom: 50px;
+	    }
+	}
+
+	#newsletter-social{
+	   border-top:$border-grey-1;
+	   padding-top: 75px;
+
+	   @include mq('phone'){
+          padding-top: 56px;
+	    }
+	}
+}
