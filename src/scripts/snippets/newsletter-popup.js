@@ -19,6 +19,10 @@ $(document).ready(function () {
             }, emailPopupDelay );
         }
 
+        $(".subscribe-li a").on('click', function(e) {
+            theme.utils.emailUtils.email_popup_load();
+        });
+
         const ui = {
             formId: $('#subscribe--popup--form'),
             textbox: $('#email-popup'),
