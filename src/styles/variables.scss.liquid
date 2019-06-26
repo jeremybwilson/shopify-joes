@@ -38,6 +38,7 @@ $weight-500:500;
 $padding-left-right:0px 50px;
 $padding-left-right-mobile:0px 17px;
 $padding-left-right-mobile25:0px 25px;
+$padding-left-right-mobile10:0px 10px;
 $padding-left-right-mobile15:0px 15px;
 $padding-left-right-mobile22:0px 22px;
 
@@ -206,6 +207,16 @@ $container-fluid-width:1115px;
         text-transform:uppercase;
     }
 
+    @mixin h3-heading{
+        font-size:21px;
+        color:$black-color;
+        font-weight:$bold;
+        letter-spacing:0px;
+        margin-bottom:0px;
+        line-height:25px;
+        text-transform:uppercase;
+    }
+
 /*h5-head*/
 
 
@@ -267,6 +278,7 @@ $container-fluid-width:1115px;
     font-size:$font-15;
     font-weight:$bold;
     letter-spacing:0px;
+    text-transform: uppercase;
 
     &:hover{
       color:$white-color;

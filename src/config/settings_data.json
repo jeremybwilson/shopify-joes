@@ -976,6 +976,134 @@
                   "before_content": "<h1>FREQUENTLY ASKED QUESTIONS<\/h1>",
                   "after_content": ""
                 }
+            },
+            "outlet-stores": {
+                "type": "outlet-stores",
+                "blocks": {
+                    "1561098776075": {
+                        "type": "image",
+                        "settings": {
+                            "state_name": "CALIFORNIA",
+                            "store_name": "JOE'S® CAMARILLO PREMIUM OUTLETS",
+                            "store_address": "850 E. Ventura Blvd. Suite # 724 Camarillo, CA 93010",
+                            "store_map_url": "https:\/\/goo.gl\/IomYaz",
+                            "store_phone": "805.445.6690 \/\/ 805.445.6609 \/\/ 805.445.6604",
+                            "store_hours": "Mon - Sat 10-9p | Sun 10-8p"
+                        }
+                    },
+                    "1561098830924": {
+                        "type": "image",
+                        "settings": {
+                            "state_name": "CALIFORNIA",
+                            "store_name": "JOE'S® CARLSBAD PREMIUM OUTLETS",
+                            "store_address": "5630 Paseo Del Norte, #D144 Carlsbad, CA 92008",
+                            "store_map_url": "",
+                            "store_phone": "760.603.8520 \/\/ 760.603.8502 \/\/ 760.603.8550",
+                            "store_hours": "Mon - Sat 10-9p | Sun 10-7p"
+                        }
+                    },
+                    "1561098857242": {
+                        "type": "image",
+                        "settings": {
+                            "state_name": "CALIFORNIA",
+                            "store_name": "JOE'S® DESERT HILLS PREMIUM OUTLETS",
+                            "store_address": "48650 Seminole Drive, #108B Cabazon, CA 92230",
+                            "store_map_url": "https:\/\/goo.gl\/gmVdlN",
+                            "store_phone": "951.849.7459 \/\/ 951.849.7458",
+                            "store_hours": "Mon - Sat 10-9p | Sun 10-8p"
+                        }
+                    },
+                    "1561098890081": {
+                        "type": "image",
+                        "settings": {
+                            "state_name": "CALIFORNIA",
+                            "store_name": "JOE'S® SAN FRANCISCO PREMIUM OUTLETS",
+                            "store_address": "2958 Livermore Outlets Drive Livermore, CA 94551",
+                            "store_map_url": "https:\/\/goo.gl\/mVEVVs",
+                            "store_phone": "925.961.9847 \/\/ 925.961.9848",
+                            "store_hours": "Mon - Sat 10-9p | Sun 10-7p"
+                        }
+                    },
+                    "1561098923417": {
+                        "type": "image",
+                        "settings": {
+                            "state_name": "ILLINOIS",
+                            "store_name": "JOE'S® FASHION OUTLETS OF CHICAGO",
+                            "store_address": "5220 Outlets Way, Space 2069 Rosemont, IL 60018",
+                            "store_map_url": "https:\/\/goo.gl\/AanHvv",
+                            "store_phone": "847.447.3330 \/\/ 847.447.3340",
+                            "store_hours": "Mon - Sat 10-9p | Sun 10-7p"
+                        }
+                    },
+                    "1561098954569": {
+                        "type": "image",
+                        "settings": {
+                            "state_name": "NEVADA",
+                            "store_name": "JOE'S® LAS VEGAS PREMIUM OUTLETS",
+                            "store_address": "755 South Grand Central Parkway, #1150 Las Vegas, NV 89106",
+                            "store_map_url": "https:\/\/goo.gl\/J1jq8d",
+                            "store_phone": "702.382.5510 \/\/ 702.382.5523 \/\/ 702.382.5529",
+                            "store_hours": "Mon - Sat 9-10p | Sun 9-8p"
+                        }
+                    },
+                    "1561098990960": {
+                        "type": "image",
+                        "settings": {
+                            "state_name": "NEW YORK",
+                            "store_name": "JOE'S® WOODBURY COMMON PREMIUM OUTLETS",
+                            "store_address": "644 Blue Bird Court Central Valley, NY 10917",
+                            "store_map_url": "https:\/\/goo.gl\/fkWsdT",
+                            "store_phone": "845.928.7661 \/\/ 845.928.7664 \/\/ 845.928.7673",
+                            "store_hours": "Mon - Sun 10-9p"
+                        }
+                    },
+                    "1561099021913": {
+                        "type": "image",
+                        "settings": {
+                            "state_name": "PENNSYLVANIA",
+                            "store_name": "JOE'S® PHILADELPHIA PREMIUM OUTLETS",
+                            "store_address": "18 West Lightcap Road, #1113 Pottstown, PA 19464",
+                            "store_map_url": "https:\/\/goo.gl\/47ed1y",
+                            "store_phone": "610.970.3816 \/\/ 610.970.9817 \/\/ 610.970.3818",
+                            "store_hours": "Mon - Sat 10-9p | Sun 10-7p"
+                        }
+                    },
+                    "1561099056510": {
+                        "type": "image",
+                        "settings": {
+                            "state_name": "VIRGINIA",
+                            "store_name": "JOE'S® LEESBURG CORNER PREMIUM OUTLETS",
+                            "store_address": "241 Fort Evans Rd. NE #1135 Leesburg, VA 20176",
+                            "store_map_url": "https:\/\/goo.gl\/5UUXiw",
+                            "store_phone": "703.771.7150 \/\/ 703.771.7151 \/\/ 703.771.7152",
+                            "store_hours": "Mon - Sat 10-9p | Sun 10-7p"
+                        }
+                    },
+                    "1561099093151": {
+                        "type": "image",
+                        "settings": {
+                            "state_name": "WASHINGTON",
+                            "store_name": "JOE'S® SEATTLE PREMIUM OUTLETS",
+                            "store_address": "10600 Qull Ceda Blvd., #618 Tulalip, WA 98271",
+                            "store_map_url": "https:\/\/goo.gl\/jquJj8",
+                            "store_phone": "360.716.2315 \/\/ 360.716.2316",
+                            "store_hours": "Mon - Sat 10-9p | Sun 10-7p"
+                        }
+                    }
+                },
+                "block_order": [
+                    "1561098776075",
+                    "1561098830924",
+                    "1561098857242",
+                    "1561098890081",
+                    "1561098923417",
+                    "1561098954569",
+                    "1561098990960",
+                    "1561099021913",
+                    "1561099056510",
+                    "1561099093151"
+                ],
+                "settings": {}
             }
         },
         "content_for_index": [
