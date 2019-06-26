@@ -1,0 +1,178 @@
+.template-page-heading{
+    @include banner-up-head-text-font;
+    color:$black-color;
+    text-align: center;
+    margin: 3px 0 35px 0px;
+
+    @include mq('phone'){
+       font-size:27px;
+       margin: 16px 0 30px 0px;
+    }
+}
+
+.store-banner {
+    width: 100%;
+    max-height: 546px;
+    overflow: hidden;
+    height: 100%;
+    img{
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        display: block;
+    }
+}
+
+.store-locations-group {
+    margin: 0 0 !important;
+    width: 100% !important;
+}
+
+.store-locations{
+    margin-top: 57px;
+
+    @include mq('phone'){
+       margin-top: 49px;
+    }
+
+    h3{
+       @include h3-heading;
+       margin:0px 0px 32px 0;
+
+       @include mq('phone'){
+          margin: 22px 0px 32px 0;
+       }
+    }
+
+    h4{
+       @include h4-head;
+
+       @include mq('phone'){
+          font-size:18px;
+       }
+    }
+
+    p{
+       @include paragraph-font;
+       font-weight:$weight-500;
+       margin: 13px 0;
+       a{
+          @include paragraph-font;
+          text-decoration:underline !important;
+          font-weight:$weight-500;
+          text-transform: uppercase;
+       }
+    }
+
+    .store-address-country {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .store-address-single {
+        max-width:33.333333%;
+        padding-right: 13%;
+        margin-bottom: 42px;
+
+        @include mq('laptop'){
+            padding-right:8%;    
+        }
+
+        @include mq('tablet'){
+            max-width: 50%;
+            padding-right: 16%;  
+        }
+
+        @include mq('phone'){
+            max-width: 75%; 
+            padding-right: 0;
+            margin-bottom:18px;
+            width:100%;
+        }
+    }
+
+    .outlet-location-link{
+        margin:0 0 0px 0;
+
+        @include mq('phone'){
+            margin: 18px 0 0px 0;
+        }
+
+        h3 {
+            margin: 0 0;
+        }
+    }
+}
+
+.outlet-link-button{
+        @include subscribe-button;
+        display: inline-block;
+        line-height: 48px;
+        margin-top: 18px;
+        
+        @include mq('phone'){
+            margin-top:10px;
+        }
+}
+
+.stores,.outlet-stores{
+  .newsletter-newsletter {
+    border-top:$border-grey-1;
+    margin-top: 87px;
+    padding-top: 78px;
+
+    @include mq('phone'){
+       margin-top: 120px;
+       padding-top: 55px;
+    }
+  }
+  #content{
+     @include mq('phone'){
+        padding:$padding-left-right-mobile10;
+     }
+  }
+}
+
+
+/*outlet-store-locatar*/
+.outlet-stores{
+    b{
+        width: 100% !important;
+        display: inline-block;
+    }
+
+    .outlet-store-section{    
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+}
+
+.two-button-last {
+    display: flex;
+    align-items: center;
+
+    @include mq('phone'){
+        flex-direction: column;
+    }
+
+    p {
+        flex: 1;
+        @include mq('phone'){
+           margin: 5px 0;
+        }
+    }
+
+    .link{
+        @include black-paragraph-14-font;
+        text-decoration:underline !important;
+    }
+
+    .outlet-link-button{margin-top:0px;  float: right;
+       @include mq('phone'){
+          line-height: 36px;
+       }
+    }
+}
+
+/*outlet-store-locatar*/

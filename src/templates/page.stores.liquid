@@ -1,0 +1,13 @@
+<div id="page" class="desktop-12 tablet-6 mobile-3" data-section-id="{{ section.id }}">
+    <h1 class="template-page-heading">{{ page.title }}</h1>
+    <div class="store-banner">
+        <img src="{{ 'joes-storefront.jpg' | asset_url }}" alt="store-banner">
+    </div>
+    <div class="store-locations">
+        {{ page.content}}
+        <div class="outlet-location-link">
+            <h3>For Outlet Locations,</h3>
+            <a class="outlet-link-button" href="{{ shop.url }}/pages/outlet-stores">Click Here</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+<div class="outlet-store-section store-locations">
+    {% for block in section.blocks %}
+        <div class="col-sm-4 store-address-single">
+            <h3 class="outlet-store-state-name">{{block.settings.state_name}}</h3>
+            <h4 class="outlet-store-name">{{block.settings.store_name}}</h4>
+            <p class="outlet-store-address">{{block.settings.store_address}}</p>
+            <p class="outlet-store-map-url">
+                <a href="{{block.settings.store_map_url}}" target="_blank">MAP IT</a>
+            </p>
+            <p class="outlet-store-phone">
+                <b>Phone:</b>
+                <span>{{block.settings.store_phone}}</span>
+            </p>
+            <p class="outlet-store-working-hours">
+                <b>Hours:</b>
+                <span>{{block.settings.store_hours}}</span>
+            </p>
+        </div>
+    {% endfor %}
+</div>
+{% schema %}
+{
+  "name": "Outlet Stores",
+  "settings": [
+  ],
+  "blocks": [
+    {
+      "name": "Outlet Store",
+      "type": "image",
+      "settings": [
+        {
+          "type": "text",
+          "id": "state_name",
+          "label": "State Name"
+        },
+        {
+          "type": "text",
+          "id": "store_name",
+          "label": "Name"
+        },
+        {
+          "type": "text",
+          "id": "store_address",
+          "label": "Address"
+        },
+        {
+          "type": "url",
+          "id": "store_map_url",
+          "label": "Map  Url"
+        },
+        {
+          "type": "text",
+          "id": "store_phone",
+          "label": "Phone No"
+        },
+        {
+          "type": "text",
+          "id": "store_hours",
+          "label": "Working Hours"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
