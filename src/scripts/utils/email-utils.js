@@ -5,17 +5,14 @@ module.exports = (function() {
 
     // LOAD : Email signup form popup (thing from bottom right of page)
     function email_popup_load() {
-        var $popup = $('#subscribe--popup');
+        var $popup = $('#myModal');
         if (!$popup.length > 0) {
             return false;
         }
 
         $.cookie('mailing_list_delay_popup', 'expires_seven_days', { expires: 7 });
         $.fancybox({
-            href: "#subscribe--popup",
-            tpl: {
-                wrap: '<div class="fancybox-wrap" tabIndex="-1" id="subscribe--popup-wrapper"><div class="fancybox-skin"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>',
-            },
+            href: "#myModal",
             helpers: {
                 overlay: null
             },
@@ -23,7 +20,7 @@ module.exports = (function() {
             closeEffect: 'fade'
         });
 
-        $('#subscribe--close').click(function () {
+        $('.modal-content .close').click(function() {
             parent.$.fancybox.close();
         });
     };
