@@ -1104,6 +1104,108 @@
                     "1561099093151"
                 ],
                 "settings": {}
+            },
+            "women-fit-guide": {
+                "type": "women-fit-guide",
+                "blocks": {
+                    "1561700619107": {
+                        "type": "image",
+                        "settings": {
+                            "fit_guide_title": "Skinny",
+                            "description": "Skinny Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+                            "collection": "women-collection",
+                            "image": "shopify:\/\/shop_images\/skinny.png"
+                        }
+                    },
+                    "1561700763172": {
+                        "type": "image",
+                        "settings": {
+                            "fit_guide_title": "Straight",
+                            "description": "Straight Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+                            "collection": "women-denim-straight",
+                            "image": "shopify:\/\/shop_images\/straight.png"
+                        }
+                    },
+                    "1561700801684": {
+                        "type": "image",
+                        "settings": {
+                            "fit_guide_title": "Bootcut",
+                            "description": "Bootcut Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+                            "collection": "women-collection",
+                            "image": "shopify:\/\/shop_images\/bootcut.png"
+                        }
+                    },
+                    "1561700858807": {
+                        "type": "image",
+                        "settings": {
+                            "fit_guide_title": "Flare",
+                            "description": "FlareLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+                            "collection": "women-collection",
+                            "image": "shopify:\/\/shop_images\/flare.png"
+                        }
+                    },
+                    "1561700917267": {
+                        "type": "image",
+                        "settings": {
+                            "fit_guide_title": "Petite",
+                            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley - Petite",
+                            "collection": "women-collection",
+                            "image": "shopify:\/\/shop_images\/petite.png"
+                        }
+                    },
+                    "1561700960992": {
+                        "type": "image",
+                        "settings": {
+                            "fit_guide_title": "Curvy",
+                            "description": "Curvy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+                            "collection": "women-denim-curvy",
+                            "image": "shopify:\/\/shop_images\/curvy.png"
+                        }
+                    }
+                },
+                "block_order": [
+                    "1561700619107",
+                    "1561700763172",
+                    "1561700801684",
+                    "1561700858807",
+                    "1561700917267",
+                    "1561700960992"
+                ],
+                "settings": {
+                    "desktop_banner": "shopify:\/\/shop_images\/banner-size-guid.png",
+                    "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png"
+                }
+            },
+            "men-fit-guide": {
+                "type": "men-fit-guide",
+                "blocks": {
+                    "1561704027169": {
+                        "type": "image",
+                        "settings": {
+                            "fit_guide_title": "Title 1",
+                            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+                            "collection": "men-collection",
+                            "image": "shopify:\/\/shop_images\/skinny-pro-img.png"
+                        }
+                    },
+                    "1561706120320": {
+                        "type": "image",
+                        "settings": {
+                            "fit_guide_title": "Title 2",
+                            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+                            "collection": "men-collection",
+                            "image": "shopify:\/\/shop_images\/skinny.png"
+                        }
+                    }
+                },
+                "block_order": [
+                    "1561704027169",
+                    "1561706120320"
+                ],
+                "settings": {
+                    "desktop_banner": "shopify:\/\/shop_images\/banner-size-guid.png",
+                    "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png"
+                }
             }
         },
         "content_for_index": [

@@ -1,0 +1,52 @@
+<div class="banner-only-images">
+    <img class="desktop_image" src="{{ section.settings.desktop_banner | img_url: '2000x' }}" alt="desktop_banner">
+    <img class="desktop_image" src="{{ section.settings.mobile_banner | img_url: '800x' }}" alt="mobile_banner">
+</div>
+
+{% include 'fit-guide' %}
+{% schema %}
+{
+    "name": "Women's Denim Fit Guide",
+    "settings": [
+		{
+            "type": "image_picker",
+            "id": "desktop_banner",
+            "label": "Desktop Banner"
+        },
+		{
+            "type": "image_picker",
+            "id": "mobile_banner",
+            "label": "Mobile Banner"
+        }
+	],
+    "max_blocks":6,
+	"blocks": [
+        {
+            "name": "Women's Denim Fit Guide",
+            "type": "image",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "fit_guide_title",
+                    "label": "Title"
+                },
+                {
+                    "type": "text",
+                    "id": "description",
+                    "label": "Small Description"
+                },
+                {
+                    "type": "collection",
+                    "id": "collection",
+                    "label": "Select collection"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}
