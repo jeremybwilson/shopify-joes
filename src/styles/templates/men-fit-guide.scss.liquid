@@ -1,0 +1,291 @@
+.skinny-slider.slick-initialized.slick-slider {
+    overflow: hidden;
+    position: relative;
+    margin-top: 43px;
+    margin-bottom:121px;
+
+    @include mq('phone'){
+       margin-bottom: 56px;
+    }
+}
+
+  
+.slick-track {
+    display: flex;
+    overflow: hidden;
+}
+
+.banner-headig{
+   @include main-container;
+
+   @include mq('phone'){
+     padding:0px;
+   }
+
+   h1{
+      @include banner-up-head-text-font;
+      color:$black-color;
+      text-align:center;
+      margin-top:6px;
+
+      @include mq('phone'){
+         font-size:$font-27-mo;
+         margin-top: 14px;
+         padding:$padding-left-right-mobile15;
+      }
+    }
+}
+
+.slick-dots li.slick-active button{
+    background-color: #000;
+}
+
+.main-class-select-product {
+    min-width: 97px;
+}
+
+.banner-only-images{
+   margin-top:30px;
+   @include main-container;
+   
+   @include mq('phone'){
+      padding:0px;
+   }
+
+   img{
+      width: 100%;
+      max-height: 716px;
+
+      &:last-child{
+            display:none;
+      }
+
+      @include mq('phone'){
+         max-height:100%;
+         &:first-child{
+           display:none;
+         }
+         &:last-child{
+            display:block;
+         }
+      }
+   }
+}
+    
+.skinny-part{
+    @include main-container;
+    width:100%;
+    overflow:hidden;
+
+    h2{
+       @include headin-black;
+       text-align:center;
+       margin-bottom:10px;
+
+       @include mq('phone'){
+          font-size:$font-27-mo;
+       }
+    }
+
+    p{
+        @include paragraph-font;
+        text-align: center;
+        margin-bottom:10px;
+        line-height:20px;
+        color:$light-black;
+
+        @include mq('phone'){
+            line-height:16px;
+        }
+    }
+
+    .slick-list.draggable{
+          max-height: 100%;
+          margin: 0 0;
+    }
+
+   .slick-arrow {
+        background-color: transparent;
+        height: 42px;
+        text-indent: -9999px;
+        background-repeat: no-repeat;
+        background-image: url(../assets/black-arrow-slider.png);
+        padding: 0 0;
+        width: 23px;
+        margin: 0 0;
+        position: absolute;
+        z-index: 99;
+        top: 32.5%;
+
+        @include mq('phone'){
+            height: 32px;
+            background-size: 15px;
+        }
+    }
+    
+    .slick-next{
+       right:0;
+       transform: rotate(180deg);
+    }
+
+    .slick-prev{
+       left: 0;
+    }
+
+}
+  
+.skinny-images img {
+    width: 100%;
+}
+
+.men_fit_guide, .women_fit_guide {
+  #newsletter-social{
+    border-top:$border-grey-1;
+    padding-top:78px;
+    @include mq('phone'){
+        padding-top: 55px;
+    }
+  }
+
+  .slick-list.draggable {
+    max-height: 100% !important;
+    margin: 0px 0 0px 0;
+    overflow: hidden;
+  }
+}
+
+.sknny-detail {
+    text-align: center;
+    margin-top: 44px;
+  
+    h3{
+        @include h3-heading;
+    }
+    
+    h4{
+        @include h4-head;
+        text-transform: lowercase;
+        margin-bottom: 17px;
+
+        @include mq('phone'){
+            font-size:$font-18-mo;
+        }
+    }
+
+    p{
+      @include black-paragraph-13-font;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+
+      @include mq('phone'){
+         line-height:16px;
+      }
+    }
+
+    .only-link-type-bitton{
+       @include h5-heading;
+       text-decoration: underline !important;
+       text-transform: capitalize;
+       margin-top: 13px !important;
+       display: inline-block;
+    }
+}
+
+hr {
+    margin: 23px 0 33px 0;
+    border:$border-grey-1;
+
+    @include mq('phone'){
+       margin: 23px 0 22px 0;
+    }
+}
+
+.skinny-loop {
+  padding:1.5px;
+
+  @include mq('mobile-potrait-small'){
+    padding:0px;
+  }
+}
+
+.skinny-loop:last-child{
+    margin-right:0px;
+}
+
+
+.selet-size-part {
+    background-color: #F7F7F7;
+    margin-bottom: 53px;
+
+    @include mq('phone'){
+       margin-bottom: 46px;
+    }
+
+    .scroll-part {
+        display: flex;
+        width: 100%;
+        overflow: auto;
+        text-align: center;
+        padding-bottom: 25px;
+  
+        &::-webkit-scrollbar{
+           height:2px;
+                  
+        }      
+
+        &::-webkit-scrollbar-thumb{
+           background-color:#9b9b9b;    
+        }
+
+        &::-webkit-scrollbar-track{
+           background-color:#e2e2e2;
+        }
+    }
+
+    img {
+        width: 100%;
+        max-height: 285px;
+        overflow: hidden;
+    }
+
+    .name{
+       @include h5-heading;
+       font-weight:$weight-500;
+       margin-top: 10px;
+
+       @include mq('mobile-potrait'){
+           margin-top: 14px; 
+           margin-bottom:0px;
+       }
+    }
+    
+    .fit-guid-description.hide{
+        display: none;
+    }
+}
+
+@include mq('phone'){
+  .slick-dots {
+      text-align: center;
+      height: 7px;
+      margin-top:12px;
+
+      li{
+        display: inline-block;
+        margin: 0 4px;
+        height: 7px;
+
+         button {
+            background-color:#a3a3a3;
+            text-indent: -9999px;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            min-height: 6px;
+            margin: 0 0;
+            padding: 0 0;
+         }
+      }
+  }
+
+}

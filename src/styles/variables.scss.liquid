@@ -16,6 +16,7 @@ $font-14:14px;
 $font-15:15px;
 $font-16:16px;
 $font-18:18px;
+$font-21:21px;
 $font-30:32px;
 $font-50:50px;
 
@@ -28,6 +29,7 @@ $font-18-mo:18px;
 $font-32-mo:32px;
 $font-10-mo:10px;
 $font-21-mo:21px;
+$font-27-mo:27px;
 
 
 $weight-light:200;
@@ -77,29 +79,6 @@ $container-fluid-width:1115px;
 @mixin container{
   max-width:1115px !important;
 }
-
-@mixin secound-container{
-  max-width:1145px !important;
-  padding:$padding-left-right-mobile15;
-  width: 100%;
-
-  @include mq('mobile-potrait'){
-     padding:0 10px;
-  }
-}
-
-@mixin main-container{
-  max-width:1440px !important;
-  margin-left:auto;
-  margin-right:auto;
-  padding:$padding-left-right;
-  width: 100%;
-
-  @include mq('phone')  {
-     padding:$padding-left-right-mobile15;
-  }
-}
-
 
 @mixin secound-container{
   max-width:1145px !important;
@@ -218,6 +197,17 @@ $container-fluid-width:1115px;
     }
 
 /*h5-head*/
+
+
+@mixin h3-heading{
+    font-size:$font-21;
+    color:$black-color;
+    font-weight:$bold;
+    letter-spacing:0px;
+    margin-bottom:0px;
+    line-height:25px;
+    text-transform:uppercase;
+}
 
 
 /*button*/

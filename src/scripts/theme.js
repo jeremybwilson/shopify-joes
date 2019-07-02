@@ -24,6 +24,7 @@ require('./sections/maps.js');
 require('./sections/product.js');
 require('./sections/collection.js');
 require('./sections/search.js');
+require('./sections/fit-guide.js');
 
 // SNIPPETS - Usually used in multiple places, most of these are global components
 require('./bol/other.js');
@@ -51,4 +52,5 @@ $(document).ready(function() {
     sections.register('mobile-navigation', theme.mobileNav);
     sections.register('product-section', theme.Product);
     sections.register('search-template', theme.Search);
+    sections.register('fit-guide', theme.FitGuide);
 });

@@ -42,7 +42,10 @@
   <!-- CSS
 ================================================== -->
 {% comment %}  {{ 'stylesheet.css' | asset_url | stylesheet_tag }} {% endcomment %}
-
+  <script>
+    window.shop_url = "{{ shop.url }}";
+    window.no_image = "{{ 'bc-sf-filter-no-image.gif' | asset_url }}";
+  </script>
   {{ 'font-awesome.css' | asset_url | stylesheet_tag }}
   {{ 'queries.css' | asset_url | stylesheet_tag }}
   {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
@@ -136,6 +139,7 @@
 </head>
 
 <body class="template-{{ template.name }} gridlock shifter {% if template contains 'product' %}product{% elsif template contains 'collection' %}collection {% elsif template contains 'page' %}{{ template | split: '.' | last }}{% elsif template contains 'customers' %}{{ template | split: '/' | first }}-{{ template | split: '/' | last }}{% else %}{{ template }}{% endif %}">
+
   {% include 'script-google-tag-body' %}
   {% include 'script-shoprunner-body' %}
   {% include 'timber-cart' %} 
