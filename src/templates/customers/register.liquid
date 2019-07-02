@@ -1,39 +1,58 @@
-<div id="customer-wrapper" class="desktop-12 mobile-3">
+<div id="customer-wrapper" class="account-page">
+
+  <div id="account-msg">
+    <h2>Sign in to your account</h2>
+    <p>Our brand new site is live. Please create a new account to explore this experience</p>
+    <hr />
+  </div>
 
   <!-- Left Side -->
 
   <div id="template" class="desktop-5 mobile-3">
 
+    <!-- Guest Checkout login -->
+
+    {% if shop.checkout.guest_login %}
+    <div id="guest" class="desktop-12 mobile-3">
+      <div class="template-header">
+        <h2>{{ 'customer.login.guest_title' | t }}</h2>
+        {% form 'guest_login' %}
+        <input class="secondary button" type="submit" value="{{ 'customer.login.guest_continue' | t }}" />
+        {% endform %}
+      </div>
+    </div>
+    {% endif %}
+
+      <div class="clear"></div>
+
+
+    <!-- End Guest Checkout login -->
     <!-- Customer Login -->
 
-
-    <div id="customer" class="desktop-12 mobile-3">
+    <div id="customer" class="login-part">
       <div class="template-header">
         <h2>{{ 'customer.login.title' | t }}</h2>
       </div>
 
       {% form 'customer_login' %}
-      {{ form.errors | default_errors }}
 
       <div id="login_email" class="clearfix large-form">
-        <label for="customer_email" class="login">{{ 'customer.login.email' | t }}</label>
-        <input type="email" value="" name="customer[email]" id="customer_email" class="large" size="30" />
+        <input type="email" value="" Placeholder="Email" name="customer[email]" id="customer_email" class="large form-field" size="30" />
       </div>
 
       {% if form.password_needed %}
 
       <div id="login_password" class="clearfix large-form">
-        <label for="customer_password" class="login">{{ 'customer.login.password' | t }}</label>
-        <input type="password" value="" name="customer[password]" id="customer_password" class="large password" size="16" />
-        <div id="forgot_password">
-          <a href="#" onclick="showRecoverPasswordForm();return false;">{{ 'customer.login.forgot_password' | t }}</a>
-        </div>
+        <input type="password" placeholder="Password" value="" name="customer[password]" id="customer_password" class="large password form-field" size="16" />
       </div>
 
       {% endif %}
 
       <div class="action-bottom">
-        <input class="secondary button" type="submit" value="{{ 'customer.login.sign_in' | t }}" />
+        <input class="secondary button subscribe-button" type="submit" value="{{ 'customer.login.sign_in' | t }}" />
+            <div id="forgot_password" class="right-link">
+              <a href="#" onclick="showRecoverPasswordForm();return false;">{{ 'customer.login.forgot_password' | t }}</a>
+            </div>
       </div>
 
       {% endform %}
@@ -52,16 +71,13 @@
 
       {% form 'recover_customer_password' %}
 
-      {{ form.errors | default_errors }}
-
       <div id="recover_email" class="clearfix large-form">
-        <label for="email" class="large">{{ 'customer.recover_password.email' | t }}</label>
-        <input type="email" value="" size="30" name="email" id="recover-email" class="large" />
+        <input type="email" placeholder="Email" value="" size="30" name="email" id="recover-email" class="large form-field" />
       </div>
 
       <div class="action-bottom">
         <input class="secondary button" type="submit" value="{{ 'customer.recover_password.submit' | t }}" />
-        <span class="note"><a href="#" onclick="hideRecoverPasswordForm();return false;">{{ 'customer.recover_password.cancel' | t }}</a></span>
+        <span class="note"><a class="cancel_button" href="#" onclick="hideRecoverPasswordForm();return false;">{{ 'customer.recover_password.cancel' | t }}</a></span>
       </div>
 
       {% endform %}
@@ -69,15 +85,15 @@
 
   </div>
 
-  <!-- End Left Side -->  
+  <!-- End Left Side -->
 
 
-  <!-- End Password Recovery -->    
-  <!-- Create Account -->    
+  <!-- End Password Recovery -->
+  <!-- Create Account -->
 
 
   <!-- Create Customer -->
-  <div id="create-customer" class="desktop-push-2 desktop-5 mobile-3">
+  <div id="create-customer" class="registar-part">
     <div class="template-header">
       <h2 class="title">{{ 'customer.register.title' | t }}</h2>
     </div>
@@ -87,38 +103,33 @@
 
 
     <div id="first_name" class="clearfix large-form">
-      <label for="first_name" class="login">{{ 'customer.register.first_name' | t }}</label>
-      <input type="text" value="" name="customer[first_name]" id="first_name" class="large" size="30" />
+      <input type="text" value="" placeholder="First Name" name="customer[first_name]" id="first_name" class="large form-field" size="30" />
     </div>
 
     <div id="last_name" class="clearfix large-form">
-      <label for="last_name" class="login">{{ 'customer.register.last_name' | t }}</label>
-      <input type="text" value="" name="customer[last_name]" id="last_name" class="large" size="30" />
+      <input type="text" value="" placeholder="Last Name" name="customer[last_name]" id="last_name" class="large form-field" size="30" />
     </div>
 
     <div id="email" class="clearfix large-form">
-      <label for="email" class="login">{{ 'customer.register.email' | t }}</label>
-      <input type="email" value="" name="customer[email]" id="email" class="large" size="30" />
+      <input type="email" placeholder="Email" value="" name="customer[email]" id="email" class="large form-field" size="30" />
     </div>
 
     <div id="password" class="clearfix large-form">
-      <label for="password" class="login">{{ 'customer.register.password' | t }}</label>
-      <input type="password" value="" name="customer[password]" id="password" class="large password" size="30" />
+      <input type="password" placeholder="Password" value="" name="customer[password]" id="password" class="large password form-field" size="30" />
     </div>
 
 
     <div class="action-bottom">
-      <input class="secondary button" type="submit" value="{{ 'customer.register.submit' | t }}"/>
+      <input class="secondary button subscribe-button" type="submit" value="{{ 'customer.register.submit' | t }}"/>
     </div>
     {% endform %}
   </div>
 
 
-  <!-- End Create Account -->     
+  <!-- End Create Account -->
 
 
 </div>
-
 
 <script type="text/javascript">
   function showRecoverPasswordForm() {
