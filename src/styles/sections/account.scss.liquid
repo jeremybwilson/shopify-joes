@@ -23,6 +23,16 @@
     }
 }
 
+.template-login, .template-register {
+  #content{
+       @include container;
+
+       @include mq('laptop'){
+          @include padding-left-right-mobile15;
+       }
+   }
+}
+
 #forgot_password {
     display: inline-block;
     float: right;
