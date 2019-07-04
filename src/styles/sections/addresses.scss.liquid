@@ -1,0 +1,141 @@
+.customers-addresses{
+    #content{
+        @include container;
+        margin-bottom: 89px;
+            @include mq('laptop'){
+                padding:$padding-left-right-mobile15;
+                margin-bottom:65px;
+            }
+    }
+
+    .newsletter-newsletter{
+        border-top:$border-grey-1;
+        padding-top: 65px;
+    }
+
+    .subscribe-button{
+        @include subscribe-button; 
+        margin-bottom: 0px;
+
+        @include mq('phone'){
+            margin-top: 0;
+        }
+    }  
+
+    .cancel-button a{
+        @include black-paragraph-14-font;
+        margin-left: 10px;
+    }
+
+    .action-bottom {
+        display: inline-block;
+        margin-top: 10px;
+    }
+}
+
+.section-title h2{
+    @include heading-black;
+    margin-bottom: 34px;
+    margin-top: 14px;
+    text-align: center;
+
+    @include mq('phone'){
+        margin-top: 26px;
+        margin-bottom: 30px;
+    }
+}
+
+.address_title{
+    @include h4-head;
+
+    @include mq('phone'){
+        font-size:18px;
+    }
+
+    .default_address {
+        margin-bottom: 0px;
+    }
+}
+
+
+.address-page{
+    display: flex;
+    flex-wrap: wrap;
+
+    .address_table {
+        width: 33.333%;
+        display: inline-block;
+        margin-bottom: 30px;
+        padding: 0 5px;
+
+        @include mq('tablet'){
+           width:50%;
+        }
+        
+        @include mq('phone'){
+           width:100%;
+           padding:0px;
+        }
+        
+        p{
+            @include paragraph-font;
+            font-weight:$weight-500;
+            margin: 13px 0;
+            a{
+                @include paragraph-font;
+                text-decoration:underline !important;
+                font-weight:$weight-500;
+                text-transform: uppercase;
+            }
+        }
+
+        .view_address p {
+            margin: 0 0 2px 0;
+
+            &:first-child{
+            margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.customer_address_table{
+    width: 100%;
+    
+    .label{
+       label{
+         @include paragraph-font;
+         font-weight:$weight-500;
+       }
+    }
+
+    .value{
+         @include paragraph-font;
+         font-weight:$weight-500;
+         display: flex;
+         align-items: center;
+    } 
+
+    tbody tr{
+        &:last-child{
+           .value{
+               padding-top:10px;
+                @include mq('phone'){
+                    input{
+                        width: auto;
+                        min-width: auto;
+                    }
+                }
+
+                input{
+                   margin-right: 5px;
+                }
+           }
+        }
+    }
+}
+
+#add_address {
+    margin-top: 35px;
+}
+

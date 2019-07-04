@@ -168,14 +168,14 @@
 }
 
 .ajaxcart__inner {
-    height: calc(100vh - 307px);
+    height: calc(100vh - 355px);
     overflow-x: overlay;
     margin-bottom:9px;
     margin-top:15px;
 
     @include mq('phone'){
        margin-top: 0px !important;
-       height: calc(100vh - 200px);
+       height: calc(100vh - 327px);
     }
 }
 
@@ -228,10 +228,25 @@ body ._SRD .srd_iconline{
     background-position: center;
     display: inline-block;
     border-radius: 3px;
+    margin-bottom: 8px;
+
+    .test-only {
+      background-color: rgba(0,0,0,0.5);
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      text-align: center;
+      line-height: 40px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
 }
 
-.paypal{background-image: url(../assets/paypal.png); background-size: 75px; background-color: #FEC439; margin-bottom: 2px;}
-.amezon{background-image: url(../assets/amezon.png); background-size: 100px; background-position-y: 12px; background-color: #F9D675;}
+.paypal{background-image: url(../assets/paypal.png); background-size: 75px; background-color: #FEC439;}
+.amazon{background-image: url(../assets/amezon.png); background-size: 100px; background-position-y: 12px; background-color: #F9D675;}
+.applepay{background-image: url(../assets/applay-pay.png); background-size:50px; background-position-y: 11px; background-color:#ffe395;}
 // Checkout
 
 button.cart__checkout {
