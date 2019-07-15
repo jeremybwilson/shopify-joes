@@ -61,9 +61,9 @@
 
                                   {% comment %} :: #3 - Regular Sub-Sub Link (notice 'Shop All' Case in this also) :: {% endcomment %}
                                   {% else %}
-                                    <li class="nav-sub-sub-item {{ sub_sub_link.title | replace: ' ', '-' | downcase }}">
+                                    <li class="nav-sub-sub-item {{ sub_sub_link.title | replace: ' ', '-' | downcase }} {% if sub_sub_link.title contains '-bold' %} bold_text{% endif %}">
 
-                                      <a href="{{ sub_sub_link.url }}">{{ sub_sub_link.title }}</a>
+                                      <a href="{{ sub_sub_link.url }}">{{ sub_sub_link.title | replace: '-bold', '' }}</a>
                                     </li>
                                   {% endif %} 
 
@@ -72,8 +72,8 @@
                             {% endif %}
                           </li>
                         {% else %}
-                          <li class="nav-sub-item  {{ sub_link.title | replace: ' ', '-' | downcase }} {{ column_width }}">
-                            <h5 class="nav-sub-header"><a href="{{ sub_link.url }}">{{ sub_link.title }}</a></h5>
+                          <li class="nav-sub-item {{ sub_link.title | replace: ' ', '-' | downcase }} {{ column_width }} {% if sub_link.title contains '-denimsub-bold' %} sub_sub_menu bold_text{% endif %}  {% if sub_link.title contains '-full75' %} desktop-full-75 {% endif %}">
+                            <h5 class="nav-sub-header"><a href="{{ sub_link.url }}">{% if sub_link.title contains '-full75' %}{{ sub_link.title | replace: '-full75', '' }}{% else %}{{ sub_link.title | replace: '-denimsub-bold', '' }}{% endif %}</a></h5>
                             
                             {% if sub_link.links != blank %}
                               <ul class="mega-stack">
@@ -97,9 +97,9 @@
 
                                   {% comment %} :: #3 - Regular Sub-Sub Link (notice 'Shop All' Case in this also) :: {% endcomment %}
                                   {% else %}
-                                    <li class="nav-sub-sub-item {{ sub_sub_link.title | replace: ' ', '-' | downcase }}">
+                                    <li class="nav-sub-sub-item {{ sub_sub_link.title | replace: ' ', '-' | downcase }} {% if sub_sub_link.title contains '-bold' %} bold_text{% endif %} {% if sub_sub_link.title contains '-full75' %} desktop-full-75 {% endif %}">
 
-                                      <a href="{{ sub_sub_link.url }}">{{ sub_sub_link.title }}</a>
+                                      <a href="{{ sub_sub_link.url }}">{{ sub_sub_link.title | replace: '-bold', '' }}</a>
                                     </li>
                                   {% endif %} 
 

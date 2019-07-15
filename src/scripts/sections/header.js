@@ -16,7 +16,7 @@ theme.Header = (function() {
       mobileNavMenu: $( '#nav-menu-mobile' ),
       mobileHeaders: $('#accordion').find('.accordion-header'),
       mobileSitesPicker: $( '#nav-sites-picker-mobile' ),
-      mobileSubHeaders: $('#accordion').find('.accordion-sub-header'),
+      mobileSubHeaders: $('#accordion').find('.accordion-sub-header').not('.responsive-full-75'),
       promoWrap: $( '#double-promo-wrapper' ),
       searchIcon: $( '.nav-search' ),
       searchBar: $( '#nav-search-bar-wrapper' ),

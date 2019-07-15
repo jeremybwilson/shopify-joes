@@ -86,20 +86,7 @@
             <span class="cart-count {% if cart.item_count == 0 %}hidden-count{% endif %}">({{ cart.item_count }})</span>
           </a>
         </li>
-        
-        {% comment %} ..:: SITE PICKER : (US, UK, EU, CAN) ::.. {% endcomment %}
-          {% if section.settings.show_site_picker %}
-            <li class="nav-item nav-sites">
-              {% include 'sites-picker' %}
-            </li>
-          {% endif %}
-
-          {% comment %} ..:: CURRENCY PICKER (DISABLED) ::.. {% endcomment %}
-          {% if settings.show_multiple_currencies %}
-            <li class="nav-item nav-currency">{% include 'currencies-picker' %}</li>
-          {% endif %}
-
-        </ul>
+     </ul>
 
       {% comment %} ..:: NAV : SITE-COLLECTIONS (Left Elements) ::.. {% endcomment %}
       <div id="nav-collections" class="header-menu font-only-menu-type">
