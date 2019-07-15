@@ -61,17 +61,6 @@
     {% comment %} :: DETAILS - Filter Toggle, Breadcrumb, Descriptions :: {% endcomment %}
     <div id="collection-details" class="grid-max-width">
 
-      {% comment %} :: DESCRIPTION - Hidden for now :: {% endcomment %}
-      {% if section.settings.show_description %}
-        {% assign titleSplit = collection.title | split: ' / ' %}
-        {% assign collectionTitle = titleSplit | last %}
-        <div class="collection-description grid-max-width">
-          <header class="description-header">{{ collectionTitle }}</header>
-          <div class="description-divider"></div>
-          <div class="rte description-body">{{ collection.description | remove: "[banner]" }}</div>
-        </div>
-      {% endif %}
-
     </div>{% comment %} END : #collection-details {% endcomment %}
     
     {% comment %} :: FILTER SETS - toggle 3/4 snippet view :: {% endcomment %}
@@ -255,12 +244,6 @@
         "id": "sort_by",
         "label": "Show Sorting",
         "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "show_description",
-        "label": "Show Descriptions",
-        "default": false
       },
       {
         "type": "checkbox",

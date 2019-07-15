@@ -3,13 +3,23 @@
 <nav id="nav" data-link-count="{{ menu.links.size }}" {% if section.settings.full_width_header %} class="header_menu font_only_menu_type" {% endif %}>
     <div id="myNavbar" class="collapse navbar-collapse">
         <ul id="nav-menu-desktop-list" data-link-count="{{ menu.links.size }}">
-            {% for link in menu.links %} {% assign meganav = false %} {% for block in section.blocks %} {% comment %} First Checks if the top link name matches the "menu_item" in its block settings and that its a mega_menu type {% endcomment %} {% if block.settings.menu_item
-            == link.title and block.type == 'mega_menu' %} {% comment %} :: MEGA-MENU - WRAPPER :: {% endcomment %} {% capture megalink %}
-            <li class="nav-primary-link nav-mega-menu {{ link.title | replace: ' ', '-' | downcase }} dropdown has_sub_menu" aria-haspopup="true" aria-expanded="false">
+            {% for link in menu.links %} {% assign meganav = false %} {% for block in section.blocks %}
+            {% comment %} First Checks if the top link name matches the "menu_item" in its block settings and that its a mega_menu type {% endcomment %}
+            {% assign lowercaseSettingName = block.settings.menu_item | downcase %}
+            {% assign lowercaseLinkTitle = link.title | downcase %}
+            {% if lowercaseSettingName == lowercaseLinkTitle and block.type == 'mega_menu' %}
+
+            {% comment %} :: MEGA-MENU - WRAPPER :: {% endcomment %} {% capture megalink %}
+            <li class="nav-primary-link nav-mega-menu {{ link.title | replace: ' ', '-' | replace: '-[', '-' | replace: ']', '' | replace: '/', '-' | replace: '---', '-' | downcase }} dropdown has_sub_menu" aria-haspopup="true" aria-expanded="false">
 
 
                 {% comment %} :: CATEGORY HEADER :: {% endcomment %}
-                <a href="{{ link.url }}" class="nav-category-header">{{ link.title }}</a> {% comment %} :: MEGA-MENU - LIST :: {% endcomment %}
+                {% if link.url != "#nolink" %}
+                    <a href="{{ link.url }}" class="nav-category-header">{{ link.title }}</a>
+                {% else %}
+                    <span class="menu-nolink">{{ link.title }}</span>
+                {% endif %}
+                {% comment %} :: MEGA-MENU - LIST :: {% endcomment %}
                 <ul class="megamenu">
                     <div class="mega-container" data-has-mega-image="{% if block.settings.nav_image != blank %}true{% else %}false{% endif %}">
 
@@ -37,33 +47,31 @@
                       {% comment %} :: SUB-NAV - LINKS :: {% endcomment %}
                       {% for sub_link in link.links %}
                         {% comment %} :: #1 - Space Entry :: {% endcomment %}
-                        {% if sub_link.title == '-' %}
+                        {% if sub_link.title == '[COLS]' %}
                           <li class="nav-list-space">
                             {% if sub_link.links != blank %}
                               <ul class="mega-stack">
                                 {% for sub_sub_link in sub_link.links %}
                                   {% comment %} 
                                     HEADINGS : Account for..
-                                      1. '-' (Entry in menu means make a gap)
+                                      1. '[COLS]' (Entry in menu means make column)
                                       2. 'SUB-HEADER_Somethin' (A Nested Sub-Header in the "sub-sub" list)
                                       3. Regular Sub-Sub-List links
                                   {% endcomment %}
 
                                   {% comment %} :: #1 - Space Entry :: {% endcomment %}
-                                  {% if sub_sub_link.title == '-' %}
+                                  {% if sub_sub_link.title == '[COLS]' %}
                                     <li class="nav-list-space"></li>
-
-                                  {% comment %} :: #2 - Nested Sub-Sub Header :: {% endcomment %}
-                                  {% elsif sub_sub_link.title contains 'SUB-HEADER_' %}  
-                                    <h5 class="nav-sub-header inline-sub-header {{ sub_sub_link.title | replace: ' ', '-' | downcase }}">
-                                      <a href="{{ sub_sub_link.url }}">{{ sub_sub_link.title | replace:  'SUB-HEADER_', '' }}</a>
-                                    </h5>
 
                                   {% comment %} :: #3 - Regular Sub-Sub Link (notice 'Shop All' Case in this also) :: {% endcomment %}
                                   {% else %}
-                                    <li class="nav-sub-sub-item {{ sub_sub_link.title | replace: ' ', '-' | downcase }}">
+                                    <li class="nav-sub-sub-item {{ sub_sub_link.title | replace: ' ', '-' | replace: '-[', '-' | replace: ']', '' | replace: '/', '-' | replace: '---', '-' | downcase }} {% if sub_sub_link.title contains ' [BOLD]' %} bold_text{% endif %}">
+                                        {% if sub_sub_link.url != "#nolink" %}
+                                            <a href="{{ sub_sub_link.url }}">{{ sub_sub_link.title | replace: ' [BOLD]', '' }}</a>
+                                        {% else %}
+                                            <span class="menu-nolink">{{ sub_sub_link.title | replace: ' [BOLD]', '' }}</span>
+                                        {% endif %}
 
-                                      <a href="{{ sub_sub_link.url }}">{{ sub_sub_link.title }}</a>
                                     </li>
                                   {% endif %} 
 
@@ -72,34 +80,37 @@
                             {% endif %}
                           </li>
                         {% else %}
-                          <li class="nav-sub-item  {{ sub_link.title | replace: ' ', '-' | downcase }} {{ column_width }}">
-                            <h5 class="nav-sub-header"><a href="{{ sub_link.url }}">{{ sub_link.title }}</a></h5>
+                          <li class="nav-sub-item {{ sub_link.title | replace: ' ', '-' | replace: '-[', '-' | replace: ']', '' | replace: '/', '-' | replace: '---', '-' | downcase }} {{ column_width }}{% if sub_link.title contains ' [TITLE]' %} sub_sub_menu bold_text{% endif %}{% if sub_link.title contains '[HDR]' %} desktop-full-75{% endif %}">
+                            <h5 class="nav-sub-header">
+                                {% if sub_link.url != "#nolink" %}
+                                    <a href="{{ sub_link.url }}">{% if sub_link.title contains '[HDR]' %}{{ sub_link.title | replace: '[HDR]', '' }}{% else %}{{ sub_link.title | replace: ' [TITLE]', '' }}{% endif %}</a>
+                                {% else %}
+                                    <span class="menu-nolink">{% if sub_link.title contains '[HDR]' %}{{ sub_link.title | replace: '[HDR]', '' }}{% else %}{{ sub_link.title | replace: ' [TITLE]', '' }}{% endif %}</span>
+                                {% endif %}
+                            </h5>
                             
                             {% if sub_link.links != blank %}
                               <ul class="mega-stack">
                                 {% for sub_sub_link in sub_link.links %}
                                   {% comment %} 
                                     HEADINGS : Account for..
-                                      1. '-' (Entry in menu means make a gap)
+                                      1. '[COLS]' (Entry in menu means make column)
                                       2. 'SUB-HEADER_Somethin' (A Nested Sub-Header in the "sub-sub" list)
                                       3. Regular Sub-Sub-List links
                                   {% endcomment %}
 
                                   {% comment %} :: #1 - Space Entry :: {% endcomment %}
-                                  {% if sub_sub_link.title == '-' %}
+                                  {% if sub_sub_link.title == '[COLS]' %}
                                     <li class="nav-list-space"></li>
-
-                                  {% comment %} :: #2 - Nested Sub-Sub Header :: {% endcomment %}
-                                  {% elsif sub_sub_link.title contains 'SUB-HEADER_' %}  
-                                    <h5 class="nav-sub-header inline-sub-header {{ sub_sub_link.title | replace: ' ', '-' | downcase }}">
-                                      <a href="{{ sub_sub_link.url }}">{{ sub_sub_link.title | replace:  'SUB-HEADER_', '' }}</a>
-                                    </h5>
 
                                   {% comment %} :: #3 - Regular Sub-Sub Link (notice 'Shop All' Case in this also) :: {% endcomment %}
                                   {% else %}
-                                    <li class="nav-sub-sub-item {{ sub_sub_link.title | replace: ' ', '-' | downcase }}">
-
-                                      <a href="{{ sub_sub_link.url }}">{{ sub_sub_link.title }}</a>
+                                    <li class="nav-sub-sub-item {{ sub_sub_link.title | replace: ' ', '-' | replace: '-[', '-' | replace: ']', '' | replace: '/', '-' | replace: '---', '-' | downcase }}{% if sub_sub_link.title contains ' [BOLD]' %} bold_text{% endif %}{% if sub_sub_link.title contains '[HDR]' %} desktop-full-75{% endif %}">
+                                    {% if sub_sub_link.url != "#nolink" %}
+                                        <a href="{{ sub_sub_link.url }}">{{ sub_sub_link.title | replace: ' [BOLD]', '' }}</a>
+                                    {% else %}
+                                        <span class="menu-nolink">{{ sub_sub_link.title | replace: ' [BOLD]', '' }}</span>
+                                    {% endif %}
                                     </li>
                                   {% endif %} 
 
@@ -135,15 +146,33 @@
             }} Number of links in the linklist {{ numy }} Columns needed {{ mod }} Balance for last column {{ mod_offset }} Links to offset before adding mod {% endcomment %} {% comment %} :: Start math for calculated multi column dropdowns :: {% endcomment
             %}
             <li class="nav-primary-link nav-simple-menu dropdown has_sub_menu" aria-haspopup="true" aria-expanded="false">
-                <a href="{{ link.url }}" class="nav-category-header">{{ link.title }}</a> {% comment %} :: PLAIN DROPDOWN : Multi-Columns :: {% endcomment %} {% if link.links.size > num %} {% include 'navigation-columns' %} {% comment %} :: PLAIN DROPDOWN
+
+                {% if link.url != "#nolink" %}
+                    <a href="{{ link.url }}" class="nav-category-header">{{ link.title }}</a>
+                {% else %}
+                    <span class="menu-nolink">{{ link.title }}</span>
+                {% endif %}
+                {% comment %} :: PLAIN DROPDOWN : Multi-Columns :: {% endcomment %} {% if link.links.size > num %} {% include 'navigation-columns' %} {% comment %} :: PLAIN DROPDOWN
                 : Single Column : List small enough to fit as 1 column :: {% endcomment %} {% else %}
                 <ul class="submenu">
 
                     {% for sub_link in link.links %}
-                    <li class="has_sub_menu" aria-haspopup="true" aria-expanded="false"><a href="{{ sub_link.url }}">{{ sub_link.title }}</a> {% if sub_link.links != blank %}
+                    <li class="has_sub_menu" aria-haspopup="true" aria-expanded="false">
+                    {% if sub_link.url != "#nolink" %}
+                        <a href="{{ sub_link.url }}">{{ sub_link.title }}</a>
+                    {% else %}
+                        <span class="menu-nolink">{{ sub_link.title }}</span>
+                    {% endif %}
+                    {% if sub_link.links != blank %}
                         <ul class="nested">
                             {% for sub_sub_link in sub_link.links %}
-                            <li class="{{ sub_sub_link.title | replace: ' ', '-' | downcase }}"><a href="{{ sub_sub_link.url }}">{{ sub_sub_link.title }}</a></li>
+                            <li class="{{ sub_sub_link.title | replace: ' ', '-' | replace: '-[', '-' | replace: ']', '' | replace: '/', '-' | replace: '---', '-' | downcase }}">
+                                {% if sub_sub_link.url != "#nolink" %}
+                                    <a href="{{ sub_sub_link.url }}">{{ sub_sub_link.title }}</a>
+                                {% else %}
+                                    <span class="menu-nolink">{{ sub_sub_link.title }}</span>
+                                {% endif %}
+                            </li>
                             {% endfor %}
                         </ul>
                         {% endif %}
@@ -158,7 +187,7 @@
 
 
             {% comment %} :: SINGLE LINK : One lonely weeb link :: {% endcomment %} {% else %}
-            <li class="nav-primary-link nav-single-link {{ link.title | replace: ' ', '-' | downcase }}">
+            <li class="nav-primary-link nav-single-link {{ link.title | replace: ' ', '-' | replace: '-[', '-' | replace: ']', '' | replace: '/', '-' | replace: '---', '-' | downcase }}">
                 <a class="nav-category-header" href="{{ link.url }}">{{ link.title }}</a>
             </li>
             {% endif %} {% endfor %}

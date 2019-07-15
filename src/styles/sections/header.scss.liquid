@@ -401,8 +401,8 @@ ul{padding:0 0px; margin: 0px;}
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
     position: absolute;
-    top: 84px;
-    z-index: 9999;
+    top: 85px;
+    z-index: 999;
     width: 100%;
     background-color: #fff;
     height: calc(100vh - 84px) !important;
@@ -417,14 +417,9 @@ ul{padding:0 0px; margin: 0px;}
 #nav-menu-mobile.mobile-nav-open{
     left: 0;
 }
-.accordion-header.open:after {
-    display: none;
-}
-.accordion-header{
-    font-size: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
 
+.accordion-toggle{
+    position:relative;
     &:before{
         content: "";
         position: absolute;
@@ -444,6 +439,15 @@ ul{padding:0 0px; margin: 0px;}
         right: 31px;
         top: 22px;
     }
+}
+
+.accordion-toggle.open:after {
+    display: none;
+}
+.accordion-header{
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .accordion-content {
@@ -469,6 +473,13 @@ ul{padding:0 0px; margin: 0px;}
      }
   }
 
+  .responsive-full-75{
+     a{
+        font-weight:$bold;
+        text-decoration: underline !important;
+     }
+  }
+
 }
 
 
@@ -481,6 +492,10 @@ ul{padding:0 0px; margin: 0px;}
     border-bottom: 1px solid #d7d7d7;
     font-size: 15px;
 }
+
+.accordion-content2 {
+    display: none;
+}
 /*acodeant*/
 
 
@@ -490,32 +505,77 @@ ul{padding:0 0px; margin: 0px;}
         width: 100%;
         left: 0;
         background-color: #fff;
-        padding: 15px 15px;
-        z-index: 99;
-        top: 41px;
+        padding:34px 15px;
+        z-index: 9999;
+        top:157px;
         min-width: 180px;
         box-shadow: 0px 8px 8px hsla(0, 0%, 0%, 0.39);
         display:none;
+
+        @include mq('laptop'){
+            top: 152px;
+        }
 
         h5.nav-sub-header a {
             font-weight: bold;
         }
 
+        .desktop-full-75 a {
+            color:{{ settings.nav_sub_header_color }};
+        }
+
+        .sub_sub_menu h5 a {
+            color:{{ settings.nav_sub_sub_header_color }} ;
+        }
+
         .mega-container {
-            max-width: 1115px;
-            margin: 0px auto;
+            /*max-width: 1115px;
+            margin: 0px auto;*/
         }
 
         li {
             text-align: left;
-            padding: 2px 5px;
-            width: 25%;
+            padding: 2px 0px;
+            width:11%;
             float: left;
 
             li{
               width:100%;
             }
         }
+
+        .nav-list-space{
+            width: 17.4%;
+            margin-right:5%;
+
+            &:after{
+                position: absolute;
+                content: "";
+                width: 2px;
+                height: 100%;
+                background-color: #b5b5b5;
+            }
+        }
+
+        .mega-column-content{
+            position: relative;
+            display: inline-block;
+            max-width: 86.5%;
+            width: 100%;
+
+            @include mq('laptop'){
+                max-width: 90%;
+            }
+        }
+
+        .desktop-full-75{
+            width: 75%;
+            h5.nav-sub-header a{
+                text-decoration: underline !important;
+            }
+        }
+
+
     }
 
     .submenu{
@@ -547,7 +607,7 @@ ul{padding:0 0px; margin: 0px;}
 
    #myNavbar{
       display:block;
-      position:relative;
+      position:unset;
    }
 
    .nav-simple-menu{
@@ -644,6 +704,7 @@ ul{padding:0 0px; margin: 0px;}
 
    a{
     @include black-paragraph-13-font;
+    color:{{ settings.nav_list_item_color }};
     margin-bottom: 0px;
     text-decoration: none !important;
     text-transform: uppercase;
@@ -658,11 +719,25 @@ ul{padding:0 0px; margin: 0px;}
        }
 
     }
+
+    .nav-primary-link{
+        &>a{
+            font-size:$font-13;
+            color:{{ settings.nav_header_color }};
+            font-weight:$weight-normal;
+            line-height:16px;
+            letter-spacing: 0;
+        }
+    }
+    .bold_text > a {
+         font-weight: bold;
+    }
+    .bold_text > .menu-nolink {
+         font-weight: bold;
+    }
 }
 
 .bc-sf-search-suggestion{min-width:320px !important;}
-
-
 
     .navbar-header{
        position:relative;

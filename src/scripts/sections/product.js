@@ -12,11 +12,13 @@ events.trigger = events.emit; // trigger alias
 theme.Product = (function() {
     function Product(container) {
         const ui = {
+            detailAccordionHeader: $('#product-detail---accordion-header'),
+            detailAccordionContent: $('#product-detail--accordion-content'),
+            descriptionAccordionHeader: $('#product-description---accordion-header'),
+            descriptionAccordionContent: $('#product-description--accordion-content'),
+            fitAccordionHeader: $('#product-fit---accordion-header'),
+            fitAccordionContent: $('#product-fit--accordion-content'),
             sizeChartPopup: $('#size-chart--popup'),
-            freeShippingAccordionHeader: $('#free-shipping--accordion-header'),
-            freeShippingAccordionContent: $('#free-shipping--accordion-content'),
-            descriptionMobileTrigger: $('#product-description--mobile-dropdown-trigger'),
-            descriptionMobileContent: $('#product-description--mobile-dropdown'),
             campaignVideoTrigger: $('.campaign-video--trigger')
         }
 
@@ -37,19 +39,27 @@ theme.Product = (function() {
             // BADGES : Generate badge in div slot if present
             buildBadges();
 
-            // FREE SHIPPING : Accordion
-            if (ui.freeShippingAccordionContent.length > 0) {
-                ui.freeShippingAccordionHeader.click(() => {
-                    ui.freeShippingAccordionHeader.toggleClass('open');
-                    ui.freeShippingAccordionContent.slideToggle(250);
+            // DETAIL : Accordion
+            if (ui.detailAccordionContent.length > 0) {
+                ui.detailAccordionHeader.click(() => {
+                    ui.detailAccordionHeader.toggleClass('open');
+                    ui.detailAccordionContent.slideToggle(350);
                 });
             }
 
             // DESCRIPTION : Accordion
-            if (ui.descriptionMobileContent.length > 0) {
-                ui.descriptionMobileTrigger.click(() => {
-                    ui.descriptionMobileTrigger.toggleClass('open');
-                    ui.descriptionMobileContent.slideToggle(350);
+            if (ui.descriptionAccordionContent.length > 0) {
+                ui.descriptionAccordionHeader.click(() => {
+                    ui.descriptionAccordionHeader.toggleClass('open');
+                    ui.descriptionAccordionContent.slideToggle(350);
+                });
+            }
+
+            // FIT INFO : Accordion
+            if (ui.fitAccordionContent.length > 0) {
+                ui.fitAccordionHeader.click(() => {
+                    ui.fitAccordionHeader.toggleClass('open');
+                    ui.fitAccordionContent.slideToggle(350);
                 });
             }
 

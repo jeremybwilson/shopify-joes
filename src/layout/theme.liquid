@@ -95,29 +95,16 @@
     {{ 'instafeed.js' | asset_url | script_tag }}
   {% endif %}
 
-  {% comment %} :: Loyalty Lion :: {% endcomment %}
-  {% if settings.loyalty_lion_enabled %}
-    {% include 'script-loyalty-lion' %}
-  {% endif %}
-
   {% comment %} :: Wishlist King App :: {% endcomment %}
   {% if settings.app_wk_enabled %}
     {% include 'appmate-wishlist-king' %}
   {% endif %}
-
-  {% comment %} :: Product Reviews :: {% endcomment %}
-  {% comment %}{% include 'pr-review-master-script' %}{% endcomment %}
 
   {% comment %} :: Shop Runner :: {% endcomment %}
   {% if settings.shoprunner_enabled %}
     {% comment %} {% include 'shoprunner-logic', isCheckout: false %} {% endcomment %}
     {% include 'shoprunner-init-script' %}
   {% endif %}
-
-  {% comment %} :: Borderfree :: 
-  {% if settings.borderfree_enabled %}
-    {% include 'borderfree-script' %}
-  {% endif %} {% endcomment %}
 
   <!-- Favicons
 ================================================== -->
@@ -135,7 +122,14 @@
 
   {{ content_for_header }}
 
+  {% comment %} :: Shop Runner :: {% endcomment %}
   {% include 'script-shoprunner-head' %}
+
+  {% comment %} :: Nosto :: {% endcomment %}
+  {% include 'nosto-library' %}
+
+  {% comment %} :: True Fit :: {% endcomment %}
+  {% include 'true-fit-library' %}
 </head>
 
 <body class="template-{{ template.name }} gridlock shifter {% if template contains 'product' %}product{% elsif template contains 'collection' %}collection {% elsif template contains 'page' %}{{ template | split: '.' | last }}{% elsif template contains 'customers' %}{{ template | split: '/' | first }}-{{ template | split: '/' | last }}{% else %}{{ template }}{% endif %}">

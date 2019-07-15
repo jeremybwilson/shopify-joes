@@ -59,8 +59,6 @@
                 "label": "Announcement BG - #2",
                 "default": "#757575"
             },
-
-
             {
                 "type": "header",
                 "content": "Navigation Header"
@@ -80,18 +78,6 @@
             },
             {
                 "type": "color",
-                "id": "logo_color",
-                "label": "Text Logo Color",
-                "default": "#777"
-            },
-            {
-                "type": "color",
-                "id": "nav_links",
-                "label": "Nav Icons",
-                "default": "#164632"
-            },
-            {
-                "type": "color",
                 "id": "nav_header_color",
                 "label": "Nav Header Color",
                 "info": "(Main nav entries in bar)",
@@ -100,7 +86,15 @@
             {
                 "type": "color",
                 "id": "nav_sub_header_color",
-                "label": "Nav Sub Header Color",
+                "label": "Megamenu Header Color",
+                "info": "(eg. Denim)",
+                "default": "#0153a6"
+            },
+            {
+                "type": "color",
+                "id": "nav_sub_sub_header_color",
+                "label": "Megamenu Sub Header Color",
+                "info": "(eg. Fit in Denim)",
                 "default": "#0153a6"
             },
             {
@@ -110,38 +104,6 @@
                 "info": "(List items in Mega-Menu)",
                 "default": "#000000"
             },
-            {
-                "type": "color",
-                "id": "nav_links_hover",
-                "label": "Nav Icons Hover",
-                "default": "#AA5131"
-            },
-            {
-                "type": "color",
-                "id": "nav_links_sale",
-                "label": "Special for nav menu items named 'sale' ",
-                "default": "#AA5131"
-            },
-            {
-                "type": "color",
-                "id": "nav_minor_border_color",
-                "label": "Search Underline",
-                "default": "#cccccc"
-            },
-            {
-                "type": "color",
-                "id": "social_links",
-                "label": "Social Icons",
-                "default": "#000000"
-            },
-            {
-                "type": "color",
-                "id": "social_links_hover",
-                "label": "Social icons hover",
-                "default": "#000000"
-            },
-
-
             {
                 "type": "header",
                 "content": "General"
@@ -162,18 +124,6 @@
                 "type": "color",
                 "id": "text_color",
                 "label": "Text content",
-                "default": "#000000"
-            },
-            {
-                "type": "color",
-                "id": "link_color",
-                "label": "Links",
-                "default": "#000000"
-            },
-            {
-                "type": "color",
-                "id": "link_hover_color",
-                "label": "Link hover",
                 "default": "#000000"
             },
             {
@@ -204,25 +154,25 @@
                 "type": "color",
                 "id": "button_bg",
                 "label": "Main Button BG",
-                "default": "#e41c39"
+                "default": "#000000"
             },
             {
                 "type": "color",
                 "id": "button_bg_hover",
                 "label": "Main Button BG Hover",
-                "default": "#a6041c"
+                "default": "#333333"
             },
             {
                 "type": "color",
                 "id": "button_text",
                 "label": "Main Button Text",
-                "default": "#FFFFFF"
+                "default": "#ffffff"
             },
             {
                 "type": "color",
                 "id": "button_text_hover",
                 "label": "Main Button Text Hover",
-                "default": "#FFFFFF"
+                "default": "#ffffff"
             },
             {
                 "type": "color",
@@ -293,8 +243,6 @@
                 "default": 0
             },
 
-
-
             {
                 "type": "header",
                 "content": "Homepage"
@@ -303,13 +251,13 @@
                 "type": "color",
                 "id": "homepage_instagram_header",
                 "label": "Instagram Feed - Text",
-                "default": "#ffffff"
+                "default": "#000"
             },
             {
                 "type": "color",
                 "id": "homepage_instagram_text",
                 "label": "Instagram Feed - Text",
-                "default": "#ffffff"
+                "default": "#000"
             },
 
             {
@@ -320,153 +268,83 @@
                 "type": "color",
                 "id": "filter_bg",
                 "label": "Filter Bar Background",
-                "default": "#F4F2EC"
+                "default": "#ffffff"
+            },
+            {
+                "type": "color",
+                "id": "filter_title_color",
+                "label": "Filter Title Color",
+                "default": "#000000"
             },
             {
                 "type": "color",
                 "id": "filter_text_color",
                 "label": "Filter Text Color",
-                "default": "#164732"
-            },
-            {
-                "type": "color",
-                "id": "filter_arrow_color",
-                "label": "Filter Arrow Color",
-                "default": "#AA5131"
-            },
-            {
-                "type": "color",
-                "id": "filter_checkbox_bg",
-                "label": "Filter Checkbox Background",
-                "default": "#FEFFFE"
-            },
-            {
-                "type": "color",
-                "id": "filter_divider_color",
-                "label": "Filter Divider Color",
-                "default": "#D8D8D8"
-            },
-            {
-                "type": "color",
-                "id": "filter_button_main_bg",
-                "label": "Main Button Background",
-                "default": "#164732"
-            },
-            {
-                "type": "color",
-                "id": "filter_button_main_text",
-                "label": "Main Button Text",
-                "default": "#FEFFFE"
-            },
-            {
-                "type": "color",
-                "id": "filter_button_alt_bg",
-                "label": "Alt Button Background",
-                "default": "#AA5131"
-            },
-            {
-                "type": "color",
-                "id": "filter_button_alt_text",
-                "label": "Alt Button Text",
-                "default": "#FEFFFE"
+                "default": "#000000"
             },
             {
                 "type": "color",
                 "id": "filter_bar_border_color",
                 "label": "Filter Bar Border Color",
-                "info": "( Color of Filter Bar Wrap border, width setting later on )",
-                "default": "#FEFFFE"
+                "info": "( Color of Filter Bar Wrap border )",
+                "default": "#e2e2e2"
             },
             {
-                "type": "color",
-                "id": "quickview_button_bg",
-                "label": "Quickview Button Background",
-                "default": "#e41c39"
-            },
-            {
-                "type": "color",
-                "id": "quickview_button_text",
-                "label": "Quickview Button Text",
-                "default": "#FEFFFE"
-            },
-            {
-                "type": "color",
-                "id": "catalog_item_text_color",
-                "label": "Catalog Item Text Color",
-                "default": "#164732"
-            },
-            {
-                "type": "color",
-                "id": "catalog_item_price_color",
-                "label": "Catalog Item Price Color",
-                "default": "#525252"
-            },
-            {
-                "type": "color",
-                "id": "catalog_item_accent_color",
-                "label": "Catalog Item Accent Color",
-                "default": "#AA5131"
+                "type": "range",
+                "id": "filter_bar_border_width",
+                "min": 0,
+                "max": 4,
+                "step": 1,
+                "unit": "px",
+                "label": "Filter Bar Border Width",
+                "info": "( Border width of Filter Bar Wrap )",
+                "default": 1
             },
             {
                 "type": "color",
                 "id": "collection_seo_footer_bg",
-                "label": "Catalog SEO Footer BG",
+                "label": "Collection Page Bottom Description BG",
+                "info": "(Enable \"Show Collection Description\" in Product Grid + Filters Settings first.)",
                 "default": "#F4F2EC"
             },
             {
                 "type": "color",
                 "id": "collection_seo_footer_text",
-                "label": "Catalog SEO Footer Text Color",
+                "label": "Collection Page Bottom Description Text Color",
                 "default": "#164732"
             },
+
+
             {
-                "type": "color",
-                "id": "collection_load_more_text",
-                "label": "Load More Text Color",
-                "default": "#FEFFFE"
-            },
-            {
-                "type": "color",
-                "id": "collection_load_more_bg",
-                "label": "Load More Button BG ",
-                "default": "#ab5232"
-            },
-            {
-                "type": "color",
-                "id": "collection_load_more_bg_hover",
-                "label": "Load More Button BG on Hover",
-                "default": "#9b492b"
+                "type": "header",
+                "content": "PDP page Badge"
             },
             {
                 "type": "color",
                 "id": "product_badge_square_bg",
                 "label": "Square Badge BG",
-                "default": "#3E3E3E"
+                "info": "(Add tags in Product, 1. item_badge_text_Back in Stock)",
+                "default": "#1a1919"
             },
             {
                 "type": "color",
                 "id": "product_badge_circle_bg",
                 "label": "Circle Badge BG",
-                "default": "#AB5232"
+                "info": "(Add tags in Product, 1. item_badge_text_Back in Stock, 2. item_badge_shape_circle)",
+                "default": "#1a1919"
             },
             {
                 "type": "color",
                 "id": "product_badge_diamond_bg",
                 "label": "Diamond Badge BG",
-                "default": "#164732"
+                "info": "(Add tags in Product, 1. item_badge_text_Back in Stock, 2. item_badge_shape_diamond)",
+                "default": "#1a1919"
             },
             {
                 "type": "color",
                 "id": "product_badge_text_color",
                 "label": "Badge Text Color",
-                "default": "#FEFFFE"
-            },
-            {
-                "type": "color",
-                "id": "react_swatch_outline_color",
-                "label": "Swatch Outline Color",
-                "info": "(For React Swatches on Collection Views)",
-                "default": "#9a9a9a"
+                "default": "#FFFFFF"
             },
 
 
@@ -479,19 +357,7 @@
                 "id": "fancybox_overlay_bg",
                 "label": "Modal Overlay BG (rgba)",
                 "info": "(The full-screen backing behind the modal)",
-                "default": "0,0,0,0.8"
-            },
-            {
-                "type": "color",
-                "id": "fancybox_close_color",
-                "label": "Modal Close Color",
-                "default": "#5B5B5B"
-            },
-            {
-                "type": "color",
-                "id": "fancybox_close_hover_color",
-                "label": "Modal Close Hover Color",
-                "default": "#9B492B"
+                "default": "0,0,0,0.5"
             },
 
 
@@ -626,91 +492,6 @@
                 "id": "gdpr_alt_button_bg_hover",
                 "label": "GDPR Alt Button Hover",
                 "default": "#d6d6d6"
-            },
-
-
-
-
-            {
-                "type": "header",
-                "content": "Navigation"
-            },
-            {
-                "type": "color",
-                "id": "navigation",
-                "label": "Background",
-                "default": "#f0f0f0"
-            },
-            {
-                "type": "color",
-                "id": "nav_color",
-                "label": "Text",
-                "default": "#ffffff"
-            },
-            {
-                "type": "color",
-                "id": "nav_hover_color",
-                "label": "Hover background",
-                "default": "#f5f5f5"
-            },
-            {
-                "type": "color",
-                "id": "nav_hover_link_color",
-                "label": "Hover text",
-                "default": "#000000"
-            },
-            {
-                "type": "color",
-                "id": "dropdown_background_color",
-                "label": "Drop-down background",
-                "default": "#000000"
-            },
-            {
-                "type": "color",
-                "id": "nav_dropdown_color",
-                "label": "Drop-down text",
-                "default": "#ffffff"
-            },
-            {
-                "type": "color",
-                "id": "dropdown_hover_background_color",
-                "label": "Drop-down hover background",
-                "default": "#000000"
-            },
-            {
-                "type": "color",
-                "id": "dropdown_hover_link_color",
-                "label": "Drop-down hover text",
-                "default": "#000000"
-            },
-            {
-                "type": "header",
-                "content": "Directional buttons",
-                "info": "Next and prev"
-            },
-            {
-                "type": "color",
-                "id": "directional_background",
-                "label": "Background",
-                "default": "#000000"
-            },
-            {
-                "type": "color",
-                "id": "directional_hover_background",
-                "label": "Background hover",
-                "default": "#000000"
-            },
-            {
-                "type": "color",
-                "id": "directional_color",
-                "label": "Text",
-                "default": "#000000"
-            },
-            {
-                "type": "color",
-                "id": "directional_hover_color",
-                "label": "Text hover",
-                "default": "#000000"
             },
 
 
@@ -1094,19 +875,9 @@
             {
                 "type": "checkbox",
                 "id": "show_collection_seo_block",
-                "label": "Show SEO Footer",
-                "info": "(Only rendered on collections, not on homepage featured collection.)",
-                "default": true
-            },
-            {
-                "type": "range",
-                "id": "filter_bar_border_width",
-                "min": 0,
-                "max": 6,
-                "step": 1,
-                "unit": "px",
-                "label": "Filter Bar Border Width",
-                "default": 0
+                "label": "Show Collection Description",
+                "info": "(Only rendered on collections page at bottom of the page, not on homepage featured collection.)",
+                "default": false
             },
             {
                 "type": "select",
@@ -1366,90 +1137,6 @@
                 "id": "default_currency",
                 "label": "Default currency",
                 "default": "USD"
-            }
-        ]
-    },
-    {
-        "name": "Rewards (Loyalty Lion)",
-        "settings": [{
-                "type": "checkbox",
-                "id": "loyalty_lion_enabled",
-                "label": "Enable Rewards",
-                "info": "(Loyalty Lion)",
-                "default": false
-            },
-            {
-                "type": "text",
-                "id": "loyalty_lion_token",
-                "label": "Loyalty Lion Token",
-                "info": "Can be found in the Loyalty Lion app in the 'Manage' Tab under 'Configuration > Settings'."
-            },
-            {
-                "type": "text",
-                "id": "loyalty_lion_secret",
-                "label": "Loyalty Lion Secret",
-                "info": "Can be found in the Loyalty Lion app in the 'Manage' Tab under 'Configuration > Settings'."
-            }
-        ]
-    },
-    {
-        "name": "Borderfree",
-        "settings": [{
-                "type": "checkbox",
-                "id": "borderfree_enabled",
-                "label": "Enable Border-Free",
-                "default": true
-            },
-            {
-                "type": "checkbox",
-                "id": "borderfree_production",
-                "label": "On Production",
-                "info": "(Is this the production theme?)",
-                "default": false
-            },
-            {
-                "type": "header",
-                "content": "Dev Scripts"
-            },
-            {
-                "type": "url",
-                "label": "JS Script URL (Dev)",
-                "id": "borderfree_js_url_dev",
-                "info": "(Is usually: https://bfx-objects.stage.borderfree.com/v1/dist/bfx.js)"
-            },
-            {
-                "type": "text",
-                "label": "JS Script Config (Dev)",
-                "id": "borderfree_js_config_dev",
-                "default": "{key:'bca2f6b0-0273-11e6-8da6-4920e7373927', env:'STAGE', mode:'default', brand:'default'}"
-            },
-            {
-                "type": "url",
-                "label": "Merchant Script URL (Dev)",
-                "id": "borderfree_merchant_url_dev",
-                "info": "(Is usually: https://stagecheckout.borderfree.com/htmlcheckout/resources/js/merchant.js)"
-            },
-
-
-            {
-                "type": "header",
-                "content": "Production Scripts"
-            },
-            {
-                "type": "url",
-                "label": "JS Script URL (Prod)",
-                "id": "borderfree_js_url_prod"
-            },
-            {
-                "type": "text",
-                "label": "JS Script Config (Prod)",
-                "id": "borderfree_js_config_prod",
-                "default": "{key:'bca2f6b0-0273-11e6-8da6-4920e7373927', env:'STAGE', mode:'default', brand:'default'}"
-            },
-            {
-                "type": "url",
-                "label": "Merchant Script URL (Prod)",
-                "id": "borderfree_merchant_url_prod"
             }
         ]
     },

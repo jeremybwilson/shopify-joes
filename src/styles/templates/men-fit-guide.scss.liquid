@@ -7,12 +7,11 @@
     @include mq('phone'){
        margin-bottom: 56px;
     }
-}
 
-  
-.slick-track {
-    display: flex;
-    overflow: hidden;
+    .slick-track {
+       display: flex;
+       overflow: hidden;
+    }    
 }
 
 .banner-headig{
@@ -152,6 +151,14 @@
     margin: 0px 0 0px 0;
     overflow: hidden;
   }
+  hr {
+    margin: 23px 0 33px 0;
+    border:$border-grey-1;
+
+    @include mq('phone'){
+       margin: 23px 0 22px 0;
+    }
+  }
 }
 
 .sknny-detail {
@@ -188,15 +195,6 @@
        text-transform: capitalize;
        margin-top: 13px !important;
        display: inline-block;
-    }
-}
-
-hr {
-    margin: 23px 0 33px 0;
-    border:$border-grey-1;
-
-    @include mq('phone'){
-       margin: 23px 0 22px 0;
     }
 }
 

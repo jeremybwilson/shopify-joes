@@ -262,20 +262,13 @@ $container-fluid-width:1115px;
 @mixin subscribe-button{
     min-width: 163px;
     height: 48px;
-    background-color: $black-color;
-    color:$white-color;
     text-align: center;
     line-height: 43px;
-    border: 0px !important;
     font-size:$font-15;
     font-weight:$bold;
     letter-spacing:0px;
     text-transform: uppercase;
-
-    &:hover{
-      color:$white-color;
-      background-color:$hover-333333;
-    }
+    @include mainButton;
     
     @include mq('phone'){
        min-width: 108px;
@@ -290,19 +283,12 @@ $container-fluid-width:1115px;
 @mixin primary-button{
     min-width: 163px;
     height: 48px;
-    border:1px solid $black-color;
-    background-color:$white-color;
     text-align: center;
     line-height: 43px;
     font-size:$font-15;
     font-weight:$bold;
     letter-spacing:0px;
-    color:$black-color; 
-
-    &:hover{
-      color:$white-color !important;
-      background-color:$black-color !important;
-    }
+    @include mainButton;
     
     @include mq('phone'){
        min-width: 108px;

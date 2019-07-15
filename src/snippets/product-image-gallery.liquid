@@ -51,15 +51,15 @@
 
         {% comment %} :: ZOOM - Overlay Region :: {% endcomment %}
         {% if section.settings.show_zoom %}
-          <a class="product-fancybox" rel="product-images"  href="{{ image | img_url: '2400x' }}">
+          <a class="product-fancybox" rel="product-images"  href="{{ image | img_url: '1400x' }}">
         {% endif %}
 
         {% comment %} :: MAIN IMAGE :: {% endcomment %}
         <img id="{{ product.id }}" class="product-image lazyload lazyload-fade"
-          src="{{ image | product_img_url: '300x' }}"
+          src="{{ image | product_img_url: '1400x' }}"
           data-src="{{ img_url }}"
           data-sizes="auto"
-          {% if section.settings.show_zoom %} data-zoom-src="{{ image | img_url: '2400x' }}" {% endif %}
+          {% if section.settings.show_zoom %} data-zoom-src="{{ image | img_url: '1400x' }}" {% endif %}
           alt="{{ image.alt | escape }}">
 
 
@@ -69,9 +69,13 @@
 
         {% comment %} :: FALLBACK :: {% endcomment %}
         <noscript>
-          <img id="{{ product.id }}" class="product-main-image" src="{{ featured_image | product_img_url: '800x' }}" alt='{{ image.alt | escape }}'/>
+          <img id="{{ product.id }}" class="product-main-image" src="{{ featured_image | product_img_url: '1000x' }}" alt='{{ image.alt | escape }}'/>
         </noscript>
 
+
+        <div class="favourite-icon">
+          <img src="{{ 'favorite.svg' | asset_url }}">
+        </div>
       </div>
     {% endfor %}
 
@@ -86,7 +90,13 @@
 
       {% endfor %}
     {% endif %}
-
+    {% comment %} :: THUMBNAIL CONTROLS :: {% endcomment %}
+    {% if section.settings.show_controls %}
+        <div class="main-image-navigation">
+            <span class="prev-image"><i class="fa fa-angle-left"></i></span>
+            <span class="next-image"><i class="fa fa-angle-right"></i></span>
+        </div>
+    {% endif %}
   </div>
 </div>
 
@@ -134,13 +144,5 @@
 
     {% if productImages.size > 2 %}</div>{% endif %}
   </div>
-
-  {% comment %} :: THUMBNAIL CONTROLS :: {% endcomment %}
-  {% if section.settings.show_controls %}
-    <div class="main-image-navigation">
-      <span class="prev-image"><i class="fa fa-angle-left"></i></span>
-      <span class="next-image"><i class="fa fa-angle-right"></i></span>
-    </div>
-  {% endif %}
 
 {%- endif -%}

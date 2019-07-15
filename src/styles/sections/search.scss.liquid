@@ -11,16 +11,6 @@ $searchBorder: 1px solid {{ settings.filter_divider_color }};
 /*  GLOBAL : 
  *     - Items not in search.liquid that need adjustment
  * ----------------------------------------------------- */
-body.search {
-    // BREADCRUMB : "Home / SEARCH TERM" Looks funky, hiding for search page
-    #breadcrumb {
-        display: none;
-    }
-
-    #content {
-        padding: 0 0 100px;
-    }
-}
 
 
 
@@ -33,20 +23,35 @@ body.search {
     float: none;
 
     @include mq( 'lap-and-up' ) {
-        margin-top: 95px;
+        margin-top:35px;
+    }
+
+    .product-list-part{
+        @include mq('phone'){
+           margin-top: 37px;
+        }
     }
 
 
     /* TITLE + SEARCH BAR : Header content w/ search bar
      * ------------------------------------------------- */ 
-    .search-title, 
+
     .bc-sf-search-result-number {
-        @include h5-heading;
+        @include black-paragraph-14-font;
         padding:$padding-left-right;
+
+        @include mq('phone'){
+           padding:$padding-left-right-mobile15;
+        }
     }
 
     .search-title {
-        @include heading-black;
+        padding:$padding-left-right;
+        @include h4-head;
+
+         @include mq('phone'){
+           padding:$padding-left-right-mobile15;
+        }
     }
 
     #search-bar {
@@ -81,34 +86,18 @@ body.search {
     }
 
 
-    /* COLLECTION : Product Grid + Item View
-     * ------------------------------------------------- */  
-    @import url('../snippets/product-grid.scss.liquid');
-    
-
-
-    /* FILTERS : Filter layout styles
-     * ------------------------------------------------- */
-    @import url('../snippets/filters.scss.liquid');
-
-
-
     /* LAYOUT : Overrides for filter / collection styles
      * ------------------------------------------------- */
     #filter-list-mobile-wrap {
         position: relative;
-        margin-top: -69px;
+        margin-top:0px;
     }
 
     .filter-wrap-desktop {
         @include mq( 'lap-and-up' ) {
             margin-top: 5px;
         }
-    }
-
-    #product-loop {
-        padding-top: 100px;
-    }
+    }   
 }
 
 
@@ -116,6 +105,10 @@ body.search {
 body.search {
     display: inline-block;
     width: 100%;
+
+    #breadcrumb {
+        display: none;
+    }
 }
 .button-wishlist-product {
     display: none;

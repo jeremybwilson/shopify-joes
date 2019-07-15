@@ -15,11 +15,12 @@ $badgeSizeDesktop: 72px;
     @include flexbox;
     @include justify-content( center );
     @include align-items( center );
-    position: absolute;
+    position: relative; // absolute
     width: $badgeSizeMobile;
     height: $badgeSizeMobile;
-    top: 0;
+    top: 7px;
     right: 0;
+    left: -142px;
     z-index: 20;
     background: $shapeSquareBg; //Fallback : If shape class is not recognized
 
@@ -100,5 +101,14 @@ $badgeSizeDesktop: 72px;
     		position: relative;
 		    transform: rotate( -45deg );
     	}
+    }
+}
+.product-list-part{
+    .item-badge {
+        position: absolute;
+        top: 7px;
+        right: 7px;
+        left: 0;
+        z-index: 999;
     }
 }

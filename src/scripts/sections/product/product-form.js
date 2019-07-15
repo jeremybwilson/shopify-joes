@@ -229,6 +229,20 @@ theme.ProductForm = function (context, events) {
       enableHistoryState: config.enable_history
     });
 
+    var productOptions = product.options;
+    if( typeof(productOptions ) != "undefined" ){
+      for(var i=0;i<productOptions.length;i++) {
+        var displaytext = (productOptions[i].toLowerCase() == 'size' ) ? '<option value=""> Select your Size </option>' : ( (productOptions[i].toLowerCase() == 'title') ? '<option value=""> Select Amount </option>' : '<option value="">Pick a ' + productOptions[i] + '</option>');
+        $('.single-option-selector:eq('+ i +')')
+            .filter(function() {
+              return $(this).find('option').length > 1
+            })
+            .prepend(displaytext)
+            .val('')
+            .trigger('change');
+      }
+    }
+
     // DROPDOWN : Option selection handler
     (function single_option_selectors() {
       var elements = context.querySelectorAll(".single-option-selector");

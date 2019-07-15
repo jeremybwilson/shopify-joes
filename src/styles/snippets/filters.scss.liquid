@@ -123,7 +123,7 @@
 
 .filter-list-desktop-wrap {
     position: absolute;
-    background: #fff;
+    background: {{ settings.filter_bg }};
     width: 100%;
     height: 0;
     top:28px;
@@ -131,7 +131,7 @@
     z-index: 999;
     opacity: 0;
     margin-left: 0 !important;
-    border-bottom:$border-grey-1;
+    border-bottom: {{ settings.filter_bar_border_width }}px solid {{ settings.filter_bar_border_color }};
     padding: 50px 50px 34px 50px;
     display:none;
 
@@ -453,12 +453,19 @@
 .filter-list-desktop-wrap #bc-sf-filter-tree-h .bc-sf-filter-option-block .bc-sf-filter-block-content{top:13px !important;}
 
 .bc-sf-filter-block-title a{
-   @include black-paragraph-13-font;
-   font-weight:$bold;
+   font-size: 13px;
+   color: {{ settings.filter_title_color }};
+   line-height: 16px;
+   letter-spacing: 0;
+   font-weight: bold;
 }
 
 .bc-sf-filter-option-label span{
-  @include black-paragraph-13-font;
+  font-size: 13px;
+  color: {{ settings.filter_text_color }};
+  font-weight: normal;
+  line-height: 16px;
+  letter-spacing: 0;
   margin-left: 0px !IMPORTANT;
 }
 

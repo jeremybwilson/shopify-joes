@@ -5,9 +5,11 @@
   margin-bottom:18px;
   h2{
     @include heading-black;
+    color: {{ settings.homepage_instagram_header }};
   }
   p{
     @include suv-headin-light;
+    color: {{ settings.homepage_instagram_text }};
 
     @include mq('phone'){
        font-size:$font-12-mo;

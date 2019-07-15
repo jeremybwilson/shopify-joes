@@ -85,7 +85,7 @@
   },
   "cart": {
     "general": {
-      "title": "My Cart",
+      "title": "Cart",
       "close_cart": "Close",
       "shipping_at_checkout": "Shipping calculated at check out",
       "empty": "Your cart is currently empty.",

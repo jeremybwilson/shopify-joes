@@ -100,15 +100,33 @@
         THIS SHOULD NOT BE HARD CODED - REPLACE BEFORE USING REVIEWS!!
         <a href="/pages/reviews?&amp;pr_merchant_id=683283&amp;pr_api_key=ecee97b3-ae68-483f-ae4b-756350853c06&amp;pr_merchant_group_id=79437&amp;pr_page_id=123456789" class="product-star-rating__write-review">Write a Review</a>
       {% endcomment %}
+      
+      <div class="star-rating-product-detail">
+         <img src="{{ 'rate-star-button.svg' | asset_url }}">
+         <img src="{{ 'rate-star-button.svg' | asset_url }}">
+         <img src="{{ 'rate-star-button.svg' | asset_url }}">
+         <img src="{{ 'rate-star-button.svg' | asset_url }}">
+         <img src="{{ 'rate-star-button.svg' | asset_url }}">
+      </div>
+
+        <a href="#" class="product-star-rating__write-review">Write a Review</a>
+      
     </div>
   {% endif %}
 
 
   <div class="clear"></div>
 
+  
+  <div class="installments-part">
+     <p class="installment-pay">or 4 installments of $$$ by afterpaya</p>
+  </div>
+
+  <div class="clear"></div>
+
 
   {% comment %} :: SKU :: {% endcomment %}
-  {% if section.settings.show_sku and product.url != '/products/gift-card' %}
+  {% if section.settings.show_sku and product_type != 'gift card' %}
     <div class="product-number">
       Item# <span class="product-sku">{{ current_variant.sku | split: '-' | first }}</span>
     </div>
@@ -127,7 +145,7 @@
     EX: "Size" (7,8,9,10) & "Color" (Red, Green, Blue)
     PDP-MERGE NOTE : Options must be congruent to do a merge, so its okay to use product object when checking OPTIONS only
   {% endcomment %}
-  {% if product.options.size > 1 %}
+  {% if product.options.size > 0 %}
 
     {% comment %} :: OPTIONS DISPLAY - SWATCHES :: {% endcomment %}
     {% if section.settings.variant_display_type == 'swatches' %}
@@ -260,9 +278,25 @@
     </div><div class="clear"></div>
   {% endif %}
 
+    {% if product_type == 'gift card' %}
+        <hr class="product-hr">
+        <div class="gift-card-form">
+            <div id="giftcard_sender-email" class="clearfix large-form">
+                <input required type="email" value="" placeholder="Sender's Email" name="properties[Sender Email]" id="sender-email" class="large form-field" size="60">
+            </div>
+            <div id="giftcard_recipient-email" class="clearfix large-form">
+                <input required type="email" value="" placeholder="Recipient's Email" name="properties[Recipient Email]" id="recipient-email" class="large form-field" size="60">
+            </div>
+            <div id="giftcard_message" class="clearfix large-form">
+                <textarea id="message" name="properties[Message]" class="large form-field" placeholder="Message (Optional)" style="width: 100%; min-height: 75px;"></textarea>
+            </div>
+        </div>
+        <div class="clear"></div>
+    {% endif %}
+
 
   {% comment %} :: ADD TO CART ::{% endcomment %}
-  {% if product.available %}
+  {% if product.available %}{% endif %}
     <div id="product-add">
       {% if section.settings.show_quantity %}
         <div class="quanity-select">
@@ -279,7 +313,7 @@
 
     </div>
     <p class="add-to-cart-msg"></p>
-  {% endif %}
+
 
   <div class="clear"></div>
 {% endform %}
