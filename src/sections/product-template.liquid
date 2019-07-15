@@ -60,8 +60,9 @@
     <div id="product-photos" class="desktop-6 tablet-3 mobile-hide" data-product-gallery>
 
       {% comment %} :: ITEM BADGE :: {% endcomment %}
-      {% include 'react-item-badge' %}
-
+      {% if template == 'product' %}
+        {% include 'react-item-badge' %}
+      {% endif %}
       {%- if product.featured_image -%}
         {% include 'product-image-gallery' %}
       {%- else -%}
