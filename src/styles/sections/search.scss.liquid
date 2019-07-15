@@ -26,6 +26,12 @@ $searchBorder: 1px solid {{ settings.filter_divider_color }};
         margin-top:35px;
     }
 
+    .product-list-part{
+        @include mq('phone'){
+           margin-top: 37px;
+        }
+    }
+
 
     /* TITLE + SEARCH BAR : Header content w/ search bar
      * ------------------------------------------------- */ 
@@ -33,11 +39,19 @@ $searchBorder: 1px solid {{ settings.filter_divider_color }};
     .bc-sf-search-result-number {
         @include black-paragraph-14-font;
         padding:$padding-left-right;
+
+        @include mq('phone'){
+           padding:$padding-left-right-mobile15;
+        }
     }
 
     .search-title {
         padding:$padding-left-right;
         @include h4-head;
+
+         @include mq('phone'){
+           padding:$padding-left-right-mobile15;
+        }
     }
 
     #search-bar {
