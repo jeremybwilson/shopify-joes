@@ -2,22 +2,13 @@
 
 <div id="search-template" class="desktop-12 tablet-6 mobile-3" data-section-id="{{ section.id }}" data-section-type="search-template">
 
-  <h2 class="search-title">{{ 'general.search.title' | t }}: <span>"{{ search.terms }}"</span></h2>
+  <h4 class="search-title">{{ 'general.search.title' | t }}: <span>"{{ search.terms }}"</span></h4>
   <p class="bc-sf-search-result-number"></p>
 
-  <div id="search-bar" class="desktop-12 mobile-3">
-    <form action="/search" method="get">
-      <input type="text" name="q" id="q" placeholder="{{ 'general.search.placeholder' | t }}" />
-      {% include 'svg-icon-search' %}
-    </form>
-  </div>
   
       
   {% comment %} :: FILTER + SORT - Desktop Component :: {% endcomment %}
-  <div id="full-width-filter" class="filter-wrap-desktop">
-    <h4 class="filter-label">FILTER</h4>
-    <div id="bc-sf-filter-tree-h" class="filter-list-desktop"></div>
-    
+  <div id="full-width-filter" class="filter-wrap-desktop">   
     <ul id="sortme" class="sort-options animate25">
       <li id="bc-sf-filter-top-sorting" class="clearfix filter"></li>
     </ul>
@@ -42,7 +33,7 @@
 
 
   {% comment %} :: PRODUCT LIST :: {% endcomment %}
-  <div id="product-loop" data-bc-sort="{{ collection.default_sort_by }}">
+  <div id="product-loop" class="product-list-part" data-bc-sort="{{ collection.default_sort_by }}">
     {% assign products-per-row = section.settings.products-per-row %}
     {% if collection.image %}
       <div class="product-index {{ grid_item_width }}" data-alpha="{{ collection.title }}">     

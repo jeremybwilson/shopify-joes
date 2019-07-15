@@ -34,11 +34,12 @@
 {% for optionObj in product.options_with_values %}
   {% assign lowercaseName = optionObj.name | downcase %}
   {% assign newValuesArray = optionObj.values %}
+  {% assign product_type = product.type | downcase %}
 
   {% comment %} :: PREP : SIZE VALUE PREFIXER :: (Must add 0's to 1-digit sizes so liquid string sort works, 0's removed later in theme.js > ProductForm) {% endcomment %}
   {% include 'product-merger-util--size-handler' %}
 
-  {% if lowercaseName == "size" %}
+  {% if lowercaseName == "size" or product_type == 'gift card' %}
     {% assign option1_name = optionObj.name %}
     {% assign option1_values = newValuesArray %}
 

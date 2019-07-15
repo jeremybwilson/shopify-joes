@@ -59,8 +59,6 @@
                 "label": "Announcement BG - #2",
                 "default": "#757575"
             },
-
-
             {
                 "type": "header",
                 "content": "Navigation Header"
@@ -320,153 +318,83 @@
                 "type": "color",
                 "id": "filter_bg",
                 "label": "Filter Bar Background",
-                "default": "#F4F2EC"
+                "default": "#ffffff"
+            },
+            {
+                "type": "color",
+                "id": "filter_title_color",
+                "label": "Filter Title Color",
+                "default": "#000000"
             },
             {
                 "type": "color",
                 "id": "filter_text_color",
                 "label": "Filter Text Color",
-                "default": "#164732"
-            },
-            {
-                "type": "color",
-                "id": "filter_arrow_color",
-                "label": "Filter Arrow Color",
-                "default": "#AA5131"
-            },
-            {
-                "type": "color",
-                "id": "filter_checkbox_bg",
-                "label": "Filter Checkbox Background",
-                "default": "#FEFFFE"
-            },
-            {
-                "type": "color",
-                "id": "filter_divider_color",
-                "label": "Filter Divider Color",
-                "default": "#D8D8D8"
-            },
-            {
-                "type": "color",
-                "id": "filter_button_main_bg",
-                "label": "Main Button Background",
-                "default": "#164732"
-            },
-            {
-                "type": "color",
-                "id": "filter_button_main_text",
-                "label": "Main Button Text",
-                "default": "#FEFFFE"
-            },
-            {
-                "type": "color",
-                "id": "filter_button_alt_bg",
-                "label": "Alt Button Background",
-                "default": "#AA5131"
-            },
-            {
-                "type": "color",
-                "id": "filter_button_alt_text",
-                "label": "Alt Button Text",
-                "default": "#FEFFFE"
+                "default": "#000000"
             },
             {
                 "type": "color",
                 "id": "filter_bar_border_color",
                 "label": "Filter Bar Border Color",
-                "info": "( Color of Filter Bar Wrap border, width setting later on )",
-                "default": "#FEFFFE"
+                "info": "( Color of Filter Bar Wrap border )",
+                "default": "#e2e2e2"
             },
             {
-                "type": "color",
-                "id": "quickview_button_bg",
-                "label": "Quickview Button Background",
-                "default": "#e41c39"
-            },
-            {
-                "type": "color",
-                "id": "quickview_button_text",
-                "label": "Quickview Button Text",
-                "default": "#FEFFFE"
-            },
-            {
-                "type": "color",
-                "id": "catalog_item_text_color",
-                "label": "Catalog Item Text Color",
-                "default": "#164732"
-            },
-            {
-                "type": "color",
-                "id": "catalog_item_price_color",
-                "label": "Catalog Item Price Color",
-                "default": "#525252"
-            },
-            {
-                "type": "color",
-                "id": "catalog_item_accent_color",
-                "label": "Catalog Item Accent Color",
-                "default": "#AA5131"
+                "type": "range",
+                "id": "filter_bar_border_width",
+                "min": 0,
+                "max": 4,
+                "step": 1,
+                "unit": "px",
+                "label": "Filter Bar Border Width",
+                "info": "( Border width of Filter Bar Wrap )",
+                "default": 1
             },
             {
                 "type": "color",
                 "id": "collection_seo_footer_bg",
-                "label": "Catalog SEO Footer BG",
+                "label": "Collection Page Bottom Description BG",
+                "info": "(Enable \"Show Collection Description\" in Product Grid + Filters Settings first.)",
                 "default": "#F4F2EC"
             },
             {
                 "type": "color",
                 "id": "collection_seo_footer_text",
-                "label": "Catalog SEO Footer Text Color",
+                "label": "Collection Page Bottom Description Text Color",
                 "default": "#164732"
             },
+
+
             {
-                "type": "color",
-                "id": "collection_load_more_text",
-                "label": "Load More Text Color",
-                "default": "#FEFFFE"
-            },
-            {
-                "type": "color",
-                "id": "collection_load_more_bg",
-                "label": "Load More Button BG ",
-                "default": "#ab5232"
-            },
-            {
-                "type": "color",
-                "id": "collection_load_more_bg_hover",
-                "label": "Load More Button BG on Hover",
-                "default": "#9b492b"
+                "type": "header",
+                "content": "PDP page Badge"
             },
             {
                 "type": "color",
                 "id": "product_badge_square_bg",
                 "label": "Square Badge BG",
-                "default": "#3E3E3E"
+                "info": "(Add tags in Product, 1. item_badge_text_Back in Stock)",
+                "default": "#1a1919"
             },
             {
                 "type": "color",
                 "id": "product_badge_circle_bg",
                 "label": "Circle Badge BG",
-                "default": "#AB5232"
+                "info": "(Add tags in Product, 1. item_badge_text_Back in Stock, 2. item_badge_shape_circle)",
+                "default": "#1a1919"
             },
             {
                 "type": "color",
                 "id": "product_badge_diamond_bg",
                 "label": "Diamond Badge BG",
-                "default": "#164732"
+                "info": "(Add tags in Product, 1. item_badge_text_Back in Stock, 2. item_badge_shape_diamond)",
+                "default": "#1a1919"
             },
             {
                 "type": "color",
                 "id": "product_badge_text_color",
                 "label": "Badge Text Color",
-                "default": "#FEFFFE"
-            },
-            {
-                "type": "color",
-                "id": "react_swatch_outline_color",
-                "label": "Swatch Outline Color",
-                "info": "(For React Swatches on Collection Views)",
-                "default": "#9a9a9a"
+                "default": "#FFFFFF"
             },
 
 
@@ -479,19 +407,7 @@
                 "id": "fancybox_overlay_bg",
                 "label": "Modal Overlay BG (rgba)",
                 "info": "(The full-screen backing behind the modal)",
-                "default": "0,0,0,0.8"
-            },
-            {
-                "type": "color",
-                "id": "fancybox_close_color",
-                "label": "Modal Close Color",
-                "default": "#5B5B5B"
-            },
-            {
-                "type": "color",
-                "id": "fancybox_close_hover_color",
-                "label": "Modal Close Hover Color",
-                "default": "#9B492B"
+                "default": "0,0,0,0.5"
             },
 
 
@@ -1094,19 +1010,9 @@
             {
                 "type": "checkbox",
                 "id": "show_collection_seo_block",
-                "label": "Show SEO Footer",
-                "info": "(Only rendered on collections, not on homepage featured collection.)",
-                "default": true
-            },
-            {
-                "type": "range",
-                "id": "filter_bar_border_width",
-                "min": 0,
-                "max": 6,
-                "step": 1,
-                "unit": "px",
-                "label": "Filter Bar Border Width",
-                "default": 0
+                "label": "Show Collection Description",
+                "info": "(Only rendered on collections page at bottom of the page, not on homepage featured collection.)",
+                "default": false
             },
             {
                 "type": "select",

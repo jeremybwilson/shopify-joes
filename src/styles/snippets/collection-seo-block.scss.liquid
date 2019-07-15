@@ -3,7 +3,6 @@
  *
  * SNIPPET: collection-seo-block.liquid
  * ---------------------------------------------- */
-$seoArrowColor: {{ settings.filter_arrow_color }};
 $seoFooterBg: {{ settings.collection_seo_footer_bg }};
 $seoTextColor: {{ settings.collection_seo_footer_text }};
 
@@ -16,20 +15,21 @@ $seoTextColor: {{ settings.collection_seo_footer_text }};
     padding: 50px 0;
 
     @include mq( 'lap-and-up' ) {
-        padding: 100px 0;
+        margin-bottom: 89px;
     }
 
     // CONTENT : Box that holds each content block (above x below button fold)
     .collection-seo-content {
-        @include fontSize( 16px );
         font-weight: $font-weight--book;
         font-size: 16px;
         line-height: 40px;
         text-align: center;
-        color: $seoTextColor;
         max-width: 746px;
         margin-bottom: 0;
         transition: all 0.25s ease-in-out;
+        p{
+            color: $seoTextColor;
+        }
     }
 
     // MORE : Text below the "read more" button fold
@@ -59,7 +59,7 @@ $seoTextColor: {{ settings.collection_seo_footer_text }};
             border-bottom: none;
             border-left: 5px solid transparent;
             border-right: 5px solid transparent;
-            border-top: 8px solid $seoArrowColor;
+            border-top: 8px solid #979797;
             transition: all 0.25s ease-in-out;
             transform: rotateX( 0deg ); // to reverse the animation
         }

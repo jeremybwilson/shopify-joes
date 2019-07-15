@@ -41,7 +41,7 @@
         {% include 'mobile-product-image-gallery' %}
       {%- else -%}
         {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
-        {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+        <img id="{{ product.id }}" class="product-main-image" src="{{ 'bc-sf-filter-no-image.gif' | asset_url | product_img_url: '800x' }}" alt='{{ product.title | escape }}' style="max-width: 100%;"/>
       {%- endif -%}
 
       {% comment %} :: MOBILE VIDEO PLAYER :: {% endcomment %}
@@ -57,7 +57,7 @@
 
     {% comment %} DESKTOP PHOTOS {% endcomment %}
   <div class="row product-details--top">
-    <div id="product-photos" class="{% if section.settings.related_products == 'right' %}desktop-5{% else %}desktop-6{% endif %} tablet-3 mobile-hide" data-product-gallery>
+    <div id="product-photos" class="desktop-6 tablet-3 mobile-hide" data-product-gallery>
 
       {% comment %} :: ITEM BADGE :: {% endcomment %}
       {% include 'react-item-badge' %}
@@ -66,31 +66,19 @@
         {% include 'product-image-gallery' %}
       {%- else -%}
         {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
-        {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+        <img id="{{ product.id }}" class="product-main-image" src="{{ 'bc-sf-filter-no-image.gif' | asset_url | product_img_url: '800x' }}" alt='{{ product.title | escape }}' style="max-width: 100%;"/>
+
       {%- endif -%}
     </div>
 
-    <div id="product-right" class="{% if section.settings.related_products == 'right' %}desktop-7{% else %}desktop-6{% endif %} tablet-4">
+    <div id="product-right" class="desktop-6 tablet-4">
 
-      <div id="product-description" {% if section.settings.related_products == 'right' %}class="desktop-10 tablet-6 mobile-3"{% endif %}>
-        {% if collection and section.settings.product_nav %}
-          <div class="product-navigation">
-            {% if collection.previous_product %}
-              {{ '<i class="fa fa-angle-left" aria-hidden="true"></i>' | link_to: collection.previous_product }}
-            {% endif %}
-            {% if collection.next_product %}
-              {{ '<i class="fa fa-angle-right" aria-hidden="true"></i>' | link_to: collection.next_product }}
-            {% endif %}
-          </div>
-        {% endif %}
-
+      <div id="product-description">
         {% if section.settings.vendor %}
           <h2>{{ product.vendor }}</h2>
         {% endif %}
 
-        <h2 class="product-name  product-title-content" itemprop="name">
-          {{ product.title }}
-        </h2>
+        <h1 class="product-name  product-title-content" itemprop="name">{{ product.title }}</h1>
 
         <p class="product-color-name">{% for tag in product.tags %}{% if tag contains 'subtitle_' %}{{ tag | split: 'subtitle_' | last }}{% endif %}{% endfor %} </P>
 
@@ -118,107 +106,90 @@
             {% comment %} :: Social sharing :: {% endcomment %}
             {% if section.settings.show_social %}
               <div class="share-me product-action product-action--share">
-                <span class="share-me__label">Share</span>
                 <div class="share-me__social-sharing">
                   {% include 'social', share_title: product.title, share_permalink: product.url, share_image: product %}
                 </div>
               </div>
             {% endif %}
-
-            {% comment %} :: Sizing chart :: {% endcomment %}
-            {% if template != 'product.quick' and section.settings.size_chart_show and has_audience %}
-              <div class="product-action product-action--sizing-chart">
-                <a href="#size-chart--popup" class="fancybox size-chart--trigger">Size Chart</a>
-              </div>
-            {% endif %}
           </div>
 
           {% unless template == 'product.quick' %}
-            {% comment %} :: Product description :: '<!-- split -->' will not always be there =\ {% endcomment %}
             {% if product.description != blank %}
-              <hr class="product-hr">
-              <div class="product-desc">
-                {% assign product_description = product.description | remove: '<ul></ul>' | split: '<!-- split -->' %}
-                {% assign top_description = product_description[0] | split: '•' | first %}
-                {% assign bottom_description = product_description[1] %}
-                <div class="product-desc__heading">Product Details</div>
-                <div class="product-desc__main">
-                  <div class="rte product-description-content">
-                    {{ top_description }}
-                  </div>
-                </div>
+                {% assign full_product_description = product.description | split: '<!-- description -->' %}
+                {% assign product_description = full_product_description[0] %}
 
-                {% unless product.description contains '<!-- split -->' %}
-                  {% if product.description contains '•' %}
-                    {% assign bottom_description = blank %}
-                    {% assign bottom_description_holder = product_description[0] | split: '•' %}
-                    {% for b in bottom_description_holder %}
-                      {% unless forloop.first %}
-                        {% assign bottom_description = bottom_description | append: '•' | append: b %}
-                      {% endunless %}
-                    {% endfor %}
-                  {% endif %}
-                {% endunless %}
+                {% assign other_product_detail = full_product_description[1] | split: '<!-- detail -->' %}
+                {% assign product_detail = other_product_detail[0] %}
+                {% assign fit_imformation = other_product_detail[1] %}
 
-                {% if bottom_description != blank %}
-                  <div id="read-more" class="product-desc__more">
-                    <div class="rte">
-                      {% comment %}{- We will build our own list -}{% endcomment %}
-                      {% assign product_specs = bottom_description | remove: '<ul>' | remove: '</ul>' | remove: '<li>' | remove: '</li>' | split: '•' %}
-                      <ul>
-                        {% for spec in product_specs %}
-                          {% if spec != blank %}
-                            {% comment %}{- Remove nonbreaking space -}{% endcomment %}
-                            <li>{{ spec | remove_first: ' ' }}</li>
-                          {% endif %}
-                        {% endfor %}
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="product-desc__read-wrapper">
-                    <a class="product-desc__read js-read-toggle" href="#" data-target="#read-more">Read More</a>
-                  </div>
+                {% comment %} :: Product description :: '<!-- description -->' {% endcomment %}
+                <hr class="product-hr">
+                <dl id="product-description--accordion" class="product-desc product-description">
+                    {% comment %} :: PRODUCT DETAIL - Header :: {% endcomment %}
+                    <dt id="product-description---accordion-header" class="accordion-header-pdp open"><h3>Description</h3><span class="opener">{% include 'svg-icon-caret-down' %}</span></dt>
+                    {% comment %} :: PRODUCT DETAIL - Content :: {% endcomment %}
+                    <dd id="product-description--accordion-content" class="accrodion-content-pdp" style="display:block">
+                        {{ product_description }}
+                    </dd>
+                </dl><!-- .product-desc product-description -->
+
+                {% comment %} Check if Details available then only Show detail section {% endcomment %}
+                {% if product_detail != blank %}
+                    <hr class="product-hr">
+                    <dl id="product-detail--accordion" class="product-desc product-details">
+                        {% comment %} :: PRODUCT DETAIL - Header :: {% endcomment %}
+                        <dt id="product-detail---accordion-header" class="accordion-header-pdp"><h3>Details</h3><span class="opener">{% include 'svg-icon-caret-down' %}</span></dt>
+
+                        {% comment %} :: PRODUCT DETAIL - Content :: {% endcomment %}
+                        <dd id="product-detail--accordion-content" class="accrodion-content-pdp">
+                            {{ product_detail }}
+                        </dd>
+                    </dl><!-- .product-desc product-details -->
                 {% endif %}
-              </div>
+
+                {% comment %} Check if Fit Information available then only Show Fit Information section {% endcomment %}
+                {% if fit_imformation != blank %}
+                    <hr class="product-hr">
+                    <dl id="product-fit--accordion" class="product-desc product-fit-info">
+                        {% comment %} :: PRODUCT DETAIL - Header :: {% endcomment %}
+                        <dt id="product-fit---accordion-header" class="accordion-header-pdp"><h3>Fit Information</h3><span class="opener">{% include 'svg-icon-caret-down' %}</span></dt>
+
+                        {% comment %} :: PRODUCT DETAIL - Content :: {% endcomment %}
+                        <dd id="product-fit--accordion-content" class="accrodion-content-pdp">
+                            {{ fit_imformation }}
+                        </dd>
+                    </dl><!-- .product-desc product-fit-info -->
+                {% endif %}
             {% endif %}
 
             {% comment %} FREE SHIPPING & RETURNS {% endcomment %}
 
             {% if section.settings.shipping_text != blank or settings.shoprunner_enabled %}
               <hr class="product-hr">
-              <dl id="free-shipping--accordion">
-                {% comment %} :: SHIPPING - Header :: {% endcomment %}
-                <dt id="free-shipping--accordion-header"><h3>{{ section.settings.shipping_header_text }}</h3><span class="opener">{% include 'svg-icon-caret-down' %}</span></dt>
-
-                {% comment %} :: SHIPPING - Content :: {% endcomment %}
-                <dd id="free-shipping--accordion-content">
-                  {% if settings.shoprunner_enabled %}
+                    {% if settings.shoprunner_enabled %}
                     {% include 'shoprunner-pdp' %}
 
-                  {% else %}
-                    <div class="shipping-text">{{ section.settings.shipping_text }}</div>
+                    {% else %}
+                        <div class="shipping-title">{{ section.settings.shipping_header_text }}</div>
+                      <div class="shipping-text">{{ section.settings.shipping_text }}</div>
 
-                    {% if section.settings.shipping_learn_more_link != blank or section.settings.shipping_show_account_link %}
-                      <div class="free-shipping-links">
-                        {% if section.settings.shipping_learn_more_link != blank %}
-                          <a href="{{ section.settings.shipping_learn_more_link }}" class="free-shipping-link">Learn More</a>
-                        {% endif %}
-                        {% if section.settings.shipping_show_account_link %}
-                          <a href="/account" class="free-shipping-link">
-                            {% if customer %}
-                              My Account
-                            {% else %}
-                              Sign In
-                            {% endif %}
-                          </a>
-                        {% endif %}
-                      </div>
+                      {% if section.settings.shipping_learn_more_link != blank or section.settings.shipping_show_account_link %}
+                        <div class="free-shipping-links">
+                          {% if section.settings.shipping_learn_more_link != blank %}
+                            <a href="{{ section.settings.shipping_learn_more_link }}" class="free-shipping-link">Learn More</a>
+                          {% endif %}
+                          {% if section.settings.shipping_show_account_link %}
+                            <a href="/account" class="free-shipping-link">
+                              {% if customer %}
+                                My Account
+                              {% else %}
+                                Sign In
+                              {% endif %}
+                            </a>
+                          {% endif %}
+                        </div>
+                      {% endif %}
                     {% endif %}
-                  {% endif %}
-                </dd>
-
-              </dl><!-- .free-shipping--accordion -->
-              <hr class="product-hr">
             {% endif %}
 
           {% endunless %}
@@ -233,13 +204,6 @@
         {% endif %}
 
       </div>
-      {% unless template == 'product.quick' %}
-        {% if section.settings.related_products == 'right' %}
-          <div id="related" class="desktop-2 tablet-hide mobile-hide">
-            {% include 'related-products' %}
-          </div>
-        {% endif %}
-      {% endunless %}
     </div>
 
   </div><!-- .row -->
@@ -299,7 +263,7 @@
 
   <div class="clear"></div>
   {% unless template == 'product.quick' %}
-  {% comment %} :: REVIEWS :: {% endcomment %}
+  {% comment %} :: REVIEWS ::
     <div class="row product-details--reviews">
       <dl class="accordion accordion--product-review js-accordion">
         <dt class="accordion__header js-accordion-toggle">
@@ -311,11 +275,11 @@
         </dd>
       </dl>
     </div>
+  {% endcomment %}
+    {% comment %} ::- Related Products ::- BOTTOM CONTENT {% endcomment %}
 
-    {% comment %} BOTTOM CONTENT {% endcomment %}
-
-    {% if section.settings.related_products == 'bottom' %}
-      <div class="row related-products">
+    {% if section.settings.related_products == 'show' %}
+      <div class="container-fluid">
         <div id="related" class="bottom-related">
           <hr class="product-hr product-hr--large">
           {% include 'related-products' %}
@@ -324,26 +288,18 @@
       <div class="clear"></div>
     {% endif %}
 
-    {% comment %} INSTAGRAM YOTPO FEED {% endcomment %}
-
     {% comment %} :: CAMPAIGN VIDEO :: {% endcomment %}
     {% include 'product-campaign-video' %}
-
-    {% comment %} YOU MAY ALSO LIKE {% endcomment %}
-    {% comment %}
-    <div style="max-width:1350px; margin:auto;" id="recommendify-similar-products" shop="{{ shop.domain }}" product="{{ product.id }}"></div>
-    {% endcomment %}
-
 
     {% comment %} :: RECENTLY VIEWED :: {% endcomment %}
     {% comment %} {% include 'recently-viewed' %} {% endcomment %}
 
-    {% include 'script-infinite-variant' %}
+    {% comment %} {% include 'script-infinite-variant' %} {% endcomment %}
   {% endunless %}
 </div>
-
+{% include 'nosto-tag' %}
 {% unless template == 'product.quick' %}
-  {% comment %} :: SIZE CHART MODAL :: {% endcomment %}
+  {% comment %} :: SIZE CHART PAGE ADD AT BOTTOM OF THE PAGE :: {% endcomment %}
   {% if section.settings.size_chart_show and has_audience %}
     {% include 'product-size-chart' %}
   {% endif %}
@@ -386,13 +342,6 @@
       float: right !important;
     }
   {% endif %}
-  {% if section.settings.related_products == 'right' %}
-    #product-description,
-    .product-description {
-      border-right: 1px solid {{ settings.dotted_color }};
-      padding-right: 20px;
-    }
-  {% endif %}
   {% if section.settings.product_variants == 'swatches' %}
     .selector-wrapper {
       display: none;
@@ -403,12 +352,18 @@
     }
   {% endif %}
   {% if section.settings.swatch_shape == 'circles' %}
-    /*.swatch .color label {
-      min-width: 30px !important;
+    .swatch .color label {
       width: 30px !important;
-      border-radius: 50%;
+      border-radius: 50% !important;
       outline: 0 !important;
-    }*/
+      height: 30px !important;
+    }
+    .swatch .swatch-element.color input:checked+label:after, .swatch .swatch-element.color label:hover:after{
+        border: 0px solid #000;
+    }
+    .swatch .swatch-element.color input:checked+label{
+        border: 1px solid #000;
+    }
   {% endif %}
   {% if product.images.size > 1 %}
     #product-description .zoom-box {
@@ -431,18 +386,15 @@
       },
       {
         "type": "checkbox",
-        "id": "product_nav",
-        "label": "Show next / previous product"
-      },
-      {
-        "type": "checkbox",
         "id": "vendor",
-        "label": "Show product vendor"
+        "label": "Show product vendor",
+        "default": false
       },
       {
         "type": "checkbox",
         "id": "show_quantity",
-        "label": "Show quantity"
+        "label": "Show quantity",
+        "default": false
       },
       {
         "type": "checkbox",
@@ -501,15 +453,15 @@
       {
         "type": "checkbox",
         "id": "disable_auto_select",
-        "label": "Disable auto select",
+        "label": "Disable Size Auto Select",
         "info": "Disables auto-selecting of the first available variant (Keeps first option). [Learn more](https://help.shopify.com/en/themes/customization/products/variants/how-to-add-a-pick-an-option-to-drop-downs)",
-        "type": "checkbox"
+        "default": true
       },
       {
         "type": "text",
         "id": "selection_label",
-        "label": "Make a selection label",
-        "default": "Pick a size"
+        "label": "Make a Selection Label",
+        "default": "Select your Size"
       },
       {
         "type": "header",
@@ -519,7 +471,7 @@
         "type": "checkbox",
         "id": "show_controls",
         "label": "Show gallery controls",
-        "default": true
+        "default": false
       },
       {
         "type": "checkbox",
@@ -564,24 +516,20 @@
       },
       {
         "type": "header",
-        "content": "Additional content"
+        "content": "Related Products"
       },
       {
         "type": "select",
         "id": "related_products",
-        "label": "Related products position",
+        "label": "Show/Hide Related Products",
         "options": [
           {
             "value": "none",
             "label": "Do not show"
           },
           {
-            "value": "right",
-            "label": "Right"
-          },
-          {
-            "value": "bottom",
-            "label": "Bottom"
+            "value": "show",
+            "label": "Show"
           }
         ]
       },
@@ -618,7 +566,7 @@
         "type": "checkbox",
         "id": "show_social",
         "label": "Show social share icons",
-        "default": true
+        "default": false
       },
       {
         "type": "header",
@@ -628,13 +576,13 @@
         "type": "checkbox",
         "id": "size_chart_show",
         "label": "Show size chart",
-        "default": false
+        "default": true
       },
       {
         "type": "text",
         "id": "size_chart_header_text",
         "label": "Size Chart Header Text",
-        "default": "Size Chart"
+        "default": "Size Guide"
       },
       {
         "type": "page",

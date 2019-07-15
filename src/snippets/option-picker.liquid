@@ -80,15 +80,11 @@
   <div class="swatch-header">
     
     {% comment %} :: HEADER - NAME :: (CSS decides casing) {% endcomment %}
-    <h5>{{ option_name }}</h5>
+    {% assign product_type = product.type | downcase %}
+    <h5>{% if product_type == 'gift card' %}Amount {% else %}{{ option_name }}{% endif %}</h5>
     
     {% comment %} :: HEADER - SELECTED OPTION :: {% endcomment %}
-    <h6 class="current-option">{% if lowercase_option_name == 'size'%} Select your Size {% else %} {{ current_variant[current_option] }}{% endif %}</h6>
-
-    {% comment %} :: HEADER - SIZE CHART :: {% endcomment %}
-    {% if lowercase_option_name contains 'size' and template != 'product.quick' %}
-      <a href="#size-chart--popup" class="fancybox size-chart--trigger">Size Chart</a>
-    {% endif %}
+    <h6 class="current-option">{% if lowercase_option_name == 'size' and section.settings.disable_auto_select == true %} {{ section.settings.selection_label }} {% else %} {{ current_variant[current_option] }}{% endif %}</h6>
 
   </div><!-- .swatch-header-->
 
@@ -148,10 +144,14 @@
       {% comment %} :: OPTION - SELECTED STATE :: {% endcomment %}
       {% assign checked = "" %}
       {% if current_variant[current_option] == value %}
-        {% if lowercase_option_name != 'size'%}
-            {% assign checked = 'checked="checked"' %}
+        {% if lowercase_option_name == 'size' %}
+            {% if section.settings.disable_auto_select == false %}
+                {% assign checked = 'checked="checked"' %}
+            {% else %}
+                {% assign checked = '' %}
+            {% endif %}
         {% else %}
-            {% assign checked = '' %}
+            {% assign checked = 'checked="checked"' %}
         {% endif %}
       {% endif %}
 
@@ -185,4 +185,13 @@
 
     {% endunless %}
   {% endfor %}
+
+  {% comment %} :: HEADER - SIZE CHART :: {% endcomment %}
+    {% if template != 'product.quick' and section.settings.size_chart_show and has_audience and lowercase_option_name contains 'size' %}
+      <div class="size-guide">
+         <a href="#size-chart--popup" class="fancybox size-chart--trigger">{{ section.settings.size_chart_header_text }}</a>
+         {% comment %} <a href="#" class="fancybox Find-your-true-fit">{{ 'truee-fit.png' | asset_url | img_tag }} Find Your true fit</a> {% endcomment %}
+         <div class="tfc-fitrec-product find-your-true-fit" data-styleid="{{product.id}}" id="4060" data-userid="joe"></div>
+      </div>
+    {% endif %}
 </div>

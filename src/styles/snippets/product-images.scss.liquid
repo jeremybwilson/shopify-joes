@@ -79,8 +79,20 @@
 /*
   PRODUCT PHOTOS (Desktop Photos)
   -------------------------------- */
+.favourite-icon{
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  z-index: 99;
+
+  img{
+    width: 28px !important;
+  }
+}
+
 #product-photos {
-  width: 856 / 1350 * 100%;
+  width:63.7%;
+  margin: 0 0;
 
   @include mq( 'phone' ) {
     display: none;
@@ -93,13 +105,12 @@
   }
 }
 
-.product-main-images {
-  width: 724 / 856 * 100%;
-}
 
 #thumbnail-gallery {
   position: relative;
-  width: 76 / 856 * 100%;
+  max-width: 106px;
+  width: 100%;
+  margin:0px;
 
 
   // THUMBNAIL
@@ -113,6 +124,11 @@
     &.selected,
     &:hover {
       opacity: 1;
+    }
+
+    .slick-vertical{
+      height: 100%;
+      position: relative;
     }
   }
 

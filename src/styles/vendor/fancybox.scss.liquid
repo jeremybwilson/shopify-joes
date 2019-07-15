@@ -7,8 +7,6 @@
 $modalBg: {{ settings.background }};
 $modalFallbackTextColor: {{ settings.text_color }};
 $overlayBg: rgba( {{ settings.fancybox_overlay_bg }} );
-$closeColor: {{ settings.fancybox_close_color }};
-$closeHoverColor: {{ settings.fancybox_close_hover_color }};
 
 
 .fancybox-wrap,
@@ -60,11 +58,11 @@ $closeHoverColor: {{ settings.fancybox_close_hover_color }};
 }
 
 .fancybox-error {
-  color: #444;
-  font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+  @include black-paragraph-14-font;
   margin: 0;
   padding: 15px;
   white-space: nowrap;
+  text-align: center;
 }
 
 #fancybox-loading {

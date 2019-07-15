@@ -40,11 +40,6 @@
 	}
 }
 
-.fancybox-overlay {
-  background: rgba(0,0,0,.5);
-}
-
-
 #product-quick-view {
 	margin: 0;
 	width: 100%;
@@ -177,6 +172,11 @@
 				  text-transform:uppercase;
 				}
 
+				.product-color-name{
+					@include black-paragraph-13-font;
+					text-transform: uppercase;
+				    margin: 12px 0 0 0;
+				}
 				h6{
                   
                    @include black-paragraph-13-font;	
@@ -187,10 +187,6 @@
 				.swatch-header {
 				    line-height: 19px;
 				    margin-bottom: 6px !important;
-				}
-
-				.product-number{
-				   display:none;
 				}
 
 				#product-price{
@@ -228,6 +224,10 @@
 			}
 		}
 	}
+
+	.product-star-rating, .installments-part {
+	    display: none;
+	}
 }
 
 
@@ -246,6 +246,7 @@
 
 .product-main-image.selected {
     display: block;
+    position:relative;
 }
 
 .fancybox-wrap.fancybox-desktop.fancybox-type-ajax.fancybox-quickview.fancybox-opened {z-index: 99999999;}
@@ -268,10 +269,6 @@
   display:none;
 }
 
-.product-actions {
-    display: none;
-}
-
 .quanity-select{
   label{
 	@include black-paragraph-13-font;	
@@ -286,8 +283,6 @@
      text-align:center;
      max-width:80px;
   }
-
-  display:none;	
 }
 
 .share-icons{
