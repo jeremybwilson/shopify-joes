@@ -78,18 +78,6 @@
             },
             {
                 "type": "color",
-                "id": "logo_color",
-                "label": "Text Logo Color",
-                "default": "#777"
-            },
-            {
-                "type": "color",
-                "id": "nav_links",
-                "label": "Nav Icons",
-                "default": "#164632"
-            },
-            {
-                "type": "color",
                 "id": "nav_header_color",
                 "label": "Nav Header Color",
                 "info": "(Main nav entries in bar)",
@@ -98,7 +86,15 @@
             {
                 "type": "color",
                 "id": "nav_sub_header_color",
-                "label": "Nav Sub Header Color",
+                "label": "Megamenu Header Color",
+                "info": "(eg. Denim)",
+                "default": "#0153a6"
+            },
+            {
+                "type": "color",
+                "id": "nav_sub_sub_header_color",
+                "label": "Megamenu Sub Header Color",
+                "info": "(eg. Fit in Denim)",
                 "default": "#0153a6"
             },
             {
@@ -108,38 +104,6 @@
                 "info": "(List items in Mega-Menu)",
                 "default": "#000000"
             },
-            {
-                "type": "color",
-                "id": "nav_links_hover",
-                "label": "Nav Icons Hover",
-                "default": "#AA5131"
-            },
-            {
-                "type": "color",
-                "id": "nav_links_sale",
-                "label": "Special for nav menu items named 'sale' ",
-                "default": "#AA5131"
-            },
-            {
-                "type": "color",
-                "id": "nav_minor_border_color",
-                "label": "Search Underline",
-                "default": "#cccccc"
-            },
-            {
-                "type": "color",
-                "id": "social_links",
-                "label": "Social Icons",
-                "default": "#000000"
-            },
-            {
-                "type": "color",
-                "id": "social_links_hover",
-                "label": "Social icons hover",
-                "default": "#000000"
-            },
-
-
             {
                 "type": "header",
                 "content": "General"
@@ -160,18 +124,6 @@
                 "type": "color",
                 "id": "text_color",
                 "label": "Text content",
-                "default": "#000000"
-            },
-            {
-                "type": "color",
-                "id": "link_color",
-                "label": "Links",
-                "default": "#000000"
-            },
-            {
-                "type": "color",
-                "id": "link_hover_color",
-                "label": "Link hover",
                 "default": "#000000"
             },
             {
@@ -202,25 +154,25 @@
                 "type": "color",
                 "id": "button_bg",
                 "label": "Main Button BG",
-                "default": "#e41c39"
+                "default": "#000000"
             },
             {
                 "type": "color",
                 "id": "button_bg_hover",
                 "label": "Main Button BG Hover",
-                "default": "#a6041c"
+                "default": "#333333"
             },
             {
                 "type": "color",
                 "id": "button_text",
                 "label": "Main Button Text",
-                "default": "#FFFFFF"
+                "default": "#ffffff"
             },
             {
                 "type": "color",
                 "id": "button_text_hover",
                 "label": "Main Button Text Hover",
-                "default": "#FFFFFF"
+                "default": "#ffffff"
             },
             {
                 "type": "color",
@@ -291,8 +243,6 @@
                 "default": 0
             },
 
-
-
             {
                 "type": "header",
                 "content": "Homepage"
@@ -301,13 +251,13 @@
                 "type": "color",
                 "id": "homepage_instagram_header",
                 "label": "Instagram Feed - Text",
-                "default": "#ffffff"
+                "default": "#000"
             },
             {
                 "type": "color",
                 "id": "homepage_instagram_text",
                 "label": "Instagram Feed - Text",
-                "default": "#ffffff"
+                "default": "#000"
             },
 
             {
@@ -542,91 +492,6 @@
                 "id": "gdpr_alt_button_bg_hover",
                 "label": "GDPR Alt Button Hover",
                 "default": "#d6d6d6"
-            },
-
-
-
-
-            {
-                "type": "header",
-                "content": "Navigation"
-            },
-            {
-                "type": "color",
-                "id": "navigation",
-                "label": "Background",
-                "default": "#f0f0f0"
-            },
-            {
-                "type": "color",
-                "id": "nav_color",
-                "label": "Text",
-                "default": "#ffffff"
-            },
-            {
-                "type": "color",
-                "id": "nav_hover_color",
-                "label": "Hover background",
-                "default": "#f5f5f5"
-            },
-            {
-                "type": "color",
-                "id": "nav_hover_link_color",
-                "label": "Hover text",
-                "default": "#000000"
-            },
-            {
-                "type": "color",
-                "id": "dropdown_background_color",
-                "label": "Drop-down background",
-                "default": "#000000"
-            },
-            {
-                "type": "color",
-                "id": "nav_dropdown_color",
-                "label": "Drop-down text",
-                "default": "#ffffff"
-            },
-            {
-                "type": "color",
-                "id": "dropdown_hover_background_color",
-                "label": "Drop-down hover background",
-                "default": "#000000"
-            },
-            {
-                "type": "color",
-                "id": "dropdown_hover_link_color",
-                "label": "Drop-down hover text",
-                "default": "#000000"
-            },
-            {
-                "type": "header",
-                "content": "Directional buttons",
-                "info": "Next and prev"
-            },
-            {
-                "type": "color",
-                "id": "directional_background",
-                "label": "Background",
-                "default": "#000000"
-            },
-            {
-                "type": "color",
-                "id": "directional_hover_background",
-                "label": "Background hover",
-                "default": "#000000"
-            },
-            {
-                "type": "color",
-                "id": "directional_color",
-                "label": "Text",
-                "default": "#000000"
-            },
-            {
-                "type": "color",
-                "id": "directional_hover_color",
-                "label": "Text hover",
-                "default": "#000000"
             },
 
 
@@ -1272,90 +1137,6 @@
                 "id": "default_currency",
                 "label": "Default currency",
                 "default": "USD"
-            }
-        ]
-    },
-    {
-        "name": "Rewards (Loyalty Lion)",
-        "settings": [{
-                "type": "checkbox",
-                "id": "loyalty_lion_enabled",
-                "label": "Enable Rewards",
-                "info": "(Loyalty Lion)",
-                "default": false
-            },
-            {
-                "type": "text",
-                "id": "loyalty_lion_token",
-                "label": "Loyalty Lion Token",
-                "info": "Can be found in the Loyalty Lion app in the 'Manage' Tab under 'Configuration > Settings'."
-            },
-            {
-                "type": "text",
-                "id": "loyalty_lion_secret",
-                "label": "Loyalty Lion Secret",
-                "info": "Can be found in the Loyalty Lion app in the 'Manage' Tab under 'Configuration > Settings'."
-            }
-        ]
-    },
-    {
-        "name": "Borderfree",
-        "settings": [{
-                "type": "checkbox",
-                "id": "borderfree_enabled",
-                "label": "Enable Border-Free",
-                "default": true
-            },
-            {
-                "type": "checkbox",
-                "id": "borderfree_production",
-                "label": "On Production",
-                "info": "(Is this the production theme?)",
-                "default": false
-            },
-            {
-                "type": "header",
-                "content": "Dev Scripts"
-            },
-            {
-                "type": "url",
-                "label": "JS Script URL (Dev)",
-                "id": "borderfree_js_url_dev",
-                "info": "(Is usually: https://bfx-objects.stage.borderfree.com/v1/dist/bfx.js)"
-            },
-            {
-                "type": "text",
-                "label": "JS Script Config (Dev)",
-                "id": "borderfree_js_config_dev",
-                "default": "{key:'bca2f6b0-0273-11e6-8da6-4920e7373927', env:'STAGE', mode:'default', brand:'default'}"
-            },
-            {
-                "type": "url",
-                "label": "Merchant Script URL (Dev)",
-                "id": "borderfree_merchant_url_dev",
-                "info": "(Is usually: https://stagecheckout.borderfree.com/htmlcheckout/resources/js/merchant.js)"
-            },
-
-
-            {
-                "type": "header",
-                "content": "Production Scripts"
-            },
-            {
-                "type": "url",
-                "label": "JS Script URL (Prod)",
-                "id": "borderfree_js_url_prod"
-            },
-            {
-                "type": "text",
-                "label": "JS Script Config (Prod)",
-                "id": "borderfree_js_config_prod",
-                "default": "{key:'bca2f6b0-0273-11e6-8da6-4920e7373927', env:'STAGE', mode:'default', brand:'default'}"
-            },
-            {
-                "type": "url",
-                "label": "Merchant Script URL (Prod)",
-                "id": "borderfree_merchant_url_prod"
             }
         ]
     },

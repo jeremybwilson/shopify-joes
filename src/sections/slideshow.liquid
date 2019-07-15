@@ -27,12 +27,6 @@
       
                 {% comment %} :: IMAGES - MOBILE AND DESKTOP :: {% endcomment %}
                 {% if block.settings.image != blank %}
-
-                  {% comment %} :: IMAGE LINK :: Wrap in an anchor tag if link is supplied {% endcomment %}
-                  {% if block.settings.image_link != blank %}
-                    <a href="{{ block.settings.image_link }}">
-                  {% endif %}
-
                   <div class="box-ratio">
                     <picture>
                       
@@ -55,10 +49,6 @@
                     </noscript>
                   </div>
                   <!-- End of .box-ratio -->
-
-                  {% if block.settings.image_link != blank %}
-                    </a>
-                  {% endif %}
 
                   {% comment %} Styling to accommodate the box ratio for lazy-loaded images {% endcomment %}
                   <style>
@@ -106,11 +96,11 @@
 
                   <div class="caption-inners">
                     {% if block.settings.heading != blank %}
-                      <h1 class="slide-title">{{ block.settings.heading }}</h1>
+                      <div class="slide-title">{{ block.settings.heading }}</div>
                     {% endif %}
                     
                     {% if block.settings.subheading != blank %}
-                      <h6 class="caption">{{ block.settings.subheading }}</h6>
+                      <div class="caption">{{ block.settings.subheading }}</div>
                     {% endif %}
 
                     {% comment %} :: CTA BUTTONS :: {% endcomment %}
@@ -119,31 +109,8 @@
 
                         {% comment %} :: BUTTON #1 :: {% endcomment %}
                         <div class="cta show-lines--{{ block.settings.cta_one_line }}" id="cta-one-{{ block.id }}">
-                          <a class="white-button" href="{{ block.settings.cta_one_link }}">
-
-                            {% comment %}
-                              :: CTA LINES + TEXT :: 
-                                - Lines always present for flex item alignment behavior, invisible unless enabled {% endcomment %}
-                            {{ block.settings.cta_one_button_text }}
-                            <div class="cta-line-right"></div>
-                          </a>
+                          <a class="white-button" href="{{ block.settings.cta_one_link }}">{{ block.settings.cta_one_button_text }}<div class="cta-line-right"></div></a>
                         </div>
-
-                        {% comment %} CTA TWO - Only show if link exists. Duplicate this and the necessary schema code if client asks for more buttons. {% endcomment %}
-                        {% if block.settings.cta_two_link != blank and block.settings.cta_two_button_text != blank %}
-
-                          {% comment %} :: BUTTON #2 :: {% endcomment %}
-                          <div class="cta show-lines--{{ block.settings.cta_two_line }}" id="cta-two-{{ block.id }}">
-                            <a class="white-button" href="{{ block.settings.cta_two_link }}" class="{{ buttonWrapClasses }}">
-                              
-                              {% comment %}
-                                :: CTA LINES + TEXT :: 
-                                  - Lines always present for flex item alignment behavior, invisible unless enabled {% endcomment %}
-                              {{ block.settings.cta_two_button_text }}
-                            </a>
-                          </div>
-                        {% endif %}
-
                       </div>
                     {% endif %}
                   </div>
@@ -157,13 +124,12 @@
                 }
 
                 .flex-caption.slide-{{ block.id }} .caption-inners {
-                  {% assign bg_color = block.settings.caption_background %}
                   {% assign caption_opacity = block.settings.caption_opacity | plus: 0 %}
                   
                   {% if block.settings.caption_background == 'rgba(0,0,0,0)' %}
                     background: transparent;
                   {% else %}
-                    background: {{ bg_color | color_modify: 'alpha', caption_opacity }};
+                    background: {{ block.settings.caption_background | color_modify: 'alpha', caption_opacity }};
                   {% endif %}
                   text-align: {{ block.settings.caption_text_align }};
                 }
@@ -188,6 +154,8 @@
 
                 {% if color_scheme == 'light' or color_scheme == 'white' %}
                   {% assign slide_text_color = '#ffffff' %}
+                  {% assign slider_header_color = '#ffffff' %}
+                  {% assign slider_subheader_color = '#ffffff' %}
                   {% assign cta_bg_color = 'transparent' %}
                   {% assign cta_bg_hover_color = 'transparent' %}
                   {% assign cta_padding_mobile = '0' %}
@@ -195,26 +163,30 @@
 
                 {% elsif color_scheme == 'dark' %}
                   {% assign slide_text_color = '#000000' %}
+                  {% assign slider_header_color = '#000000' %}
+                  {% assign slider_subheader_color = '#000000' %}
                   {% assign cta_bg_color = 'transparent' %}
                   {% assign cta_bg_hover_color = 'transparent' %}
                   {% assign cta_padding_mobile = '0' %}
                   {% assign cta_padding_desktop = '0' %}
 
                 {% else %}
-                  {% assign slide_text_color = block.settings.custom_slide_main_color %}
-                  {% assign cta_bg_color = block.settings.custom_slide_alt_color %}
-                  {% assign cta_bg_hover_color = block.settings.custom_slide_alt_color %}
+                  {% assign slide_text_color = block.settings.custom_slider_header_color %}
+                  {% assign slider_header_color = block.settings.custom_slider_header_color %}
+                  {% assign slider_subheader_color = block.settings.custom_slider_sub_header_color %}
+                  {% assign cta_bg_color = block.settings.custom_slider_button_color %}
+                  {% assign cta_bg_hover_color = block.settings.custom_slider_button_hover_color %}
                   {% assign cta_padding_mobile = '10px' %}
                   {% assign cta_padding_desktop = '15px 24px' %}
                 {% endif %}
 
-                .flex-caption.slide-{{ block.id }} h2.slide-title {
-                  color: {{ slide_text_color }};
+                .flex-caption.slide-{{ block.id }} .slide-title {
+                  color: {{ slider_header_color }};
                   text-align: {{ block.settings.caption_text_align }};
                 }
 
                 .flex-caption.slide-{{ block.id }} .caption {
-                  color: {{ slide_text_color }};
+                  color: {{ slider_subheader_color }};
                   text-align: {{ block.settings.caption_text_align }};
                 }
 
@@ -295,16 +267,10 @@
           "label": "Image (Mobile)",
           "info": "Size: ~728x1024 (slide height congruency is more important than adherence to suggested size)"
         },
-        {
-          "type": "url",
-          "id": "image_link",
-          "label": "Image Link"
-        },
-
 
         {
           "type": "header",
-          "content": "-- TEXT BOX : CONTENT --"
+          "content": "-- CAPTION : CONTENT --"
         },
         {
           "type": "text",
@@ -337,16 +303,9 @@
             }
           ]
         },
-
-
         {
           "type": "header",
-          "content": "-- BUTTON #1 --"
-        },
-        {
-          "type": "url",
-          "id": "cta_one_link",
-          "label": "Link"
+          "content": "-- CAPTION : BUTTON --"
         },
         {
           "type": "text",
@@ -354,6 +313,11 @@
           "label": "Button text",
           "default": "Add a button",
           "info": "(Visible only if a link is set)"
+        },
+        {
+          "type": "url",
+          "id": "cta_one_link",
+          "label": "Link"
         },
         {
           "type": "select",
@@ -380,126 +344,9 @@
           ]
         },
 
-
         {
           "type": "header",
-          "content": "-- BUTTON #2 --"
-        },
-        {
-          "type": "url",
-          "id": "cta_two_link",
-          "label": "Link"
-        },
-        {
-          "type": "text",
-          "id": "cta_two_button_text",
-          "label": "Button text",
-          "default": "Add a button",
-          "info": "(Visible only if a link is set)"
-        },
-        {
-          "type": "select",
-          "id": "cta_two_line",
-          "label": "CTA Line Placement",
-          "default": "none",
-          "options": [
-            {
-              "value": "none",
-              "label": "None"
-            },
-            {
-              "value": "left",
-              "label": "Left"
-            },
-            {
-              "value": "right",
-              "label": "Right"
-            },
-            {
-              "value": "both",
-              "label": "Both"
-            }
-          ]
-        },  
-
-
-        {
-          "type": "header",
-          "content": "-- TEXT BOX : COLOR SCHEME --"
-        },
-        {
-          "type": "select",
-          "id": "caption_color_scheme",
-          "label": "Color Scheme",
-          "info": "Choose a color scheme from the prescribed branding colors, or select CUSTOM to select your own colors",
-          "options": [
-            {
-              "value": "light",
-              "label": "Light"
-            },
-            {
-              "value": "dark",
-              "label": "Dark"
-            },
-            {
-              "value": "custom",
-              "label": "Custom"
-            }
-          ] 
-        },
-        {
-          "type": "color",
-          "id": "custom_slide_main_color",
-          "label": "Custom - Main Color",
-          "default": "#ffffff"
-        },
-        {
-          "type": "color",
-          "id": "custom_slide_alt_color",
-          "label": "Custom - Alternate Color",
-          "default": "#e41c39"
-        },
-
-
-        {
-          "type": "header",
-          "content": "-- TEXT BOX : POSITION --"
-        },
-        {
-          "type": "select",
-          "id": "caption_horizontal",
-          "label": "Horizontal Box Position",
-          "options": [
-            {
-              "value": "left",
-              "label": "Left"
-            },
-            {
-              "value": "center",
-              "label": "Center"
-            },
-            {
-              "value": "right",
-              "label": "Right"
-            }
-          ]
-        },
-        {
-          "type": "range",
-          "id": "caption_vertical",
-          "min": 5,
-          "max": 90,
-          "step": 1,
-          "unit": "%",
-          "label": "Vertical Box Position",
-          "info": "*Check mobile & desktop to ensure no text clipping occurs.",
-          "default": 44
-        },
-
-
-        {
-          "type": "header",
-          "content": "-- TEXT BOX : BACKGROUND --"
+          "content": "-- CAPTION : COLOR SCHEME --"
         },
         {
           "type": "color",
@@ -553,6 +400,85 @@
               "label": "100%"
             }
           ]
+        },
+        {
+          "type": "select",
+          "id": "caption_color_scheme",
+          "label": "Color Scheme",
+          "info": "Choose CUSTOM to set your own colors",
+          "options": [
+            {
+              "value": "light",
+              "label": "Light"
+            },
+            {
+              "value": "dark",
+              "label": "Dark"
+            },
+            {
+              "value": "custom",
+              "label": "Custom"
+            }
+          ]
+        },
+        {
+          "type": "color",
+          "id": "custom_slider_header_color",
+          "label": "Custom - Header Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "custom_slider_sub_header_color",
+          "label": "Custom - Sub-Header Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "custom_slider_button_color",
+          "label": "Custom - Button Color",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "custom_slider_sub_button_hover_color",
+          "label": "Custom - Button hover Color",
+          "default": "#ed0a0a"
+        },
+
+        {
+          "type": "header",
+          "content": "-- CAPTION : POSITION --"
+        },
+        {
+          "type": "select",
+          "id": "caption_horizontal",
+          "label": "Horizontal Box Position",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        },
+        {
+          "type": "range",
+          "id": "caption_vertical",
+          "min": 5,
+          "max": 90,
+          "step": 1,
+          "unit": "%",
+          "label": "Vertical Box Position",
+          "info": "*Check mobile & desktop to ensure no text clipping occurs.",
+          "default": 44
         }
       ]
     }

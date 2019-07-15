@@ -64,94 +64,60 @@
   </footer>
 </div>
 
-{% comment %}
-    {
-    "name": "Social Media",
-    "settings": [
-    {
-      "type": "text",
-      "id": "social_heading",
-      "label": "Social - Heading",
-      "default": "Connect With Us"
-    }],
-    "presets": [{
-      "name": "Newsletter & Social",
-      "category": "Promotional"
-    }]
-  }
-  {% endcomment %}
-
 {% schema %}
-  {
+{
     "name": "Footer & Social",
     "settings": [
-      {
-        "type": "header",
-        "content": "Phone Number"
-      },
-      {
-        "type": "text",
-        "id": "tel_text",
-        "label": "Display Text",
-        "default": "1-877-528-JOES (5637)",
-        "info": "This is the text that will be displayed on the site."
-      },
-      {
-      "type": "text",
-      "id": "tel_number",
-      "label": "Actual Number",
-      "default": "18775285637",
-      "info": "This is the number that will actually be dialed when the link is clicked on mobile. Do not include dashes or any punctuation."
-      },
-      
-      {
-        "type": "text",
-        "id": "social_heading",
-        "label": "Social - Heading",
-        "default": "Connect With Us"
-      } 
+        {
+            "type": "header",
+            "content": "Phone Number"
+        },
+        {
+            "type": "text",
+            "id": "tel_text",
+            "label": "Display Text",
+            "default": "1-877-528-JOES (5637)",
+            "info": "This is the text that will be displayed on the site."
+        },
+        {
+            "type": "text",
+            "id": "tel_number",
+            "label": "Actual Number",
+            "default": "18775285637",
+            "info": "This is the number that will actually be dialed when the link is clicked on mobile. Do not include dashes or any punctuation."
+        },
+        {
+            "type": "text",
+            "id": "social_heading",
+            "label": "Social - Heading",
+            "default": "Connect With Us"
+        }
     ],
+    "max_blocks":2,
     "blocks":[
-    {
-      "type":"link_list",
-      "name":"Menu",
-      "settings":[
         {
-          "type": "link_list",
-          "id": "menu_id",
-          "label": "Footer Menu"
-        },
-        {
-          "type": "checkbox",
-          "id": "show_headings",
-          "label": "Show Footer Menu Headers",
-          "default": true
+            "type":"link_list",
+            "name":"Menu",
+            "settings":[
+                {
+                    "type": "link_list",
+                    "id": "menu_id",
+                    "label": "Footer Menu"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "show_headings",
+                    "label": "Show Footer Menu Headers",
+                    "default": true
+                }
+            ]
         }
-      ]
-    },
-
-    {
-      "type":"link_list_2",
-      "name":"Menu 2",
-      "settings":[
-        {
-          "type": "link_list",
-          "id": "menu_id",
-          "label": "Footer Menu"
-        },
-        {
-          "type": "checkbox",
-          "id": "show_headings",
-          "label": "Show Footer Menu Headers",
-          "default": true
-        }
-      ]
-    }
     ],
-   "presets": [{
-      "name": "Footer",
-      "category": "Promotional"
-    }]
-  }
-  
+    "presets": [
+        {
+            "name": "Footer",
+            "category": "Promotional"
+        }
+    ]
+}
 {% endschema %}

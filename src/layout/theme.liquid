@@ -95,29 +95,16 @@
     {{ 'instafeed.js' | asset_url | script_tag }}
   {% endif %}
 
-  {% comment %} :: Loyalty Lion :: {% endcomment %}
-  {% if settings.loyalty_lion_enabled %}
-    {% include 'script-loyalty-lion' %}
-  {% endif %}
-
   {% comment %} :: Wishlist King App :: {% endcomment %}
   {% if settings.app_wk_enabled %}
     {% include 'appmate-wishlist-king' %}
   {% endif %}
-
-  {% comment %} :: Product Reviews :: {% endcomment %}
-  {% comment %}{% include 'pr-review-master-script' %}{% endcomment %}
 
   {% comment %} :: Shop Runner :: {% endcomment %}
   {% if settings.shoprunner_enabled %}
     {% comment %} {% include 'shoprunner-logic', isCheckout: false %} {% endcomment %}
     {% include 'shoprunner-init-script' %}
   {% endif %}
-
-  {% comment %} :: Borderfree :: 
-  {% if settings.borderfree_enabled %}
-    {% include 'borderfree-script' %}
-  {% endif %} {% endcomment %}
 
   <!-- Favicons
 ================================================== -->
