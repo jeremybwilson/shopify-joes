@@ -81,16 +81,19 @@ table.size-chart {
     background: transparent;
   }
   .fancybox-close {
-    left: 50%;
-    top: -40px;
     transform: translateX(-50%);
     color: $color--accent-1;
     text-decoration: none;
-    @include mq('tablet-and-up') {
+
       left: auto;
       margin-left: 0;
-      top: 0;
-    }
+      top:15px;
+      right:18px;
+  }
+
+  .fancybox-inner{
+    background-color:$white-color;
+    padding-top:18px;
   }
 }
 
@@ -98,17 +101,138 @@ table.size-chart {
   max-height: 80vh;
 
   @include mq('lap-and-up') {
-    max-width: 720px;
+    max-width:800px;
     width: 100%;
-    padding-left: 50px;
-    padding-right: 50px;
-    overflow-y: scroll;
+    padding-left:0px;
+    padding-right:0px;
   }
 
   h2 {
-    color: $color--white;
+    @include heading-black;
+    margin: 30px 0;
+
+    @include mq('phone'){
+      margin:20px 8px;
+    }
+
+     @include mq('mobile-potrait-small'){
+       font-size:18px;
+       margin: 15px 5px;
+     }
   }
 
+  .nav-tabs{ 
+    border-bottom:$border-grey-1;
+    text-align: center;
+    margin-bottom:46px;
+
+    @include mq('phone'){
+       margin-bottom:30px;
+    }
+
+    @include mq('mobile-potrait'){
+       border:0px;
+       margin-bottom: 15px;
+    }
+
+    li {
+       list-style: none;
+       display: inline-block;
+       margin: 0 21px;
+       padding-bottom: 5px;
+       border-bottom: 1px solid transparent;
+      
+       @include mq('mobile-potrait'){
+          width: max-content;
+          display: list-item;
+          margin: 0px auto 5px auto;
+          padding-bottom: 0px;
+       }
+
+       &.active{
+          border-bottom: 1px solid $black-color;
+       }
+
+         a{
+           @include black-paragraph-13-font;
+           text-transform:uppercase;
+         }
+    } 
+  }
+
+  p{
+    @include paragraph-font;
+    margin-bottom: 4px;
+  }
+
+  .tab-content{
+    width:100%;
+    
+    @include mq('mobile-potrait-small'){
+        overflow-x: auto;
+    }
+
+    .tab-pane {
+      display: none;
+    }
+
+    .tab-pane.active {
+        display: block;
+    }
+
+    tr{
+      width: 100%;
+      display: inline-table;
+      border-bottom:$border-grey-1;
+
+      td{
+         @include black-paragraph-13-font;
+         text-transform:uppercase;
+         min-width: 60px;
+         text-align: center;
+         padding:6px 4px;
+         max-width: 60px;
+
+         @include mq('phone'){
+           max-width:30px;
+           min-width:30px;
+         }
+
+         @include mq('mobile-potrait-small'){
+           max-width:60px;
+           min-width:60px;
+           word-break: break-word;
+         }
+      }
+    }
+  }
+}
+
+.left-right-padding-seam-size-chart-popup {
+    padding-left:80px;
+    padding-right:80px;
+
+    @include mq('phone'){
+      padding-left:40px;
+      padding-right:40px;
+    }
+
+    @include mq('mobile-potrait'){
+       padding-left:15px;
+       padding-right:15px;
+    }
+}
+
+.padding-bottom-fifteen{
+  padding-bottom:50px;
+
+  @include mq('phone'){
+      padding-bottom:40px;
+  }
+
+  @include mq('mobile-potrait'){
+    padding-bottom:25px;
+  }
 }
 
 // FAQ

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*men_women_part*/
 
-.twin-promos .men-women-jeans-part{margin-top:$mt-8; width:$full-width;  max-height: 650px;  margin-bottom: 0px;
+.twin-promos .men-women-jeans-part{/*margin-top:$mt-8;*/ width:$full-width;  /*max-height: 650px;*/  margin-bottom: 0px;
    @include mq('phone'){margin-top: 5px;  max-height:100%; padding:0px;} 
 }
 
@@ -14,6 +14,13 @@
 
     p{
       @include banner-paragraph-text-white;
+    }
+}
+
+#shopify-section-home-twin_promos{
+    margin-top: -8px;
+    @include mq('phone'){
+       margin-top: -16px;
     }
 }
 
@@ -34,17 +41,17 @@
                 height: 100%;
                 object-fit: cover;
                 object-position: center;
-                max-height:650px;
-                min-height:650px;
+                /*max-height:650px;
+                min-height:650px;*/
                 overflow: hidden;
                 
                 @include mq('phone'){
-                   height:450px;
+                  /* height:450px;*/
                    min-height:100%;
                 }
 
                 @include mq('mobile-potrait'){
-                   height: 290px;
+                  /* height: 290px;*/
                    min-height:100%;
                 }
             }
@@ -95,14 +102,14 @@
                 height: 100%;
                 object-fit: cover;
                 object-position: center;
-                max-height: 754px;
-                min-height: 754px;
+                /*max-height: 754px;
+                min-height: 754px;*/
                 overflow: hidden;
 
-                @include mq('phone'){
+                /*@include mq('phone'){
                    height:649px;
                    min-height:100%;
-                }
+                }*/
             }
         }
 
@@ -119,9 +126,9 @@
     position: relative;
 }
 
-#shopify-section-home-full_width_promo #promo-full-width-promo {
+/*#shopify-section-home-full_width_promo #promo-full-width-promo {
     max-height: 753px;
-}
+}*/
 
 
 .white-button{

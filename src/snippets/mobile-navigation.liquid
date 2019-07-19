@@ -6,29 +6,28 @@
             {% comment %} :: LEVEL 1 : SUB-NAV : Accordion (Has nested menus) :: {% endcomment %}
             {% if link.links != blank %}
                 <li class="accordion-header accordion-toggle" aria-haspopup="true" aria-expanded="false"><a href="{{ link.url }}" class="nav-category-header">{{ link.title | escape }}</a></li>
-
                 <div class="accordion-content">
                     <ul class="sub">
                         {% for sub_link in link.links %}
                             {% comment %} :: LEVEL 2 : SUB-NAV : First sub-nav has children nav elements :: {% endcomment %}
                             {% if sub_link.links != blank %}
-                                {% if sub_link.title == '-' %}
+                                {% if sub_link.title == '[COLS]' %}
                                     {% for sub_sub_link in sub_link.links %}
                                         {% comment %} PREVENT : Entries that denote a gap for desktop (are named "-'){% endcomment %}
-                                        {% if sub_sub_link.title != '-' %}
+                                        {% if sub_sub_link.title != '[COLS]' %}
                                             {% comment %} PSEUDO HEADER : Adding "SUB-HEADER_ will cause entry to not link, but be a nested header" {% endcomment %}
-                                            {% if sub_sub_link.title contains 'SUB-HEADER_' %}
-                                                <li class="link-sub-header custom-sub-header">{{ sub_sub_link.title | replace: 'SUB-HEADER_', '' }}</li>
-                                            {% else %}
-                                                <li {% if sub_sub_link.title contains '-bold' %} class="bold_text" {% endif %}>
-                                                    <a href="{{ sub_sub_link.url }}">{{ sub_sub_link.title | replace: '-bold', '' }}</a>
-                                                </li>
-                                            {% endif %}
+                                            <li {% if sub_sub_link.title contains ' [BOLD]' %} class="bold_text" {% endif %}>
+                                                {% if sub_sub_link.url != "#nolink" %}
+                                                    <a href="{{ sub_sub_link.url }}">{{ sub_sub_link.title | replace: ' [BOLD]', '' }}</a>
+                                                {% else %}
+                                                    <span class="menu-nolink">{{ sub_sub_link.title | replace: ' [BOLD]', '' }}</span>
+                                                {% endif %}
+                                            </li>
                                         {% endif %}
                                     {% endfor %}
                                 {% else %}
-                                    {% comment %} :: LEVEL 2 : Title :: {% endcomment %}
-                                    <li class="accordion-sub-header accordion-toggle {% if sub_link.title contains '-bold' %} bold_text {% endif %}" aria-haspopup="true" aria-expanded="false"><span>{% if sub_link.title contains '-bold' %} {{ sub_link.title | replace: '-denimsub-bold', '' }} {% else %} {{ sub_link.title | escape }} {% endif %}</span></li>
+                                {% comment %} :: LEVEL 2 : Title :: {% endcomment %}
+                                <li class="accordion-sub-header accordion-toggle {% if sub_link.title contains ' [BOLD]' or sub_link.title contains ' [TITLE]'  %} bold_text {% endif %}" aria-haspopup="true" aria-expanded="false"><span>{% if sub_link.title contains ' [BOLD]' or sub_link.title contains ' [TITLE]' %} {{ sub_link.title | replace: ' [BOLD]', '' | replace: ' [TITLE]', '' }} {% else %} {{ sub_link.title | escape }} {% endif %}</span></li>
 
                                     {% comment %} :: LEVEL 2 : Nested Sub-Sub-Nav Menu :: {% endcomment %}
                                     <div class="accordion-content2">
@@ -36,7 +35,7 @@
                                             {% for sub_sub_link in sub_link.links %}
 
                                                 {% comment %} PREVENT : Entries that denote a gap for desktop (are named "-'){% endcomment %}
-                                                {% if sub_sub_link.title != '-' %}
+                                                {% if sub_sub_link.title != '[COLS]' %}
 
                                                     {% comment %} PSEUDO HEADER : Adding "SUB-HEADER_ will cause entry to not link, but be a nested header" {% endcomment %}
                                                     {% if sub_sub_link.title contains 'SUB-HEADER_' %}
@@ -55,8 +54,8 @@
                             {% comment %} :: LEVEL 2 : FLAT : Sub-topic has no nested elements :: * Hides menu elements that are titled as "-" which mark space gaps on desktop {% endcomment %}
                             {% else %}
                                 {% comment %}Prevent our pseudo-sub-headers from showing on mobile (name starts with "SUB-HEADER_") {% endcomment %}
-                                {% if sub_link.title contains '-full75' %}
-                                    <li class="accordion-sub-header responsive-full-75" aria-haspopup="true" aria-expanded="false"><a href="{{ sub_link.url }}"><span>{{ sub_link.title | replace: '-full75', '' }}</span></a></li>
+                                {% if sub_link.title contains ' [HDR]' %}
+                                    <li class="accordion-sub-header responsive-full-75" aria-haspopup="true" aria-expanded="false"><a href="{{ sub_link.url }}"><span>{{ sub_link.title | replace: ' [HDR]', '' }}</span></a></li>
                                 {% else %}
                                     <li class="link-sub-header {% if sub_sub_link.title contains 'Shop All' %} shop-all {% endif %}">
                                         <a href="{{ sub_link.url }}">{{ sub_link.title | escape }}</a>
@@ -69,7 +68,7 @@
 
 
             {% comment %} :: LEVEL 1 : FLAT : Simple Menu (has no nested children) :: {% endcomment %}
-            {% elsif link.title != '-' %}
+            {% elsif link.title != '[COLS]' %}
                 <li class="link-header"><a href="{{ link.url }}">{{ link.title | escape }}</a></li>
             {% endif %}
         {% endfor %}

@@ -1,0 +1,71 @@
+<div class="gift-top-section">
+    {% if block.type == 'physical-card' %}
+        {% for block in section.blocks %}
+            <p>{{ block.settings.physical_title }}</p>
+        {% endfor %}
+    {% else %}
+        {% for block in section.blocks %}
+            <p>{{ block.settings.e-card_title }}</p>
+        {% endfor %}
+    {% endif %}
+</div>
+
+{% schema %}
+{
+    "name": "Gift Cards",
+    "blocks":[
+        {
+            "type": "physical-card",
+            "name": "Physical Card",
+            "settings":[
+                {
+                    "type": "image_picker",
+                    "id": "physical_image",
+                    "label": "Card Image"
+                },
+                {
+                    "type": "text",
+                    "id": "physical_title",
+                    "label": "Title"
+                },
+                {
+                    "type": "text",
+                    "id": "physical_sub-title",
+                    "label": "Sub title"
+                },
+                {
+                    "type": "html",
+                    "id": "physical_content",
+                    "label": "Content"
+                },
+                {
+                    "type": "link_list",
+                    "id": "physical_link_page",
+                    "label": "Link"
+                },
+                {
+                    "type": "text",
+                    "id": "physical_page_button_text",
+                    "label": "Button Text"
+                }
+            ]
+        },
+        {
+            "type": "e-card",
+            "name": "E-Card",
+            "settings":[
+                {
+                    "type": "text",
+                    "id": "e-card_title",
+                    "label": "Title"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "e-card_image",
+                    "label": "Card Image"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

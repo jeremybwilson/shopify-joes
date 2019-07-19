@@ -95,12 +95,6 @@
   {% comment %} :: REVIEWS - STAR RATING :: {% endcomment %}
   {% if settings.app_wk_enabled %}
     <div class="product-star-rating">
-      {% comment %}{% include 'pr-review-snippet' %}{% endcomment %}
-      {% comment %}
-        THIS SHOULD NOT BE HARD CODED - REPLACE BEFORE USING REVIEWS!!
-        <a href="/pages/reviews?&amp;pr_merchant_id=683283&amp;pr_api_key=ecee97b3-ae68-483f-ae4b-756350853c06&amp;pr_merchant_group_id=79437&amp;pr_page_id=123456789" class="product-star-rating__write-review">Write a Review</a>
-      {% endcomment %}
-      
       <div class="star-rating-product-detail">
          <img src="{{ 'rate-star-button.svg' | asset_url }}">
          <img src="{{ 'rate-star-button.svg' | asset_url }}">
@@ -110,7 +104,12 @@
       </div>
 
         <a href="#" class="product-star-rating__write-review">Write a Review</a>
-      
+      <div data-bv-show="inline_rating" data-bv-product-Id="{{product.id}}" data-bv-redirect-url="{{ product.url }}"></div>
+      <div data-bv-show="rating_summary" data-bv-product-Id="{{product.id}}">
+        {% if product.metafields.bazaarvoice.reviews-aggregate-ratings %}
+          {{ product.metafields.bazaarvoice.reviews-aggregate-ratings }}
+        {% endif %}
+      </div>
     </div>
   {% endif %}
 
@@ -119,7 +118,23 @@
 
   
   <div class="installments-part">
-     <p class="installment-pay">or 4 installments of $$$ by afterpaya</p>
+    {% comment %} <p class="installment-pay">or 4 installments of $$$ by afterpaya</p> {% endcomment %}
+     <p class="installment-pay affirm-as-low-as" data-page-type="product" data-amount="{{ price }}"></p>
+    <script>
+      var selectCallback = function(variant, selector) {
+
+        //Affirm Promos: Monthly Payment Messaging, dynamic pricing embed code
+        //
+        //NOTE: This Affirm embed code is only needed if you are using product variants.
+        //'selectCallback' might not be in your product.liquid template if product variants are not used or supported.
+        //If you are using product variants in your shop, use the following code to dynamically update your Monthly Payment Messaging when the customer selects a different product variant.
+
+        $('.affirm-as-low-as').attr('data-amount',variant.price);
+        affirm.ui.refresh();
+
+      };
+
+    </script>
   </div>
 
   <div class="clear"></div>

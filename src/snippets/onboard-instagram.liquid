@@ -1,6 +1,6 @@
-<div class="instagram-placeholder">
+<div id="instafeed-{{ section.id }}" class="instagram-placeholder">
 {% for i in (1..3) %}
-<div class="instagram-item onboard-instagram">
+<div class="loop-part instagram-item onboard-instagram">
   {% capture current %}{{ forloop.index }}{% endcapture %}
   {%- assign placeholder = 'product-' | append: current -%}
   {{ placeholder | placeholder_svg_tag: 'placeholder-svg' }}

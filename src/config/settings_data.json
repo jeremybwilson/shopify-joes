@@ -149,6 +149,9 @@
         "shoprunner_enabled": true,
         "shoprunner_retailer_id": "JJEANS",
         "shoprunner_env": "dev",
+        "dashhudson_enabled": true,
+        "dashhudson_id": "6384088",
+        "dashhudson_name": "likeshop-carousel",
         "checkout_header_image": "",
         "checkout_logo_image": "shopify:\/\/shop_images\/checkout-logo.png",
         "checkout_logo_position": "center",
@@ -240,9 +243,13 @@
                         }
                     },
                     "nav-item-4": {
-                        "type": "simple_menu",
+                        "type": "mega_menu",
                         "settings": {
-                            "menu_item": "sale"
+                            "menu_item": "sale",
+                            "nav_image": "",
+                            "nav_image_link": "",
+                            "nav_image_title": "",
+                            "nav_image_sub_title": ""
                         }
                     },
                     "nav-item-5": {
@@ -321,9 +328,9 @@
                     "Women": {
                         "type": "collection_banner",
                         "settings": {
-                            "collection_handle": "women",
-                            "banner_image_desktop": "shopify:\/\/shop_images\/collection_header_test.jpg",
-                            "banner_image_mobile": "shopify:\/\/shop_images\/mobile_banner_test.jpg",
+                            "collection_handle": "women-collection",
+                            "banner_image_desktop": "shopify:\/\/shop_images\/woemn-collection.jpg",
+                            "banner_image_mobile": "shopify:\/\/shop_images\/woemn-collection.jpg",
                             "banner_text_header": "BOOTIES",
                             "banner_text_body": "Sed ut predciptalis unde omnis iste natus sit voluptatem accusatium dolorem.",
                             "banner_text_divider": true,
@@ -338,10 +345,32 @@
                             "textbox_color_bg": "#000000",
                             "textbox_opacity": "1"
                         }
+                    },
+                    "1563519014702": {
+                        "type": "collection_banner",
+                        "settings": {
+                            "collection_handle": "men-collection",
+                            "banner_image_desktop": "shopify:\/\/shop_images\/men-collection.jpg",
+                            "banner_image_mobile": "shopify:\/\/shop_images\/men-collection.jpg",
+                            "banner_text_header": "Header",
+                            "banner_text_body": "Content here please. Sed ut predciptalis unde omnis iste natus sit voluptatem accusatium dolorem.",
+                            "banner_text_divider": true,
+                            "textbox_constrain": true,
+                            "textbox_horizontal": "center",
+                            "textbox_horizontal_nudge": 0,
+                            "textbox_vertical": "center",
+                            "textbox_vertical_nudge": 0,
+                            "textbox_text_align": "left",
+                            "textbox_color_text": "#ffffff",
+                            "textbox_color_divider": "#ffffff",
+                            "textbox_color_bg": "#000000",
+                            "textbox_opacity": "1"
+                        }
                     }
                 },
                 "block_order": [
-                    "Women"
+                    "Women",
+                    "1563519014702"
                 ],
                 "settings": {
                     "grid": 3,
@@ -436,8 +465,8 @@
                     "home-hero_slideshow--slide-1": {
                         "type": "image",
                         "settings": {
-                            "image": "shopify:\/\/shop_images\/beach-towel-in-wind.jpg",
-                            "mobile_image": "shopify:\/\/shop_images\/beach-towel-in-wind.jpg",
+                            "image": "shopify:\/\/shop_images\/JOES_HomePage_1440x698_WWW.jpg",
+                            "mobile_image": "shopify:\/\/shop_images\/JOES_HomePage_Mobile_320x614_WWW.jpg",
                             "heading": "FLAWLESS3",
                             "subheading": "From kitten heels to over-the-knee boots.",
                             "caption_text_align": "left",
@@ -461,8 +490,8 @@
                     "home-hero_slideshow--slide-2": {
                         "type": "image",
                         "settings": {
-                            "image": "shopify:\/\/shop_images\/confident-young-woman.jpg",
-                            "mobile_image": "shopify:\/\/shop_images\/confident-young-woman.jpg",
+                            "image": "shopify:\/\/shop_images\/JOES_HomePage_1440x698_JE.jpg",
+                            "mobile_image": "shopify:\/\/shop_images\/JOES_HomePage_Mobile_320x614_JE.jpg",
                             "heading": "FROM ITALIA WITH LOVE",
                             "subheading": "From over-the-knee boots to kitten heels.",
                             "caption_text_align": "right",
@@ -500,8 +529,8 @@
                     "promo-left": {
                         "type": "text_block",
                         "settings": {
-                            "image": "shopify:\/\/shop_images\/women.png",
-                            "mobile_image": "shopify:\/\/shop_images\/women.png",
+                            "image": "shopify:\/\/shop_images\/JOES_HomePage_708x650_Jeans-W.jpg",
+                            "mobile_image": "shopify:\/\/shop_images\/JOES_HomePage_708x650_Jeans-W.jpg",
                             "link": "shopify:\/\/collections\/women-collection",
                             "heading_text": "WOMEN'S JEANS",
                             "body_text": "",
@@ -518,8 +547,8 @@
                     "promo-right": {
                         "type": "text_block",
                         "settings": {
-                            "image": "shopify:\/\/shop_images\/men.png",
-                            "mobile_image": "shopify:\/\/shop_images\/men.png",
+                            "image": "shopify:\/\/shop_images\/JOES_HomePage_708x650_Jeans-M.jpg",
+                            "mobile_image": "shopify:\/\/shop_images\/JOES_HomePage_708x650_Jeans-M.jpg",
                             "link": "shopify:\/\/collections\/men-collection",
                             "heading_text": "MEN'S JEANS",
                             "body_text": "",
@@ -548,8 +577,8 @@
                     "full-width-promo": {
                         "type": "text_block",
                         "settings": {
-                            "image": "shopify:\/\/shop_images\/full-banner.png",
-                            "mobile_image": "shopify:\/\/shop_images\/full-banner.png",
+                            "image": "shopify:\/\/shop_images\/JOES_HomePage_1440x753-Flawless.jpg",
+                            "mobile_image": "shopify:\/\/shop_images\/JOES_HomePage_Mobile_320x428_Flawless.jpg",
                             "link": "shopify:\/\/collections",
                             "heading_text": "FLAWLESS",
                             "body_text": "<p>Gravity defying sleek silhouette<\/p>",
@@ -577,8 +606,7 @@
                     "heading": "As Seen On",
                     "text": "<p>Use <strong>#InMyJoes<\/strong> for your photos to be featured. Tap to shop.<\/p>",
                     "link": "https:\/\/www.instagram.com\/joesjeans\/",
-                    "cta_text": "FOLLOW US",
-                    "instagram_access_token": "1022365975.1677ed0.a29a97191f864ee0afeb65ef0024312b"
+                    "cta_text": "FOLLOW US"
                 }
             },
             "page-about-template": {
@@ -711,7 +739,7 @@
                     "type": "html",
                     "settings": {
                       "title": "WHAT PAYMENT METHODS DOES JOE'S ACCEPT?",
-                      "answer": "<p>We accept Visa, MasterCard, American Express and Discover as well as Paypal. Please note that we do not accept any other methods of payment apart from those listed above.<\/p>",
+                      "answer": "<p>We accept Visa, MasterCard, American Express and Discover as well as Paypal, Apple Pay, Amazon Pay and Affirm. Please note that we do not accept any other methods of payment apart from those listed above.<\/p>",
                       "anchor": ""
                     }
                   },
@@ -1020,7 +1048,7 @@
                         "settings": {
                             "fit_guide_title": "Skinny",
                             "description": "Skinny Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
-                            "collection": "women-collection",
+                            "collection": "women-denim-fit-skinny",
                             "image": "shopify:\/\/shop_images\/skinny.png"
                         }
                     },
@@ -1029,7 +1057,7 @@
                         "settings": {
                             "fit_guide_title": "Straight",
                             "description": "Straight Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
-                            "collection": "women-denim-straight",
+                            "collection": "women-denim-fit-straight",
                             "image": "shopify:\/\/shop_images\/straight.png"
                         }
                     },
@@ -1038,7 +1066,7 @@
                         "settings": {
                             "fit_guide_title": "Bootcut",
                             "description": "Bootcut Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
-                            "collection": "women-collection",
+                            "collection": "women-denim-fit-bootcut",
                             "image": "shopify:\/\/shop_images\/bootcut.png"
                         }
                     },
@@ -1047,7 +1075,7 @@
                         "settings": {
                             "fit_guide_title": "Flare",
                             "description": "FlareLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
-                            "collection": "women-collection",
+                            "collection": "women-denim-fit-flare",
                             "image": "shopify:\/\/shop_images\/flare.png"
                         }
                     },
@@ -1056,7 +1084,7 @@
                         "settings": {
                             "fit_guide_title": "Petite",
                             "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley - Petite",
-                            "collection": "women-collection",
+                            "collection": "women-denim-fit-petite",
                             "image": "shopify:\/\/shop_images\/petite.png"
                         }
                     },
@@ -1065,8 +1093,26 @@
                         "settings": {
                             "fit_guide_title": "Curvy",
                             "description": "Curvy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
-                            "collection": "women-denim-curvy",
+                            "collection": "women-denim-fit-curvy",
                             "image": "shopify:\/\/shop_images\/curvy.png"
+                        }
+                    },
+                    "1563517424761": {
+                        "type": "image",
+                        "settings": {
+                            "fit_guide_title": "Boyfriend",
+                            "description": "Small Description for Boyfriend Women fit guide",
+                            "collection": "women-denim-fit-boyfriend",
+                            "image": "shopify:\/\/shop_images\/Boyfriend.jpg"
+                        }
+                    },
+                    "1563517483912": {
+                        "type": "image",
+                        "settings": {
+                            "fit_guide_title": "Cigarette",
+                            "description": "Cigarette Description will here.",
+                            "collection": "women-collection",
+                            "image": "shopify:\/\/shop_images\/Cigarette.jpg"
                         }
                     }
                 },
@@ -1076,7 +1122,9 @@
                     "1561700801684",
                     "1561700858807",
                     "1561700917267",
-                    "1561700960992"
+                    "1561700960992",
+                    "1563517424761",
+                    "1563517483912"
                 ],
                 "settings": {
                     "desktop_banner": "shopify:\/\/shop_images\/banner-size-guid.png",
@@ -1089,25 +1137,55 @@
                     "1561704027169": {
                         "type": "image",
                         "settings": {
-                            "fit_guide_title": "Title 1",
+                            "fit_guide_title": "skinny",
                             "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
-                            "collection": "men-collection",
-                            "image": "shopify:\/\/shop_images\/skinny-pro-img.png"
+                            "collection": "men-denim-fit-skinny-fit",
+                            "image": "shopify:\/\/shop_images\/skinny-men-desktop_ceb4ba93-12df-476e-813e-ec773fc91de6.jpg"
                         }
                     },
                     "1561706120320": {
                         "type": "image",
                         "settings": {
-                            "fit_guide_title": "Title 2",
+                            "fit_guide_title": "Slim",
                             "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-                            "collection": "men-collection",
-                            "image": "shopify:\/\/shop_images\/skinny.png"
+                            "collection": "men-denim-fit-slim-fit",
+                            "image": "shopify:\/\/shop_images\/slim-desktop-men.jpg"
+                        }
+                    },
+                    "1563454773939": {
+                        "type": "image",
+                        "settings": {
+                            "fit_guide_title": "STRAIGHT",
+                            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+                            "collection": "men-denim-straight-leg",
+                            "image": "shopify:\/\/shop_images\/straight-men-desktop.jpg"
+                        }
+                    },
+                    "1563455212718": {
+                        "type": "image",
+                        "settings": {
+                            "fit_guide_title": "STRAIGHT + NARROW",
+                            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley  PREVIOUS product image THE ASHER Shop Now",
+                            "collection": "men-denim-straight-narrow",
+                            "image": "shopify:\/\/shop_images\/straight-narrow-men-desktop.jpg"
+                        }
+                    },
+                    "1563455312383": {
+                        "type": "image",
+                        "settings": {
+                            "fit_guide_title": "Athletic slim",
+                            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+                            "collection": "men-denim-fit-athletic-fit",
+                            "image": "shopify:\/\/shop_images\/AthlETIC-SLIM.jpg"
                         }
                     }
                 },
                 "block_order": [
                     "1561704027169",
-                    "1561706120320"
+                    "1561706120320",
+                    "1563454773939",
+                    "1563455212718",
+                    "1563455312383"
                 ],
                 "settings": {
                     "desktop_banner": "shopify:\/\/shop_images\/banner-size-guid.png",

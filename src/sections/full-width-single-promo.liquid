@@ -24,9 +24,16 @@
         {% comment %} :: IMAGE :: {% endcomment %}
         {% if block.settings.link != blank %}<a href="{{ block.settings.link }}">{% endif %}
           {% if block.settings.image != blank %}
-            {% include 'advanced-responsive-image' | default_image: block.settings.image, mobile_image: block.settings.mobile_image, block_id: block.id %}
+            <picture>
+                {% assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+                <img class="lazyload lazyload-fade"
+                        id="{{ block.id }}"
+                        data-src="{{ img_url }}"
+                        data-sizes="auto"
+                        alt="{{ block.settings.image.alt | escape }}">
+            </picture>
             <noscript>
-              <img src="{{ block.settings.image | img_url: '800x' }}" alt="{{ block.settings.image.alt }}">
+              <img src="{{ block.settings.image | img_url: '1440x' }}" alt="{{ block.settings.image.alt }}">
             </noscript>
           {% endif %}
         {% if block.settings.link != blank %}</a>{% endif %}

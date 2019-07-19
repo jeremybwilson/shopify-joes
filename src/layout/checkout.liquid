@@ -20,11 +20,44 @@
     <!-- Sailthru
   ================================================== -->
     {% comment %}{% include 'sailthru-script' %}{% endcomment %}
+    {% comment %} Added by Shoprunner {% endcomment %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="{{ 'shoprunner_init.js' | asset_url }}"></script>
+    {% comment %} End of Added by Shoprunner {% endcomment %}
 
   </head>
 
   <body>
     {% include 'script-google-tag-body' %}
+    {% comment %} Added for Shoprunner {% endcomment %}
+    <script>
+      $(document).on('page:load page:change', function() {
+        addShoprunnerDivs();
+        if ($('.section--shipping-method').length) {
+          if ($.cookie("sr_token") == null){
+            console.log("SR Token Was not found : ");
+            if ( $('div.radio-wrapper[data-shipping-method*="shoprunner"]').length > 0) {
+              $('.radio__input').prop('checked' , false);
+              $('div.radio-wrapper[data-shipping-method*="shoprunner"]').parent().remove();
+              $('[name="checkout[shipping_rate][id]"]').prop("checked",false);
+              $('[name="checkout[shipping_rate][id]"]:first').prop("checked",true);
+            };
+          }
+        };
+      });
+
+      function addShoprunnerDivs(){
+        if ($('.order-summary__section__content [name="sr_headerDiv"]').length == 0){
+          $('.order-summary__section__content').append('<div style="margin-bottom: 20px;" name="sr_headerDiv"></div>');
+        }
+
+        if (typeof window.sr_updateMessages !== "undefined") {
+          window.sr_updateMessages();
+        }
+      };
+    </script>
+    {% comment %} End of Added for Shoprunner {% endcomment %}
 
     <p>
       {{ content_for_header }}
