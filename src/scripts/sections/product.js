@@ -137,3 +137,15 @@ $(document).on('click', '.show-more-product-color', function() {
     }
     return false;
 });
+
+/*============================================================================
+PRODUCT SIZE CHART : tab select 
+==============================================================================*/
+
+$(document).on('click', "#size-chart--popup [data-toggle='tab']", function(){
+    $("#size-chart--popup .nav-justified li").removeClass("active");
+    $("#size-chart--popup .tab-content .tab-pane").removeClass("active");
+
+    $(this).parent("li").addClass("active");
+    $("#size-chart--popup .tab-content " + $(this).data("href")).addClass("active");
+});

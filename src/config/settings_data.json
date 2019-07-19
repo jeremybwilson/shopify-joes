@@ -149,6 +149,9 @@
         "shoprunner_enabled": true,
         "shoprunner_retailer_id": "JJEANS",
         "shoprunner_env": "dev",
+        "dashhudson_enabled": true,
+        "dashhudson_id": "6384088",
+        "dashhudson_name": "likeshop",
         "checkout_header_image": "",
         "checkout_logo_image": "shopify:\/\/shop_images\/checkout-logo.png",
         "checkout_logo_position": "center",
@@ -240,9 +243,13 @@
                         }
                     },
                     "nav-item-4": {
-                        "type": "simple_menu",
+                        "type": "mega_menu",
                         "settings": {
-                            "menu_item": "sale"
+                            "menu_item": "sale",
+                            "nav_image": "",
+                            "nav_image_link": "",
+                            "nav_image_title": "",
+                            "nav_image_sub_title": ""
                         }
                     },
                     "nav-item-5": {
@@ -436,8 +443,8 @@
                     "home-hero_slideshow--slide-1": {
                         "type": "image",
                         "settings": {
-                            "image": "shopify:\/\/shop_images\/beach-towel-in-wind.jpg",
-                            "mobile_image": "shopify:\/\/shop_images\/beach-towel-in-wind.jpg",
+                            "image": "shopify:\/\/shop_images\/JOES_HomePage_1440x698_WWW.jpg",
+                            "mobile_image": "shopify:\/\/shop_images\/JOES_HomePage_Mobile_320x614_WWW.jpg",
                             "heading": "FLAWLESS3",
                             "subheading": "From kitten heels to over-the-knee boots.",
                             "caption_text_align": "left",
@@ -461,8 +468,8 @@
                     "home-hero_slideshow--slide-2": {
                         "type": "image",
                         "settings": {
-                            "image": "shopify:\/\/shop_images\/confident-young-woman.jpg",
-                            "mobile_image": "shopify:\/\/shop_images\/confident-young-woman.jpg",
+                            "image": "shopify:\/\/shop_images\/JOES_HomePage_1440x698_JE.jpg",
+                            "mobile_image": "shopify:\/\/shop_images\/JOES_HomePage_Mobile_320x614_JE.jpg",
                             "heading": "FROM ITALIA WITH LOVE",
                             "subheading": "From over-the-knee boots to kitten heels.",
                             "caption_text_align": "right",
@@ -500,8 +507,8 @@
                     "promo-left": {
                         "type": "text_block",
                         "settings": {
-                            "image": "shopify:\/\/shop_images\/women.png",
-                            "mobile_image": "shopify:\/\/shop_images\/women.png",
+                            "image": "shopify:\/\/shop_images\/JOES_HomePage_708x650_Jeans-W.jpg",
+                            "mobile_image": "shopify:\/\/shop_images\/JOES_HomePage_708x650_Jeans-W.jpg",
                             "link": "shopify:\/\/collections\/women-collection",
                             "heading_text": "WOMEN'S JEANS",
                             "body_text": "",
@@ -518,8 +525,8 @@
                     "promo-right": {
                         "type": "text_block",
                         "settings": {
-                            "image": "shopify:\/\/shop_images\/men.png",
-                            "mobile_image": "shopify:\/\/shop_images\/men.png",
+                            "image": "shopify:\/\/shop_images\/JOES_HomePage_708x650_Jeans-M.jpg",
+                            "mobile_image": "shopify:\/\/shop_images\/JOES_HomePage_708x650_Jeans-M.jpg",
                             "link": "shopify:\/\/collections\/men-collection",
                             "heading_text": "MEN'S JEANS",
                             "body_text": "",
@@ -548,8 +555,8 @@
                     "full-width-promo": {
                         "type": "text_block",
                         "settings": {
-                            "image": "shopify:\/\/shop_images\/full-banner.png",
-                            "mobile_image": "shopify:\/\/shop_images\/full-banner.png",
+                            "image": "shopify:\/\/shop_images\/JOES_HomePage_1440x753-Flawless.jpg",
+                            "mobile_image": "shopify:\/\/shop_images\/JOES_HomePage_Mobile_320x428_Flawless.jpg",
                             "link": "shopify:\/\/collections",
                             "heading_text": "FLAWLESS",
                             "body_text": "<p>Gravity defying sleek silhouette<\/p>",
@@ -577,8 +584,7 @@
                     "heading": "As Seen On",
                     "text": "<p>Use <strong>#InMyJoes<\/strong> for your photos to be featured. Tap to shop.<\/p>",
                     "link": "https:\/\/www.instagram.com\/joesjeans\/",
-                    "cta_text": "FOLLOW US",
-                    "instagram_access_token": "1022365975.1677ed0.a29a97191f864ee0afeb65ef0024312b"
+                    "cta_text": "FOLLOW US"
                 }
             },
             "page-about-template": {
@@ -711,7 +717,7 @@
                     "type": "html",
                     "settings": {
                       "title": "WHAT PAYMENT METHODS DOES JOE'S ACCEPT?",
-                      "answer": "<p>We accept Visa, MasterCard, American Express and Discover as well as Paypal. Please note that we do not accept any other methods of payment apart from those listed above.<\/p>",
+                      "answer": "<p>We accept Visa, MasterCard, American Express and Discover as well as Paypal, Apple Pay, Amazon Pay and Affirm. Please note that we do not accept any other methods of payment apart from those listed above.<\/p>",
                       "anchor": ""
                     }
                   },

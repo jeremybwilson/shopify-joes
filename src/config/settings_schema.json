@@ -1290,5 +1290,27 @@
                 "default": "dev"
             }
         ]
+    },
+    {
+        "name": "Dash Hudson",
+        "settings": [{
+            "type": "checkbox",
+            "id": "dashhudson_enabled",
+            "label": "Enable Dash Hudson",
+            "default": true
+        },
+            {
+                "type": "text",
+                "id": "dashhudson_id",
+                "label": "Dash Hudson ID",
+                "default": "6384088",
+            },
+            {
+                "type": "text",
+                "id": "dashhudson_name",
+                "label": "Dash Hudson Name",
+                "default": "likeshop"
+            }
+        ]
     }
 ]

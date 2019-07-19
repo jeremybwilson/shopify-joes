@@ -29,17 +29,10 @@
                     {{- token | truncate: 9, "" -}}
                     {% endcapture %}
                     <div class="as-see-part-slider">
-                      {% if section.settings.instagram_access_token != blank %}
-                      {% comment %}
-                        <div class="flexslider instafeed-mob-slider">
-                          <ul id="instafeed-{{ section.id }}" class="slides" data-access-token="{{ token }}"></ul>
-                        </div>
-                      {% endcomment %}
-                      <div id="instafeed-{{ section.id }}" class="instafeed-mob-slider" data-access-token="{{ token }}"></div>
-                      {% else %}
-
-                      {% include 'onboard-instagram' %}
-                      {% endif %}
+                        {% comment %} :: Dash Hudson :: {% endcomment %}
+                        {% if settings.dashhudson_enabled %}
+                            {% include 'dash-hudson-library' %}
+                        {% endif %}
                     </div>
 
                     {% comment %} CTA {% endcomment %}                   
@@ -69,7 +62,7 @@
 
 {% schema %}
 {
-	"name": "Instagram feed",
+	"name": "Dash Hudson Insta feed",
 	"settings": [
     {
       "type": "text",
@@ -81,7 +74,7 @@
       "type": "richtext",
       "id": "text",
       "label": "Text",
-      "default": "<p>Lorem ipsum dolor sit amet, coasins ec tetur adipiscing elit</p>"
+      "default": "<p>Use <strong>#InMyJoes</strong> for your photos to be featured. Tap to shop.</p>"
     },
     {
        "type": "url",
@@ -92,18 +85,12 @@
        "type": "text",
          "id": "cta_text",
       "label": "CTA text",
-    "default": "View All"
-    },    
-    {
-        "type": "textarea",
-        "id": "instagram_access_token",
-        "label": "Instagram access token",
-    	  "info": "Required for permission to show your Instagram content [instructions here](http://support.undergroundmedia.co.uk/customer/en/portal/articles/2386318-home-page---instagram-feed) for setup."
+    "default": "FOLLOW US"
     }
   ],
   "presets": [
     {
-      "name": "Instagram feed",
+      "name": "Dash Hudson Insta feed",
       "category": "Social media"
     }
   ]
