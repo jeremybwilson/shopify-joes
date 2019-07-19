@@ -151,7 +151,7 @@
         "shoprunner_env": "dev",
         "dashhudson_enabled": true,
         "dashhudson_id": "6384088",
-        "dashhudson_name": "likeshop",
+        "dashhudson_name": "likeshop-carousel",
         "checkout_header_image": "",
         "checkout_logo_image": "shopify:\/\/shop_images\/checkout-logo.png",
         "checkout_logo_position": "center",
