@@ -1,4 +1,4 @@
-@charset "UTF-8";
+/*@charset "UTF-8";
 
 #contact-muck {
   td {
@@ -210,4 +210,40 @@
       fill: $color--accent-1;
     }
   }
+}
+*/
+
+
+
+.contact{
+		.newsletter-newsletter {
+			border-top: 1px solid #e2e2e2;
+			margin-top: 75px;
+			padding-top: 75px;
+
+			@include mq('phone'){
+				margin-top: 56px;
+				padding-top: 56px;
+			}
+		}
+
+    h1{
+    @include banner-up-head-text-font;
+	  text-align: center;
+	  margin: 0 0 35px 0;
+	  color:$black-color;
+
+	  @include mq('phone'){
+	     font-size:27px;
+	  }
+    }
+
+	p{
+	  @include paragraph-font;
+	  margin-bottom:10px;
+      text-align: justify;
+	  a{
+	    @include paragraph-font;
+	  }
+	}
 }

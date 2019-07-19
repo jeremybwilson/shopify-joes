@@ -3,31 +3,34 @@
 	    display: none;
 	}
 
-	#page-container{
-	   margin-bottom:89px;
+	.newsletter-newsletter {
+    border-top:$border-grey-1;
+    margin-top:75px;
+    padding-top:75px;
 
+    @include mq('phone'){
+       margin-top:56px;
+       padding-top:56px;
+    }
+  }
+
+	#page-container{
 	   .row{
 	        margin: 0 auto !IMPORTANT;
 		    width: 100% !important;
 		    padding: 0 0;
 	   }
-
-	   @include mq('phone'){
-	      margin-bottom:65px;
-	   }
 	}
     
     h1{
-      @include banner-up-head-text-font;
-	  text-align: center;
-	  padding-bottom: 17px;
-	  margin: 0 0 25px 0;
-	  color:$black-color;
-	  border-bottom:$border-grey-1;
+			@include banner-up-head-text-font;
+			text-align: center;
+			margin: 0 0 35px 0;
+			color:$black-color;
 
-	  @include mq('phone'){
-	     font-size:27px;
-	  }
+			@include mq('phone'){
+				font-size:27px;
+			}
     }
 
 	p{

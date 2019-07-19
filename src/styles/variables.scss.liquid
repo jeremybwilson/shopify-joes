@@ -111,7 +111,7 @@ $container-fluid-width:1115px;
     bottom:0px;
     padding:58px 50px;
     
-    @media #{$mobile} {
+    @include mq('phone'){
        padding:38px 15px;
     }    
 }
@@ -841,11 +841,11 @@ $button--alt-border-hover: {{ settings.alt_button_border_width }}px solid {{ set
  * ------------------------------------------------------------------------- */
 
 
-$laptop-up: "only screen and (max-width :1260px) and (min-width :1200px)";
+/*$laptop-up: "only screen and (max-width :1260px) and (min-width :1200px)";
 $laptop: "only screen and (max-width :1199px)";
 $tablet: "only screen and (max-width :1023px)";
 $mobile: "only screen and (max-width :767px)";
-$mobile-potrait: "only screen and (max-width :567px)";
+$mobile-potrait: "only screen and (max-width :567px)";*/
 
 $mobile-potrait-small:   "screen and (max-width: 480px)";
 $mobile-potrait:   "screen and (max-width: 567px)";

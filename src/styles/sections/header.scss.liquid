@@ -18,12 +18,12 @@ ul{padding:0 0px; margin: 0px;}
    padding-top:0px;
    padding-bottom:89px;
 
-     @include mq('phone'){
-        padding-bottom:60px;
-     }
-
      @include mq('laptop'){
         @include padding-left-right-mobile15;
+     }
+
+     @include mq('phone'){
+        padding-bottom:60px;
      }
 }
 .cart #breadcrumb{
@@ -584,7 +584,7 @@ ul{padding:0 0px; margin: 0px;}
         left: 0;
         background-color: #fff;
         padding: 15px 15px;
-        z-index: 99;
+        z-index: 9999;
         top: 41px;
         min-width: 180px;
         box-shadow: 0px 8px 8px hsla(0, 0%, 0%, 0.39);
@@ -718,7 +718,25 @@ ul{padding:0 0px; margin: 0px;}
           font-weight: bold;
        }
 
-    }
+   }
+
+   span.menu-nolink{
+        font-weight:$bold !important;
+        @include black-paragraph-13-font;
+        color:{{ settings.nav_list_item_color }};
+        margin-bottom: 0px;
+        text-decoration: none !important;
+        text-transform: uppercase;
+
+        @include mq('laptop'){
+            font-size:$font-12;
+        } 
+        
+        @include mq('phone-and-tablet'){
+            font-size: 15px;
+            font-weight: bold;
+        }
+   }
 
     .nav-primary-link{
         &>a{
@@ -734,6 +752,12 @@ ul{padding:0 0px; margin: 0px;}
     }
     .bold_text > .menu-nolink {
          font-weight: bold;
+         font-size: 12px;
+         text-transform: uppercase;
+
+         @include mq('laptop'){
+            font-size:$font-15;
+         }
     }
 }
 

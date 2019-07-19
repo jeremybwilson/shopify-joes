@@ -1,6 +1,6 @@
-.template-page #content {
+/*.template-page #content {
    @include main-container;
-}
+}*/
 
 .privacy #content {
   @include main-container;
@@ -18,13 +18,20 @@
    @include secound-container;
 }
 
+.contact #content {
+  @include main-container;
+}
+
+.page #content{
+	@include main-container;
+}
+
 .stores, .outlet-stores{
   #content{
      @include main-container;
   }
 }
   
-
 .template-page #page {
   margin-left: 0;
   margin-right: 0;
@@ -38,3 +45,4 @@
 #page {
     width: 100%;
 }
+

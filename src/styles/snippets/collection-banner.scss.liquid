@@ -1,144 +1,132 @@
 /* COLLECTION BANNER : Header image and content
  * ---------------------------------------------- */
-.collection-banner {
-    position: relative;
-    
-    // BANNER : IMAGES
-    .banner-image-desktop {
+/*collection-banner*/
+
+.right-banner-img {
+    width: calc(100% - 41.8%);
+    display: inline-block;
+    object-position:center;
+    object-fit:cover;
+
+    img{
+      width:100%;
+      height:101%;
+      object-position:center;
+      object-fit:cover;
+    }
+
+    .box-ratio{padding-bottom:0px !important; height:100%;}
+
+    .banner-image-mobile {
         display: none;
-    }
 
-    @include mq( 'lap-and-up' ) {
-        .banner-image-desktop {
-            display: block;
-        }
-
-        .banner-image-mobile {
-            display: none;
+        @include mq('phone'){
+            display:block;
         }
     }
 
-
-    // BANNER : Textbox
-    .banner-text-box-wrap {
-        width: 100%;
-        height: auto;
-
-
-        // DESKTOP DISPLAY - Textbox position is paid attention to on desktop, ignored on mobile
-        @include mq( 'lap-and-up' ) {
-            @include flexbox;
-            @include align-items( center ); // VERTICAL : Center (Default)
-            @include justify-content( center ); // HORIZONTAL : Center (Default)
-            position: absolute;
-            height: 100%;
-            left: 0;
-            top: 0;
-
-            // TRANSPARENT LANDING : Account for landing transparent nav
-            {% if settings.nav_transparent_landing %} 
-                padding: 80px 0 0; //Navbar = 80px high
-            {% else %}
-                padding: 0 20px;
-            {% endif %}
-
-            // CONSTRAIN WIDTH : Match nav-bar max widths on desktop sizes
-            &[data-constrain-width='true'] {
-                left: 50%;
-                transform: translateX( -50% );
-                max-width: 1000px;
-            }
-
-            // VERTICAL PLACEMENT : TOP
-            &[data-textbox-vertical='top'] {
-                @include align-items( flex-start );
-            }
-            // VERTICAL PLACEMENT : BOTTOM
-            &[data-textbox-vertical='bottom'] {
-                @include align-items( flex-end );
-            }
-
-            // HORIZONTAL PLACEMENT : LEFT
-            &[data-textbox-horizontal='left'] {
-                @include justify-content( flex-start );
-            }
-            // HORIZONTAL PLACEMENT : BOTTOM
-            &[data-textbox-horizontal='right'] {
-                @include justify-content( flex-end );
-            }
-        }
-
-        @include mq( 'desk-and-up' ) {
-            // CONSTRAIN WIDTH : Match nav-bar max widths on desktop sizes
-            &[data-constrain-width='true'] {
-                max-width: 1200px;
-            }
-        }
-
-        @include mq( 'wide-and-up' ) {
-            // CONSTRAIN WIDTH : Match nav-bar max widths on desktop sizes
-            &[data-constrain-width='true'] {
-                max-width: 1400px;
-            }
-        }
-
-        .banner-text-box {
-            @include flexbox;
-            @include flex-wrap( wrap );
-            @include flex-direction( column );
-            @include align-items ( center ); // Center Text alignment is default, always center on mobile
-            @include justify-content( center );
-            position: relative;
-            padding: 30px 20px 20px;
-            max-width: 440px;
-            margin: 0 auto; // Center block for mobile
-            text-align: center; // Mobile default
-
-            // TEXT-ALIGNMENT : Mobile always center aligned, move ".text-____" blocks up if wanted on mobile
-            @include mq( 'lap-and-up' ) {
-                margin: 0;
-                padding: 50px 40px;
-
-                // TEXT-ALIGN : Left
-                &.text-left {
-                    text-align: left;
-                    @include align-items( flex-start );
-                }
-                // TEXT-ALIGN : Right
-                &.text-right {
-                    text-align: right;
-                    @include align-items( flex-end );
-                }
-            }
-
-
-            // TEXTBOX : Header
-            .banner-header {
-                @include fontSize( 25px );
-                font-weight: $font-weight--medium;
-                margin-bottom: 15px;
-
-                @include mq( 'lap-and-up' ) {
-                    @include fontDim( 28px, 32px, 7px );
-                }
-                
-            }
-
-            // TEXTBOX : Divider
-            .banner-divider {
-                position: relative;
-                width: 65px;
-                height: 1px;
-                margin-bottom: 20px;
-                background: $color--text-1;
-            }
-
-            // TEXTBOX : Body
-            .banner-body {
-                color: $color--dark-gray;
-                font-weight: $font-weight--medium;
-                @include fontSize( 18px );
-            }
+    .banner-image-desktop{
+        @include mq('phone'){
+           display:none;
         }
     }
 }
+
+.right-banner-img.collection-banner-full{width:$full-width;}
+
+.banner-text-box-wrap {
+    max-width: 41.8%;
+    display: inline-block;
+    width: 100%;
+}
+
+#shopify-section-collection-template .collection-banner .banner-text-box-wrap .banner-text-box.text-center {
+    margin: 0 0 !important;
+    padding: 40px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+   
+    @include mq('phone'){
+        padding:20px;
+    }
+
+}
+
+.collection-banner{
+    flex-direction: row-reverse;
+    width: 100% !important;
+    display: flex;
+    /*height: 586px;*/
+    width: calc(100% - 50px);
+    overflow: hidden;
+    padding:$padding-left-right;
+   
+    /*@include mq('phone-and-tablet'){
+       height:400px;
+    }*/
+
+    @include mq('phone'){
+       /*height:250px;*/
+       padding:0 10px;
+    }
+
+    /*@include mq('mobile-potrait'){
+       height:131px;    
+    }*/
+
+}
+
+.banner-header{
+  @include banner-head;
+  line-height: 1.2;
+      
+      @include mq('phone-and-tablet'){
+         font-size:$font-32-mo;
+      }
+
+      @include mq('phone'){
+        font-size:$font-18-mo;
+      }
+
+      @include mq('mobile-potrait'){
+        font-size:$font-15-mo;
+      }
+}
+
+.banner-body{
+  @include banner-paragraph;
+  max-width:70%;
+    
+    @include mq('laptop'){
+       max-width:90%;
+    }
+    @include mq('phone-and-tablet'){
+       max-width:100%;
+    }
+    @include mq('phone'){
+        display:none;
+    }
+}
+
+.banner-content-plp {
+    margin: 0 0 !important;
+    padding: 40px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #000;
+
+    p{
+       @include banner-paragraph;
+       max-width: 70%;
+    }
+
+}
+/*collection-banner*/
