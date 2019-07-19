@@ -118,7 +118,8 @@
 
   
   <div class="installments-part">
-     <p class="installment-pay">or 4 installments of $$$ by afterpaya</p>
+    {% comment %} <p class="installment-pay">or 4 installments of $$$ by afterpaya</p> {% endcomment %}
+     <p class="installment-pay affirm-as-low-as" data-page-type="product" data-amount="{{ price }}"></p>
   </div>
 
   <div class="clear"></div>

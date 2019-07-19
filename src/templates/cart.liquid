@@ -91,6 +91,7 @@
           <span class="subtotal-header">{{ 'cart.general.subtotal' | t }}</span>
           <span id="cart-page-price" class="money bfx-price bfx-product-subtotal">{{ cart.total_price | money }}</span>
         </h4>
+          <p class="affirm-as-low-as" data-page-type="cart" data-amount="{{cart.total_price}}"></p>
 
         <input type="submit" name="update" id="update-cart" value="{{ 'cart.general.update' | t }}" class="button" />
         <input type="submit" name="checkout" id="checkout" value="{{ 'cart.general.checkout' | t }}" class="button bfx-checkout" />

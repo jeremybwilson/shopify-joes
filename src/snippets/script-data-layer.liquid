@@ -1015,20 +1015,6 @@ __bva__.helpers = (function () {
           productView();
         }
       });
-      $(document).on('click', '.product-quickview-button', function () {
-        var viewedElementId = $(this).data('id');
-        var viewedProduct = $(this).data('product');
-        viewedElementId = viewedElementId.toString();
-        console.log('Quick View:', viewedElementId);
-        dataLayer.push({
-          event: 'Quick View',
-          pageType: 'Product',
-          pageTitle: product.products[0].name,
-          pageURL: product.products[0].url,
-          quickViewedIds: viewedElementId,
-          quickViewedProducts: [viewedProduct]
-        });
-      });
       if (sessionStorage.getItem('clicked_next_or_prev_on_quickview')) {
         console.log('Quick View by next or prev');
         dataLayer.push({
