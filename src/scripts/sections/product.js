@@ -143,9 +143,10 @@ PRODUCT SIZE CHART : tab select
 ==============================================================================*/
 
 $(document).on('click', "#size-chart--popup [data-toggle='tab']", function(){
-    $("#size-chart--popup .nav-justified li").removeClass("active");
-    $("#size-chart--popup .tab-content .tab-pane").removeClass("active");
+    var popup_section = $(this).data('section');
+    $("#size-chart--popup #size-chart--"+ popup_section +" .nav-justified li").removeClass("active");
+    $("#size-chart--popup #size-chart--"+ popup_section +" .tab-content .tab-pane").removeClass("active");
 
     $(this).parent("li").addClass("active");
-    $("#size-chart--popup .tab-content " + $(this).data("href")).addClass("active");
+    $("#size-chart--popup #size-chart--"+ popup_section +" .tab-content " + $(this).data("href")).addClass("active");
 });

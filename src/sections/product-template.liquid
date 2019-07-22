@@ -119,7 +119,7 @@
                 {% assign full_product_description = product.description | split: '<!-- description -->' %}
                 {% assign product_description = full_product_description[0] %}
 
-                {% assign other_product_detail = full_product_description[1] | split: '<!-- detail -->' %}
+                {% assign other_product_detail = full_product_description[1] | split: '<!-- details -->' %}
                 {% assign product_detail = other_product_detail[0] %}
                 {% assign fit_imformation = other_product_detail[1] %}
 
