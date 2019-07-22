@@ -112,9 +112,23 @@
   }
 }
 .bold{font-weight:$bold;}
+
 .as-see-on-part {
    margin:$margin-tb-100;
    @include mq('phone-and-tablet'){margin:24px 0px 68px 0;}
+
+   .slick-slide{
+      padding: 0 8px !IMPORTANT;
+
+      .ls-carousel-photo{
+          margin: 0px 0px !important;
+          width: 100% !important;
+      }
+   }
+
+   .slick-list.draggable {
+      margin: 0 -7px !important;
+   }
 }
 
 .black-button {

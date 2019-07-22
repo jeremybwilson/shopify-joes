@@ -1,25 +1,36 @@
 /*@charset "UTF-8";*/
+
+.contact-content{
+  a{
+    color:$black-color;
+  }
+
+  h3{
+    @include h3-heading;
+  }
+}
+
 .contact{
-		.newsletter-newsletter {
-			border-top: 1px solid #e2e2e2;
-			margin-top: 75px;
-			padding-top: 75px;
+      .newsletter-newsletter {
+        border-top: 1px solid #e2e2e2;
+        margin-top: 75px;
+        padding-top: 75px;
 
-			@include mq('phone'){
-				margin-top: 56px;
-				padding-top: 56px;
-			}
-		}
+        @include mq('phone'){
+          margin-top: 56px;
+          padding-top: 56px;
+        }
+      }
 
-    h1{
-    @include banner-up-head-text-font;
-	  text-align: center;
-	  margin: 0 0 35px 0;
-	  color:$black-color;
+      h1{
+      @include banner-up-head-text-font;
+      text-align: center;
+      margin: 0 0 35px 0;
+      color:$black-color;
 
-	  @include mq('phone'){
-	     font-size:27px;
-	  }
+      @include mq('phone'){
+        font-size:27px;
+      }
     }
 
 	p{
@@ -29,14 +40,5 @@
 	  a{
 	    @include paragraph-font;
 	  }
-	}
-	.contact-content{
-		a{
-			color:$black-color;
-		}
-
-		h3{
-			@include h3-heading;
-		}
 	}
 }
