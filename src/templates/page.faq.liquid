@@ -30,5 +30,25 @@ $( document).ready(function() {
         $(this).addClass("active").closest('.toggle').find('.toggle-inner').slideDown(200);
       }
     });
+	//size-chart--popup
+	$('[data-toggle="faq-size-modal"]').on('click', function () {
+		var clickon = $(this).data('tab-target');
+		if (clickon != 'all') {
+			$('#size-chart--popup').find('.size-chart--wrapper').hide();
+			$('#size-chart--popup').find('#size-chart--' + clickon).show();
+		}
+		$('[data-toggle="faq-size-modal"]').fancybox({
+			width: 900,
+			height: 506,
+			padding: 0,
+			aspectRatio: true,
+			helpers: {
+				media: true,
+				overlay: {
+					locked: false
+				}
+			}
+		});
+	})
 });
 </script>

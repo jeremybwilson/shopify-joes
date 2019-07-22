@@ -468,7 +468,7 @@
                             "image": "shopify:\/\/shop_images\/JOES_HomePage_1440x698_WWW.jpg",
                             "mobile_image": "shopify:\/\/shop_images\/JOES_HomePage_Mobile_320x614_WWW.jpg",
                             "heading": "FLAWLESS3",
-                            "subheading": "From kitten heels to over-the-knee boots.",
+                            "subheading": "",
                             "caption_text_align": "left",
                             "cta_one_link": "\/collections\/legacy\/audience_men",
                             "cta_one_button_text": "SHOP NOW",
@@ -493,7 +493,7 @@
                             "image": "shopify:\/\/shop_images\/JOES_HomePage_1440x698_JE.jpg",
                             "mobile_image": "shopify:\/\/shop_images\/JOES_HomePage_Mobile_320x614_JE.jpg",
                             "heading": "FROM ITALIA WITH LOVE",
-                            "subheading": "From over-the-knee boots to kitten heels.",
+                            "subheading": "",
                             "caption_text_align": "right",
                             "cta_one_link": "\/collections\/legacy\/audience_men",
                             "cta_one_button_text": "Shop Now",
@@ -615,7 +615,7 @@
                     "1560851184448": {
                         "type": "image_picker",
                         "settings": {
-                            "about_image_desktop": "shopify:\/\/shop_images\/baby-hands-and-feet.jpg"
+                            "about_image_desktop": "shopify:\/\/shop_images\/JOES_About_Page_556x761_4764e557-f819-42fe-bd2a-30308ed78484.jpg"
                         }
                     }
                 },
@@ -723,7 +723,7 @@
                     "type": "html",
                     "settings": {
                       "title": "WHICH SIZE SHOULD I CHOOSE?",
-                      "answer": "<ul>\n<li><a href=\"#size-chart-modal\" data-toggle=\"modal\" data-tab-target=\"#size-chart-women\">women<\/a><\/li>\n<li><a href=\"#size-chart-modal\" data-toggle=\"modal\" data-tab-target=\"#size-chart-men\">men<\/a><\/li>\n<li><a href=\"#size-chart-modal\" data-toggle=\"modal\" data-tab-target=\"#size-chart-kids\">kids<\/a><\/li>\n<\/ul>",
+                      "answer": "<ul>\n    <li><a href=\"#size-chart--popup\" data-toggle=\"faq-size-modal\" data-tab-target=\"womens\">women<\/a><\/li>\n    <li><a href=\"#size-chart--popup\" data-toggle=\"faq-size-modal\" data-tab-target=\"mens\">men<\/a><\/li>\n    <li><a href=\"#size-chart--popup\" data-toggle=\"faq-size-modal\" data-tab-target=\"kids\">kids<\/a><\/li>\n<\/ul>",
                       "anchor": ""
                     }
                   },
@@ -908,6 +908,8 @@
                 ],
                 "settings": {
                   "anchor_top_offset": -100,
+                  "size_chart_show": true,
+                  "size_chart_page": "size-chart",
                   "before_content": "<h1>FREQUENTLY ASKED QUESTIONS<\/h1>",
                   "after_content": ""
                 }

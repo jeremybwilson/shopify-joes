@@ -5,6 +5,8 @@
     {% assign audience = tag | remove: 'audience_' %}
 
     {% case audience %}
+      {% when 'kids' %}
+        {% assign size_chart_type = 'kids' %}
       {% when 'boys' %}
         {% assign size_chart_type = 'kids' %}
       {% when 'girls' %}

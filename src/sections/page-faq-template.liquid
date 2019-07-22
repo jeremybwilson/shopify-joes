@@ -30,6 +30,12 @@
     {{ section.settings.after_content }}
 {% endif %}
 
+{% if section.settings.size_chart_page != blank %}
+    <div id="size-chart--popup" class="product-page-popup" style="display: none" data-size-chart-type="all">
+        {{ pages[section.settings.size_chart_page].content }}
+    </div>
+{% endif %}
+
 {% schema %}
   {
     "name": "FAQ page",
@@ -43,6 +49,21 @@
         "unit": "px",
         "label": "Anchor - Top offset",
         "default": -100
+    },
+    {
+        "type": "header",
+        "content": "Size Chart"
+    },
+    {
+        "type": "checkbox",
+        "id": "size_chart_show",
+        "label": "Show size chart",
+        "default": true
+    },
+    {
+        "type": "page",
+        "id": "size_chart_page",
+        "label": "Size Chart Page"
     },
     {
         "type": "html",
