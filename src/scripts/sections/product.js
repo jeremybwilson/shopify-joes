@@ -98,30 +98,10 @@ events.on("quickview:load", function(container) {
     theme.Product(container);
 });
 
-/*============================================================================
-QUICK VIEW MODAL : Use Fancybox to Ajax in product quick view template
-==============================================================================*/
-$(document).on('click', '.product-quickview', function() {
-
-    // Call Fancybox for product modal + stop scroll to top
-    $('.product-quickview').fancybox({
-        padding: 0,
-        margin: 0,
-        transitionIn: 'fade',
-        afterShow: function afterShow() {
-            var context = document.querySelector("#product-quick-view");
-            theme.Product(context);
-        },
-        wrapCSS: 'fancybox-quickview',
-        helpers: { overlay: { locked: false } }
-    });
-    return false;
-});
 
 /*============================================================================
-QUICK VIEW MODAL : show/Hide more colres than 5
+QUICK VIEW MODAL : Show/Hide more colors than 5
 ==============================================================================*/
-
 $(document).on('click', '.show-more-product-color', function() {
 
     // Call Fancybox for product modal + stop scroll to top
@@ -138,10 +118,10 @@ $(document).on('click', '.show-more-product-color', function() {
     return false;
 });
 
+
 /*============================================================================
 PRODUCT SIZE CHART : tab select 
 ==============================================================================*/
-
 $(document).on('click', "#size-chart--popup [data-toggle='tab']", function(){
     var popup_section = $(this).data('section');
     $("#size-chart--popup #size-chart--"+ popup_section +" .nav-justified li").removeClass("active");
