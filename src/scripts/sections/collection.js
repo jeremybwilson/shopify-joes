@@ -74,19 +74,6 @@ theme.Collection = (function() {
           });
         }
       });
-
-      // QUICKVIEW : Attach fancybox to quickview buttons
-      $('.product-quickview').fancybox({
-          padding: 0,
-          margin: 0,
-          transitionIn: 'fade',
-          afterShow: function afterShow() {
-              var context = document.querySelector("#product-quick-view");
-              theme.Product(context);
-          },
-          wrapCSS: 'fancybox-quickview',
-          helpers: { overlay: { locked: false } }
-      });
     });
   }
 

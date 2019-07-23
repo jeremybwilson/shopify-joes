@@ -88,11 +88,41 @@ module.exports = (function() {
     });
   };
 
+
+  // QUICKVIEW : DESKTOP : Attach events for quickview modals to appear and such
+  const setupQuickview = function () {
+    $(document).ready( () => {
+      
+      // QUICKVIEW BUTTON : Bind fancybox modals to quickview buttons
+      $('.product-quickview').fancybox({
+        padding: 0,
+        margin: 0,
+        transitionIn: 'fade',
+        afterShow: function afterShow() {
+          var context = document.querySelector("#product-quick-view");
+          theme.Product(context);
+        },
+        wrapCSS: 'fancybox-quickview',
+        helpers: { 
+          overlay: { 
+            locked: false 
+          } 
+        }
+      });
+
+    });
+  }
+
+
+
   // INITALIZER : Attaches events and subscribes the component collections to updates via the filter app
   const init = function( wrapperId ) {
 
     // ATTACH : Bind event handlers for "Apply All" button in desktop filter sets
     attachApplyAll( wrapperId );
+
+    // QUICKVIEW : Attach quickview modal fancybox windows
+    setupQuickview();
 
     // UPDATES : SUB : Subscribe to collection updates to re-render react-components
     $(document).on( "collectionUpdated", updateTemplate );

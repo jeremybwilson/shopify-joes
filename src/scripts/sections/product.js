@@ -12,6 +12,7 @@ events.trigger = events.emit; // trigger alias
 theme.Product = (function() {
     function Product(container) {
         const ui = {
+            campaignVideoTrigger: $('.campaign-video--trigger'),
             detailAccordionHeader: $('#product-detail---accordion-header'),
             detailAccordionContent: $('#product-detail--accordion-content'),
             descriptionAccordionHeader: $('#product-description---accordion-header'),
@@ -19,7 +20,7 @@ theme.Product = (function() {
             fitAccordionHeader: $('#product-fit---accordion-header'),
             fitAccordionContent: $('#product-fit--accordion-content'),
             sizeChartPopup: $('#size-chart--popup'),
-            campaignVideoTrigger: $('.campaign-video--trigger')
+            showMoreColors: $('.show-more-product-color')
         }
 
         theme.ProductGalleryMobile(events);
@@ -87,6 +88,37 @@ theme.Product = (function() {
                     ui.sizeChartPopup.find('#size-chart--' + size_chart_type).show();
                 }
             }
+
+            //SIZE CHART : Moved this into proudct as it will only appear inside product.
+            $(document).on('click', "#size-chart--popup [data-toggle='tab']", function(){
+                var popup_section = $(this).data('section');
+                $("#size-chart--popup #size-chart--"+ popup_section +" .nav-justified li").removeClass("active");
+                $("#size-chart--popup #size-chart--"+ popup_section +" .tab-content .tab-pane").removeClass("active");
+
+                $(this).parent("li").addClass("active");
+                $("#size-chart--popup #size-chart--"+ popup_section +" .tab-content " + $(this).data("href")).addClass("active");
+            });
+
+
+            // QUICKVIEW : Show More Colors
+            if ( ui.showMoreColors.length ) {
+                ui.showMoreColors.on( 'click', function() {
+                  var isOpen = ui.showMoreColors.hasClass('color-open');
+
+                  // SHOW/HIDE : More Colors In Quickview
+                  if( isOpen ){
+                    ui.showMoreColors.removeClass('color-open');
+                    ui.showMoreColors.text('more colors');
+                    $('.hide-more-color').toggle('slow');
+
+                  } else {
+                    ui.showMoreColors.addClass('color-open');
+                    ui.showMoreColors.text('less colors');
+                    $('.hide-more-color').toggle('slow');
+                  }
+                  return false;
+                });
+            }
         });
     }
 
@@ -96,37 +128,4 @@ theme.Product = (function() {
 
 events.on("quickview:load", function(container) {
     theme.Product(container);
-});
-
-
-/*============================================================================
-QUICK VIEW MODAL : Show/Hide more colors than 5
-==============================================================================*/
-$(document).on('click', '.show-more-product-color', function() {
-
-    // Call Fancybox for product modal + stop scroll to top
-    if($('.show-more-product-color').hasClass('color-open')){
-        $('.show-more-product-color').removeClass('color-open');
-        $('.show-more-product-color').text('more colors');
-        $('.hide-more-color').toggle('slow');
-
-    }else{
-        $('.show-more-product-color').addClass('color-open');
-        $('.show-more-product-color').text('less colors');
-        $('.hide-more-color').toggle('slow');
-    }
-    return false;
-});
-
-
-/*============================================================================
-PRODUCT SIZE CHART : tab select 
-==============================================================================*/
-$(document).on('click', "#size-chart--popup [data-toggle='tab']", function(){
-    var popup_section = $(this).data('section');
-    $("#size-chart--popup #size-chart--"+ popup_section +" .nav-justified li").removeClass("active");
-    $("#size-chart--popup #size-chart--"+ popup_section +" .tab-content .tab-pane").removeClass("active");
-
-    $(this).parent("li").addClass("active");
-    $("#size-chart--popup #size-chart--"+ popup_section +" .tab-content " + $(this).data("href")).addClass("active");
 });
