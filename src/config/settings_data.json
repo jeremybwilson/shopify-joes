@@ -615,7 +615,7 @@
                     "1560851184448": {
                         "type": "image_picker",
                         "settings": {
-                            "about_image_desktop": "shopify:\/\/shop_images\/JOES_About_Page_556x761_4764e557-f819-42fe-bd2a-30308ed78484.jpg"
+                            "about_image_desktop": "shopify:\/\/shop_images\/JOES_About_Page_556x761_v2.jpg"
                         }
                     }
                 },
@@ -1051,7 +1051,10 @@
                             "fit_guide_title": "Skinny",
                             "description": "Skinny Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
                             "collection": "women-denim-fit-skinny",
-                            "image": "shopify:\/\/shop_images\/skinny.png"
+                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Skinny-W.jpg",
+                            "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png",
+                            "desktop_fit_image": "shopify:\/\/shop_images\/skinny.png",
+                            "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Skinny-W.jpg"
                         }
                     },
                     "1561700763172": {
@@ -1060,7 +1063,10 @@
                             "fit_guide_title": "Straight",
                             "description": "Straight Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
                             "collection": "women-denim-fit-straight",
-                            "image": "shopify:\/\/shop_images\/straight.png"
+                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Straight-W.jpg",
+                            "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png",
+                            "desktop_fit_image": "shopify:\/\/shop_images\/skinny-pro-img.png",
+                            "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Straight-W.jpg"
                         }
                     },
                     "1561700801684": {
@@ -1069,7 +1075,10 @@
                             "fit_guide_title": "Bootcut",
                             "description": "Bootcut Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
                             "collection": "women-denim-fit-bootcut",
-                            "image": "shopify:\/\/shop_images\/bootcut.png"
+                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Bootcut-W.jpg",
+                            "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png",
+                            "desktop_fit_image": "shopify:\/\/shop_images\/bootcut.png",
+                            "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Bootcut-W.jpg"
                         }
                     },
                     "1561700858807": {
@@ -1078,7 +1087,10 @@
                             "fit_guide_title": "Flare",
                             "description": "FlareLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
                             "collection": "women-denim-fit-flare",
-                            "image": "shopify:\/\/shop_images\/flare.png"
+                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Flare-W.jpg",
+                            "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png",
+                            "desktop_fit_image": "shopify:\/\/shop_images\/flare.png",
+                            "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Flare-W.jpg"
                         }
                     },
                     "1561700917267": {
@@ -1087,7 +1099,10 @@
                             "fit_guide_title": "Petite",
                             "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley - Petite",
                             "collection": "women-denim-fit-petite",
-                            "image": "shopify:\/\/shop_images\/petite.png"
+                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Petite-W.jpg",
+                            "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png",
+                            "desktop_fit_image": "shopify:\/\/shop_images\/petite.png",
+                            "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Petite-W.jpg"
                         }
                     },
                     "1561700960992": {
@@ -1096,7 +1111,10 @@
                             "fit_guide_title": "Curvy",
                             "description": "Curvy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
                             "collection": "women-denim-fit-curvy",
-                            "image": "shopify:\/\/shop_images\/curvy.png"
+                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Curvy-W.jpg",
+                            "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png",
+                            "desktop_fit_image": "shopify:\/\/shop_images\/curvy.png",
+                            "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Curvy-W.jpg"
                         }
                     },
                     "1563517424761": {
@@ -1105,7 +1123,10 @@
                             "fit_guide_title": "Boyfriend",
                             "description": "Small Description for Boyfriend Women fit guide",
                             "collection": "women-denim-fit-boyfriend",
-                            "image": "shopify:\/\/shop_images\/Boyfriend.jpg"
+                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Boyfriend-W.jpg",
+                            "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png",
+                            "desktop_fit_image": "shopify:\/\/shop_images\/women-skinny.jpg",
+                            "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Boyfriend-W.jpg"
                         }
                     },
                     "1563517483912": {
@@ -1114,7 +1135,10 @@
                             "fit_guide_title": "Cigarette",
                             "description": "Cigarette Description will here.",
                             "collection": "women-collection",
-                            "image": "shopify:\/\/shop_images\/Cigarette.jpg"
+                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Cigarette-W.jpg",
+                            "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png",
+                            "desktop_fit_image": "shopify:\/\/shop_images\/women-skinny.jpg",
+                            "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Cigarette-W.jpg"
                         }
                     }
                 },
@@ -1129,8 +1153,6 @@
                     "1563517483912"
                 ],
                 "settings": {
-                    "desktop_banner": "shopify:\/\/shop_images\/banner-size-guid.png",
-                    "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png"
                 }
             },
             "men-fit-guide": {
@@ -1142,7 +1164,10 @@
                             "fit_guide_title": "skinny",
                             "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
                             "collection": "men-denim-fit-skinny-fit",
-                            "image": "shopify:\/\/shop_images\/skinny-men-desktop_ceb4ba93-12df-476e-813e-ec773fc91de6.jpg"
+                            "desktop_banner": "shopify:\/\/shop_images\/SKINNY.jpg",
+                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Skinny_83cd8668-438b-4ebe-ad1d-99e9e74bac36.jpg",
+                            "desktop_fit_image": "shopify:\/\/shop_images\/skinny-men-desktop_ceb4ba93-12df-476e-813e-ec773fc91de6.jpg",
+                            "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Skinny_605bd65d-963f-43e9-b176-8a466788cdbb.jpg"
                         }
                     },
                     "1561706120320": {
@@ -1151,7 +1176,10 @@
                             "fit_guide_title": "Slim",
                             "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
                             "collection": "men-denim-fit-slim-fit",
-                            "image": "shopify:\/\/shop_images\/slim-desktop-men.jpg"
+                            "desktop_banner": "shopify:\/\/shop_images\/SLIM.jpg",
+                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Slim_38f288dc-40db-407d-8e14-0bc3292d662e.jpg",
+                            "desktop_fit_image": "shopify:\/\/shop_images\/slim-desktop-men.jpg",
+                            "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Slim.jpg"
                         }
                     },
                     "1563454773939": {
@@ -1160,7 +1188,10 @@
                             "fit_guide_title": "STRAIGHT",
                             "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
                             "collection": "men-denim-straight-leg",
-                            "image": "shopify:\/\/shop_images\/straight-men-desktop.jpg"
+                            "desktop_banner": "shopify:\/\/shop_images\/STRAIGHT.jpg",
+                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Straight_1a3802e9-c6f8-496b-8a01-289848251cd2.jpg",
+                            "desktop_fit_image": "shopify:\/\/shop_images\/straight-men-desktop.jpg",
+                            "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Straight_c891d164-8fa2-4f3f-b71d-1d06f7261868.jpg"
                         }
                     },
                     "1563455212718": {
@@ -1169,7 +1200,10 @@
                             "fit_guide_title": "STRAIGHT + NARROW",
                             "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley  PREVIOUS product image THE ASHER Shop Now",
                             "collection": "men-denim-straight-narrow",
-                            "image": "shopify:\/\/shop_images\/straight-narrow-men-desktop.jpg"
+                            "desktop_banner": "shopify:\/\/shop_images\/STRAIGHT_NARROW.jpg",
+                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Straight_Narrow_ca61aa7b-dda1-404a-b941-218c3b8e4858.jpg",
+                            "desktop_fit_image": "shopify:\/\/shop_images\/straight-narrow-men-desktop.jpg",
+                            "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Skinny.jpg"
                         }
                     },
                     "1563455312383": {
@@ -1178,7 +1212,10 @@
                             "fit_guide_title": "Athletic slim",
                             "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
                             "collection": "men-denim-fit-athletic-fit",
-                            "image": "shopify:\/\/shop_images\/AthlETIC-SLIM.jpg"
+                            "desktop_banner": "shopify:\/\/shop_images\/ATHLETIC-SLIM_609657eb-b81c-4254-83fa-66403e80a0e0.jpg",
+                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Athletic_5624c796-fc63-45ac-8e6b-d32df930e01b.jpg",
+                            "desktop_fit_image": "shopify:\/\/shop_images\/AthlETIC-SLIM.jpg",
+                            "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Athletic_bec58c36-2d7e-42e2-9fac-3e6e6ca06b9e.jpg"
                         }
                     }
                 },
@@ -1190,8 +1227,6 @@
                     "1563455312383"
                 ],
                 "settings": {
-                    "desktop_banner": "shopify:\/\/shop_images\/banner-size-guid.png",
-                    "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png"
                 }
             }
         },

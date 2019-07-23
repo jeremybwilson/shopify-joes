@@ -1,0 +1,110 @@
+#header-section .search_bar{
+  border:0px !IMPORTANT;
+  background-color:transparent !IMPORTANT;
+  padding:0 0 !IMPORTANT;
+}
+
+.template-.gridlock #content{
+    @include main-container;
+    margin-bottom: 89px;
+
+    h2{
+        @include banner-up-head-text-font;
+        color:$black-color;
+        padding-bottom: 17px;
+        text-align: center;
+    }
+
+    input, select {
+        font-size: 12px;
+        color: #000;
+        font-weight: normal;
+        letter-spacing: 0px;
+        line-height: 16px;
+        border: 0px;
+        border-bottom: 1px solid #000;
+        height: 35px;
+        margin-right: 0px;
+        padding: 0 20px;
+        outline: none !IMPORTANT;
+        background-color: transparent;
+        width: 100%;
+    }
+
+    .search_bar{ 
+        margin-bottom: 30px;
+        padding: 20px 20px;
+
+        label{
+            @include black-paragraph-14-font;
+            width: 100%;
+            text-align: left;
+            font-weight:$bold;
+        }
+
+        .main_search_bar{
+            width: 35%;
+            margin-right: 15px;
+        }
+        .search_within_distance {
+            width: 20%;
+            margin-right: 15px;
+        }
+        .search_limit {
+            width: 20%;
+            margin-right: 15px;
+        }
+
+        #submitBtn{
+            @include subscribe-button;
+            width: calc(20% - 7px);
+            margin: 12px 0 0 0;    
+            line-height: 28px;
+            border-radius: 0px;
+        }
+    }
+}
+
+.addresses li,.gm_popup {
+    a{
+        margin-bottom: 0px !important;
+         display: flex !important;
+         flex-direction: column;
+    }
+    span{
+        @include paragraph-font;  
+        width: 100%;
+    } 
+
+    span.name{
+        @include h4-head;
+        color:$black-color !IMPORTANT;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+}
+
+
+.gm-style-iw.gm-style-iw-c {
+    border-radius: 0pc !important;
+    padding: 0 0 !important;
+
+    .gm-style-iw-d {
+        margin: 20px;
+    }
+
+    .gm-style-iw-d {
+        margin: 20px 10px 20px 20px;
+    }
+}
+
+.gm-ui-hover-effect {
+    right: 0 !IMPORTANT;
+    top: 0px !important;
+
+    img{
+       width: 20px !IMPORTANT;
+       height: 20px !important;
+       margin: 0 0 !important;
+    }
+}

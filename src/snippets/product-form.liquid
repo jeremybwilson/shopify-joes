@@ -95,17 +95,7 @@
   {% comment %} :: REVIEWS - STAR RATING :: {% endcomment %}
   {% if settings.app_wk_enabled %}
     <div class="product-star-rating">
-      <div class="star-rating-product-detail">
-         <img src="{{ 'rate-star-button.svg' | asset_url }}">
-         <img src="{{ 'rate-star-button.svg' | asset_url }}">
-         <img src="{{ 'rate-star-button.svg' | asset_url }}">
-         <img src="{{ 'rate-star-button.svg' | asset_url }}">
-         <img src="{{ 'rate-star-button.svg' | asset_url }}">
-      </div>
-
-        <a href="#" class="product-star-rating__write-review">Write a Review</a>
-      <div data-bv-show="inline_rating" data-bv-product-Id="{{product.id}}" data-bv-redirect-url="{{ product.url }}"></div>
-      <div data-bv-show="rating_summary" data-bv-product-Id="{{product.id}}">
+      <div class="product-star-rating__write-review" data-bv-show="rating_summary" data-bv-product-Id="{{product.id}}">
         {% if product.metafields.bazaarvoice.reviews-aggregate-ratings %}
           {{ product.metafields.bazaarvoice.reviews-aggregate-ratings }}
         {% endif %}
