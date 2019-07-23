@@ -1303,7 +1303,7 @@
                 "type": "text",
                 "id": "dashhudson_id",
                 "label": "Dash Hudson ID",
-                "default": "6384088",
+                "default": "6384088"
             },
             {
                 "type": "text",
