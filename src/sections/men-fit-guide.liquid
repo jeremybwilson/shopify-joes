@@ -1,26 +1,9 @@
-<div class="banner-only-images">
-    <img class="desktop_image" src="{{ section.settings.desktop_banner | img_url: '2000x' }}" alt="desktop_banner">
-    <img class="desktop_image" src="{{ section.settings.mobile_banner | img_url: '800x' }}" alt="mobile_banner">
-</div>
-
 {% include 'fit-guide' %}
 {% schema %}
 {
     "name": "Men's Denim Fit Guide",
-    "settings": [
-		{
-            "type": "image_picker",
-            "id": "desktop_banner",
-            "label": "Desktop Banner"
-        },
-		{
-            "type": "image_picker",
-            "id": "mobile_banner",
-            "label": "Mobile Banner"
-        }
-	],
     "max_blocks":12,
-	"blocks": [
+    "blocks": [
         {
             "name": "Men's Denim Fit Guide",
             "type": "image",
@@ -42,8 +25,25 @@
                 },
                 {
                     "type": "image_picker",
-                    "id": "image",
-                    "label": "Image"
+                    "id": "desktop_banner",
+                    "label": "Desktop Banner",
+                    "info": "Desktop Image Size: 1340X720 px"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "mobile_banner",
+                    "label": "Mobile Banner",
+                    "info": "Mobile Image Size: 320X467 px"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "desktop_fit_image",
+                    "label": "Desktop Fit Image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "mobile_fit_image",
+                    "label": "Mobile Fit Image"
                 }
             ]
         }

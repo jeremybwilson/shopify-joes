@@ -23,6 +23,13 @@ theme.FitGuide = (function() {
             type: 'GET'
         })
         .done(function(data) {
+            $(".banner-only-images").removeClass('active');
+            $('[data-section-id="fit-top-'+collectionhandle+'"]').addClass('active');
+            if(!is_first_time){
+                $('html, body').animate({
+                    scrollTop: $('[data-section-type="fit-guide"]').offset().top - $("#nav-bar-wrapper").height()
+                }, 2000);
+            }
             var products = data.products;
             $(products).each(function(index){//console.log(this);
                 var img = (this.images.length > 0) ? this.images[0].src : no_image;
@@ -89,11 +96,6 @@ theme.FitGuide = (function() {
                     }
                 ]
             });
-            if(!is_first_time){
-                $('html, body').animate({
-                    scrollTop: $("#product-slider").offset().top - $("#nav-bar-wrapper").height()
-                }, 2000);
-            }
         })
         .fail(function(data) {})
         .always(function(data) {});
