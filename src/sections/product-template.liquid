@@ -116,14 +116,14 @@
 
           {% unless template == 'product.quick' %}
             {% if product.description != blank %}
-                {% assign full_product_description = product.description | split: '<!-- description -->' %}
+                {% assign full_product_description = product.description | split: '<!-- details -->' %}
                 {% assign product_description = full_product_description[0] %}
 
-                {% assign other_product_detail = full_product_description[1] | split: '<!-- details -->' %}
+                {% assign other_product_detail = full_product_description[1] | split: '<!-- fit_info -->' %}
                 {% assign product_detail = other_product_detail[0] %}
                 {% assign fit_imformation = other_product_detail[1] %}
 
-                {% comment %} :: Product description :: '<!-- description -->' {% endcomment %}
+                {% comment %} :: Product description :: 'Before content of <!-- details -->' {% endcomment %}
                 <hr class="product-hr">
                 <dl id="product-description--accordion" class="product-desc product-description">
                     {% comment %} :: PRODUCT DETAIL - Header :: {% endcomment %}

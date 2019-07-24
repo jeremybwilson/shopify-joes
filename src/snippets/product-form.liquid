@@ -60,9 +60,11 @@
 
   {%- if settings.show_multiple_currencies -%}
     {% assign price = current_variant.price | money_with_currency %}
+    {% assign affirmprice = current_variant.price %}
     {% assign compare_price = current_variant.compare_at_price | money_with_currency %}
   {%- else -%}
     {% assign price = current_variant.price | money %}
+    {% assign affirmprice = current_variant.price %}
     {% assign compare_price = current_variant.compare_at_price | money %}
   {%- endif -%}
 
@@ -109,7 +111,7 @@
   
   <div class="installments-part">
     {% comment %} <p class="installment-pay">or 4 installments of $$$ by afterpaya</p> {% endcomment %}
-     <p class="installment-pay affirm-as-low-as" data-page-type="product" data-amount="{{ price }}"></p>
+     <p class="installment-pay affirm-as-low-as" data-page-type="product" data-amount="{{ affirmprice }}"></p>
     <script>
       var selectCallback = function(variant, selector) {
 

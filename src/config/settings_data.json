@@ -294,34 +294,6 @@
                     "linklist_breakpoint": 10
                 }
             },
-            "footer": {
-                "type": "footer",
-                "blocks": {
-                    "footer-menu-content": {
-                        "type": "link_list",
-                        "settings": {
-                            "menu_id": "footer",
-                            "show_headings": true
-                        }
-                    },
-                    "footer-menu-content2": {
-                        "type": "link_list",
-                        "settings": {
-                            "menu_id": "footer",
-                            "show_headings": true
-                        }
-                    }
-                },
-                "block_order": [
-                    "footer-menu-content",
-                    "footer-menu-content2"
-                ],
-                "settings": {
-                    "tel_text": "1-877-528-JOES (5637)",
-                    "tel_number": "18775285637",
-                    "social_heading": "Follow Us"
-                }
-            },
             "collection-template": {
                 "type": "collection-template",
                 "blocks": {
@@ -467,24 +439,21 @@
                         "settings": {
                             "image": "shopify:\/\/shop_images\/JOES_HomePage_1440x698_WWW.jpg",
                             "mobile_image": "shopify:\/\/shop_images\/JOES_HomePage_Mobile_320x614_WWW.jpg",
-                            "heading": "FLAWLESS3",
+                            "heading": "",
                             "subheading": "",
                             "caption_text_align": "left",
-                            "cta_one_link": "\/collections\/legacy\/audience_men",
                             "cta_one_button_text": "SHOP NOW",
+                            "cta_one_link": "shopify:\/\/collections\/women-denim-fabric-flawless",
                             "cta_one_line": "left",
-                            "cta_two_link": "",
-                            "cta_two_button_text": "",
-                            "cta_two_line": "none",
+                            "caption_background": "rgba(0,0,0,0)",
+                            "caption_opacity": "0.2",
                             "caption_color_scheme": "light",
                             "custom_slider_header_color": "#ffffff",
                             "custom_slider_sub_header_color": "#ffffff",
                             "custom_slider_button_color": "#ed0a0a",
                             "custom_slider_sub_button_hover_color": "#ffffff",
                             "caption_horizontal": "left",
-                            "caption_vertical": 80,
-                            "caption_background": "rgba(0,0,0,0)",
-                            "caption_opacity": "0.2"
+                            "caption_vertical": 80
                         }
                     },
                     "home-hero_slideshow--slide-2": {
@@ -492,24 +461,21 @@
                         "settings": {
                             "image": "shopify:\/\/shop_images\/JOES_HomePage_1440x698_JE.jpg",
                             "mobile_image": "shopify:\/\/shop_images\/JOES_HomePage_Mobile_320x614_JE.jpg",
-                            "heading": "FROM ITALIA WITH LOVE",
+                            "heading": "Julian’s Winning Picks",
                             "subheading": "",
                             "caption_text_align": "right",
-                            "cta_one_link": "\/collections\/legacy\/audience_men",
                             "cta_one_button_text": "Shop Now",
+                            "cta_one_link": "shopify:\/\/collections\/men-denim",
                             "cta_one_line": "none",
-                            "cta_two_link": "",
-                            "cta_two_button_text": "",
-                            "cta_two_line": "right",
+                            "caption_background": "rgba(0,0,0,0)",
+                            "caption_opacity": "0.2",
                             "caption_color_scheme": "light",
                             "custom_slider_header_color": "#ffffff",
                             "custom_slider_sub_header_color": "#ffffff",
                             "custom_slider_button_color": "#ed0a0a",
                             "custom_slider_sub_button_hover_color": "#ffffff",
                             "caption_horizontal": "right",
-                            "caption_vertical": 70,
-                            "caption_background": "rgba(0,0,0,0)",
-                            "caption_opacity": "0.2"
+                            "caption_vertical": 70
                         }
                     }
                 },
@@ -531,7 +497,7 @@
                         "settings": {
                             "image": "shopify:\/\/shop_images\/JOES_HomePage_708x650_Jeans-W.jpg",
                             "mobile_image": "shopify:\/\/shop_images\/JOES_HomePage_708x650_Jeans-W.jpg",
-                            "link": "shopify:\/\/collections\/women-collection",
+                            "link": "shopify:\/\/collections\/women-denim",
                             "heading_text": "WOMEN'S JEANS",
                             "body_text": "",
                             "text_align": "left",
@@ -549,7 +515,7 @@
                         "settings": {
                             "image": "shopify:\/\/shop_images\/JOES_HomePage_708x650_Jeans-M.jpg",
                             "mobile_image": "shopify:\/\/shop_images\/JOES_HomePage_708x650_Jeans-M.jpg",
-                            "link": "shopify:\/\/collections\/men-collection",
+                            "link": "shopify:\/\/collections\/men-denim",
                             "heading_text": "MEN'S JEANS",
                             "body_text": "",
                             "text_align": "left",
@@ -579,7 +545,7 @@
                         "settings": {
                             "image": "shopify:\/\/shop_images\/JOES_HomePage_1440x753-Flawless.jpg",
                             "mobile_image": "shopify:\/\/shop_images\/JOES_HomePage_Mobile_320x428_Flawless.jpg",
-                            "link": "shopify:\/\/collections",
+                            "link": "shopify:\/\/collections\/women-denim-fabric-flawless",
                             "heading_text": "FLAWLESS",
                             "body_text": "<p>Gravity defying sleek silhouette<\/p>",
                             "text_align": "left",
@@ -859,7 +825,7 @@
                     "type": "html",
                     "settings": {
                       "title": "HOW DO I RETURN OR EXCHANGE AN ITEM?",
-                      "answer": "<p><strong>Holiday Returns Policy<\/strong><\/p>\n\n<p>We are sure that your loved ones will love their gifts, but just in case we have extended our 30-day return policy for the holidays to 60-days from the receipt of your order. This is applicable for all orders placed between November 15th, 2018 and December 25th, 2018.<\/p>\n<hr>\n<p><\/p>\n<p>Making a return or exchange purchased through<a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> is easy using our FREE collection service. <a href=\"\/\">JoesJeans.com<\/a> offers our customers within the continental United States the ultimate experience in shopping by giving you a pre-paid return label with every full price purchase! Whether you would like to exchange your item for another size or would like to receive a full refund you can be assured <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> is here to make your experience the best possible.<\/p>\n<p>To make a return or exchange purchased through <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> please follow the below instructions if your return is within 30 days of the receipt of your order.<\/p>\n<ul>\n<li>Your product(s) must be returned new, unused with all garment tags still attached and within thirty days of the receipt of your order. We are unable to accept merchandise which is not received with these specified conditions. Also, please remember to send all return\/exchanges directly to JOESJEANS ONLINE STORE, 19801 S. Santa Fe Ave., Rancho Dominguez, CA 90221.<\/li>\n<li>Exchanges can only be made for a different size of the item originally ordered through <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a>. If you wish to exchange your purchase from <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> for a completely new item or a different size, you will need to return it for a <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> credit and place a new order.<\/li>\n<li>To ensure that your return is adequately protected in transit, we recommend you send your items back to us in the original packaging provided.<\/li>\n<li>Please fill out the enclosed Return-Exchange form that was included with your order.<\/li>\n<li>To ensure that your return or exchange is received we recommend using the free UPS return label that is included in your package. If your return is not shipped by our UPS partner we cannot be responsible for tracking and receiving. For your reference please keep the UPS tracking number that is located on a sticker below the return label. This tracking number will allow you to confirm that your return or exchange was received by Joe's shipping department.<\/li>\n<li>Have your shipment picked up from your home or office simply by scheduling your pickup online at <a href=\"www.ups.com\" alt=\"Click to go to homepage of UPS\">UPS.com<\/a> or by calling <a href=\"tel:1-800-742-5877\" alt=\"Click to call UPS customer service at 1-800-PICK-UPS\"> 1-800-PICK-UPS® (1-800-742-5877)<\/a>. UPS On-Call Pickup is available for same day pickup in most parts of the country. you may also schedule a pickup in advance for the next business day or later in the week.<\/li>\n<li>We will inspect and process your return. Your refund will be applied to your original method of payment within 14 business days of receipt to JOESJEANS ONLINE STORE, 19801 S. Santa Fe Ave., Rancho Dominguez, CA 90221. Posting to your credit card account could take an additional 10 days depending on your credit card company.<\/li>\n<li>You will receive email notification once your return has been received and processed.<\/li>\n<li>Items purchased at any of JOE'S brick and mortar stores including JOE'S full price retail stores, JOE'S Outlet stores or at over 1,200 retail doors carrying JOE'S Jeans products in the U.S. and abroad cannot be returned to <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a>. Please contact <a href=\"mailto:customerservice@JoesJeans.com\" alt=\"Click to email JOE'S Jeans customer service\">customerservice@joesjeans.com<\/a> or call please call Toll Free: <a href=\"tel:+18775285637\" alt=\"Click to call JOE'S Jeans customer service at 1-877-528-JOES\">1-877-528-JOES (5637)<\/a> regarding problems with items not purchased at <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a>.<\/li>\n<li>All promotional offers listed at <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> cannot be combined with any other offers or previous promotions and cannot be applied to previous purchases.<\/li>\n<\/ul>\n<p>Please note that items must be returned new, unused and with all garment tags still attached. All sale and markdown items are final sale and are not eligible for a free pre-paid return label. We are also unable to accept merchandise which is not received in the above specified conditions. Furthermore, to ensure that your return is adequately protected in transit, we recommend you send your items back to us in the original packaging provided. If you have any questions, concerns, or comments regarding JOE'S products or the <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> eShop, please call Toll Free: <a href=\"tel:+18775285637\" alt=\"Click to call JOE'S Jeans customer service toll free\">1-877-528-JOES (5637)<\/a> | USA 6AM - 6PM PST, Monday - Sunday except for New Year’s Day and Christmas or Email: <a href=\"mailto:customerservice@shop.joesjeans.com\" alt=\"Click to e-mail JOE'S Jeans Customer Service\">customerservice@shop.joesjeans.com<\/a>.<\/p>\n<p>*Free collection does not apply to items returned from a different country to the original shipping destination.<\/p>",
+                        "answer": "<p>In the event that you are unhappy with your purchase from either <a style=\"text-decoration:underline !important\" href=\"\/\">JoesJeans.com<\/a> or our retail store, we will gladly accept a return within 30 days of purchase.<\/p>\n\n<ul>\n\t<li>Your product(s) must be returned new, unused with all garment tags still attached and within thirty days of the receipt of your order. We are unable to accept merchandise which is not received with these specified conditions.<\/li>\n\t<ul>\n\t\t<li>Also, please remember to send all return\/exchanges directly to JOESJEANS ONLINE STORE, 19801 S. Santa Fe Ave., Rancho Dominguez, CA 90221 if you decide to not use the return label.<\/li>\n\t<\/ul>\n\t<li>If you wish to exchange your purchase from <a style=\"text-decoration:underline !important\" href=\"\/\">JoesJeans.com<\/a> for a completely new item or a different size, just follow the steps in the returns process.<\/li>\n\t<li>To ensure that your return is adequately protected in transit, we recommend you send your items back to us in the original packaging provided. <\/li>\n\t<li>Please click here to start the return process<\/li>\n\t<ul>\n\t\t<li><a target=\"_blank\" style=\"text-decoration:underline !important\" href=\"https:\/\/joesjeans.returnly.com\/\"><strong>START YOUR RETURN<\/strong><\/a><\/li>\n\t<\/ul>\n\t<li>We will inspect and process your return. Your refund will be applied to your original method of payment within 14 business days of receipt to JOESJEANS ONLINE STORE, 19801 S. Santa Fe Ave., Rancho Dominguez, CA 90221. Posting to your credit card account could take an additional 10 days depending on your credit card company.<\/li>\n\t<li>You will receive email notification once your return has been received and processed.<\/li>\n\t<li>Items purchased at any of JOE'S brick and mortar stores including JOE'S full price retail stores, JOE'S Outlet stores or at over 1,200 retail doors carrying JOE'S Jeans products in the U.S. and abroad cannot be returned to <a style=\"text-decoration:underline !important\" href=\"\/\">JoesJeans.com<\/a>. Please contact <a style=\"text-decoration:underline !important\" href=\"mailto:customerservice@joesjeans.com?subject=Joe's%20Jeans%20Customer%20Service\">customerservice@joesjeans.com<\/a> or call please call Toll Free: <a style=\"text-decoration:underline !important\" href=\"tel:+18775285637\">1-877-528-JOES (5637)<\/a> regarding problems with items not purchased at <a style=\"text-decoration:underline !important\" href=\"\/\">JoesJeans.com<\/a>.<\/li>\n\t<li>All promotional offers listed at <a style=\"text-decoration:underline !important\" href=\"\/\">JoesJeans.com<\/a> cannot be combined with any other offers or previous promotions and cannot be applied to previous purchases.<\/li>\n<\/ul>",
                       "anchor": ""
                     }
                   },
@@ -1051,7 +1017,7 @@
                             "fit_guide_title": "Skinny",
                             "description": "Skinny Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
                             "collection": "women-denim-fit-skinny",
-                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Skinny-W.jpg",
+                            "desktop_banner": "shopify:\/\/shop_images\/desktop-banner-main.png",
                             "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png",
                             "desktop_fit_image": "shopify:\/\/shop_images\/skinny.png",
                             "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Skinny-W.jpg"
@@ -1063,7 +1029,7 @@
                             "fit_guide_title": "Straight",
                             "description": "Straight Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
                             "collection": "women-denim-fit-straight",
-                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Straight-W.jpg",
+                            "desktop_banner": "shopify:\/\/shop_images\/desktop-banner-main.png",
                             "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png",
                             "desktop_fit_image": "shopify:\/\/shop_images\/skinny-pro-img.png",
                             "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Straight-W.jpg"
@@ -1075,7 +1041,7 @@
                             "fit_guide_title": "Bootcut",
                             "description": "Bootcut Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
                             "collection": "women-denim-fit-bootcut",
-                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Bootcut-W.jpg",
+                            "desktop_banner": "shopify:\/\/shop_images\/desktop-banner-main.png",
                             "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png",
                             "desktop_fit_image": "shopify:\/\/shop_images\/bootcut.png",
                             "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Bootcut-W.jpg"
@@ -1087,7 +1053,7 @@
                             "fit_guide_title": "Flare",
                             "description": "FlareLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
                             "collection": "women-denim-fit-flare",
-                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Flare-W.jpg",
+                            "desktop_banner": "shopify:\/\/shop_images\/desktop-banner-main.png",
                             "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png",
                             "desktop_fit_image": "shopify:\/\/shop_images\/flare.png",
                             "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Flare-W.jpg"
@@ -1099,7 +1065,7 @@
                             "fit_guide_title": "Petite",
                             "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley - Petite",
                             "collection": "women-denim-fit-petite",
-                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Petite-W.jpg",
+                            "desktop_banner": "shopify:\/\/shop_images\/desktop-banner-main.png",
                             "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png",
                             "desktop_fit_image": "shopify:\/\/shop_images\/petite.png",
                             "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Petite-W.jpg"
@@ -1111,7 +1077,7 @@
                             "fit_guide_title": "Curvy",
                             "description": "Curvy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
                             "collection": "women-denim-fit-curvy",
-                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Curvy-W.jpg",
+                            "desktop_banner": "shopify:\/\/shop_images\/desktop-banner-main.png",
                             "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png",
                             "desktop_fit_image": "shopify:\/\/shop_images\/curvy.png",
                             "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Curvy-W.jpg"
@@ -1123,7 +1089,7 @@
                             "fit_guide_title": "Boyfriend",
                             "description": "Small Description for Boyfriend Women fit guide",
                             "collection": "women-denim-fit-boyfriend",
-                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Boyfriend-W.jpg",
+                            "desktop_banner": "shopify:\/\/shop_images\/desktop-banner-main.png",
                             "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png",
                             "desktop_fit_image": "shopify:\/\/shop_images\/women-skinny.jpg",
                             "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Boyfriend-W.jpg"
@@ -1135,7 +1101,7 @@
                             "fit_guide_title": "Cigarette",
                             "description": "Cigarette Description will here.",
                             "collection": "women-collection",
-                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Cigarette-W.jpg",
+                            "desktop_banner": "shopify:\/\/shop_images\/desktop-banner-main.png",
                             "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png",
                             "desktop_fit_image": "shopify:\/\/shop_images\/women-skinny.jpg",
                             "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Cigarette-W.jpg"
@@ -1227,6 +1193,34 @@
                     "1563455312383"
                 ],
                 "settings": {
+                }
+            },
+            "footer": {
+                "type": "footer",
+                "blocks": {
+                    "1563958350916": {
+                        "type": "link_list",
+                        "settings": {
+                            "footer_menu_id": "footer",
+                            "show_headings": true
+                        }
+                    },
+                    "1563958363924": {
+                        "type": "link_list",
+                        "settings": {
+                            "footer_menu_id": "footer-secound-menu",
+                            "show_headings": true
+                        }
+                    }
+                },
+                "block_order": [
+                    "1563958350916",
+                    "1563958363924"
+                ],
+                "settings": {
+                    "tel_text": "1-877-528-JOES (5637)",
+                    "tel_number": "18775285637",
+                    "social_heading": "Follow Us"
                 }
             }
         },
