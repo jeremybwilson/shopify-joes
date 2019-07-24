@@ -1,0 +1,323 @@
+.product-star-rating{
+
+    .product-star-rating__write-review{
+        min-height: 18px;
+
+         @include mq('phone'){
+             min-height: 22px;
+         }
+    }
+
+    [data-bv-show=rating_summary] {
+
+        .bv_main_container {
+            padding: 0px !important; 
+            margin: 0px !important;
+            width:100% !important;
+            position: relative !IMPORTANT;
+
+            .bv_avgRating_component_container {display: none !IMPORTANT;}
+            .bv_numReviews_component_container{display: none !IMPORTANT;}
+            .bv_main_container_line_break {display: none !important;}
+            
+            .bv_main_container_row_flex{ 
+                 position: absolute !important; top: -34px !IMPORTANT; right: 0 !important;  padding: 0 0 !important;
+                 
+                 @include mq('phone'){
+                     top: -29px !IMPORTANT;
+                 }
+            }
+            .bv_stars_component_container{padding-right:0px !important;}
+            .bv_main_container_CTA_row{ 
+                position: absolute !important; top:20px !important;  padding: 0 0 !important;
+                @include mq('phone'){
+                     top:17px !IMPORTANT;
+                }
+            }
+            .bv_stars_button_container svg {max-width: 12px !important; max-height: 12px !important; margin: 0 4px !IMPORTANT; margin-right: 0px !important;}
+            
+            .bv_main_container_CTA_row button#WAR {background-color: transparent !important; color: #9B9B9B !important; 
+                font-family: 'Montserrat', sans-serif !important; font-size: 12px !important; 
+                font-weight: normal !important; text-transform: capitalize !important; 
+                padding: 0 0 !important;
+            }
+ 
+        }
+
+        .bv_main_container_row_normal{display:none !IMPORTANT;}
+
+    }
+    
+}
+
+
+.bv_modal_component_container[data-bv-modal] {
+    display: none !IMPORTANT;
+}
+
+/**/
+
+.bv-review-container{
+     
+    width: 94.8%;
+    margin: 0px auto 105px auto;
+
+    .bv-content-list-reviews{
+
+        li.bv-content-item.bv-content-top-review.bv-content-review {
+            padding: 0px !important;
+            margin: 0px !important;
+            border-bottom:1px solid #e2e2e2 !important;
+        }
+
+    }
+}
+
+.product-details--reviews {
+   .bv-cv2-cleanslate {
+       .bv-core-container-65 {
+           .bv-content-item.bv-content-review .bv-author-profile{display:none !important;}
+
+            .bv-content-title{
+                font-size: 15px !important;
+                color: #000 !important;
+                font-weight: bold !important;
+                letter-spacing: 0px !important;
+                line-height: 19px !important;
+                text-transform: uppercase !important;
+                font-family: 'Montserrat', sans-serif !important;
+                margin: 21px 0 !important;
+            }
+
+             .bv-control-bar{margin:30px 0px 45px 0 !important; padding:0px !important; border-bottom:1px solid #e2e2e2 !important;}
+             .bv-action-bar{    margin-right: 0px !important; padding-right: 0px !important;  padding-left: 0px !important; margin-left: 0px !important;}
+             .bv-control-bar-count{padding:0px !IMPORTANT;}
+
+            .bv-content-summary P{
+                font-size:$font-12 !important;
+                color:$light-black !important;
+                font-weight:$weight-normal !important;
+                letter-spacing:0px !important;
+                line-height:16px !important;
+                font-family: 'Montserrat', sans-serif !important;
+            }
+
+            span.bv-content-datetime-stamp{
+                    position: absolute !important;
+                    top:-6px !important;
+                    right: 0 !important;
+                    color: #9B9B9B !important;
+            }
+
+            span.bv-content-datetime-dot {
+             display: none !important;}
+
+            .bv-content-data-label-container, .bv-content-data-value{
+                font-size:$font-12 !important;
+                color:$light-black !important;
+                font-weight:$weight-normal !important;
+                letter-spacing:0px !important;
+                line-height:16px !important;
+                font-family: 'Montserrat', sans-serif !important;
+            }
+
+            dl.bv-content-feedback-vote p, span {
+                font-size: 13px !important;
+                color: #000000 !important;
+                font-weight: normal !important;
+                letter-spacing: 0px !important;
+                line-height: 16px !important;
+                font-family: 'Montserrat', sans-serif !important;
+            }
+
+            dd.bv-content-feedback-vote.bv-content-feedback-vote-active{display:none !important;}
+
+            .bv-content-actions-container{padding: 0 0px 0px !important; margin: 0px !important;}
+
+             .bv-content-item-author-profile-offset-on{width: 100%!important;     padding-left: 0px!important;}
+
+             .bv-content-feedback-btn-container .bv-content-btn{
+                background-color: transparent !important;
+             }
+
+             .bv-content-btn-count:before {
+                content: "(";
+                position: absolute;
+                font-size: 13px;
+                left: -7px;
+                color: #9B9B9B;
+            }
+
+            .bv-content-details-container {
+                display: none !important;
+            }
+
+            .bv-content-data{margin-bottom:0px !important;}
+            dt.bv-content-feedback-vote-request {
+                padding-top: 0px !important;
+            }
+
+            .bv-content-btn-count:after{
+                content: ")";
+                position: absolute;
+                font-size: 13px;
+                right: -7px;
+                color: #9B9B9B;
+            }
+
+            .bv-content-item .bv-feedback-container{float: right !important;}
+
+            span.bv-content-btn-count {
+                position: relative !important;
+                color:#9B9B9B !important;
+                    text-decoration: underline !important;
+            }
+
+            .bv-content-search .bv-masthead .bv-masthead-product {
+                padding: 0 0 !important;
+                border: 0px !important;
+            }
+
+            .bv-content-search { border: 0px !important;}
+            .bv-content-search .bv-masthead .bv-masthead-product .bv-stars-container {padding: 0 !important; margin: 0px !important;}
+
+            dd.bv-rating-ratio-count, dd.bv-rating-ratio-number{display:none !important;}
+
+            .bv-content-search .bv-masthead .bv-masthead-product .bv-secondary-summary .bv-percent-recommend-container{
+                font-size: 13px !important;
+                color:$black-color !important;
+                font-weight:550 !important;
+                letter-spacing: 0px !important;
+                line-height: 16px !important;
+                font-family: 'Montserrat', sans-serif !important;
+            }
+
+            .bv-control-bar-count {
+                    visibility: hidden !important;
+            }
+
+            .bv-dropdown-target{border-bottom:1px solid #000 !important; padding: 6px 25px 6px 10px!important;}
+            span#bv-dropdown-select-reviews {
+                font-size: 13px !important;
+                color: #4a4a4a !important;
+                font-weight: normal !important;
+                letter-spacing: 0px !important;
+                line-height: 16px !important;
+                font-family: 'Montserrat', sans-serif !important;
+                text-transform: uppercase !important;
+                    font-family: 'Montserrat', sans-serif !important;
+            }   
+
+            span.bv-dropdown-arrow:before {
+                content: "";
+                position: absolute;
+                background-image: url(../assets/arrow-down.svg);
+                width: 12px;
+                height: 6px;
+                top: 2px;
+                right:0px;
+                background-repeat: no-repeat;
+                z-index: 999;
+            }
+
+            span.bv-dropdown-arrow {
+                text-indent: -9999px !important;
+            }
+
+            .bv-section-summary .bv-content-title{
+                font-size: 27px !important;
+                color: #000 !important;
+                font-weight: bold !important;
+                letter-spacing: 0.2px !important;
+                text-transform: uppercase !important;
+                line-height: 30px !important;
+                margin-top: 8px !important;
+                font-family: 'Montserrat', sans-serif !important;
+                padding: 0px !important;
+                margin: 0px 0 30px 0 !important;
+            }
+
+            .bv-section-summary .bv-section-summary-inline .bv-secondary-rating-summary .bv-secondary-rating-summary-list{
+                margin: 0 0 !important;
+            }
+            .bv-section-summary .bv-section-summary-inline .bv-secondary-rating-summary .bv-rating-ratio .bv-secondary-rating-summary-rating {
+                display: none !important;
+            }
+            td.bv-secondary-rating-summary-id.bv-td {
+                display: none !important;
+            }
+
+            .bv-section-summary .bv-section-summary-inline .bv-secondary-rating-summary .bv-secondary-rating-summary-stars .bv-td {
+                padding: 0 0 !important;
+            }
+            .bv-section-summary .bv-section-summary-inline .bv-secondary-rating-summary .bv-secondary-rating-summary-bars-container .bv-td{
+                padding: 0 0 !important;
+            }
+
+            .bv-content-slider-value{ height: 16px!important; top: -3px !important; width: 16px!important; background-color: #000 !important;}
+            .bv-content-slider-sublabel1 {font-size: 13px !important; color: #9B9B9B !important;}
+            li.bv-content-slider-segment{background-color: #e2e2e2 !important; border-left: 0px !important;   height: 7px!important;}
+            .bv-content-slider-container{border: 1px solid #979797 !important;  max-height: 7px!important;   min-width: 240px !important;}
+            .bv-section-summary .bv-section-summary-inline .bv-secondary-rating-summary .bv-secondary-rating-summary-container{ margin-top: 20px !important; width:100% !important;}
+            span.bv-content-slider-sublabel1{font-size:13px !important;}
+
+            .bv-section-summary{
+                padding:0px !IMPORTANT;
+                margin:0px !important;
+                td.bv-inline-histogram.bv-section-summary-block{
+                    display: none !important;
+                }
+            }
+       }
+
+        .bv-core-container-65 .bv-content-header {
+            padding: 0 0 !important;
+            margin: 0px !important;
+        }
+
+        .bv-core-container-65 .bv-content-summary{
+            padding: 0 0 !important;
+            margin: 0px !important;
+        }
+
+        .bv-content-search .bv-masthead .bv-searchbar {
+            display: none !IMPORTANT;
+        }
+        
+
+        .bv-core-container-65 .bv-action-bar button{
+                min-width: 219px !important;
+                height: 50px !IMPORTANT;
+                text-align: center;
+                line-height: 30px !IMPORTANT;
+                font-size: 15px !important;
+                font-weight: bold !important;
+                letter-spacing: 1.2px !IMPORTANT;
+                text-transform: uppercase !important;
+                background: #000 !important;
+                color: #fff !important;
+                border: 0px solid rgba(0,0,0,0) !important;
+                text-decoration: none !important;
+                text-align: center !important;
+                cursor: pointer;
+                font-family: 'Montserrat', sans-serif !important;
+                background-image: none !important;
+                border-radius: 0px !important;
+        }
+
+   }
+
+}
+
+button.bv-content-btn.bv-filter-control.bv-expand-filter-button.bv-focusable {
+    display: none !important;
+}
+
+ .bv-cv2-cleanslate .bv-core-container-65 .bv-rating-stars-container .bv-rating-stars{font-size:19px !important;}
+ .bv-cv2-cleanslate .bv-core-container-65 .bv-secondary-rating-summary-list .bv-rating-stars-container .bv-rating-stars{font-size:28px !important;     bottom: 0px !important;}
+
+.row.product-details--top {
+    border-bottom: 1px solid #e2e2e2;
+    margin-bottom: 50px;
+    padding-bottom: 89px;
+}
