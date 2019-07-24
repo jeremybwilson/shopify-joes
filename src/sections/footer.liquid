@@ -5,7 +5,7 @@
       {% comment %} :: FOOTER NAVIGATION :: {% endcomment %}
       {% if section.blocks %}          
           {% for block in section.blocks %}
-            {% assign menu = linklists[block.settings.menu_id] %} 
+            {% assign menu = linklists[block.settings.footer_menu_id] %}
             <div class="col-md-2 col-xs-12 col-sm-4 footer-part">
               <nav>
                 {% comment %} :: TITLE : Basic title if no nested menus inside footer :: {% endcomment %}
@@ -90,18 +90,18 @@
             "type": "text",
             "id": "social_heading",
             "label": "Social - Heading",
-            "default": "Connect With Us"
+            "default": "Follow Us"
         }
     ],
     "max_blocks":2,
     "blocks":[
         {
+            "name":"Footer Menu",
             "type":"link_list",
-            "name":"Menu",
             "settings":[
                 {
                     "type": "link_list",
-                    "id": "menu_id",
+                    "id": "footer_menu_id",
                     "label": "Footer Menu"
                 },
                 {
