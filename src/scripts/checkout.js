@@ -150,7 +150,8 @@ bolCheckout.RemoveStatesFromShipping = (function() {
   INITALIZER : Add all initalizers here
 ==============================================================================*/
 bolCheckout.init = function() {
-	// bolCheckout.SailThruCheckout(); // <-- UNUSED CURRENTLY
+  // bolCheckout.SailThruCheckout(); // <-- UNUSED CURRENTLY
+  bolCheckout.RemoveStatesFromShipping();
 };
 
 
