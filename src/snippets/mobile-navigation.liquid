@@ -1,7 +1,7 @@
 <nav id="nav-menu-mobile">
     {% comment %} :: MOBILE MENU :: {% endcomment %}
     <ul id="accordion">
-        {% assign menu = linklists[section.settings.main_nav] %}
+        {% assign menu = linklists[settings.main_nav] %}
         {% for link in menu.links %}
             {% comment %} :: LEVEL 1 : SUB-NAV : Accordion (Has nested menus) :: {% endcomment %}
             {% if link.links != blank %}
@@ -11,97 +11,55 @@
                         {% for sub_link in link.links %}
                             {% comment %} :: LEVEL 2 : SUB-NAV : First sub-nav has children nav elements :: {% endcomment %}
                             {% if sub_link.links != blank %}
-                                {% comment %} :: LEVEL 2 : Title :: {% endcomment %}
-                                <li class="accordion-sub-header responsive-full-75 no-bottom-border{% if sub_link.title contains '[HDR]' %} mobile-bold{% endif %}" aria-haspopup="true" aria-expanded="false">
-                                    {% if sub_link.url != "#nolink" %}
-                                        <a href="{{ sub_link.url }}">{% if sub_link.title contains '[HDR]' %}{{ sub_link.title | replace: '[HDR]', '' }} {% else %} {{ sub_link.title | escape }}{% endif %}</a>
-                                    {% else %}
-                                        <span class="menu-nolink">{% if sub_link.title contains '[HDR]' %}{{ sub_link.title | replace: '[HDR]', '' }} {% else %} {{ sub_link.title | escape }}{% endif %}</span>
-                                    {% endif %}
-                                </li>
-                                {% comment %} :: LEVEL 2 : Nested Sub-Sub-Nav Menu :: {% endcomment %}
-                                <ul class="sub second-level-menu">
+                                {% if sub_link.title == '[COLS]' %}
                                     {% for sub_sub_link in sub_link.links %}
-
                                         {% comment %} PREVENT : Entries that denote a gap for desktop (are named "-'){% endcomment %}
                                         {% if sub_sub_link.title != '[COLS]' %}
-
                                             {% comment %} PSEUDO HEADER : Adding "SUB-HEADER_ will cause entry to not link, but be a nested header" {% endcomment %}
-                                            {% if sub_sub_link.title contains 'SUB-HEADER_' %}
-                                                <li class="link-sub-header custom-sub-header">{{ sub_sub_link.title | replace: 'SUB-HEADER_', '' }}</li>
-                                            {% else %}
-                                                <li {% if sub_sub_link.title contains 'Shop All' %} class="shop-all" {% endif %}>
-                                                    <a href="{{ sub_sub_link.url }}">{{ sub_sub_link.title }}</a>
-                                                </li>
-                                            {% endif %}
+                                            <li {% if sub_sub_link.title contains ' [BOLD]' %} class="bold_text" {% endif %}>
+                                                {% if sub_sub_link.url != "#nolink" %}
+                                                    <a href="{{ sub_sub_link.url }}">{{ sub_sub_link.title | replace: ' [BOLD]', '' }}</a>
+                                                {% else %}
+                                                    <span class="menu-nolink">{{ sub_sub_link.title | replace: ' [BOLD]', '' }}</span>
+                                                {% endif %}
+                                            </li>
                                         {% endif %}
                                     {% endfor %}
-                                </ul>
+                                {% else %}
+                                {% comment %} :: LEVEL 2 : Title :: {% endcomment %}
+                                <li class="accordion-sub-header accordion-toggle {% if sub_link.title contains ' [BOLD]' or sub_link.title contains ' [TITLE]'  %} bold_text {% endif %}" aria-haspopup="true" aria-expanded="false"><span>{% if sub_link.title contains ' [BOLD]' or sub_link.title contains ' [TITLE]' %} {{ sub_link.title | replace: ' [BOLD]', '' | replace: ' [TITLE]', '' }} {% else %} {{ sub_link.title | escape }} {% endif %}</span></li>
+
+                                    {% comment %} :: LEVEL 2 : Nested Sub-Sub-Nav Menu :: {% endcomment %}
+                                    <div class="accordion-content2">
+                                        <ul class="sub">
+                                            {% for sub_sub_link in sub_link.links %}
+
+                                                {% comment %} PREVENT : Entries that denote a gap for desktop (are named "-'){% endcomment %}
+                                                {% if sub_sub_link.title != '[COLS]' %}
+
+                                                    {% comment %} PSEUDO HEADER : Adding "SUB-HEADER_ will cause entry to not link, but be a nested header" {% endcomment %}
+                                                    {% if sub_sub_link.title contains 'SUB-HEADER_' %}
+                                                        <li class="link-sub-header custom-sub-header">{{ sub_sub_link.title | replace: 'SUB-HEADER_', '' }}</li>
+                                                    {% else %}
+                                                        <li {% if sub_sub_link.title contains 'Shop All' %} class="shop-all" {% endif %}>
+                                                            <a href="{{ sub_sub_link.url }}">{{ sub_sub_link.title }}</a>
+                                                        </li>
+                                                    {% endif %}
+                                                {% endif %}
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                {% endif %}
+
                             {% comment %} :: LEVEL 2 : FLAT : Sub-topic has no nested elements :: * Hides menu elements that are titled as "-" which mark space gaps on desktop {% endcomment %}
                             {% else %}
                                 {% comment %}Prevent our pseudo-sub-headers from showing on mobile (name starts with "SUB-HEADER_") {% endcomment %}
                                 {% if sub_link.title contains ' [HDR]' %}
-                                    <li class="accordion-sub-header responsive-full-75{% if sub_link.title contains '[HDR]' %} mobile-bold{% endif %}" aria-haspopup="true" aria-expanded="false"><a href="{{ sub_link.url }}"><span>{{ sub_link.title | replace: ' [HDR]', '' }}</span></a></li>
+                                    <li class="accordion-sub-header responsive-full-75" aria-haspopup="true" aria-expanded="false"><a href="{{ sub_link.url }}"><span>{{ sub_link.title | replace: ' [HDR]', '' }}</span></a></li>
                                 {% else %}
-                                    {% if sub_link.title contains '[IMPORT]' %}
-                                        <li class="import-sub-header denim-links {{ sub_link.title | replace: ' ', '-' | replace: '-[', '-' | replace: ']', '' | replace: '/', '-' | replace: '---', '-' | replace: '[', '-' | downcase }} {{ column_width }}{% if sub_link.title contains ' [IMPORT]' %} desktop-full-75{% endif %}">
-                                            {% if sub_sub_link.url != "#nolink" %}
-                                                <a href="{{ sub_link.url }}"><span>{{ sub_link.title | replace: '[IMPORT]', '' | replace: '[WOMEN]', '' | replace: '[MEN]', '' }}</span></a>
-                                            {% else %}
-                                                <span class="menu-nolink">{{ sub_link.title | replace: '[IMPORT]', '' | replace: '[WOMEN]', '' | replace: '[MEN]', '' }}</span>
-                                            {% endif %}
-                                        </li>
-                                        {% if sub_link.title contains '[WOMEN]' and section.settings.women_sub_menu != '' %}
-                                            {% assign women_menu = linklists[section.settings.women_sub_menu] %}
-                                            {% for importlink in women_menu.links %}
-                                                <div class="accordion-content3 sub-denim-menu">
-                                                    <h5 class="accordion-sub-header accordion-toggle nav-sub-header">
-                                                        {% if importlink.url != "#nolink" %}
-                                                            <a href="{{ importlink.url }}">{{ importlink.title | replace: '[HDR]', '' }}</a>
-                                                        {% else %}
-                                                            <span class="menu-nolink">{{ importlink.title | replace: '[HDR]', '' }}</span>
-                                                        {% endif %}
-                                                    </h5>
-                                                    <div class="accordion-content2">
-                                                        <ul class="sub">
-                                                            {% for sub_importlink in importlink.links %}
-                                                                <li class="nav-sub-sub-item {{ sub_importlink.title | replace: ' ', '-' }}" >
-                                                                    <a href="{{ sub_importlink.url }}">{{ sub_importlink.title }}</a>
-                                                                </li>
-                                                            {% endfor %}
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            {% endfor %}
-                                        {% endif %}
-                                        {% if sub_link.title contains '[MEN]' and section.settings.men_sub_menu != '' %}
-                                            {% assign men_menu = linklists[section.settings.men_sub_menu] %}
-                                            {% for importlink in men_menu.links %}
-                                                <div class="accordion-content3 sub-denim-menu">
-                                                    <h5 class="accordion-sub-header accordion-toggle nav-sub-header">
-                                                        {% if importlink.url != "#nolink" %}
-                                                            <a href="{{ importlink.url }}">{{ importlink.title | replace: '[HDR]', '' }}</a>
-                                                        {% else %}
-                                                            <span class="menu-nolink">{{ importlink.title | replace: '[HDR]', '' }}</span>
-                                                        {% endif %}
-                                                    </h5>
-                                                    <div class="accordion-content2">
-                                                        <ul class="sub">
-                                                            {% for sub_importlink in importlink.links %}
-                                                                <li class="nav-sub-sub-item {{ sub_importlink.title | replace: ' ', '-' }}" >
-                                                                    <a href="{{ sub_importlink.url }}">{{ sub_importlink.title }}</a>
-                                                                </li>
-                                                            {% endfor %}
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            {% endfor %}
-                                        {% endif %}
-                                    {% else %}
-                                        <li class="link-sub-header {% if sub_sub_link.title contains 'Shop All' %} shop-all {% endif %}">
-                                            <a href="{{ sub_link.url }}">{{ sub_link.title | escape }}</a>
-                                        </li>
-                                    {% endif %}
+                                    <li class="link-sub-header {% if sub_sub_link.title contains 'Shop All' %} shop-all {% endif %}">
+                                        <a href="{{ sub_link.url }}">{{ sub_link.title | escape }}</a>
+                                    </li>
                                 {% endif %}
                             {% endif %}
                         {% endfor %}
