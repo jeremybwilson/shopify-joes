@@ -59,54 +59,23 @@
 
 .bv-review-container{
      
-    @include secound-container;
-    margin:0px auto 85px auto;
-
-    @include mq('phone'){
-        margin: 0px auto 0px auto !important;
-    }
+    width: 94.8%;
+    margin: 0px auto 105px auto;
 
     .bv-content-list-reviews{
+
         li.bv-content-item.bv-content-top-review.bv-content-review {
             padding: 0px !important;
             margin: 0px !important;
             border-bottom:1px solid #e2e2e2 !important;
-
-            @include mq('phone'){padding: 0px 0 15px 0 !important;}
         }
 
     }
 }
 
 .product-details--reviews {
-   width:100% !important;
-   #BVRRSearchContainer {
-       margin-bottom: 20px !IMPORTANT;
-       @include mq('phone'){
-           margin-bottom: 3px !IMPORTANT;
-       }
-    }
-
    .bv-cv2-cleanslate {
        .bv-core-container-65 {
-
-           .bv-content-item .bv-content-btn{
-               @include mq('phone'){
-                 padding: 2px 7px!important;
-               }
-           }
-           
-           .bv-content-list-reviews{
-                padding-top: 66px !important;
-                margin-top: 66px !important;
-                border-top: 1px solid #e2e2e2 !important;
-
-                @include mq('phone'){
-                    padding-top: 62px !important;
-                    margin-top: 56px !important;
-                }
-           }
-
            .bv-content-item.bv-content-review .bv-author-profile{display:none !important;}
 
             .bv-content-title{
@@ -121,14 +90,7 @@
             }
 
              .bv-control-bar{margin:30px 0px 45px 0 !important; padding:0px !important; border-bottom:1px solid #e2e2e2 !important;}
-             .bv-action-bar{margin-right: 0px !important; padding-right: 0px !important;  
-             padding-left: 0px !important; margin-left: 0px !important; position: absolute !important; right: 0 !important; top: 23px !important;
-             
-                    @include mq('phone'){
-                        position: relative !important;
-                        top: 0px !important;  
-                    }
-             }
+             .bv-action-bar{    margin-right: 0px !important; padding-right: 0px !important;  padding-left: 0px !important; margin-left: 0px !important;}
              .bv-control-bar-count{padding:0px !IMPORTANT;}
 
             .bv-content-summary P{
@@ -140,51 +102,15 @@
                 font-family: 'Montserrat', sans-serif !important;
             }
 
-            .bv-content-item-author-profile-offset-on .bv-content-header .bv-content-author-name .bv-author, .bv-content-datetime{
-                @include mq('phone'){
-                    display:none !important;
-                }
-            }
-
-            .bv-content-preview-message{
-                 margin: 10px 0px 15px!important;
-                 font-size:$font-12 !important; 
-                 letter-spacing:0px !important;
-                 line-height:16px !important;
-                 font-family: 'Montserrat', sans-serif !important;   
-            }
-
-            .bv-text-link{
-                font-size:$font-12 !important;
-                color:$light-black !important;
-                font-weight:$weight-normal !important;
-                letter-spacing:0px !important;
-                line-height:16px !important;
-                font-family: 'Montserrat', sans-serif !important;
-
-                &:hover{
-                    font-size:$font-12 !important;
-                    color:$light-black !important;
-                    font-weight:$weight-normal !important;
-                    letter-spacing:0px !important;
-                    line-height:16px !important;
-                    font-family: 'Montserrat', sans-serif !important;
-                }
-            }
-
             span.bv-content-datetime-stamp{
-                position: absolute !important;
-                top:-6px !important;
-                right: 0 !important;
-                color: #9B9B9B !important;
-                
-                @include mq('phone'){
-                    top: -20px !important;
-                }
+                    position: absolute !important;
+                    top:-6px !important;
+                    right: 0 !important;
+                    color: #9B9B9B !important;
             }
-            
 
-            .bv-content-data-summary .bv-content-meta .bv-content-datetime-dot, { display: none !important;}
+            span.bv-content-datetime-dot {
+             display: none !important;}
 
             .bv-content-data-label-container, .bv-content-data-value{
                 font-size:$font-12 !important;
@@ -198,7 +124,7 @@
             dl.bv-content-feedback-vote p, span {
                 font-size: 13px !important;
                 color: #000000 !important;
-                font-weight:500 !important;
+                font-weight: normal !important;
                 letter-spacing: 0px !important;
                 line-height: 16px !important;
                 font-family: 'Montserrat', sans-serif !important;
@@ -212,9 +138,6 @@
 
              .bv-content-feedback-btn-container .bv-content-btn{
                 background-color: transparent !important;
-             }
-             .bv-content-feedback-btn-container .bv-content-btn:hover{
-               background-color: transparent !important;  
              }
 
              .bv-content-btn-count:before {
@@ -242,16 +165,7 @@
                 color: #9B9B9B;
             }
 
-            .bv-content-item .bv-feedback-container{
-                float: right !important;
-                
-                @include mq('phone'){
-                        display: flex !important;
-                        width: 100% !important;
-                        justify-content: center !important;
-                        margin-top: 20px !important;
-                }
-            }
+            .bv-content-item .bv-feedback-container{float: right !important;}
 
             span.bv-content-btn-count {
                 position: relative !important;
@@ -265,7 +179,7 @@
             }
 
             .bv-content-search { border: 0px !important;}
-            .bv-content-search .bv-masthead .bv-masthead-product .bv-stars-container {padding: 0 !important; margin: 0px !important; display:none !important;}
+            .bv-content-search .bv-masthead .bv-masthead-product .bv-stars-container {padding: 0 !important; margin: 0px !important;}
 
             dd.bv-rating-ratio-count, dd.bv-rating-ratio-number{display:none !important;}
 
@@ -321,11 +235,6 @@
                 font-family: 'Montserrat', sans-serif !important;
                 padding: 0px !important;
                 margin: 0px 0 30px 0 !important;
-
-                @include mq('phone'){
-                   font-size:$font-21-mo !important; 
-                   margin: 0px 0 25px 0 !important;
-                }
             }
 
             .bv-section-summary .bv-section-summary-inline .bv-secondary-rating-summary .bv-secondary-rating-summary-list{
@@ -347,36 +256,18 @@
 
             .bv-content-slider-value{ height: 16px!important; top: -3px !important; width: 16px!important; background-color: #000 !important;}
             .bv-content-slider-sublabel1 {font-size: 13px !important; color: #9B9B9B !important;}
-            li.bv-content-slider-segment{background-color: #e2e2e2 !important; border-left: 0px !important; height:5px!important;}
-            .bv-content-slider-container{border: 1px solid #979797 !important;  max-height:5px!important;   min-width: 240px !important;}
-            .bv-section-summary .bv-section-summary-inline .bv-secondary-rating-summary .bv-secondary-rating-summary-container{ 
-                margin-top: 20px !important; width:100% !important;
-
-                @include mq('phone'){
-                     margin-top: 25px !important;
-                }
-            }
-            .bv-section-summary .bv-section-summary-inline .bv-secondary-rating-summary .bv-secondary-rating-summary-container .bv-content-slider-sublabel1{font-size:13px !important;     margin-top: 5px !important;}
-            .bv-section-summary .bv-section-summary-inline .bv-secondary-rating-summary .bv-secondary-rating-summary-container .bv-content-slider-sublabel2 {font-size:13px !important;     margin-top: 5px !important;}
-            .bv-cv2-cleanslate .bv-core-container-65 ol { margin-top: 66px !important; padding-top: 66px !important; border-top: 1px solid #e5e5e5 !important;}
+            li.bv-content-slider-segment{background-color: #e2e2e2 !important; border-left: 0px !important;   height: 7px!important;}
+            .bv-content-slider-container{border: 1px solid #979797 !important;  max-height: 7px!important;   min-width: 240px !important;}
+            .bv-section-summary .bv-section-summary-inline .bv-secondary-rating-summary .bv-secondary-rating-summary-container{ margin-top: 20px !important; width:100% !important;}
+            span.bv-content-slider-sublabel1{font-size:13px !important;}
 
             .bv-section-summary{
                 padding:0px !IMPORTANT;
                 margin:0px !important;
-                width:75% !important;
-
-                @include mq('phone-and-tablet'){
-                   width: 65% !important;
-                }
-
                 td.bv-inline-histogram.bv-section-summary-block{
                     display: none !important;
                 }
             }
-
-            .bv-header{position:relative !important;}
-
-            .bv-action-bar-header{display:none !important;}
        }
 
         .bv-core-container-65 .bv-content-header {
@@ -391,12 +282,6 @@
 
         .bv-content-search .bv-masthead .bv-searchbar {
             display: none !IMPORTANT;
-        }
-
-        .bv-action-bar .bv-write-container{
-            @include mq('phone'){
-                width:100% !important;
-            }
         }
         
 
@@ -418,21 +303,6 @@
                 font-family: 'Montserrat', sans-serif !important;
                 background-image: none !important;
                 border-radius: 0px !important;
-
-                @include mq('phone'){
-                    width:100% !important;
-                }
-
-                &:hover{
-                    font-size: 15px !important;
-                    font-family: 'Montserrat', sans-serif !important;
-                    letter-spacing: 1.2px !IMPORTANT;
-                }
-                &:focus{
-                    font-size: 15px !important;
-                    font-family: 'Montserrat', sans-serif !important;
-                    letter-spacing: 1.2px !IMPORTANT;
-                }
         }
 
    }
@@ -450,9 +320,4 @@ button.bv-content-btn.bv-filter-control.bv-expand-filter-button.bv-focusable {
     border-bottom: 1px solid #e2e2e2;
     margin-bottom: 50px;
     padding-bottom: 89px;
-
-    @include mq('phone'){
-        margin-bottom: 45px;
-        padding-bottom: 35px;
-    }
 }

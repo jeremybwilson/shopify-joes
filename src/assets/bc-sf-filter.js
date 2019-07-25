@@ -165,8 +165,8 @@ BCSfFilter.prototype.buildProductGridItem = function(data, index, totalProduct) 
     // PRICE : Add price and original price if discounted
     var itemPriceHtml = '';
     if (onSale) {
+        itemPriceHtml += '<div class="onsale bfx-price">' + this.formatMoney(data.price_min, this.moneyFormat) + '</div>';
         itemPriceHtml += '<div class="was bfx-price">' + this.formatMoney(data.compare_at_price_min, this.moneyFormat) + '</div>';
-        itemPriceHtml += '<div class="onsale bfx-price" style="color: #ff0000;">Sale ' + this.formatMoney(data.price_min, this.moneyFormat) + '</div>';
 
     } else {
         itemPriceHtml += '<div class="product-price bfx-price">';
