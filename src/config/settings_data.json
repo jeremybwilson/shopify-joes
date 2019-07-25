@@ -278,7 +278,7 @@
                     "announcement_swap_rate": 5,
                     "show_header_left_text": true,
                     "header_left_text": "Free U.S Shipping!",
-                    "header_left_url": "shopify:\/\/pages\/shipping",
+                    "header_left_url": "shopify:\/\/pages\/faq",
                     "logo_image": "shopify:\/\/shop_images\/JOES-black.png",
                     "account_icon": "text",
                     "account_icon_text_value": "Login",
