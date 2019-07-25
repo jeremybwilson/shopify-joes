@@ -2,9 +2,39 @@
 /* 404 Page styling
  * ----------------------------------------------------------------------- */
 
-body.template-404 {
+ body.template-404 {
 	
 	#content {
-	    padding: 90px 20px 20px;
+	    @include secound-container;
+	}
+
+	.page-not-found {
+		width: 50% !important;
+		margin: 89px auto;
+		text-align: center;
+
+		@include mq('phone'){
+		   margin:65px auto;
+		   width:100% !important;
+		}
+
+		h1{
+			@include heading-black;
+		}
+
+		p{
+			@include black-paragraph-13-font;
+		}
+
+		#search-bar{
+		    display: inline-block;
+			width: 100%;
+			margin-top: 30px;
+			max-width: 65%;
+			
+			h3{
+				display:none !important;
+			}
+		}
 	}
 }

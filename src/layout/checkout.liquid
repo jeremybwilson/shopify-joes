@@ -34,6 +34,7 @@
     <script>
       $(document).on('page:load page:change', function() {
         addShoprunnerDivs();
+        addShoprunnerDivstoProduct()
         if ($('.section--shipping-method').length) {
           if ($.cookie("sr_token") == null){
             console.log("SR Token Was not found : ");
@@ -50,6 +51,18 @@
       function addShoprunnerDivs(){
         if ($('.order-summary__section__content [name="sr_headerDiv"]').length == 0){
           $('.order-summary__section__content').append('<div style="margin-bottom: 20px;" name="sr_headerDiv"></div>');
+        }
+
+        if (typeof window.sr_updateMessages !== "undefined") {
+          window.sr_updateMessages();
+        }
+      };
+
+      function addShoprunnerDivstoProduct(){
+        if ($('.product-table .product__description [name="sr_cartProductDiv"]').length == 0){
+          $.each('.product-table .product__description', function () {
+            $(this).append('<span class="shoprunner-indicator"><div class="sr-cart-icon" name="sr_cartProductDiv" style="margin: 10px 0; width: 100%"></div></span>');
+          });
         }
 
         if (typeof window.sr_updateMessages !== "undefined") {
