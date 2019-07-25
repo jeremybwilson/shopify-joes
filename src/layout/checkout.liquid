@@ -26,6 +26,20 @@
     <script src="{{ 'shoprunner_init.js' | asset_url }}"></script>
     {% comment %} End of Added by Shoprunner {% endcomment %}
 
+    {% comment %} Shipping State Exclusions Array Init {% endcomment %}
+    <script type="text/javascript">
+      {% assign exclusionsArr = settings.checkout_shipping_state_exclusions | newline_to_br | split: '<br />' %}
+
+      window.bol_checkout_shipping_state_exclusions = [
+        {%- for exclusion in exclusionsArr -%}
+          {% if forloop.last == true %}
+            '{{ exclusion | strip_newlines }}'
+          {% else %}
+            '{{ exclusion | strip_newlines }}',
+          {% endif %}
+        {%- endfor -%} ];
+    </script>
+
   </head>
 
   <body>

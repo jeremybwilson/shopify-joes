@@ -1312,5 +1312,20 @@
                 "default": "likeshop"
             }
         ]
-    }
+    },
+    {
+        "name": "Checkout - Custom",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Shipping State Exclusions"
+            },
+            {
+                "type": "textarea",
+                "id": "checkout_shipping_state_exclusions",
+                "label": "Checkout Shipping State Exclusions",
+                "info": "States to be excluded (via Javascript) from the shipping page. One state per line."
+            }
+        ]
+    }    
 ]
