@@ -91,6 +91,60 @@ bolCheckout.SailThruCheckout = (function() {
   return SailThruCheckout;
 })();
 
+bolCheckout.RemoveStatesFromShipping = (function() {
+  function RemoveStatesFromShipping() {
+
+    // check if excluded states exist and if on contact info page
+    if ( !window.bol_checkout_shipping_state_exclusions
+        || !(window.bol_checkout_shipping_state_exclusions instanceof Array)
+        || Shopify.Checkout.step != 'contact_information'
+    ) {
+      return;
+    }
+
+    // assign state select
+    var selectEl = document.querySelector('#checkout_shipping_address_province');
+
+    // Will loop through settings array and remove state options from select
+    function removeStates() {
+      var exclusions = window.bol_checkout_shipping_state_exclusions;
+
+      // check if any exclusions exist and if select exists
+      if (exclusions.length && selectEl) {
+        exclusions.forEach( item => {
+          $(checkout_shipping_address_province).find('option[data-alternate-values*="' + item + '"]').remove();
+        });
+      }
+    }
+
+    // Fire remove states everytime it is updated
+    var onChange = function(mutationsList, observer) {
+      for(var mutation of mutationsList) {
+        if ( mutation.type == 'childList' ) {
+          removeStates();
+        }
+      }
+    };
+
+    // Observer to fire removeStates whenever select changes
+    const observer = new MutationObserver( onChange );
+
+    // WATCH : Observe the node for changes from BV
+    observer.observe( selectEl, {
+      attributes: false,
+      childList: true,
+      subtree: false
+    });
+
+    // Fire first time on load
+    removeStates();
+
+  }
+
+  RemoveStatesFromShipping.prototype = assignIn({}, RemoveStatesFromShipping.prototype, {});
+  return RemoveStatesFromShipping;
+})();
+
 
 /*============================================================================
   INITALIZER : Add all initalizers here
