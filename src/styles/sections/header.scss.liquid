@@ -473,12 +473,6 @@ ul{padding:0 0px; margin: 0px;}
      }
   }
 
-  .responsive-full-75{
-     a{
-        font-weight:$bold;
-        text-decoration: underline !important;
-     }
-  }
 
 }
 
@@ -496,6 +490,37 @@ ul{padding:0 0px; margin: 0px;}
 .accordion-content2 {
     display: none;
 }
+
+.accordion-sub-header .sub li:last-child {
+    border-bottom: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.mobile-bold>a {
+    font-weight: bold !important;
+}
+
+.denim-links a {
+    font-weight: bold !important;
+}
+.sub .denim-links a{
+    text-decoration: underline !important;
+}
+
+
+
+.sub .sub li {
+    padding-left: 60px !important;
+}
+
+.sub-denim-menu .accordion-sub-header {
+    padding-left: 65px;
+}
+.sub-denim-menu .sub li {
+    padding-left: 80px !important;
+}
+
+
 /*acodeant*/
 
 
@@ -507,7 +532,7 @@ ul{padding:0 0px; margin: 0px;}
         background-color: #fff;
         padding:34px 15px;
         z-index: 9999;
-        top:157px;
+        top:156px;
         min-width: 180px;
         box-shadow: 0px 8px 8px hsla(0, 0%, 0%, 0.39);
         display:none;
@@ -569,12 +594,17 @@ ul{padding:0 0px; margin: 0px;}
         }
 
         .desktop-full-75{
-            width: 75%;
+            width: 77.5%;
             h5.nav-sub-header a{
                 text-decoration: underline !important;
             }
         }
-
+        
+        .nav-import-menu {
+            display: inline-block;
+            width: 13.7%;
+            vertical-align: top;
+        }
 
     }
 
@@ -585,7 +615,7 @@ ul{padding:0 0px; margin: 0px;}
         background-color: #fff;
         padding: 15px 15px;
         z-index: 9999;
-        top: 41px;
+        top: 40px;
         min-width: 180px;
         box-shadow: 0px 8px 8px hsla(0, 0%, 0%, 0.39);
         display:none;
@@ -708,6 +738,7 @@ ul{padding:0 0px; margin: 0px;}
     margin-bottom: 0px;
     text-decoration: none !important;
     text-transform: uppercase;
+    font-weight:$weight-500;
 
        @include mq('laptop'){
          font-size:$font-12;
@@ -752,12 +783,7 @@ ul{padding:0 0px; margin: 0px;}
     }
     .bold_text > .menu-nolink {
          font-weight: bold;
-         font-size: 12px;
          text-transform: uppercase;
-
-         @include mq('laptop'){
-            font-size:$font-15;
-         }
     }
 }
 
