@@ -1,0 +1,33 @@
+.template-page.gridlock.shifter.page{
+    
+    h1{
+        @include banner-up-head-text-font;
+        color:$black-color;
+        text-align: center;
+
+        @include mq('phone'){
+            margin-top:16px;
+            font-size:$font-27-mo;
+        }
+
+        &:nth-child(2) {
+            margin-bottom: 35px;
+
+            @include mq('phone'){
+                margin:0px 0 30px 0px;
+            }
+        }
+    }
+
+    .newsletter-newsletter{
+        border-top:$border-grey-1;
+        margin-top: 87px;
+        padding-top: 78px;
+
+        @include mq('phone'){
+          margin-top:65px;
+          padding-top:65px;
+        }
+    }
+
+}
