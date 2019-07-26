@@ -55,8 +55,8 @@ theme.FitGuide = (function() {
                 slider_html += "<img src='" + img +"' alt='product image'>";
                 slider_html += "</div>";
                 slider_html += "<div class='sknny-detail'>";
-                slider_html += "<h3>"+this.title+"</h3>";
-                slider_html += "<h4>" + productsubtitle+ "</h4>";
+                slider_html += "<h4>"+this.title+"</h4>";
+                slider_html += "<h5>" + productsubtitle+ "</h5>";
                 slider_html += "<p>" + productfitguide_one+ "</p>";
                 slider_html += "<p>" + productfitguide_two+ "</p>";
                 slider_html += "<a href='" + shop_url +"/products/" + this.handle + "' class='only-link-type-bitton'>Shop Now</a>";
