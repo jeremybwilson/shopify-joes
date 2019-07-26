@@ -20,11 +20,6 @@
     <!-- Sailthru
   ================================================== -->
     {% comment %}{% include 'sailthru-script' %}{% endcomment %}
-    {% comment %} Added by Shoprunner {% endcomment %}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-    <script src="{{ 'shoprunner_init.js' | asset_url }}"></script>
-    {% comment %} End of Added by Shoprunner {% endcomment %}
 
     {% comment %} Shipping State Exclusions Array Init {% endcomment %}
     <script type="text/javascript">
@@ -40,15 +35,20 @@
         {%- endfor -%} ];
     </script>
 
+    {% comment %} :: Shop Runner :: {% endcomment %}
+    {% include 'script-shoprunner-head' %}
   </head>
 
   <body>
     {% include 'script-google-tag-body' %}
+    {% include 'script-shoprunner-body' %}
+
     {% comment %} Added for Shoprunner {% endcomment %}
     <script>
       $(document).on('page:load page:change', function() {
         addShoprunnerDivs();
-        addShoprunnerDivstoProduct()
+        addShoprunnerDivstoProduct();
+        addShoprunnerShippingDiv();
         if ($('.section--shipping-method').length) {
           if ($.cookie("sr_token") == null){
             console.log("SR Token Was not found : ");
@@ -77,6 +77,16 @@
           $.each('.product-table .product__description', function () {
             $(this).append('<span class="shoprunner-indicator"><div class="sr-cart-icon" name="sr_cartProductDiv" style="margin: 10px 0; width: 100%"></div></span>');
           });
+        }
+
+        if (typeof window.sr_updateMessages !== "undefined") {
+          window.sr_updateMessages();
+        }
+      };
+
+      function addShoprunnerShippingDiv(){
+        if ($('.section--shipping-method [name="sr_shippingOptionDiv"]').length == 0){
+            $('.section--shipping-method .content-box').prepend('<div class="content-box__row"><div class="sr-shipping-icon" name="sr_shippingOptionDiv" style="margin: 10px 0; width: 100%"></div></div>');
         }
 
         if (typeof window.sr_updateMessages !== "undefined") {
