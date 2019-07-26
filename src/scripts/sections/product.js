@@ -89,17 +89,6 @@ theme.Product = (function() {
                 }
             }
 
-            //SIZE CHART : Moved this into proudct as it will only appear inside product.
-            $(document).on('click', "#size-chart--popup [data-toggle='tab']", function(){
-                var popup_section = $(this).data('section');
-                $("#size-chart--popup #size-chart--"+ popup_section +" .nav-justified li").removeClass("active");
-                $("#size-chart--popup #size-chart--"+ popup_section +" .tab-content .tab-pane").removeClass("active");
-
-                $(this).parent("li").addClass("active");
-                $("#size-chart--popup #size-chart--"+ popup_section +" .tab-content " + $(this).data("href")).addClass("active");
-            });
-
-
             // QUICKVIEW : Show More Colors
             if ( ui.showMoreColors.length ) {
                 ui.showMoreColors.on( 'click', function() {
@@ -128,4 +117,20 @@ theme.Product = (function() {
 
 events.on("quickview:load", function(container) {
     theme.Product(container);
+});
+
+/*============================================================================
+SIZE CHART : tab select (Applicable in Product and FAQ page)
+==============================================================================*/
+$(document).on('click', "#size-chart--popup [data-toggle='tab']", function(){
+    var popup_section = $(this).data('section');
+    $("#size-chart--popup #size-chart--"+ popup_section +" .nav-justified li").removeClass("active");
+    $("#size-chart--popup #size-chart--"+ popup_section +" .tab-content .tab-pane").removeClass("active");
+
+    $(this).parent("li").addClass("active");
+    $("#size-chart--popup #size-chart--"+ popup_section +" .tab-content " + $(this).data("href")).addClass("active");
+});
+
+$(document).on('click', ".js-drawer-open-right", function(){
+    window.sr_updateMessages();
 });
