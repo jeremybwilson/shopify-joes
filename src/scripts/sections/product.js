@@ -120,6 +120,26 @@ events.on("quickview:load", function(container) {
 });
 
 /*============================================================================
+QUICK VIEW MODAL : Use Fancybox to Ajax in product quick view template
+==============================================================================*/
+$(document).on('click', '.product-quickview', function() {
+
+    // Call Fancybox for product modal + stop scroll to top
+    $('.product-quickview').fancybox({
+        padding: 0,
+        margin: 0,
+        transitionIn: 'fade',
+        afterShow: function afterShow() {
+            var context = document.querySelector("#product-quick-view");
+            events.trigger("quickview:load",context);
+        },
+        wrapCSS: 'fancybox-quickview',
+        helpers: { overlay: { locked: false } }
+    });
+    return false;
+});
+
+/*============================================================================
 SIZE CHART : tab select (Applicable in Product and FAQ page)
 ==============================================================================*/
 $(document).on('click', "#size-chart--popup [data-toggle='tab']", function(){
