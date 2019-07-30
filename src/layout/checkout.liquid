@@ -9,17 +9,10 @@
 
     <title>{{ page_title }}</title>
 
-    {% comment %} :: LIBRARY SCRIPTS :: {% endcomment %}
-    {{ 'jquery-2.2.4.min.js' | asset_url | script_tag }}
-
-  <!-- Data Layer for GTM
-  ================================================== -->
-    {% include 'script-google-tag-head' %}
-    {% include 'script-data-layer' %}
-
-    <!-- Sailthru
-  ================================================== -->
-    {% comment %}{% include 'sailthru-script' %}{% endcomment %}
+    {% comment %} Added by Shoprunner {% endcomment %}
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    {% comment %} End of Added by Shoprunner {% endcomment %}
 
     {% comment %} Shipping State Exclusions Array Init {% endcomment %}
     <script type="text/javascript">
@@ -35,66 +28,47 @@
         {%- endfor -%} ];
     </script>
 
-    {% comment %} :: Shop Runner :: {% endcomment %}
-    {% include 'script-shoprunner-head' %}
+    {% comment %} :: LIBRARY SCRIPTS :: {% endcomment %}
+    {{ 'vendor-checkout.js' | asset_url | script_tag }}
+
+
+  <!-- Shoprunner
+  ================================================== -->
+    {% if settings.shoprunner_enabled %}
+      {% include 'shoprunner-init', isCheckout: true %}
+    {% endif %}
+
+
+  <!-- Data Layer for GTM
+  ================================================== -->
+    {% include 'script-google-tag-head' %}
+
+    {%- if settings.enable_script_data_layer -%}
+      {% include 'script-data-layer' %}
+    {%- endif -%}
+
+    {% if settings.favicon %}
+      <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x' }}">
+    {% endif %}
+  
+
+  <!-- Bazaar Voice
+  ================================================== -->
+  {% if settings.reviews_enabled %}
+    {% include 'script-bazaarvoice' %}
+  {% endif %} 
+
+
+  {% comment %}
+  <!-- Sailthru
+  ================================================== -->
+    {% include 'sailthru-script' %}
+  {% endcomment %}
+
   </head>
 
   <body>
     {% include 'script-google-tag-body' %}
-    {% include 'script-shoprunner-body' %}
-
-    {% comment %} Added for Shoprunner {% endcomment %}
-    <script>
-      $(document).on('page:load page:change', function() {
-        addShoprunnerDivs();
-        addShoprunnerDivstoProduct();
-        addShoprunnerShippingDiv();
-        if ($('.section--shipping-method').length) {
-          if ($.cookie("sr_token") == null){
-            console.log("SR Token Was not found : ");
-            if ( $('div.radio-wrapper[data-shipping-method*="shoprunner"]').length > 0) {
-              $('.radio__input').prop('checked' , false);
-              $('div.radio-wrapper[data-shipping-method*="shoprunner"]').parent().remove();
-              $('[name="checkout[shipping_rate][id]"]').prop("checked",false);
-              $('[name="checkout[shipping_rate][id]"]:first').prop("checked",true);
-            };
-          }
-        };
-      });
-
-      function addShoprunnerDivs(){
-        if ($('.order-summary__section__content [name="sr_headerDiv"]').length == 0){
-          $('.order-summary__section__content').append('<div style="margin-bottom: 20px;" name="sr_headerDiv"></div>');
-        }
-
-        if (typeof window.sr_updateMessages !== "undefined") {
-          window.sr_updateMessages();
-        }
-      };
-
-      function addShoprunnerDivstoProduct(){
-        if ($('.product-table .product__description [name="sr_cartProductDiv"]').length == 0){
-          $.each('.product-table .product__description', function () {
-            $(this).append('<span class="shoprunner-indicator"><div class="sr-cart-icon" name="sr_cartProductDiv" style="margin: 10px 0; width: 100%"></div></span>');
-          });
-        }
-
-        if (typeof window.sr_updateMessages !== "undefined") {
-          window.sr_updateMessages();
-        }
-      };
-
-      function addShoprunnerShippingDiv(){
-        if ($('.section--shipping-method [name="sr_shippingOptionDiv"]').length == 0){
-            $('.section--shipping-method .content-box').prepend('<div class="content-box__row"><div class="sr-shipping-icon" name="sr_shippingOptionDiv" style="margin: 10px 0; width: 100%"></div></div>');
-        }
-
-        if (typeof window.sr_updateMessages !== "undefined") {
-          window.sr_updateMessages();
-        }
-      };
-    </script>
-    {% comment %} End of Added for Shoprunner {% endcomment %}
 
     <p>
       {{ content_for_header }}
@@ -138,11 +112,17 @@
       </div>
     </div>
 
-    <div id="sr_logic">{% include 'shoprunner-logic', isCheckout: true %}</div>
-
     {{ tracking_code }}
+
+    {% comment %} :: Custom CSS :: {% endcomment %}
+    {{ 'checkout.scss.css' | asset_url | stylesheet_tag }}
 
     {% comment %} :: BOL - Checkout Customizations :: {% endcomment %}
     {{ 'checkout.js' | asset_url | script_tag }}
+
+    {% comment %} :: Shop Runner :: {% endcomment %}
+    {% if settings.shoprunner_enabled %}
+      {% include 'shoprunner-checkout-body' %}
+    {% endif %}
   </body>
 </html>

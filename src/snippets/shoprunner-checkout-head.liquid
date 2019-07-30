@@ -1,0 +1,380 @@
+{% comment %}
+
+:: Shoprunner Initalization Script ::
+    - Load in the core theme
+    - Supply retalier ID and environment info via settings_data.json
+
+{% endcomment %}
+
+
+<script id="shoprunner-checkout-head-script" type="text/javascript">
+
+  var _shoprunner_com = {};
+
+  /* =======================================================================
+  ======== Custom Diff Code to enable Shoprunner for Shopify Stores ========
+  ========================================================================*/
+
+  window._shoprunner_script_loaded = function() {
+    window._shoprunner_script_loaded_callbacks.forEach(function(callback) {
+      callback.apply(this);
+    }, this);
+  };
+
+  if (!window._shoprunner_dom_loaded_callbacks) {
+    window._shoprunner_dom_loaded_callbacks = [];
+  }
+
+  if (!window._shoprunner_script_loaded_callbacks) {
+    window._shoprunner_script_loaded_callbacks = [];
+  }
+
+  /* =======================================================================
+  ==== End of Custom Diff Code to enable Shoprunner for Shopify Stores =====
+  ========================================================================*/
+  (function() {
+
+    /* -----------------------------------------
+     * SR Configuration
+     * -----------------------------------------
+     */
+
+     {% assign retailer_id = settings.shoprunner_retailer_id %}
+     {% if retailer_id == blank %}
+         console.log( '[shoprunner_init] : Retailer ID was blank, please add one or disable shoprunner in settings.' );
+         {% assign retailer_id = 'retailer_id_missing' %}
+     {% endif %}
+
+    _shoprunner_com.version = 4.0;
+    _shoprunner_com.enabled = true;
+    _shoprunner_com.retailerID = '{{ retailer_id }}';
+    // Application Proxy URL - Static
+    _shoprunner_com.loginValidationURL = function(token, successCallback, failureCallback) {
+      $.ajax({
+        url: '/apps/shoprunner/validate?srtoken=' + token,
+        success: function(passed_token) {
+          if (passed_token == ' ' || passed_token == '') {
+            sr_$.cookie.clear('token');
+          } else {
+            if (passed_token) {
+              sr_$.cookie.set('token', passed_token, 1 / 3);
+              $.ajax({
+                type: 'POST',
+                url: '/cart/update.js',
+                data: "attributes[sr_token]=" + passed_token,
+                dataType: "json",
+                success: function(resultData) {}
+              });
+            } else {
+              sr_$.cookie.set('token', data);
+            }
+          }
+            successCallback();
+        },
+        error: function() {
+          sr_$.cookie.clear('token');
+          failureCallback();
+        }
+      });
+    }
+
+    /*
+     * @const (Integer field)
+     * 1 - Development/Staging
+     * 2 - Production
+     */
+    {% assign env_id = 1 %}
+    {% if settings.shoprunner_env == "prod" %}
+        {% assign env_id = 2 %}
+    {% endif %}
+    _shoprunner_com.environmentID = {{ env_id }};
+
+
+    if (_shoprunner_com.enabled) {
+      _shoprunner_com.prefix = window.parent.document.location.protocol + "//";
+      _shoprunner_com.sr_jsContentURL = _shoprunner_com.prefix + "staging-content.shoprunner.com";
+
+      if (_shoprunner_com.environmentID == 2) {
+        _shoprunner_com.sr_jsContentURL = _shoprunner_com.prefix + "content.shoprunner.com";
+      }
+
+      var sr_CSS_URL = _shoprunner_com.sr_jsContentURL + "/" + _shoprunner_com.retailerID + ".css";
+      var sr_js_content_el_URL = _shoprunner_com.sr_jsContentURL + "/" + _shoprunner_com.retailerID + ".js";
+
+      setTimeout(function() {
+        var a = document.createElement("link");
+        a.href = sr_CSS_URL;
+        a.type = "text/css";
+        a.rel = "stylesheet";
+        document.getElementsByTagName("head")[0].appendChild(a);
+        var b = document.createElement("script");
+        b.onload = window._shoprunner_script_loaded;
+        b.src = sr_js_content_el_URL;
+        b.type = "text/javascript";
+        document.getElementsByTagName("head")[0].appendChild(b)
+      }, 1);
+    }
+
+    _shoprunner_com.docReady = false;
+    _shoprunner_com.dom_loaded = function() {
+      _shoprunner_com.docReady = true;
+    }
+
+    if (document.addEventListener) {
+      document.addEventListener("DOMContentLoaded", _shoprunner_com.dom_loaded, false)
+    } else {
+      if (document.attachEvent) {
+        document.attachEvent("onreadystatechange", _shoprunner_com.dom_loaded)
+      }
+    }
+
+    if (window.addEventListener) {
+      window.addEventListener("load", _shoprunner_com.dom_loaded, false)
+    } else {
+      if (window.attachEvent) {
+        var r = window.attachEvent("onload", _shoprunner_com.dom_loaded)
+      }
+    }
+  }());
+
+  function _srOrderSubmit() {
+    if (typeof Shopify !== 'undefined' && Shopify.Checkout.hasOwnProperty('OrderStatus')) {
+      let srToken = "{{ checkout.attributes['sr_token'] }}";
+
+      srToken = srToken.replace(/(&quot\;)/g,"");
+
+      console.log(decodeURIComponent(srToken));
+
+
+      // BOL EDITS - checks to see if variables exist (otherwise breaks checkout)
+      {% assign srSubTotal = checkout.subtotal_price | money_without_currency | remove: "," %}
+      {% if checkout.subtotal_price == blank %}
+        {% assign srSubTotal = 'null' %}
+      {% endif %}
+
+      {% assign totalOrderAmount = checkout.total_price | money_without_currency | remove: "," %}
+      {% if checkout.total_price == blank %}
+        {% assign totalOrderAmount = 'null' %}
+      {% endif %}
+
+
+      _shoprunner_com.cart = new Object();
+      _shoprunner_com.cart.srSubTotal = {{ srSubTotal }};
+      _shoprunner_com.orderID = "{{ checkout.order.name }}";
+      _shoprunner_com.tokenID = srToken;
+      _shoprunner_com.totalOrderAmount = {{ totalOrderAmount }};
+      _shoprunner_com.billingSubTotal = {{ srSubTotal }};
+
+      let tenderType = [];
+
+      {% for transaction in checkout.transactions %}
+        switch( '{{ transaction.payment_details.credit_card_company }}' )
+        {
+          case 'american express':
+            tenderType.push('AX');
+            break;
+          case 'mastercard':
+            tenderType.push('MC');
+            break;
+          case 'visa':
+            tenderType.push('VI');
+            break;
+          case 'diner’s club':
+            tenderType.push('DC');
+            break;
+          case 'discover':
+            tenderType.push('DI');
+            break;
+          case 'paypal':
+            tenderType.push('PP');
+            break;
+          case 'private label':
+            tenderType.push('PL');
+            break;
+          case 'japanese credit bureau':
+            tenderType.push('JC');
+            break;
+          case 'bill me later':
+            tenderType.push('BL');
+            break;
+          case 'echeck':
+            tenderType.push('EC');
+            break;
+          case 'gift card':
+            tenderType.push('GC');
+            break;
+          case 'online gift certificate':
+            tenderType.push('OGC');
+            break;
+          case 'store credit':
+            tenderType.push('SC');
+            break;
+          case 'amazon payments':
+            tenderType.push('AZ');
+            break;
+          case 'others':
+            tenderType.push('OT');
+            break;
+        }
+      {% endfor %}
+
+      _shoprunner_com.tenderType = tenderType.join();
+      _shoprunner_com.confirmedProducts = "";
+
+        {% for shipping_method in order.shipping_methods %}
+          {% if shipping_method.title == "ShopRunner Free 2-Day Shipping" %}
+            {% assign method = 'SR2 Day' %}
+          {% elsif shipping_method.title == "ShopRunner Free Ground Shipping" %}
+            {% assign method = 'ground' %}
+          {% else %}
+            {% assign method = shipping_method.title  %}
+          {% endif %}
+        {% endfor %}
+
+
+      {% for item in order.line_items %}
+        _shoprunner_com.confirmedProducts += '|{{ item.sku }}~{{ item.quantity }}~{{ item.price | money_without_currency | remove: "," }}~{{ method }}~{% if item.product.tags contains 'shoprunner' %}true{% else %}false{% endif %}~UNK';
+      {% endfor %}
+      _shoprunner_com.submitConfirmationData();
+    }
+  }
+
+  (function() {
+    var interval, count = 0;
+    // once the SR code has loaded, submit the order data.
+    function srTryToSubmit() {
+      if (typeof(_shoprunner_com) != 'undefined' && typeof(_shoprunner_com.submitConfirmationData) == 'function') {
+      clearInterval(interval);
+      _srOrderSubmit();
+      }
+      count += 1;
+      if(count > 10) // Retry for 5 seconds
+      clearInterval(interval);
+    }
+    // try to submit the order data every 500ms.
+    interval = setInterval(srTryToSubmit, 500);
+
+
+    /* =======================================================================
+    ================ Inject Checkout Divs for shipping methods ===============
+    ========================================================================*/
+
+    var products = {
+      {% for li in checkout.line_items -%}
+      {{ li.product_id }}: {{ li.product.tags | json }},
+      {%- endfor %}
+    };
+
+    function addShoprunnerDivs(){
+      if ($('.order-summary__section__content [name="sr_headerDiv"]').length == 0){
+        if (
+          typeof Shopify !== 'undefined' &&
+          !Shopify.Checkout.hasOwnProperty('OrderStatus') &&
+          Shopify.Checkout.step != "payment_method" ) {
+            $('.order-summary__section__content').append('<div style="margin-bottom: 20px;" name="sr_headerDiv"></div>');
+        }
+      }
+      $.each(products, function(key, val) {
+        if ($.inArray('shoprunner', val) >= 0){
+          if ($('[data-order-summary-section="line-items"] .product[data-product-id="'+key+'"] .product__description [name=sr_cartProductDiv]').length == 0){
+            $('[data-order-summary-section="line-items"] .product[data-product-id="'+key+'"] .product__description').append('<div name="sr_cartProductDiv"></div>')
+          }
+        }
+      });
+      var span = $('[data-shipping-method*="shoprunner"] label span').first();
+      if (span) {
+
+        // For some reason the container has a display none when not signed in, don't know why...
+        $('[data-shipping-method*="shoprunner"] label span').first().closest('.content-box__row').show();
+
+        span.html('<div name="sr_shippingOptionDiv"></div>');
+
+      }
+      if (typeof sr_$ !== "undefined") {
+        sr_$.renderDivs();
+        updateShipping();
+      }
+    }
+
+    function updateShipping() {
+      if (!_sr_token.get()) {
+        // Disable and select 2nd radio button in list if not signed in
+        $('[data-shipping-method*="shoprunner"] input')
+          .attr('disabled', true)
+          .attr('checked', false);
+
+        $('input[name="checkout[shipping_rate][id]"]')
+          .eq(1)
+          .attr('checked', true);
+      } else {
+        // If signed in, clear fields and automatically select shoprunner input
+        $('input[name="checkout[shipping_rate][id]"]').attr('checked', false);
+        $('[data-shipping-method*="shoprunner"] input')
+          .attr('disabled', false)
+          .attr('checked', true);
+      }
+    }
+
+    $(document).ready(function() {
+      if (window.Behaviour){
+        var _old_Behaviour_prototype_updatePage = Behaviour.prototype.updatePage;
+        Behaviour.prototype.updatePage = function(){
+          _old_Behaviour_prototype_updatePage.apply(this, arguments);
+          addShoprunnerDivs();
+        }
+        addShoprunnerDivs();
+
+
+        $(document.body).on('sr_sign_in', function(data){
+          updateShipping();
+        });
+        $(document.body).on('sr_sign_out', function(data){
+          updateShipping();
+        });
+
+
+        // Observer to check whenever shipping inputs change, iOS/Safari bug
+        // is causing the shoprunner radio input to not always have the
+        // disabled attribute attached when not signed in to ShopRunner.
+        // Will manually deselect and reapply the disabled attribute
+        var shippingMethods = document.querySelector('fieldset[data-shipping-methods]');
+
+
+        // Fire update shipping to double check in case SR shipping gets selected
+        var onChange = function(mutationsList, observer) {
+          observer.disconnect();
+          updateShipping();
+        };
+
+        // Observer to fire removeStates whenever select changes
+        const observer = new MutationObserver( onChange );
+
+        if (shippingMethods) {
+          // WATCH : Observe the node for changes in shipping methods
+          observer.observe( shippingMethods, {
+            attributes: true,
+            childList: true,
+            subtree: true
+          });
+        }
+      }
+    });
+
+    /* =======================================================================
+    ================ Inject Thank You Page Div For Success ===================
+    ========================================================================*/
+
+    $(document).ready(function() {
+      if ($('html.page--thank-you').length) {
+        if (_sr_token.get()) {
+          $('.content .main__content .section:first-of-type').after('<div name="sr_checkoutSRItemsPageDiv"></div>');
+        } else {
+          $('.content .main__content .section:first-of-type').after('<div name="sr_checkoutPageDiv"></div>');
+        }
+
+        sr_$.renderDivs();
+      }
+    });
+
+  })();
+</script>

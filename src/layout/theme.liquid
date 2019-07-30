@@ -102,8 +102,7 @@
 
   {% comment %} :: Shop Runner :: {% endcomment %}
   {% if settings.shoprunner_enabled %}
-    {% comment %} {% include 'shoprunner-logic', isCheckout: false %} {% endcomment %}
-    {% include 'shoprunner-init-script' %}
+    {% include 'shoprunner-init', isCheckout: false %}
   {% endif %}
 
   <!-- Favicons
