@@ -72,10 +72,12 @@
           <img id="{{ product.id }}" class="product-main-image" src="{{ featured_image | product_img_url: '1000x' }}" alt='{{ image.alt | escape }}'/>
         </noscript>
 
+        {% comment %} :: Wishlist King App :: {% endcomment %}
+        <!-- include 'wishlist-button-product' with '{{ product.id }}' -->
 
-        <div class="favourite-icon">
+        {% comment %} <div class="favourite-icon">
           <img src="{{ 'favorite.svg' | asset_url }}">
-        </div>
+        </div> {% endcomment %}
       </div>
     {% endfor %}
 

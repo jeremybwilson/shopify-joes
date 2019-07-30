@@ -21,6 +21,7 @@ var bcSfFilterTemplate = {
                                 '<div class="product-images">' +
                                     '{{itemBadge}}' +
                                     '<div class="product-image">' +
+                                    //'<!-- include "wishlist-button-collection" with "{{itemId}}" -->' +                                    
                                         '<a href="{{itemUrl}}" title="{{itemTitle}}">' +
                                         '<div class="reveal">' +
                                             '<img id="product-image-{{itemProductId}}" src="{{itemThumbUrl}}" alt="{{itemTitle}}" />' +

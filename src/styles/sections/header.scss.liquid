@@ -113,7 +113,7 @@ ul{padding:0 0px; margin: 0px;}
     a{
       @include paragraph-font;
       color: {{ settings.announcement_text_color}}; //$white-color;
-      font-weight:$weight-light;
+      //font-weight:$weight-light;
       text-decoration:none !important;
 
       @include mq('phone'){font-size:$font-10-mo;}
@@ -322,6 +322,19 @@ ul{padding:0 0px; margin: 0px;}
            line-height: 22px;
            @include mq('laptop'){
               line-height:18px;
+           }
+
+           .wk-icon {
+              width: 14px;
+              height: 14px;
+
+              svg {
+                 width: 100%;
+                 height: 100%;
+              }
+           }
+           .wk-label, .wk-count {
+              display: none;
            }
         }
  

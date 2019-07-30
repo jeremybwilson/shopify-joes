@@ -59,15 +59,10 @@
         {% comment %} ..:: WISHLIST ::.. {% endcomment %}
         {% if section.settings.show_wishlist %}
           <li class="nav-item nav-wishlist">
-            {% comment %} :: Wishlist King App :: 
+            {% comment %} :: Wishlist King App :: {% endcomment %}
             {% if settings.app_wk_enabled %}
               <!-- include 'wishlist-link' -->
-            {% else %}
-              
-              
-            {% endif %}{% endcomment %}
-            {% comment %} :: Heart Icon Placeholder :: {% endcomment %}
-            {% include 'svg-icon-heart' %}
+            {% endif %}
           </li>
         {% endif %}
         
