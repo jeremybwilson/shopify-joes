@@ -5,7 +5,11 @@
     <p>{{ 'cart.general.empty' | t }}</p>
 
   {% else %}
-      <span class="shoprunner-indicator"><div name="sr_headerDiv" style="width: 100%"></div></span>
+      
+    {% if settings.shoprunner_enabled %}
+      {% include 'shoprunner-cart-header' %}
+    {% endif %}
+
     <form action="/cart" method="post" id="cartform" class="bfx-checkout-container">
       <table>
         <thead>
@@ -38,9 +42,12 @@
                     <span class="hide bfx-sku">{{ item.sku }}</span>
                     <span class="bfx-product-customData-label hide">variant_id</span>
                     <span class="bfx-product-customData-value hide">{{ item.variant_id }}</span>
-                    {% if settings.shoprunner_enabled %}
+
+                    {% comment %} :: PRODUCT - SHOPRUNNER ELIGIBLE LOGO :: {% endcomment %}
+                    {% if settings.shoprunner_enabled and isGiftItem == false %}
                       <span class="shoprunner-indicator">{% include 'shoprunner-cart-icon' %}</span>
                     {% endif %}
+                    
                   </div>
                 {% assign property_size = item.properties | size %}
                 {% if property_size > 0 %}

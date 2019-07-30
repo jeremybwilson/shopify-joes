@@ -167,8 +167,10 @@
 
             {% if section.settings.shipping_text != blank or settings.shoprunner_enabled %}
               <hr class="product-hr">
-                    {% if settings.shoprunner_enabled %}
-                    {% include 'shoprunner-pdp' %}
+                    {% comment %} :: SHOPRUNNER :: {% endcomment %}
+                    {% if settings.shoprunner_enabled and template != 'product.quick' %}
+                      {% include 'shoprunner-pdp'%}
+                    {% endif %}
 
                     {% else %}
                         <div class="shipping-title">{{ section.settings.shipping_header_text }}</div>
