@@ -425,25 +425,17 @@ BCSfFilter.prototype.buildFilterSorting = function() {
 // Build additional attributes of product items
 BCSfFilter.prototype.buildExtrasProductList = function(data) {
 
-    // THE ONE IN THEME.JS SEEMS TO ACTUALLY DO SOMETHING,
-    // NOT SURE WHAT THIS IS DOING AS NOTHING BROKE COMMENTING IT OUT..
-
-    // if ($(window).width() >= 769) {
-    //     $('.prod-container').hover(function(){
-    //         $(this).children('.product-modal').show();
-    //     }, function(){
-    //         $(this).children('.product-modal').hide();
-    //     })
-
-    //     // Call Fancybox for product modal + stop scroll to top
-    //     $('.product-modal').fancybox({
-    //         helpers: {
-    //             overlay: {
-    //                 locked: false
-    //             }
-    //         }
-    //     });
-    // }
+    $('.product-quickview').fancybox({
+        padding: 0,
+        margin: 0,
+        transitionIn: 'fade',
+        afterShow: function afterShow() {
+            var context = document.querySelector("#product-quick-view");
+            theme.Product(context);
+        },
+        wrapCSS: 'fancybox-quickview',
+        helpers: { overlay: { locked: false } }
+    });
 };
 
 // Build Additional Elements
