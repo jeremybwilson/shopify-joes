@@ -126,6 +126,14 @@
                 "label": "Text content",
                 "default": "#000000"
             },
+
+            {
+                "type": "color",
+                "id": "link_color",
+                "label": "Link color",
+                "default": "#000000"
+            },
+
             {
                 "type": "color",
                 "id": "sale_color",
@@ -1327,5 +1335,5 @@
                 "info": "States to be excluded (via Javascript) from the shipping page. One state per line."
             }
         ]
-    }    
+    }
 ]

@@ -79,7 +79,6 @@
   }
 }
 
-
 /*
   PRODUCT PHOTOS (Desktop Photos)
   -------------------------------- */
@@ -89,9 +88,40 @@
   right: 25px;
   z-index: 99;
 
-  img{
+  img {
     width: 28px !important;
   }
+}
+button.wk-button-product {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  z-index: 99;
+  padding: 0;
+  background: transparent;
+
+  &:hover {
+    background: transparent;
+  }
+  .wk-icon {
+    width: 28px;
+    height: 28px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+
+      path {
+        fill: #909090;
+        stroke: #909090;
+      }
+    }
+  }
+
+  .wk-label {
+    display: none;
+  }
+
 }
 
 #product-photos {
