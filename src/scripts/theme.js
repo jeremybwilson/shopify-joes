@@ -13,7 +13,7 @@ theme.utils.emailUtils = require('./utils/email-utils.js');
 require('./sections/sections.js');
 require('./sections/instagram.js');
 require('./sections/header.js');
-require('./sections/newsletter.js');
+//require('./sections/newsletter.js');
 require('./sections/testimonials.js');
 require('./sections/columns-carousel.js');
 require('./sections/slideshow.js');
