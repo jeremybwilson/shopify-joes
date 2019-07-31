@@ -9,6 +9,7 @@
     max-width: 100%;
     height:auto;
     margin:8px 0 0 0;
+    flex-wrap: wrap;
 
     @include mq('mobile-potrait'){
        margin: 3px 0 0 0;
@@ -22,6 +23,7 @@
         width: 20px;
         height: 20px;
         margin-right: 3px;
+        margin-bottom: 10px;
 
         @include mq('mobile-potrait'){
            width: 9px;
@@ -67,6 +69,7 @@
             background-size: contain;
             background-repeat: no-repeat;
             height:20px;
+            width:100%;
 
             // STUBS, Don't use this fully
             &.red       { background-color: #e80076; }
