@@ -124,5 +124,6 @@
     {% if settings.shoprunner_enabled %}
       {% include 'shoprunner-checkout-body' %}
     {% endif %}
+    <div class="tfc-order-notify " data-userid="{% if customer %}{{ customer.name }}{% endif %}" data-orderid="{{ checkout.order_number }}"></div>
   </body>
 </html>
