@@ -121,11 +121,6 @@
 
   {{ content_for_header }}
 
-  {% comment %} :: Shop Runner :: {% endcomment %}
-  {% if settings.shoprunner_enabled %}
-    {% include 'shoprunner-init', isCheckout: false %}
-  {% endif %}  
-
   {% comment %} :: Nosto :: {% endcomment %}
   {% include 'nosto-library' %}
 
