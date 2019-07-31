@@ -17,7 +17,7 @@
                 {% if link.url != "#nolink" %}
                     <a href="{{ link.url }}" class="nav-category-header">{{ link.title }}</a>
                 {% else %}
-                    <span class="menu-nolink">{{ link.title }}</span>
+                    <a href="javascript:void (0);" class="nav-category-header">{{ link.title }}</a>
                 {% endif %}
                 {% comment %} :: MEGA-MENU - LIST :: {% endcomment %}
                 <ul class="megamenu">
@@ -150,7 +150,7 @@
                 {% if link.url != "#nolink" %}
                     <a href="{{ link.url }}" class="nav-category-header">{{ link.title }}</a>
                 {% else %}
-                    <span class="menu-nolink">{{ link.title }}</span>
+                    <a href="javascript:void (0);" class="nav-category-header">{{ link.title }}</a>
                 {% endif %}
                 {% comment %} :: PLAIN DROPDOWN : Multi-Columns :: {% endcomment %} {% if link.links.size > num %} {% include 'navigation-columns' %} {% comment %} :: PLAIN DROPDOWN
                 : Single Column : List small enough to fit as 1 column :: {% endcomment %} {% else %}
