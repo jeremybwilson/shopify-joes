@@ -5,7 +5,12 @@
         {% for link in menu.links %}
             {% comment %} :: LEVEL 1 : SUB-NAV : Accordion (Has nested menus) :: {% endcomment %}
             {% if link.links != blank %}
-                <li class="accordion-header accordion-toggle" aria-haspopup="true" aria-expanded="false"><a href="{{ link.url }}" class="nav-category-header">{{ link.title | escape }}</a></li>
+                {% if link.url != "#nolink" %}
+                    <li class="accordion-header accordion-toggle" aria-haspopup="true" aria-expanded="false"><a href="{{ link.url }}" class="nav-category-header">{{ link.title | escape }}</a></li>
+                {% else %}
+                    <li class="accordion-header accordion-toggle" aria-haspopup="true" aria-expanded="false"><a href="javascript:void (0);" class="nav-category-header">{{ link.title | escape }}</a></li>
+                {% endif %}
+
                 <div class="accordion-content">
                     <ul class="sub">
                         {% for sub_link in link.links %}
