@@ -472,7 +472,7 @@ var ajaxCart = (function(module, $) {
     }
 
     $cartContainer.append(template(data));
-
+    window.sr_updateMessages();
     cartCallback(cart);
   };
 

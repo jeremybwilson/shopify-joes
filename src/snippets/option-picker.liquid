@@ -190,7 +190,7 @@
     {% if template != 'product.quick' and section.settings.size_chart_show and has_audience and lowercase_option_name contains 'size' %}
       <div class="size-guide">
          <a href="#size-chart--popup" class="fancybox size-chart--trigger">{{ section.settings.size_chart_header_text }}</a>
-        <div class="tfc-fitrec-product find-your-true-fit" id="{{product.id}}" data-userid="{% if customer %}{{ customer.name }}{% endif %}"></div>
+        <div class="tfc-fitrec-product find-your-true-fit" id="{{product.id}}" data-userid="{% if customer %}{{ customer.id }}{% endif %}"></div>
       </div>
     {% endif %}
 </div>
