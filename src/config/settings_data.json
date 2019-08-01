@@ -282,7 +282,7 @@
                     "logo_image": "shopify:\/\/shop_images\/JOES-black.png",
                     "account_icon": "text",
                     "account_icon_text_value": "Login",
-                    "account_show_user_name": false,
+                    "account_show_user_name": true,
                     "cart_icon": "text",
                     "cart_icon_text_value": "Bag",
                     "show_search": true,
