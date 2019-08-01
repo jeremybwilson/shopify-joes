@@ -130,7 +130,3 @@ $(document).on('click', "#size-chart--popup [data-toggle='tab']", function(){
     $(this).parent("li").addClass("active");
     $("#size-chart--popup #size-chart--"+ popup_section +" .tab-content " + $(this).data("href")).addClass("active");
 });
-
-$(document).on('click', ".js-drawer-open-right", function(){
-    window.sr_updateMessages();
-});
