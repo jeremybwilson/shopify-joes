@@ -56,9 +56,7 @@
 
     #bc-sf-filter-tree-h {
         width: 100% !important;
-        max-height: 300px;
-        overflow-y: auto;
-        margin-bottom: 15px;
+        margin-bottom:25px;
     }
     .constrain-container {
         width:max-content !important;
@@ -222,6 +220,14 @@
          height: auto;
          pointer-events: all;
          background:transparent;
+         flex-wrap: wrap;
+
+          @include mq('lap'){
+              justify-content: flex-start;
+          }
+          @include mq('tablet'){
+              justify-content: flex-start;
+          }
       }
 
       #filter-button-desktop{
@@ -240,15 +246,47 @@
 .bc-sf-filter-option-block{
     position: relative;
     margin-bottom: 0;
-    width: 100%;
-    max-width:148px;
+    width:auto;
+    margin-right: 20px !important;
+    margin-bottom: 30px !important;
+
+    &:last-child{
+        margin-right: 0px !important;
+    }
+
+    @include mq('lap'){
+        margin-right:15px !important;
+        margin-bottom:35px !important;
+    }
+
+    @include mq('tablet'){
+        margin-right:15px !important;
+        margin-bottom:35px !important;
+    }
 
     @include mq('phone'){
       max-width: 100%;
+        margin-right:0px !important;
+        margin-bottom:0px !important;
     }
 
     .bc-sf-filter-option-amount{
       display:none;
+    }
+    .bc-sf-filter-block-content-inner{
+        display: flex;
+        .bc-sf-filter-option-multiple-list{
+            max-width: 130px;
+            width: 100%;
+
+            @include mq('lap'){
+                max-width: 105px;
+            }
+
+            @include mq('tablet'){
+                max-width: 105px;
+            }
+        }
     }
 }
 
