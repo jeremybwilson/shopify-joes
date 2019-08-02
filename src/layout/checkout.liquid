@@ -34,9 +34,9 @@
 
   <!-- Shoprunner
   ================================================== -->
-    {% if settings.shoprunner_enabled %}
+    {% comment %} {% if settings.shoprunner_enabled %}
       {% include 'shoprunner-init', isCheckout: true %}
-    {% endif %}
+    {% endif %}{% endcomment %}
 
 
   <!-- Data Layer for GTM
