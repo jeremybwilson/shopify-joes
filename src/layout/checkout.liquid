@@ -34,11 +34,11 @@
 
   <!-- Shoprunner
   ================================================== -->
-    {% comment %} {% if settings.shoprunner_enabled %}
-      {% include 'shoprunner-init', isCheckout: true %}
-    {% endif %}{% endcomment %}
+    {% if settings.shoprunner_enabled %}
+      {% comment %}{% include 'shoprunner-init', isCheckout: true %}{% endcomment %}
+      {% include 'shoprunner-checkout-head' %}
+    {% endif %}
 
-    {% include 'shoprunner-checkout-head' %}
   <!-- Data Layer for GTM
   ================================================== -->
     {% include 'script-google-tag-head' %}
