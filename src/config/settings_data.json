@@ -278,7 +278,7 @@
                     "announcement_swap_rate": 5,
                     "show_header_left_text": true,
                     "header_left_text": "Free U.S Shipping!",
-                    "header_left_url": "shopify:\/\/pages\/shipping",
+                    "header_left_url": "shopify:\/\/pages\/faq",
                     "logo_image": "shopify:\/\/shop_images\/JOES-black.png",
                     "account_icon": "text",
                     "account_icon_text_value": "Login",
@@ -1015,10 +1015,10 @@
                         "type": "image",
                         "settings": {
                             "fit_guide_title": "Skinny",
-                            "description": "Skinny Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+                            "description": "8 3\/4\" rise, 10\" leg opening, 28\" inseam. A versatile mid rise skinny that stops at the ankle and is figure flattering to all shapes. A classic, wardrobe staple.",
                             "collection": "women-denim-fit-skinny",
-                            "desktop_banner": "shopify:\/\/shop_images\/desktop-banner-main.png",
-                            "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png",
+                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Skinny-W.jpg",
+                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Skinny-W_2fa09d5a-7170-4b8a-b695-d249d64b05ec.jpg",
                             "desktop_fit_image": "shopify:\/\/shop_images\/skinny.png",
                             "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Skinny-W.jpg"
                         }
@@ -1027,10 +1027,10 @@
                         "type": "image",
                         "settings": {
                             "fit_guide_title": "Straight",
-                            "description": "Straight Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+                            "description": "9 1\/2” rise, 11” leg opening, 28” inseam. A slightly more relaxed alternative to a skinny fit, this mid-rise has an overall slim fit and stops at the ankle for a comfortable, versatile wear.",
                             "collection": "women-denim-fit-straight",
-                            "desktop_banner": "shopify:\/\/shop_images\/desktop-banner-main.png",
-                            "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png",
+                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Straight-W.jpg",
+                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Straight-W_a957632f-9df1-4e13-b88c-64e40fcc35a3.jpg",
                             "desktop_fit_image": "shopify:\/\/shop_images\/skinny-pro-img.png",
                             "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Straight-W.jpg"
                         }
@@ -1039,10 +1039,10 @@
                         "type": "image",
                         "settings": {
                             "fit_guide_title": "Bootcut",
-                            "description": "Bootcut Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+                            "description": "8 3\/4\" rise, 17\" leg opening, 34\" inseam. A versatile bootcut fit designed to elevate any wardrobe. Contoured waistband curves with the hips to lift and shape the backside.",
                             "collection": "women-denim-fit-bootcut",
-                            "desktop_banner": "shopify:\/\/shop_images\/desktop-banner-main.png",
-                            "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png",
+                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Bootcut-W.jpg",
+                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Bootcut-W_5f3f61b4-3d05-4945-8bbb-8aee4c6d7e9d.jpg",
                             "desktop_fit_image": "shopify:\/\/shop_images\/bootcut.png",
                             "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Bootcut-W.jpg"
                         }
@@ -1051,10 +1051,10 @@
                         "type": "image",
                         "settings": {
                             "fit_guide_title": "Flare",
-                            "description": "FlareLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+                            "description": "8 3\/4\" rise, 17\" leg opening, 26\" inseam. Add a little kick to your step with a cropped flare that is fitted through the hips and thighs and opens up at the ankle.",
                             "collection": "women-denim-fit-flare",
-                            "desktop_banner": "shopify:\/\/shop_images\/desktop-banner-main.png",
-                            "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png",
+                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Flare-W.jpg",
+                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Flare-W_32749c5b-a350-4884-9c28-4bd2b734aad5.jpg",
                             "desktop_fit_image": "shopify:\/\/shop_images\/flare.png",
                             "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Flare-W.jpg"
                         }
@@ -1063,10 +1063,10 @@
                         "type": "image",
                         "settings": {
                             "fit_guide_title": "Petite",
-                            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley - Petite",
+                            "description": "8 1\/4” rise, 9 1\/2” leg opening, 29” inseam. Perfectly tailored to fit a petite frame.",
                             "collection": "women-denim-fit-petite",
-                            "desktop_banner": "shopify:\/\/shop_images\/desktop-banner-main.png",
-                            "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png",
+                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Petite-W.jpg",
+                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Petite-W_d231350d-e31f-46af-9782-14ee647d8d64.jpg",
                             "desktop_fit_image": "shopify:\/\/shop_images\/petite.png",
                             "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Petite-W.jpg"
                         }
@@ -1075,10 +1075,10 @@
                         "type": "image",
                         "settings": {
                             "fit_guide_title": "Curvy",
-                            "description": "Curvy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+                            "description": "8 1\/2\" rise, 10 1\/2\" leg opening, 31\" inseam. Full length contoured curvy skinny with extra ease through the hip and thigh area. Designed specifically for a sexy, curvy figure.",
                             "collection": "women-denim-fit-curvy",
-                            "desktop_banner": "shopify:\/\/shop_images\/desktop-banner-main.png",
-                            "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png",
+                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Curvy-W.jpg",
+                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Curvy-W_b75f25a2-3eb4-449c-b84b-bed192af0ca1.jpg",
                             "desktop_fit_image": "shopify:\/\/shop_images\/curvy.png",
                             "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Curvy-W.jpg"
                         }
@@ -1087,10 +1087,10 @@
                         "type": "image",
                         "settings": {
                             "fit_guide_title": "Boyfriend",
-                            "description": "Small Description for Boyfriend Women fit guide",
+                            "description": "9\" rise, 12\" leg opening. A mid rise boyfriend fir that is easy at the hips and slim through the legs. A sexy alternative to a loose fitting boyfriend cut. Available in a crop (23 1\/2\" inseam) and ankle (23 1\/2\" inseam) length.",
                             "collection": "women-denim-fit-boyfriend",
-                            "desktop_banner": "shopify:\/\/shop_images\/desktop-banner-main.png",
-                            "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png",
+                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Boyfriend-W.jpg",
+                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Boyfriend-W_6b63c1e3-c199-42f9-93e0-04ee5fa2bd74.jpg",
                             "desktop_fit_image": "shopify:\/\/shop_images\/women-skinny.jpg",
                             "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Boyfriend-W.jpg"
                         }
@@ -1101,8 +1101,8 @@
                             "fit_guide_title": "Cigarette",
                             "description": "Cigarette Description will here.",
                             "collection": "women-collection",
-                            "desktop_banner": "shopify:\/\/shop_images\/desktop-banner-main.png",
-                            "mobile_banner": "shopify:\/\/shop_images\/banner-size-guid-mobile.png",
+                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Cigarette-W.jpg",
+                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Cigarette-W_57853574-87af-4290-8815-5a2757b12449.jpg",
                             "desktop_fit_image": "shopify:\/\/shop_images\/women-skinny.jpg",
                             "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Cigarette-W.jpg"
                         }
@@ -1128,10 +1128,10 @@
                         "type": "image",
                         "settings": {
                             "fit_guide_title": "skinny",
-                            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
-                            "collection": "men-denim-fit-skinny-fit",
-                            "desktop_banner": "shopify:\/\/shop_images\/SKINNY.jpg",
-                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Skinny_83cd8668-438b-4ebe-ad1d-99e9e74bac36.jpg",
+                            "description": "9 3\/4\" rise, 13 1\/4\" leg opening, 33\" inseam. Our most narrow, skinny fit that hugs the body from hip to ankle. Specifically made for the modern guy who is looking for a sleek daily essential.",
+                            "collection": "men-denim-fit-skinny",
+                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Skinny-M.jpg",
+                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Skinny_ba21e0aa-e084-4c38-8234-c7be24745087.jpg",
                             "desktop_fit_image": "shopify:\/\/shop_images\/skinny-men-desktop_ceb4ba93-12df-476e-813e-ec773fc91de6.jpg",
                             "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Skinny_605bd65d-963f-43e9-b176-8a466788cdbb.jpg"
                         }
@@ -1140,10 +1140,10 @@
                         "type": "image",
                         "settings": {
                             "fit_guide_title": "Slim",
-                            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-                            "collection": "men-denim-fit-slim-fit",
-                            "desktop_banner": "shopify:\/\/shop_images\/SLIM.jpg",
-                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Slim_38f288dc-40db-407d-8e14-0bc3292d662e.jpg",
+                            "description": "10\" rise, 14 1\/2\" leg opening, 34\" inseam. Created for the man looking for something slightly narrower but not quite a skinny fit. A slim leg from hip to knee and tapered at ankle.",
+                            "collection": "men-denim-fit-slim",
+                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Slim-M.jpg",
+                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Slim_512df4da-3e37-49d4-889e-7bea83dbad3f.jpg",
                             "desktop_fit_image": "shopify:\/\/shop_images\/slim-desktop-men.jpg",
                             "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Slim.jpg"
                         }
@@ -1152,10 +1152,10 @@
                         "type": "image",
                         "settings": {
                             "fit_guide_title": "STRAIGHT",
-                            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+                            "description": "10 1\/2\" rise, 17\" leg opening, 34\" inseam. Easily dressed up or down for Joe's most versatile straight leg fit. Straight fit from hip to ankle.",
                             "collection": "men-denim-straight-leg",
-                            "desktop_banner": "shopify:\/\/shop_images\/STRAIGHT.jpg",
-                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Straight_1a3802e9-c6f8-496b-8a01-289848251cd2.jpg",
+                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Straight-M.jpg",
+                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Straight_a33a7b0f-590e-4b0d-ae4e-d1cada032e2a.jpg",
                             "desktop_fit_image": "shopify:\/\/shop_images\/straight-men-desktop.jpg",
                             "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Straight_c891d164-8fa2-4f3f-b71d-1d06f7261868.jpg"
                         }
@@ -1164,10 +1164,10 @@
                         "type": "image",
                         "settings": {
                             "fit_guide_title": "STRAIGHT + NARROW",
-                            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley  PREVIOUS product image THE ASHER Shop Now",
+                            "description": "10 1\/4\" rise, 15 1\/2\" leg opening, 34\" inseam. Casual yet refined, for any occasion. Our fan favorite fit. Straight fit from hip with a tailored narrow leg.",
                             "collection": "men-denim-straight-narrow",
-                            "desktop_banner": "shopify:\/\/shop_images\/STRAIGHT_NARROW.jpg",
-                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Straight_Narrow_ca61aa7b-dda1-404a-b941-218c3b8e4858.jpg",
+                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Straight_Narrow-M.jpg",
+                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Straight_Narrow_931fedef-81a1-4cfd-9541-8e834b6237e0.jpg",
                             "desktop_fit_image": "shopify:\/\/shop_images\/straight-narrow-men-desktop.jpg",
                             "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Skinny.jpg"
                         }
@@ -1176,10 +1176,10 @@
                         "type": "image",
                         "settings": {
                             "fit_guide_title": "Athletic slim",
-                            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
-                            "collection": "men-denim-fit-athletic-fit",
-                            "desktop_banner": "shopify:\/\/shop_images\/ATHLETIC-SLIM_609657eb-b81c-4254-83fa-66403e80a0e0.jpg",
-                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Athletic_5624c796-fc63-45ac-8e6b-d32df930e01b.jpg",
+                            "description": "10 5\/8\" rise, 18\" leg opening, 34\" inseam. Our most relaxed jean designed for an athletic build. A relaxed fit from hip to ankle and ease in the thigh.",
+                            "collection": "men-denim-fit-athletic",
+                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Athletic-M.jpg",
+                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Athletic_23a916e7-d3f4-42d1-b60f-d31b07acf7d0.jpg",
                             "desktop_fit_image": "shopify:\/\/shop_images\/AthlETIC-SLIM.jpg",
                             "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Athletic_bec58c36-2d7e-42e2-9fac-3e6e6ca06b9e.jpg"
                         }

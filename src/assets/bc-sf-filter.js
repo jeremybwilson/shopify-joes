@@ -448,7 +448,9 @@ BCSfFilter.prototype.buildAdditionalElements = function(data, eventType) {
         filterTreeWrap: '#bc-sf-filter-tree',
         filterWrap: '.filter-wrap-desktop',
         resultsCount: 'results-count', // Using innerHTML, lack of # intentional
-        selectedInputs: 'input.selected'
+        selectedInputs: 'input.selected',
+        filterBlockContent: ".filter-wrap-desktop .bc-sf-filter-block-content",
+        filterOption: ".bc-sf-filter-option-block"
     };
 
     // RESULTS COUNT : Render number of results in current collection
@@ -530,6 +532,35 @@ BCSfFilter.prototype.buildAdditionalElements = function(data, eventType) {
     }
     updateFilterCounts(); //Invoke count update on filter update
 
+    var updateFilterColumns = function(){
+        $.each($(ui.filterBlockContent), function (index, value) {
+            if($(this).find('li').length > 9){
+                var filterMainid = $(this).attr("id");
+                var filterWraperClass = $("#"+filterMainid).find('ul').attr('class');
+                //Add class(.removing) and id to make ul distinguish
+                $("#" + filterMainid + " ." + filterWraperClass).addClass('removing').attr("id", 'column0');
+
+                var filterCount = $("#" + filterMainid + " ." + filterWraperClass + " li").length;
+                var filterSplitAfter = 9;
+                var column = 1;
+                var j = 0;
+                for (var i = 0; i < filterCount; i += filterSplitAfter) {
+                    // First lets Append UL with same class but different ID after default/ previous UL
+                    $("#" + filterMainid + " #column" + j).after('<ul class="'+ filterWraperClass +'" id="column' + column + '"></ul>');
+
+                    // Now split Main LI's and add them to new appended UL
+                    $("#" + filterMainid + " #column" + column).html($(".removing li").splice(0, filterSplitAfter));
+
+                    column++;
+                    j++;
+                }
+
+                // Remove Default UL as its Empty now
+                $("#" + filterMainid + " .removing").remove();
+            }
+        });
+    };
+    updateFilterColumns();
 
     // SWATCHES : Trigger event emit to re-render swatches
     $.event.trigger({
