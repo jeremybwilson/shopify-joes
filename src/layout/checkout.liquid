@@ -56,8 +56,10 @@
   ================================================== -->
   {% if settings.reviews_enabled %}
     {% include 'script-bazaarvoice' %}
-  {% endif %} 
+  {% endif %}
 
+  {% comment %} :: True Fit :: {% endcomment %}
+  {% include 'true-fit-library' %}
 
   {% comment %}
   <!-- Sailthru
@@ -124,6 +126,6 @@
     {% if settings.shoprunner_enabled %}
       {% include 'shoprunner-checkout-body' %}
     {% endif %}
-    <div class="tfc-order-notify " data-userid="{% if customer %}{{ customer.name }}{% endif %}" data-orderid="{{ checkout.order_number }}"></div>
+    <div class="tfc-order-notify " data-userid="{% if customer %}{{ customer.id }}{% endif %}" data-orderid="{{ checkout.order_number }}"></div>
   </body>
 </html>
