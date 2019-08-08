@@ -157,8 +157,8 @@ footer {
     bottom: 72px;
     right: 30px;
     z-index: 999999;
-    width: 60px;
-    height: 60px;
+    width: 49px;
+    height: 49px;
     background-color: #000;
     border: 1px solid #000;
     border-radius: 50%;
@@ -167,6 +167,36 @@ footer {
     @include mq('phone') {
         bottom: 65px;
         right: 17px;
+    }
+
+    @include mq('mobile-potrait') {
+        width: 35px;
+        height: 35px;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        background-image: url(../assets/white-arrow.svg);
+        width: 20px;
+        height: 12px;
+        top: 18px;
+        right: 13px;
+        background-repeat: no-repeat;
+        z-index: 999;
+        background-size: 20px;
+
+         @include mq('mobile-potrait') {
+            background-size: 16px;
+            width: 16px;
+            height: 12px;
+            top: 12px;
+            right: 9px;
+         }
+    }
+
+    svg.icon.icon-arrow_up{
+        display:none;
     }
     img{
         display:block;

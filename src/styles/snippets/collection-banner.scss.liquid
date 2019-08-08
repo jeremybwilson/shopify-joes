@@ -42,18 +42,6 @@
 
 #shopify-section-collection-template .collection-banner .banner-text-box-wrap .banner-text-box.text-center {
     margin: 0 0 !important;
-    padding: 40px;
-    display: flex;
-    height: 100%;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-   
-    @include mq('phone'){
-        padding:20px;
-    }
-
 }
 
 .collection-banner{
@@ -122,6 +110,10 @@
     justify-content: center;
     align-items: flex-start;
     background-color: #000;
+    
+    @include mq('phone'){
+        padding:20px;
+    }
 
     p{
        @include banner-paragraph;

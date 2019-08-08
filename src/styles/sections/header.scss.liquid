@@ -81,6 +81,7 @@ ul{padding:0 0px; margin: 0px;}
 .isStuck {
     width: 100%;
     z-index: 9999;
+    border-bottom:0px !important;
 }
 
 
@@ -377,7 +378,7 @@ ul{padding:0 0px; margin: 0px;}
 .search-header {
     border: 0px;
     border-bottom: 1px solid $field-border-color;
-    line-height: 18px;
+    line-height: 19px;
     max-width: 92px;
     width: 100%;
     font-size: $font-13;
@@ -416,7 +417,7 @@ ul{padding:0 0px; margin: 0px;}
   transition: all 1s ease-in-out;
     position: absolute;
     top: 85px;
-    z-index: 999;
+    z-index: 9999;
     width: 100%;
     background-color: #fff;
     height: calc(100vh - 84px) !important;
@@ -521,13 +522,14 @@ ul{padding:0 0px; margin: 0px;}
         background-color: #fff;
         padding:34px 15px;
         z-index: 9999;
-        top:157px;
+        top:156px;
         min-width: 180px;
         box-shadow: 0px 8px 8px hsla(0, 0%, 0%, 0.39);
         display:none;
+        border-top: $border-grey-1;
 
         @include mq('laptop'){
-            top: 152px;
+            top: 151px;
         }
 
         h5.nav-sub-header a {
@@ -604,6 +606,7 @@ ul{padding:0 0px; margin: 0px;}
         box-shadow: 0px 8px 8px hsla(0, 0%, 0%, 0.39);
         display:none;
         max-width:160px;
+        border-top: $border-grey-1;
 
         li{
           width:100%;
@@ -821,5 +824,11 @@ ul{padding:0 0px; margin: 0px;}
    
 }
 
+
+
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) {
+    .search-header{line-height: 16px; height: 17px;}
+}}
 
 /*header*/
