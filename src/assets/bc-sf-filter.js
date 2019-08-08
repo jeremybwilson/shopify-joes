@@ -291,7 +291,8 @@ BCSfFilter.prototype.buildProductGridItem = function(data, index, totalProduct) 
 
                 // SWATCH IMAGE : Build swatch image, fallback to color setting in case that fails
                 var colorName = slugify( colorObj.title ).replace( /-/gi, '_' ); //Replace slug dash for _ to support photo studio tool format
-                var swatchFileName = colorObj.sku + '_' + colorName + '_sw.jpg';
+                var cleanskuname = colorObj.sku.split('-');
+                var swatchFileName = cleanskuname[0] + '_' + colorName + '_sw.gif';
                 var swatchImgUrl = bcSfFilterConfig.general.file_url.replace( 'swatch_url_source_do_not_remove.png', swatchFileName.toLowerCase() );
 
                 // SWATCH OBJ: Single swatch object for manifest
@@ -455,7 +456,7 @@ BCSfFilter.prototype.buildAdditionalElements = function(data, eventType) {
 
     // RESULTS COUNT : Render number of results in current collection
     var resultsDiv = document.getElementById( ui.resultsCount ) || {};
-    resultsDiv.innerHTML = data.total_product + " Results";
+    resultsDiv.innerHTML = data.total_product + " Products";
 
 
     // Build number of products (BoostCommerce Code)
