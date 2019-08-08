@@ -1,10 +1,43 @@
 /*filter*/
 
 .styled-select {          
-    @include product-filter-select; 
-    text-indent: -9999px;              
+   /* @include product-filter-select; 
+    text-indent: -9999px; */ 
+   @include black-paragraph-13-font;   
+    position: absolute;
+    background-color: #fff;
+    top: 28px;
+    left: 0;
+    padding: 15px 0px;
+    right: 0;
+    margin: 0px auto;
+    min-width: 180px;
+    border-bottom:$border-grey-1;
+    z-index: 99;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.22);     
+    display:none;
+
+    @include mq('phone'){
+        left:auto;
+        right:0;
+    }
+
+    li{
+        padding: 5px 15px;
+
+        @include mq('phone'){
+          padding:8px 15px;  
+        }
+    }  
+
+    .li-active{
+       font-weight:$bold; 
+    }
 }
 
+.styled-select.active {
+    display: block;
+}
 
 #sortme{ 
    
@@ -34,7 +67,7 @@
 }
 
 #bc-sf-filter-tree-h .bc-sf-filter-option-block .bc-sf-filter-block-title a{
-  background-color:transparent;
+  background-color:transparent !important;
   &:before{
      display:none;
   }
@@ -69,17 +102,11 @@
 
 #bc-sf-filter-top-sorting{
     position: relative;
-    .sort-label{
-      &:before {
-        content: "";
-        position: absolute;
-        background-image: url(../assets/arrow-down.svg);
-        width: 12px;
-        height: 6px;
-        top:7px;
-        right:-35px;
-        background-repeat: no-repeat;
-      }
+   
+    .sort-label{margin-right: 0px; display:block !important;}
+
+    .sort-label.active:before {
+        transform: rotate(180deg);
     }
 }
 
@@ -134,7 +161,7 @@
     display:none;
 
     @include mq('phone-and-tablet'){
-        top: 47px;
+        top:33px;
     }
 
     #filter-apply-button-desktop{
@@ -321,7 +348,7 @@
 }
 
 
-#filter-button-desktop {
+#filter-button-desktop, .sort-label {
     display: inline-block;
     padding: 6px 20px 4px 6px;
     @include black-paragraph-13-font;
@@ -421,7 +448,7 @@
         float: none !important;
         min-width: 320px;
         left: 0;
-        top: 47px;
+        top:33px;
         padding: 25px 40px 0px 45px;
         margin: 0px;
         position: absolute;
@@ -481,13 +508,10 @@
     }
 }
 
-.sort-label {
-    position: absolute;
-    top: 7px;
-    left: 7px;
+/*.sort-label {
     @include black-paragraph-13-font;
     text-transform: uppercase;
-}
+}*/
 .filter-list-desktop-wrap #bc-sf-filter-tree-h .bc-sf-filter-option-block .bc-sf-filter-block-content{top:13px !important;}
 
 .bc-sf-filter-block-title a{
