@@ -57,30 +57,31 @@
 
   {% comment %} :: GRID DISPLAY - Follows .row maximums using '.grid-max-width' :: {% endcomment %}
   <div class="collection-content-wrap">
-
-    {% comment %} :: DETAILS - Filter Toggle, Breadcrumb, Descriptions :: {% endcomment %}
-    <div id="collection-details" class="grid-max-width">
-
-    </div>{% comment %} END : #collection-details {% endcomment %}
-    
     {% comment %} :: FILTER SETS - toggle 3/4 snippet view :: {% endcomment %}
     <div class="three-four-product-show-buton" id="three-pro-fou-pro-show-butt">
-       <label class="product-column-show">
-          <span class="checkmark three-part">
-             <span class="squer"></span>
-             <span class="squer"></span>
-             <span class="squer"></span>
-          </span>
-       </label>
+        {% comment %} :: DETAILS - Filter Toggle, Breadcrumb, Descriptions :: {% endcomment %}
+        <div id="collection-details" class="grid-max-width collection-details same-css">
+          <div id="results-count"></div>
+        </div>{% comment %} END : #collection-details {% endcomment %}
 
-        <label class="product-column-show">
-            <span class="checkmark four-part active">
+       <div class="right-part mobile-none same-css">
+          <label class="product-column-show">
+              <span class="checkmark three-part">
                 <span class="squer"></span>
                 <span class="squer"></span>
                 <span class="squer"></span>
-                <span class="squer"></span>
-            </span>
-        </label>  
+              </span>
+          </label>
+
+          <label class="product-column-show">
+              <span class="checkmark four-part active">
+                  <span class="squer"></span>
+                  <span class="squer"></span>
+                  <span class="squer"></span>
+                  <span class="squer"></span>
+              </span>
+          </label>  
+        </div>
     </div> 
 
     {% comment %} :: FILTER SETS :: {% endcomment %}

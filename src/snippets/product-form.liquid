@@ -131,18 +131,6 @@
 
   <div class="clear"></div>
 
-
-  {% comment %} :: SKU :: {% endcomment %}
-  {% if section.settings.show_sku and product_type != 'gift card' %}
-    <div class="product-number">
-      Item# <span class="product-sku">{{ current_variant.sku | split: '-' | first }}</span>
-    </div>
-  {% endif %}
-
-  <div class="clear"></div>
-
-
-
   {% comment %}
   :: OPTIONS LOGIC - Many x Many ::
   -------------------

@@ -312,10 +312,31 @@
     padding:$padding-left-right;
     position: relative;
     z-index: 999;
-    display: inline-block;
+    display:flex;
+    align-items: center;
     width: 100%;
+   
+    @include mq('phone-and-tablet'){margin-top:15px;}
+    @include mq('phone'){padding:$padding-left-right-mobile15;}
 
-    @include mq('phone-and-tablet'){display:none;}
+    .same-css{
+       margin: 0px !important;
+       flex:1;
+    }
+    @include mq('phone-and-tablet'){
+        .mobile-none{
+            display:none;
+        }
+    }
+
+    .collection-details {
+       text-align:left;
+       @include black-paragraph-13-font;
+       @include mq('phone'){
+          text-align:center;
+       }
+    }
+   
 }
 /*product-show-dot*/
 

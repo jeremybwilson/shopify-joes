@@ -21,7 +21,8 @@ theme.Header = (function() {
       searchIcon: $( '.nav-search' ),
       searchBar: $( '#nav-search-bar-wrapper' ),
       searchClose: $( '.nav-search-bar-close' ),
-      swapRate: $container.attr( 'data-swap-rate' )
+      swapRate: $container.attr( 'data-swap-rate' ),
+      scrolltop: $( '.scrollToTop')
     }
 
     this.initStickyNav()
@@ -145,6 +146,23 @@ theme.Header = (function() {
       // START : Begin auto-toggle until user interaction
       start();
     }
+
+    // Fadein/Out scrolltop arrow
+      $(window).scroll(function(){
+          if ($(this).scrollTop() > 100) {
+              ui.scrolltop.fadeIn();
+          } else {
+              ui.scrolltop.fadeOut();
+          }
+      });
+
+    // Onclick of scrolltop take page to Top
+    $(document).ready(() => {
+      ui.scrolltop.click(() => {
+        $('html, body').animate({scrollTop : 0},800);
+        return false;
+      });
+    });
   }
 
   Header.prototype = _.assignIn({}, Header.prototype, {
