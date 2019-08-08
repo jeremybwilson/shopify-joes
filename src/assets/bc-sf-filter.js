@@ -62,7 +62,7 @@ var bcSfFilterTemplate = {
     'paginateHtml': '<span class="count"></span>{{previous}}{{pageItems}}{{next}}',
 
     // Sorting Template
-    'sortingHtml': '<h4 class="sort-label">' + bcSfFilterConfig.label.sorting + '</h4><select class="styled-select">{{sortingItems}}</select>',
+    'sortingHtml': '<h4 class="sort-label">' + bcSfFilterConfig.label.sorting + '</h4><ul class="styled-select">{{sortingItems}}</ul>',
 
     // Apply Btn Template (Mobile) : Filter constructor not exposed, so func binding close not available, hence this sad click..
     'mobileApplyBtnHtml': '<button class="mobile-apply-button" onClick="$(\'#bc-sf-filter-tree-mobile-button\').click()">Apply</button>'
@@ -413,7 +413,7 @@ BCSfFilter.prototype.buildFilterSorting = function() {
             // Build content
             var sortingItemsHtml = '';
             for (var k in sortingArr) {
-                sortingItemsHtml += '<option value="' + k +'">' + sortingArr[k] + '</option>';
+                sortingItemsHtml += '<li data-value="' + k +'">' + sortingArr[k] + '</li>';
             }
             var html = bcSfFilterTemplate.sortingHtml.replace(/{{sortingItems}}/g, sortingItemsHtml);
             jQ(this.selector.topSorting).html(html);
@@ -535,7 +535,7 @@ BCSfFilter.prototype.buildAdditionalElements = function(data, eventType) {
 
     var updateFilterColumns = function(){
         $.each($(ui.filterBlockContent), function (index, value) {
-            if($(this).find('li').length > 9){
+            if($(this).find('li').length > 9 && $('#' + $(this).attr("id") + ' #column1').length == 0){
                 var filterMainid = $(this).attr("id");
                 var filterWraperClass = $("#"+filterMainid).find('ul').attr('class');
                 //Add class(.removing) and id to make ul distinguish
@@ -562,6 +562,19 @@ BCSfFilter.prototype.buildAdditionalElements = function(data, eventType) {
         });
     };
     updateFilterColumns();
+
+    var updateSortColumns = function(){
+        $("h4.sort-label").on('click', function () {
+            $(this).toggleClass('active');
+            $("ul.styled-select").toggleClass('active');
+        });
+        $('.styled-select li').click(function(evt) {
+            onInteractWithToolbar(evt,"sort",bcsffilter.queryParams.sort,$(this).data('value'));
+            $("ul.styled-select").toggleClass('active');
+            $("h4.sort-label").toggleClass('active');
+        });
+    };
+    updateSortColumns();
 
     // SWATCHES : Trigger event emit to re-render swatches
     $.event.trigger({
