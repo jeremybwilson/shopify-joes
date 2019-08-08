@@ -88,7 +88,7 @@
           <meta itemprop="priceCurrency" content="{{ shop.currency }}">
           <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
           {% capture product_form_config %}
-            
+
             {
                 "button": {{ 'products.product.add_to_cart' | t | json }},
                 "currency_switcher_enabled": {{ settings.show_multiple_currencies | json }},
@@ -133,6 +133,15 @@
                         {{ product_description }}
                     </dd>
                 </dl><!-- .product-desc product-description -->
+
+                <div class="clear"></div>
+                {% comment %} :: SKU :: {% endcomment %}
+                {% if section.settings.show_sku and product_type != 'gift card' %}
+                  <div class="product-number">
+                    Style: <span class="product-sku">{{ current_variant.sku | split: '-' | first }}</span>
+                  </div>
+                {% endif %}
+                <div class="clear"></div>
 
                 {% comment %} Check if Details available then only Show detail section {% endcomment %}
                 {% if product_detail != blank %}
@@ -193,7 +202,6 @@
                         </div>
                       {% endif %}
                     {% endif %}
-            {% endif %}
 
           {% endunless %}
         </div>
