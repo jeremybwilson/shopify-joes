@@ -13,7 +13,7 @@
             <div class="ajaxcart__inner">
                 {{#items}}
                     <div class="ajaxcart__product">
-                        <div class="ajaxcart row" data-line="{{line}}">
+                        <div class="ajaxcart row" data-line="{{line}}" data-id="{{id}}">
                             {{!-- :: PRODUCT IMAGE :: --}}
                             <div class="grid__item desktop-4 tablet-2 mobile-1">
                                 <a href="{{url}}" class="ajaxcart__product-image"><img src="{{img}}" alt="{{name}}"></a>
@@ -36,7 +36,9 @@
                                                             {{#if_not_eq @key 'Sender Email'}}
                                                                 {{#if_not_eq @key 'Recipient Email'}}
                                                                     {{#if_not_eq @key 'Message'}}
-                                                                        <span class="ajaxcart__product-meta">{{@key}}: {{this}}</span>
+                                                                        {{#unless_contains @key '_private'}}
+                                                                            <span class="ajaxcart__product-meta">{{@key}}: {{this}}</span>
+                                                                        {{/unless_contains}}
                                                                     {{/if_not_eq}}
                                                                 {{/if_not_eq}}
                                                             {{/if_not_eq}}
@@ -62,7 +64,7 @@
                                 {{#if properties.discountItem }}
                                     <div class="display-table">
                                         <div class="display-table-cell">
-                                            <a class="ajaxcart__remove" data-line="{{line}}">Remove</a>
+                                            <a class="ajaxcart__remove" data-line="{{line}}" data-id="{{id}}">Remove</a>
                                         </div>
                                     </div>
 
