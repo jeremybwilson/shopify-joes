@@ -155,7 +155,7 @@ ul{padding:0 0px; margin: 0px;}
     padding-top: 30px;
     padding-bottom:0px;
     background-color: {{ settings.header_background }}; //$white-color;
-    border-bottom: $border-grey-1;
+    border-bottom:0px;
 
     @include mq('phone-and-tablet'){
        display:inline-block;
@@ -408,6 +408,11 @@ ul{padding:0 0px; margin: 0px;}
     }
 }
 
+  .nav-list-space li:not(.bold_text) a {
+      font-size: 12px;
+      padding-left: 5px;
+  }
+
 /*acodeant*/
 #nav-menu-mobile{
   left:-100%;
@@ -424,7 +429,7 @@ ul{padding:0 0px; margin: 0px;}
     overflow-y: auto;
 
     @include mq('tablet'){
-      top: 116px;
+      top: 115px;
       height: calc(100vh - 116px) !important;
     }
 }
@@ -767,16 +772,8 @@ ul{padding:0 0px; margin: 0px;}
     .bold_text > a {
          font-weight: bold;
     }
-    .bold_text > .menu-nolink {
-         font-weight: bold;
-         font-size: 12px;
-         text-transform: uppercase;
-
-         @include mq('laptop'){
-            font-size:$font-15;
-         }
-    }
 }
+
 
 .bc-sf-search-suggestion{min-width:320px !important;}
 

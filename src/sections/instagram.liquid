@@ -17,7 +17,7 @@
                 <div class="newsletter-homepage">
                     <div class="heading-part">
                         {% if section.settings.heading != blank %}
-                          <h2>{{ section.settings.heading | escape }}</h2>
+                          <h2 class="flex-center">{{ section.settings.heading | escape }} <span class="instagram-icon"> {% include 'svg-icon-instagram' %}</span></h2>
                         {% endif %}
                         {% if section.settings.text != blank %}
                           <div class="copy">{{ section.settings.text }}</div>

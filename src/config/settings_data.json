@@ -570,7 +570,7 @@
                 "type": "instagram",
                 "settings": {
                     "heading": "As Seen On",
-                    "text": "<p>Use <strong>#InMyJoes<\/strong> for your photos to be featured. Tap to shop.<\/p>",
+                    "text": "",
                     "link": "https:\/\/www.instagram.com\/joesjeans\/",
                     "cta_text": "FOLLOW US"
                 }

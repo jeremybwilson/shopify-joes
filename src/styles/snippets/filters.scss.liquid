@@ -16,18 +16,30 @@
     z-index: 99;
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.22);     
     display:none;
+    width: min-content;
+    max-height:400px;
+    overflow-x: auto;
 
     @include mq('phone'){
         left:auto;
         right:0;
     }
 
+    @include mq('mobile-potraite'){
+        max-width: 250px;
+    } 
+
     li{
         padding: 5px 15px;
+        white-space:nowrap;
 
         @include mq('phone'){
           padding:8px 15px;  
         }
+
+         @include mq('mobile-potraite'){
+            white-space: normal;
+         }
     }  
 
     .li-active{
@@ -120,10 +132,11 @@
 }
 
 .filter-open #filter-bg-shadow {
-    opacity: 0.7;
+    opacity: 0;
     pointer-events: all;
-    height:100%;
-    display:none;
+    height:100vh;
+    position: fixed;
+    top:0;
 }
 
  .bc-sf-filter-clear {
@@ -221,6 +234,7 @@
 
 .bc-sf-filter-option-block .bc-sf-filter-block-content ul li input[type=checkbox]+a{
    padding:0px !important;
+   white-space: nowrap;
 }
 
 .bc-sf-filter-pc.bc-sf-filter-selection-wrapper {
@@ -273,7 +287,7 @@
 .bc-sf-filter-option-block{
     position: relative;
     margin-bottom: 0;
-    width:auto;
+    width: min-content;
     margin-right: 20px !important;
     margin-bottom: 30px !important;
 
@@ -300,19 +314,26 @@
     .bc-sf-filter-option-amount{
       display:none;
     }
+    
+    #bc-sf-filter-block-content-size .bc-sf-filter-option-multiple-list {
+        min-width: 75px;
+    }
+
     .bc-sf-filter-block-content-inner{
         display: flex;
         .bc-sf-filter-option-multiple-list{
-            max-width: 130px;
+            max-width: min-content;
             width: 100%;
+            min-width: 130px;
+            padding-right: 15px;
 
-            @include mq('lap'){
-                max-width: 105px;
+            /*@include mq('lap'){
+                max-width: 130px;
             }
 
             @include mq('tablet'){
-                max-width: 105px;
-            }
+                max-width: 130px;
+            }*/
         }
     }
 }
@@ -468,7 +489,7 @@
             width: 100% !important;
              border:0px;
                a{
-                 text-align:left;  
+                 text-align:left;   
                }
                
                a.selected{

@@ -116,6 +116,7 @@
          text-align: center;
          max-width: 50px;
          border: 1px solid #d2d2d2;
+         border-radius:0px !important;
       }
 }
 
@@ -175,10 +176,16 @@
 
     @include mq('phone'){
        margin-top: 0px !important;
-       height: calc(100vh - 327px);
+       height:100%;
     }
 }
 
+@include mq('phone'){
+  #CartContainer {
+      height: calc(100vh - 60px);
+      overflow-y: auto;
+  }
+}
 
 
 #CartContainer{
@@ -230,6 +237,11 @@ body ._SRD .srd_iconline{
     border-radius: 3px;
     margin-bottom: 8px;
 
+    @include mq('phone'){
+      height:40px;
+      line-height:38px;
+    }
+
     .test-only {
       background-color: rgba(0,0,0,0.5);
       width: 100%;
@@ -247,6 +259,9 @@ body ._SRD .srd_iconline{
 .paypal{background-image: url(../assets/paypal.png); background-size: 75px; background-color: #FEC439;}
 .amazon{background-image: url(../assets/amazon.png); background-size: 100px; background-position-y: 12px; background-color: #F9D675;}
 .applepay{background-image: url(../assets/apple-pay.png); background-size:50px; background-position-y: 11px; background-color:#ffe395;}
+
+
+
 // Checkout
 
 button.cart__checkout {
@@ -255,7 +270,24 @@ button.cart__checkout {
   min-width:100%;
   margin-bottom:8px;
   letter-spacing: 1.02px;
+
+  @include mq('phone'){
+    min-width: 100%;
+    height: 48px;
+    text-align: center;
+    line-height: 43px;
+    font-size: 15px;
+  }
 }
+
+.additional_checkout_buttons .additional-checkout-button--google-pay {
+    width: 100% !important;
+
+    .gpay-iframe{
+      height:40px !important;
+    }
+}
+
 
 
 /*popup-cart*/
