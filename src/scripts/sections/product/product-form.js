@@ -312,6 +312,7 @@ theme.ProductForm = function (context, events) {
 
   // ITEM : SKU
   (function sku() {
+    return false;
     var element = document.querySelector(".product-sku");
 
     if ( !element ) {

@@ -88,7 +88,7 @@
           <meta itemprop="priceCurrency" content="{{ shop.currency }}">
           <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
           {% capture product_form_config %}
-            
+
             {
                 "button": {{ 'products.product.add_to_cart' | t | json }},
                 "currency_switcher_enabled": {{ settings.show_multiple_currencies | json }},
@@ -123,16 +123,24 @@
               {% assign product_detail = other_product_detail[0] %}
               {% assign fit_imformation = other_product_detail[1] %}
 
-              {% comment %} :: Product description :: 'Before content of <!-- details -->' {% endcomment %}
-              <hr class="product-hr">
-              <dl id="product-description--accordion" class="product-desc product-description">
-                {% comment %} :: PRODUCT DETAIL - Header :: {% endcomment %}
-                <dt id="product-description---accordion-header" class="accordion-header-pdp open"><h3>Description</h3><span class="opener">{% include 'svg-icon-caret-down' %}</span></dt>
-                {% comment %} :: PRODUCT DETAIL - Content :: {% endcomment %}
-                <dd id="product-description--accordion-content" class="accrodion-content-pdp" style="display:block">
-                  {{ product_description }}
-                </dd>
-              </dl><!-- .product-desc product-description -->
+                {% comment %} :: Product description :: 'Before content of <!-- details -->' {% endcomment %}
+                <hr class="product-hr">
+                <dl id="product-description--accordion" class="product-desc product-description">
+                    {% comment %} :: PRODUCT DETAIL - Header :: {% endcomment %}
+                    <dt id="product-description---accordion-header" class="accordion-header-pdp open"><h3>Description</h3><span class="opener">{% include 'svg-icon-caret-down' %}</span></dt>
+                    {% comment %} :: PRODUCT DETAIL - Content :: {% endcomment %}
+                    <dd id="product-description--accordion-content" class="accrodion-content-pdp" style="display:block">
+                        {{ product_description }}
+                        <div class="clear"></div>
+                          {% comment %} :: SKU :: {% endcomment %}
+                          {% if section.settings.show_sku and product_type != 'gift card' %}
+                            <div class="product-number">
+                              Style: <span class="product-sku">{{ current_variant.sku | split: '-' | first }}</span>
+                            </div>
+                          {% endif %}
+                        <div class="clear"></div>
+                    </dd>
+                </dl><!-- .product-desc product-description -->
 
               {% comment %} Check if Details available then only Show detail section {% endcomment %}
               {% if product_detail != blank %}
@@ -176,25 +184,23 @@
               <div class="shipping-title">{{ section.settings.shipping_header_text }}</div>
               <div class="shipping-text">{{ section.settings.shipping_text }}</div>
 
-              {% if section.settings.shipping_learn_more_link != blank or section.settings.shipping_show_account_link %}
-                <div class="free-shipping-links">
-                  {% if section.settings.shipping_learn_more_link != blank %}
-                    <a href="{{ section.settings.shipping_learn_more_link }}" class="free-shipping-link">Learn More</a>
-                  {% endif %}
-
-                  {% if section.settings.shipping_show_account_link %}
-                    <a href="/account" class="free-shipping-link">
-                      {% if customer %}
-                        My Account
-                      {% else %}
-                        Sign In
+                      {% if section.settings.shipping_learn_more_link != blank or section.settings.shipping_show_account_link %}
+                        <div class="free-shipping-links">
+                          {% if section.settings.shipping_learn_more_link != blank %}
+                            <a href="{{ section.settings.shipping_learn_more_link }}" class="free-shipping-link">Learn More</a>
+                          {% endif %}
+                          {% if section.settings.shipping_show_account_link %}
+                            <a href="/account" class="free-shipping-link">
+                              {% if customer %}
+                                My Account
+                              {% else %}
+                                Sign In
+                              {% endif %}
+                            </a>
+                          {% endif %}
+                        </div>
                       {% endif %}
-                    </a>
-                  {% endif %}
-                </div>
-              {% endif %}
-
-            {% endif %}
+                    {% endif %}
 
           {% endunless %}
         </div>

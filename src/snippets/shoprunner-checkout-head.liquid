@@ -39,6 +39,54 @@
      * -----------------------------------------
      */
 
+     // Cookie Methods
+     var _sr_cookie = {
+       get: function getCookie(name) {
+         var nameEq = name + '=';
+         var cookies = document.cookie.split(';');
+         for (var i = 0; i < cookies.length; i++) {
+           var cookie = cookies[i];
+           while (cookie.charAt(0) === ' ') {
+             cookie = cookie.substring(1, cookie.length);
+           }
+           if (cookie.indexOf(nameEq) === 0) {
+             return cookie.substring(nameEq.length, cookie.length);
+           }
+         }
+
+         return null;
+       },
+       set: function setCookie(name, value, options) {
+         var expires = '';
+         if (options && typeof options.expirationMinutes === 'number') {
+           var date = new Date();
+           date.setTime(date.getTime() + (options.expirationMinutes * 60 * 1000));
+           expires += '; expires=' + date.toUTCString();
+         }
+         document.cookie = name + '=' + value + expires + '; path=/';
+       },
+       clear: function clearCookie(name) {
+         this.set(name, '', {
+           expirationMinutes: -1
+         })
+       }
+     };
+
+     // Token Methods
+     window._sr_token = {
+       get: function getSrToken() {
+         return _sr_cookie.get('sr_token');
+       },
+       set: function setSrToken(value, expirationMinutes) {
+         _sr_cookie.set('sr_token', value, {
+           expirationMinutes: expirationMinutes
+         });
+       },
+       clear: function clearSrToken() {
+         _sr_cookie.clear('sr_token');
+       }
+     };
+
      {% assign retailer_id = settings.shoprunner_retailer_id %}
      {% if retailer_id == blank %}
          console.log( '[shoprunner_init] : Retailer ID was blank, please add one or disable shoprunner in settings.' );
