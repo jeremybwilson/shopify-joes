@@ -329,6 +329,24 @@
       }
     }
 
+    function addShoprunnerDivstoProduct(){
+      // Add SR div except Thank you page.
+      if ($('html.page--thank-you').length == 0) {
+        // Add SR div after Product Summary
+        if ($('.order-summary__section__content [name="sr_headerDiv"]').length == 0) {
+          $('.order-summary__section__content').append('<div style="margin-bottom: 20px;" name="sr_headerDiv"></div>');
+        }
+
+        // Add SR div in All product <td>
+        if ($('.product-table .product__description [name="sr_cartProductDiv"]').length == 0) {
+          $('.product__description').append('<span class="shoprunner-indicator"><div class="sr-cart-icon" name="sr_cartProductDiv" style="margin: 10px 0; width: 100%"></div></span>');
+        }
+        if (typeof window.sr_updateMessages !== "undefined") {
+          window.sr_updateMessages();
+        }
+      }
+    };
+
     function updateShipping() {
       if (!_sr_token.get()) {
         // Disable and select 2nd radio button in list if not signed in
@@ -354,8 +372,10 @@
         Behaviour.prototype.updatePage = function(){
           _old_Behaviour_prototype_updatePage.apply(this, arguments);
           addShoprunnerDivs();
+          addShoprunnerDivstoProduct();
         }
         addShoprunnerDivs();
+        addShoprunnerDivstoProduct();
 
 
         $(document.body).on('sr_sign_in', function(data){
