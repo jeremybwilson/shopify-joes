@@ -116,12 +116,12 @@
 
           {% unless template == 'product.quick' %}
             {% if product.description != blank %}
-                {% assign full_product_description = product.description | split: '<!-- details -->' %}
-                {% assign product_description = full_product_description[0] %}
+              {% assign full_product_description = product.description | split: '<!-- details -->' %}
+              {% assign product_description = full_product_description[0] %}
 
-                {% assign other_product_detail = full_product_description[1] | split: '<!-- fit_info -->' %}
-                {% assign product_detail = other_product_detail[0] %}
-                {% assign fit_imformation = other_product_detail[1] %}
+              {% assign other_product_detail = full_product_description[1] | split: '<!-- fit_info -->' %}
+              {% assign product_detail = other_product_detail[0] %}
+              {% assign fit_imformation = other_product_detail[1] %}
 
                 {% comment %} :: Product description :: 'Before content of <!-- details -->' {% endcomment %}
                 <hr class="product-hr">
@@ -142,47 +142,47 @@
                     </dd>
                 </dl><!-- .product-desc product-description -->
 
-                {% comment %} Check if Details available then only Show detail section {% endcomment %}
-                {% if product_detail != blank %}
-                    <hr class="product-hr">
-                    <dl id="product-detail--accordion" class="product-desc product-details">
-                        {% comment %} :: PRODUCT DETAIL - Header :: {% endcomment %}
-                        <dt id="product-detail---accordion-header" class="accordion-header-pdp"><h3>Details</h3><span class="opener">{% include 'svg-icon-caret-down' %}</span></dt>
+              {% comment %} Check if Details available then only Show detail section {% endcomment %}
+              {% if product_detail != blank %}
+                <hr class="product-hr">
+                <dl id="product-detail--accordion" class="product-desc product-details">
+                  {% comment %} :: PRODUCT DETAIL - Header :: {% endcomment %}
+                  <dt id="product-detail---accordion-header" class="accordion-header-pdp"><h3>Details</h3><span class="opener">{% include 'svg-icon-caret-down' %}</span></dt>
 
-                        {% comment %} :: PRODUCT DETAIL - Content :: {% endcomment %}
-                        <dd id="product-detail--accordion-content" class="accrodion-content-pdp">
-                            {{ product_detail }}
-                        </dd>
-                    </dl><!-- .product-desc product-details -->
-                {% endif %}
+                  {% comment %} :: PRODUCT DETAIL - Content :: {% endcomment %}
+                  <dd id="product-detail--accordion-content" class="accrodion-content-pdp">
+                    {{ product_detail }}
+                  </dd>
+                </dl><!-- .product-desc product-details -->
+              {% endif %}
 
-                {% comment %} Check if Fit Information available then only Show Fit Information section {% endcomment %}
-                {% if fit_imformation != blank %}
-                    <hr class="product-hr">
-                    <dl id="product-fit--accordion" class="product-desc product-fit-info">
-                        {% comment %} :: PRODUCT DETAIL - Header :: {% endcomment %}
-                        <dt id="product-fit---accordion-header" class="accordion-header-pdp"><h3>Fit Information</h3><span class="opener">{% include 'svg-icon-caret-down' %}</span></dt>
+              {% comment %} Check if Fit Information available then only Show Fit Information section {% endcomment %}
+              {% if fit_imformation != blank %}
+                <hr class="product-hr">
+                <dl id="product-fit--accordion" class="product-desc product-fit-info">
+                  {% comment %} :: PRODUCT DETAIL - Header :: {% endcomment %}
+                  <dt id="product-fit---accordion-header" class="accordion-header-pdp"><h3>Fit Information</h3><span class="opener">{% include 'svg-icon-caret-down' %}</span></dt>
 
-                        {% comment %} :: PRODUCT DETAIL - Content :: {% endcomment %}
-                        <dd id="product-fit--accordion-content" class="accrodion-content-pdp">
-                            {{ fit_imformation }}
-                        </dd>
-                    </dl><!-- .product-desc product-fit-info -->
-                {% endif %}
+                  {% comment %} :: PRODUCT DETAIL - Content :: {% endcomment %}
+                  <dd id="product-fit--accordion-content" class="accrodion-content-pdp">
+                    {{ fit_imformation }}
+                  </dd>
+                </dl><!-- .product-desc product-fit-info -->
+              {% endif %}
             {% endif %}
 
             {% comment %} FREE SHIPPING & RETURNS {% endcomment %}
 
             {% if section.settings.shipping_text != blank or settings.shoprunner_enabled %}
               <hr class="product-hr">
-                    {% comment %} :: SHOPRUNNER :: {% endcomment %}
-                    {% if settings.shoprunner_enabled and template != 'product.quick' %}
-                      {% include 'shoprunner-pdp'%}
-                    {% endif %}
+                {% comment %} :: SHOPRUNNER :: {% endcomment %}
+                {% if settings.shoprunner_enabled and template != 'product.quick' %}
+                  {% include 'shoprunner-pdp'%}
+                {% endif %}
 
-                    {% else %}
-                        <div class="shipping-title">{{ section.settings.shipping_header_text }}</div>
-                      <div class="shipping-text">{{ section.settings.shipping_text }}</div>
+            {% else %}
+              <div class="shipping-title">{{ section.settings.shipping_header_text }}</div>
+              <div class="shipping-text">{{ section.settings.shipping_text }}</div>
 
                       {% if section.settings.shipping_learn_more_link != blank or section.settings.shipping_show_account_link %}
                         <div class="free-shipping-links">
