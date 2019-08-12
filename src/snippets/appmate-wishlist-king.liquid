@@ -395,7 +395,7 @@
   {% else %}
     {% assign link_icon = 'wishlist-icon-empty' %}
   {% endif %}
-  <a href="{{ wishlist.url }}" class="wk-link wk-{{ wishlist.state }}" title="View Wishlist"><div class="wk-icon">{% include link_icon %}</div><span class="wk-label">Wishlist</span> <span class="wk-count">({{ wishlist.item_count }})</span></a>
+  <a href="{{ wishlist.url }}" class="wk-link wk-{{ wishlist.state }}" title="View Wishlist" aria-label="wishlist"><div class="wk-icon">{% include link_icon %}</div><span class="wk-label">Wishlist</span> <span class="wk-count">({{ wishlist.item_count }})</span></a>
 </script>
 
 <script
