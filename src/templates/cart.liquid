@@ -104,7 +104,7 @@
         <input type="submit" name="checkout" id="checkout" value="{{ 'cart.general.checkout' | t }}" class="button bfx-checkout" />
         <div class="clear"></div>
         {% if additional_checkout_buttons %}
-          {{ content_for_additional_checkout_buttons }}
+            {% comment %}{{ content_for_additional_checkout_buttons }}{% endcomment %}
         {% endif %}
         <div class="clear"></div>
       </div>
