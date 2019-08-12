@@ -9,11 +9,8 @@
     margin: 0px auto;
 
    h5 {
-      p{
-       @include h5-heading;
-          
-        @include mq('phone-and-tablet'){max-width:90%; margin: 0px auto;} 
-      }
+       @include h5-heading;  
+       @include mq('phone-and-tablet'){max-width:90%; margin: 0px auto;} 
    }
    
    @include mq('phone-and-tablet'){max-width: 65% !important;}

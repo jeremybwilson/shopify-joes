@@ -41,7 +41,7 @@
         {% include 'mobile-product-image-gallery' %}
       {%- else -%}
         {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
-        <img id="{{ product.id }}" class="product-main-image" src="{{ 'bc-sf-filter-no-image.gif' | asset_url | product_img_url: '800x' }}" alt='{{ product.title | escape }}' style="max-width: 100%;"/>
+        <img class="product-main-image" src="{{ 'bc-sf-filter-no-image.gif' | asset_url | product_img_url: '800x' }}" alt='{{ product.title | escape }}' style="max-width: 100%;"/>
       {%- endif -%}
 
       {% comment %} :: MOBILE VIDEO PLAYER :: {% endcomment %}
