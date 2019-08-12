@@ -13,14 +13,14 @@
         <p class="intro">{{ settings.email_popup_bottom_text }}</p>
         {% endunless %}
         <form class="subcribe-form" id="subcribe-form">
-            <input class="form-field" type="email" id="email" name="Email" placeholder="{{ settings.email_popup_input_placeholder }}">
-            <input class="form-field" type="text" id="birthdate-datepicker" placeholder="{{ settings.dob_popup_input_placeholder }}">
+            <input class="form-field" type="email" aria-label="Enter Your Email address" id="email" name="Email" placeholder="{{ settings.email_popup_input_placeholder }}">
+            <input class="form-field" type="text" aria-label="Enter Your Birthdate" id="birthdate-datepicker" placeholder="{{ settings.dob_popup_input_placeholder }}">
             <input type="hidden" id="birthdate" name="Birthdate" value="">
             <br/>
             <p class="intro">{{ settings.email_popup_interested_text }}</p>
             <div class="men-women-category">
                 <label class="custom-radio">Women's
-                    <input type="radio" checked="checked" name="signup_for" value="women" id="signup_for">
+                    <input type="radio" name="signup_for" value="women" id="signup_for">
                     <span class="checkmark"></span>
                 </label>
                 <label class="custom-radio">Men's
@@ -32,9 +32,9 @@
                     <span class="checkmark"></span>
                 </label>
             </div>
-            <label id="button-footer-newsletter-submit" for="footer-newsletter-submit">
+            <div id="button-footer-newsletter-submit" for="footer-newsletter-submit">
                 <input class="subscribe-button" id="footer-newsletter-submit" type="submit" value="Subscribe">
-            </label>
+            </div>
         </form>
         <div id="subscribe--popup--form-response">
             <div id="subscribe--popup--error-response" style="display:none;">{{ settings.email_popup_error }}</div>
