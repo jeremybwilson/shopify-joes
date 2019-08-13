@@ -131,8 +131,11 @@ BCSfFilter.prototype.buildProductGridItem = function(data, index, totalProduct) 
         //Find subtitle_ and add to product list
         var joesJeansSwatchTags = findTag('subtitle_');
         if (joesJeansSwatchTags.length > 0) {
-            var findTag = JSON.stringify(joesJeansSwatchTags).replace('subtitle_', '');
-            itemHtml = itemHtml.replace(/{{jjeansSwatch}}/g, findTag.replace(/\[|\]|\"/g, ''));
+            var findTag = JSON.stringify(joesJeansSwatchTags)
+                .replace('["subtitle_', '')
+                .replace('"]','') // closing bracket
+                .replace('\\"','"'); // escaped quotes for inches
+            itemHtml = itemHtml.replace(/{{jjeansSwatch}}/g, findTag);
         } else {
             itemHtml = itemHtml.replace(/{{jjeansSwatch}}/g, ''); //No badge, remove block
         }
@@ -180,7 +183,7 @@ BCSfFilter.prototype.buildProductGridItem = function(data, index, totalProduct) 
 
         itemPriceHtml += '</div>';
     }
-    itemHtml = itemHtml.replace(/{{itemPrice}}/g, itemPriceHtml);
+    itemHtml = itemHtml.replace('{{itemPrice}}', itemPriceHtml);
 
 
     // QUICK VIEW : Add quickview template and setup for fancybox usage
