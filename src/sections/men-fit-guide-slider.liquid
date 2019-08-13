@@ -1,0 +1,38 @@
+{% if section.blocks.size > 0 %}
+
+    <div class="fit-image-slider"></div>
+    {% capture products_list %}
+        {% for block in section.blocks %}{{ block.settings.collection }}|{{ block.settings.desktop_banner | img_url: '2000x' }}|{{ block.settings.mobile_banner | img_url: '800x' }}{% if forloop.last == false %}::{% endif%}{% endfor %}    {% endcapture %}
+    {% assign products_array = products_list | split: '::'%}
+    <input type="hidden" data-id="fitsliderobject" data-slider-value='{{ products_list }}'>
+{% endif %}
+{% schema %}
+{
+    "name": "Men Fit Guide Top Slider",
+    "blocks": [
+        {
+            "name": "Top Slider Image",
+            "type": "slider_image",
+            "settings": [
+                {
+                    "type": "collection",
+                    "id": "collection",
+                    "label": "Select collection"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "desktop_banner",
+                    "label": "Desktop Banner",
+                    "info": "Desktop Image Size: 1340X720 px"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "mobile_banner",
+                    "label": "Mobile Banner",
+                    "info": "Mobile Image Size: 320X467 px"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}
