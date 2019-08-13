@@ -104,15 +104,22 @@
                     {% endif %}
 
                     {% comment %} :: CTA BUTTONS :: {% endcomment %}
-                    {% if block.settings.cta_one_link != blank and block.settings.cta_one_button_text != blank %}
                       <div class="buttons-row">
 
                         {% comment %} :: BUTTON #1 :: {% endcomment %}
-                        <div class="cta show-lines--{{ block.settings.cta_one_line }}" id="cta-one-{{ block.id }}">
-                          <a class="white-button" href="{{ block.settings.cta_one_link }}">{{ block.settings.cta_one_button_text }}<div class="cta-line-right"></div></a>
-                        </div>
+                        {% if block.settings.cta_one_link != blank and block.settings.cta_one_button_text != blank %}
+                          <div class="cta show-lines--left" id="cta-one-{{ block.id }}">
+                            <a class="white-button" href="{{ block.settings.cta_one_link }}">{{ block.settings.cta_one_button_text }}</a>
+                          </div>
+                        {% endif %}
+
+                        {% comment %} :: BUTTON #2 :: {% endcomment %}
+                        {% if block.settings.cta_two_link != blank and block.settings.cta_two_button_text != blank %}
+                          <div class="cta show-lines--left" id="cta-two-{{ block.id }}">
+                            <a class="white-button" href="{{ block.settings.cta_two_link }}">{{ block.settings.cta_two_button_text }}</a>
+                          </div>
+                        {% endif %}
                       </div>
-                    {% endif %}
                   </div>
                 </div>
               </li>
@@ -204,11 +211,6 @@
 
                 .flex-caption.slide-{{ block.id }} .cta a:hover {
                   background-color: {{ cta_bg_hover_color }};
-                }
-
-                .flex-caption.slide-{{ block.id }} .cta .cta-line-left,
-                .flex-caption.slide-{{ block.id }} .cta .cta-line-right {
-                  background-color: {{ slide_text_color }};
                 }
 
               </style>
@@ -305,7 +307,7 @@
         },
         {
           "type": "header",
-          "content": "-- CAPTION : BUTTON --"
+          "content": "-- CAPTION : BUTTON #1 --"
         },
         {
           "type": "text",
@@ -319,29 +321,22 @@
           "id": "cta_one_link",
           "label": "Link"
         },
+
         {
-          "type": "select",
-          "id": "cta_one_line",
-          "label": "CTA Line Placement",
-          "default": "none",
-          "options": [
-            {
-              "value": "none",
-              "label": "None"
-            },
-            {
-              "value": "left",
-              "label": "Left"
-            },
-            {
-              "value": "right",
-              "label": "Right"
-            },
-            {
-              "value": "both",
-              "label": "Both"
-            }
-          ]
+          "type": "header",
+          "content": "-- CAPTION : BUTTON #2 --"
+        },
+        {
+          "type": "text",
+          "id": "cta_two_button_text",
+          "label": "Button text",
+          "default": "Add a button",
+          "info": "(Visible only if a link is set)"
+        },
+        {
+          "type": "url",
+          "id": "cta_two_link",
+          "label": "Link"
         },
 
         {
