@@ -168,7 +168,8 @@
       let tenderType = [];
 
       {% for transaction in checkout.transactions %}
-        switch( '{{ transaction.payment_details.credit_card_company }}' )
+        var cardCompany = '{{ transaction.payment_details.credit_card_company | downcase }}';
+        switch( cardCompany )
         {
           case 'american express':
             tenderType.push('AX');
