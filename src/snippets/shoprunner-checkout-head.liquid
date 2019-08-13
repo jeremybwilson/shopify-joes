@@ -139,7 +139,7 @@
 
   function _srOrderSubmit() {
     if (typeof Shopify !== 'undefined' && Shopify.Checkout.hasOwnProperty('OrderStatus')) {
-      let srToken = "{{ checkout.attributes['sr_token'] }}";
+      var srToken = "{{ checkout.attributes['sr_token'] }}";
 
       srToken = srToken.replace(/(&quot\;)/g,"");
 
@@ -165,7 +165,7 @@
       _shoprunner_com.totalOrderAmount = {{ totalOrderAmount }};
       _shoprunner_com.billingSubTotal = {{ srSubTotal }};
 
-      let tenderType = [];
+      var tenderType = [];
 
       {% for transaction in checkout.transactions %}
         var cardCompany = '{{ transaction.payment_details.credit_card_company | downcase }}';
