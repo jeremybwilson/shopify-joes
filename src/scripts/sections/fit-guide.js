@@ -34,7 +34,7 @@ theme.FitGuide = (function() {
         });
         //$(".fit-image-slider").unslick();
         $(".fit-image-slider").html(top_image_slider);
-        $('.fit-image-slider').slick({
+        /*$('.fit-image-slider').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: false,
@@ -65,7 +65,7 @@ theme.FitGuide = (function() {
                     }
                 }
             ]
-        });
+        });*/
 
         $.ajax({
             url: shop_url + "/collections/" + collectionhandle + "/products.json?limit=20",
