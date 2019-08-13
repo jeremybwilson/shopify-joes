@@ -550,7 +550,7 @@ BCSfFilter.prototype.buildAdditionalElements = function(data, eventType) {
                 var j = 0;
                 for (var i = 0; i < filterCount; i += filterSplitAfter) {
                     // First lets Append UL with same class but different ID after default/ previous UL
-                    $("#" + filterMainid + " #column" + j).after('<ul class="'+ filterWraperClass +'"></ul>');
+                    $("#" + filterMainid + " #column" + j).after('<ul class="'+ filterWraperClass +'" id="column' + column + '"></ul>');
 
                     // Now split Main LI's and add them to new appended UL
                     $("#" + filterMainid + " #column" + column).html($(".removing li").splice(0, filterSplitAfter));
