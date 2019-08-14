@@ -138,6 +138,7 @@
                         <a href="#" class="payment-button applepay"><span class="test-only">Test Only</span></a>
                     {% endraw %}
                 {% endif %}
+                <p class="affirm-as-low-as" data-amount="{{cart.total_price}}" data-page-type="cart"></p>
                 {% if additional_checkout_buttons %}
                     {% comment %}<div class="additional_checkout_buttons">{{ content_for_additional_checkout_buttons }}</div>{% endcomment %}
                 {% endif %}

@@ -5,19 +5,75 @@ theme.FitGuide = (function() {
             var parent = $(".collection-fit-guid-click:first").parents('.fit-guid-collection-div');
             var is_first_time = 1;
 
+            load_topslider(collectionhandle);
             load_products(collectionhandle,parent,is_first_time);
         });
         $(document).on('click','.collection-fit-guid-click',function(){
             var collectionhandle = $(this).attr('data-collection-handle');
             var parent = $(this).parents('.fit-guid-collection-div');
+
+            $('.fit-image-slider').slick('unslick');
+            load_topslider(collectionhandle);
             load_products(collectionhandle,parent);
         });
+    }
+    function load_topslider(collectionhandle) {
+        var slider_value = $('[data-id="fitsliderobject"]').attr('data-slider-value');
+
+        var image_slider_array = ( slider_value != '' || typeof slider_value != "undefined" )? slider_value.split('::'): [];
+        if (image_slider_array.length > 0){
+            var slideCount = 0;
+            var top_image_slider = '';
+            $.each(image_slider_array, function (key, value) {
+                var each_sliderimage = value.split('|');
+                if ( $.trim(each_sliderimage[0]) == collectionhandle){
+                    top_image_slider += '<div class="banner-only-images" data-section-id="fit-top-'+ collectionhandle +'">';
+                    top_image_slider += '<img class="desktop_image" src="'+ $.trim(each_sliderimage[1]) +'" alt="desktop_banner">';
+                    top_image_slider += '<img class="desktop_image" src="'+ $.trim(each_sliderimage[2]) +'" alt="mobile_banner">';
+                    top_image_slider += '</div>';
+                    slideCount ++;
+                }
+            });
+            //$(".fit-image-slider").unslick();
+            $(".fit-image-slider").html(top_image_slider);
+            if (slideCount <=1) return true;
+            $('.fit-image-slider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: false,
+                autoplaySpeed:false,
+                centerPadding: '3px',
+                responsive: [
+                    {
+                        breakpoint:991,
+                        settings: {
+                            centerMode: true
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            centerMode: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            centerMode: true,
+                            dots: true
+                        }
+                    }
+                ]
+            });
+        }
     }
     function load_products(collectionhandle,parent,is_first_time = 0) {
         var main_class_select_product = parent;
         var title = main_class_select_product.find('.name').html();
         var description = main_class_select_product.find('.fit-guid-description').html();
         var slider_html = "<div class='skinny-part'><h2>"+ title +"</h2><p>" + description + "</p><div class='skinny-slider'>";
+
         $.ajax({
             url: shop_url + "/collections/" + collectionhandle + "/products.json?limit=20",
             type: 'GET'
@@ -28,7 +84,7 @@ theme.FitGuide = (function() {
             if(!is_first_time){
                 $('html, body').animate({
                     scrollTop: $('[data-section-type="fit-guide"]').offset().top - $("#nav-bar-wrapper").height()
-                }, 2000);
+                }, 1000);
             }
             var products = data.products;
             $(products).each(function(index){//console.log(this);

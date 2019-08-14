@@ -318,6 +318,10 @@
     transform: rotate(180deg)
 }
 
+.filter-open #filter-list-mobile-wrap #bc-sf-filter-tree {
+    display: block !important;
+}
+
 .bc-sf-filter-option-block {
     position: relative;
     margin-bottom: 0;
@@ -348,7 +352,8 @@
     .bc-sf-filter-option-block {
         max-width:100%;
         margin-right: 0px !important;
-        margin-bottom: 0px !important
+        margin-bottom: 0px !important;
+        width:100%;
     }
 }
 
@@ -527,7 +532,8 @@
     position: absolute;
     z-index: 99;
     background-color: #fff;
-    margin: 0px
+    margin: 0px;
+    display:none !important;
 }
 
 #filter-list-mobile-wrap #bc-sf-filter-tree .bc-sf-filter-option-block {
@@ -595,4 +601,11 @@
     line-height: 16px;
     letter-spacing: 0;
     margin-left: 0px !IMPORTANT
+}
+
+
+.template-search{
+    #bc-sf-filter-tree-mobile-button {
+        display: none !important;
+    }
 }
