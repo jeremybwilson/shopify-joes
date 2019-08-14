@@ -1,27 +1,26 @@
-    {% if section.blocks.size > 0 %}
-        <div class="selet-size-part">
-            <div class="container-fluid">
-                <div class="scroll-part">
-                    {% for block in section.blocks %}
-                        {% assign current_collection = collections[block.settings.collection] %}
-                        <!-- Start Collection -->
-                        <div class="main-class-select-product fit-guid-collection-div">
-                            <div class="iamges-part collection-fit-guid-click desktop-fit-image" data-collection-handle="{{current_collection.handle}}">
-                                <img src="{{ block.settings.desktop_fit_image | img_url: '200x' }}" alt="Fit Guide">
-                            </div>
-                            <div class="iamges-part collection-fit-guid-click mobile-fit-image" data-collection-handle="{{current_collection.handle}}">
-                                <img src="{{ block.settings.mobile_fit_image | img_url: '200x' }}" alt="Fit Guide">
-                            </div>
-                            <a class="fit-guid-single-title collection-fit-guid-click" data-collection-handle="{{current_collection.handle}}">
-                                <h5 class="name">{{block.settings.fit_guide_title}}</h5>
-                            </a>
-                            <p class="fit-guid-description hide">{{block.settings.description}}</p>
+{% if section.blocks.size > 0 %}
+    <div class="selet-size-part">
+        <div class="container-fluid">
+            <div class="scroll-part">
+                {% for block in section.blocks %}
+                    {% assign current_collection = collections[block.settings.collection] %}
+                    <!-- Start Collection -->
+                    <div class="main-class-select-product fit-guid-collection-div">
+                        <div class="iamges-part collection-fit-guid-click desktop-fit-image" data-collection-handle="{{current_collection.handle}}">
+                            <img src="{{ block.settings.desktop_fit_image | img_url: '200x' }}" alt="Fit Guide">
                         </div>
-                        <!-- End Collection -->
-                    {% endfor %}
-                </div>
+                        <div class="iamges-part collection-fit-guid-click mobile-fit-image" data-collection-handle="{{current_collection.handle}}">
+                            <img src="{{ block.settings.mobile_fit_image | img_url: '200x' }}" alt="Fit Guide">
+                        </div>
+                        <a class="fit-guid-single-title collection-fit-guid-click" data-collection-handle="{{current_collection.handle}}">
+                            <h5 class="name">{{block.settings.fit_guide_title}}</h5>
+                        </a>
+                        <p class="fit-guid-description hide">{{block.settings.description}}</p>
+                    </div>
+                    <!-- End Collection -->
+                {% endfor %}
             </div>
         </div>
-        <div id="product-slider"></div>
-    {% endif %}
-</div>
+    </div>
+    <div id="product-slider"></div>
+{% endif %}
