@@ -47,24 +47,21 @@ theme.FitGuide = (function() {
                     {
                         breakpoint:991,
                         settings: {
-                            centerMode: true,
-                            slidesToShow:3
+                            centerMode: true
                         }
                     },
                     {
                         breakpoint: 768,
                         settings: {
                             centerMode: true,
-                            dots: true,
-                            slidesToShow:2
+                            dots: true
                         }
                     },
                     {
                         breakpoint: 480,
                         settings: {
                             centerMode: true,
-                            dots: true,
-                            slidesToShow: 1
+                            dots: true
                         }
                     }
                 ]
