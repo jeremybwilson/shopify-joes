@@ -1010,7 +1010,8 @@
     },
     {
         "name": "Subscribe Popup",
-        "settings": [{
+        "settings": [
+            {
                 "type": "checkbox",
                 "id": "popup",
                 "label": "Show Subscribe Popup",
