@@ -59,7 +59,7 @@ $(document).ready(function () {
 
                     if ( typeof zaius !== 'undefined' ) {
                         zaius.subscribe(
-                            {   
+                            {
                                 list_id: 'newsletter',
                                 email: ui.textbox.val()
                             },
