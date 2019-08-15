@@ -118,6 +118,12 @@
       <input type="password" placeholder="Password" value="" name="customer[password]" id="password" class="large password form-field" size="30" />
     </div>
 
+    {%- if settings.enable_newsletter_subscribe -%}
+    <div id="customer_subscribe" class="clearfix large_form" style="margin-bottom: 1em;">
+      <input type="checkbox" name="customer[accepts_marketing]" checked="checked" id="accepts_marketing"/>
+      <label for="accepts_marketing" class="login" style="display:inline; margin-left: .25em;"> Subscribe to our newsletter </label>
+    </div>
+    {%- endif -%}
 
     <div class="action-bottom">
       <input class="secondary button subscribe-button" type="submit" value="{{ 'customer.register.submit' | t }}"/>
