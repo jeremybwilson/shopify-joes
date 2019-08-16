@@ -41,11 +41,8 @@
 
   <!-- Data Layer for GTM
   ================================================== -->
+    {% include 'script-data-layer' %}
     {% include 'script-google-tag-head' %}
-    
-    {%- if settings.enable_script_data_layer -%}
-      {% include 'script-data-layer' %}
-    {%- endif -%}
     {% include 'script-smarterhq-checkout' %}
 
     {% if settings.favicon %}
