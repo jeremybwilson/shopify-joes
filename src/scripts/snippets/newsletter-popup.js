@@ -9,11 +9,11 @@ $(document).ready(function () {
 
         // COOKIES : Check cookies (including GDPR)
         var check_popup_cookie = $.cookie('mailing_list_delay_popup');
-        var check_banner_cookie = $.cookie('gdpr_banner_read');
+        // var check_banner_cookie = $.cookie('gdpr_banner_read');
 
         // by default, the cookie banner will popup first. once the user hits "accept", then load the newsletter.
         // the newsletter is set to popup again after 7 days. though the cookie banner has already been read,
-        if (check_popup_cookie == null && check_banner_cookie != null) {
+        if (!check_popup_cookie) {
             setTimeout(function () {
                 theme.utils.emailUtils.email_popup_load();
             }, emailPopupDelay );
@@ -59,7 +59,7 @@ $(document).ready(function () {
 
                     if ( typeof zaius !== 'undefined' ) {
                         zaius.subscribe(
-                            {   
+                            {
                                 list_id: 'newsletter',
                                 email: ui.textbox.val()
                             },

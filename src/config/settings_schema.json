@@ -30,6 +30,13 @@
                 "label": "Enable Data Layer Debugging",
                 "info": "You'll see debugging information via console.log",
                 "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "enable_newsletter_subscribe",
+                "label": "Enable Subscribing Newsletter",
+                "info": "You'll see the checkbox on our login/signup form",
+                "default": true
             }
         ]
     },
@@ -1010,7 +1017,8 @@
     },
     {
         "name": "Subscribe Popup",
-        "settings": [{
+        "settings": [
+            {
                 "type": "checkbox",
                 "id": "popup",
                 "label": "Show Subscribe Popup",

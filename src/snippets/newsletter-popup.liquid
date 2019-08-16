@@ -12,7 +12,7 @@
         {% unless settings.email_popup_bottom_text == blank %}
         <p class="intro">{{ settings.email_popup_bottom_text }}</p>
         {% endunless %}
-        <form class="subcribe-form" id="subcribe-form">
+        <form class="subcribe-form" id="subscribe--popup--form">
             <input class="form-field" type="email" aria-label="Enter Your Email address" id="email" name="Email" placeholder="{{ settings.email_popup_input_placeholder }}">
             <input class="form-field" type="text" aria-label="Enter Your Birthdate" id="birthdate-datepicker" placeholder="{{ settings.dob_popup_input_placeholder }}">
             <input type="hidden" id="birthdate" name="Birthdate" value="">
