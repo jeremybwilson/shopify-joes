@@ -12,7 +12,9 @@ theme.FitGuide = (function() {
             var collectionhandle = $(this).attr('data-collection-handle');
             var parent = $(this).parents('.fit-guid-collection-div');
 
-            $('.fit-image-slider').slick('unslick');
+            if( $('.fit-image-slider').hasClass('slick-initialized') ) {
+                $('.fit-image-slider').slick('unslick');
+            }
             load_topslider(collectionhandle);
             load_products(collectionhandle,parent);
         });

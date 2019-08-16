@@ -1,0 +1,30 @@
+<script>
+    (function(w,d,s,sr,c){w[sr]=w[sr]||[]; var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src= d.location.protocol+'//d1n00d49gkbray.cloudfront.net/js/'+c+'.js';f.parentNode.insertBefore(j,f); })(window,document,'script','_smtr','joes');
+
+    var _smtr = _smtr || window._smtr || [];
+
+    // ::- Purchase Confirmation Page -::
+    if ($('html.page--thank-you').length) {
+        _smtr.push(["pageView", { "pageType": "purchase",
+            "orders": [{
+                "orderItems": [
+                    {% for line_item in order.line_items %}
+                    {
+                        "productId": "{{ line_item.product_id | json }}",
+                        "Price": {{ line_item.price | money_without_currency | remove: ',' | json  }},
+                        "sku": {{ line_item.sku | json }},
+                        "qty": "{{ line_item.quantity | json }}"
+                    }{% if forloop.last == false %},{% endif%}
+                    {% endfor %}
+                ],
+                "total": {{ order.total_price | money_without_currency | remove: ',' | json }},
+                "orderId": "{{ order.order_number }}",
+                "tax": {{ order.tax_price | money_without_currency | remove: ',' | json }},
+                "shipping": {{ order.shipping_price | money_without_currency | remove: ',' | json }},
+                "city": "{{ order.shipping_address.city }}",
+                "state": "{{ order.shipping_address.province }}",
+                "country": "{{ order.shipping_address.country }}"
+            }]
+        }]);
+    }
+</script>
