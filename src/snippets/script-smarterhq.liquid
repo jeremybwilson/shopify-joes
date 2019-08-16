@@ -1,1 +1,57 @@
-smarterhq.liquid
+<script>
+    (function(w,d,s,sr,c){w[sr]=w[sr]||[]; var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src= d.location.protocol+'//d1n00d49gkbray.cloudfront.net/js/'+c+'.js';f.parentNode.insertBefore(j,f); })(window,document,'script','_smtr','joes');
+
+    var _smtr = _smtr || window._smtr || [];
+
+    // ::- Product Page -::
+    {% if product %}
+    _smtr.push(["pageView", {
+        "pageType": "product",
+        "productId": "{{ product.id }}",
+        "productName": "{{ product.title | escape }}",
+        "ProductUrl": "{{ shop.secure_url }}{{ product.url }}",
+        "ImageUrl": "https:{{ product.featured_image.src|img_url:"grande" }}",
+        "sku": {{ sku | json }},
+        "Price": {{ product.variants[0].price | money_without_currency | remove: ',' | json }},
+        "Category": "{{ product.type | escape }}"
+    }]);
+    {% endif %}
+
+
+    // ::- Collection Page -::
+    {% if collection %}
+        _smtr.push(["pageView", {
+            "pageType": "Category",
+            "CategoryId": "{{ collection.id }}",
+            "CategoryName": "{{ collection.title | escape }}",
+            "Description": "{{ collection.description | escape }}"
+        }]);
+    {% endif %}
+
+    // ::- Search Page -::
+    {% if search.performed %}
+        _smtr.push(["pageView", {
+            "pageType": "Search",
+            "SearchPhrase": "{{ search.terms }}
+        }]);
+    {% endif %}
+
+    //::-  Cart Page-::
+    {% if template == 'cart'%}
+        _smtr.push(["pageView", {
+            "pageType": "Cart",
+            "cartTotal": {{ cart.total_price | money_without_currency | remove: ',' | json }},
+            "cartId": "{{ cartToken }}",
+            "cartItems":[
+                {% for line_item in cart.items %}
+                    {
+                        "productId": "{{ line_item.product_id | json }}",
+                        "Price": {{ line_item.price | money_without_currency | remove: ',' | json  }},
+                        "sku": {{ line_item.sku | json }},
+                        "qty": "{{ line_item.quantity | json }}"
+                    }{% if forloop.last == false %},{% endif%}
+                {% endfor %}
+            ]
+        }]);
+    {% endif %}
+</script>
