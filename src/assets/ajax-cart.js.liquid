@@ -492,6 +492,7 @@ var ajaxCart = (function(module, $) {
 
     $cartContainer.append(template(data));
     window.sr_updateMessages();
+    affirm.ui.refresh();
     cartCallback(cart);
   };
 
