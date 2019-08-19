@@ -295,10 +295,10 @@ __bva__.helpers = (function () {
 
         var originalCallback = arguments[1];
         arguments[1] = function (product) {
-          product.addQuantity = addQuantity;
+          product.addQuantity = addQuantity || 1; // If Any product doesn't have the quantity on PDP, so it will be 1 as default.
           self.fireAddToCartPixel(product)
           return originalCallback.call(this, product);
-        }
+        };
 
         originalMethod.apply(ShopifyAPI, arguments);
       };
