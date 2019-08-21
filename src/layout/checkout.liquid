@@ -28,8 +28,9 @@
         {%- endfor -%} ];
     </script>
 
-    {% comment %} :: LIBRARY SCRIPTS :: {% endcomment %}
+    {% comment %} :: LIBRARY SCRIPTS ::
     {{ 'vendor-checkout.js' | asset_url | script_tag }}
+    {% endcomment %}
 
 
   <!-- Shoprunner
@@ -114,11 +115,13 @@
 
     {{ tracking_code }}
 
-    {% comment %} :: Custom CSS :: {% endcomment %}
+    {% comment %} :: Custom CSS ::
     {{ 'checkout.scss.css' | asset_url | stylesheet_tag }}
+    {% endcomment %}
 
-    {% comment %} :: BOL - Checkout Customizations :: {% endcomment %}
+    {% comment %} :: BOL - Checkout Customizations ::
     {{ 'checkout.js' | asset_url | script_tag }}
+    {% endcomment %}
 
     {% comment %} :: Shop Runner :: {% endcomment %}
     {% if settings.shoprunner_enabled %}
