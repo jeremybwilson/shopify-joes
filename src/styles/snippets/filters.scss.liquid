@@ -283,8 +283,10 @@
          }
       }
 
-    #filter-list-mobile-wrap #bc-sf-filter-tree{
-        display: block !important;
+    @include mq('phone') {
+        #filter-list-mobile-wrap #bc-sf-filter-tree {
+            display: block !important;
+        }
     }
 }
 
