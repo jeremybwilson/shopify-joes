@@ -14,7 +14,8 @@ theme.Collection = (function() {
       desktopFilterSet: $( '.filter-list-desktop' ),
       mobileFilterBtn: $( '#filter-button-mobile' ),
       seoBlockWrap: $( '#collection-seo-wrap' ),
-      seoReadMoreBtn: $( '#collection-seo-read-more' )
+      seoReadMoreBtn: $( '#collection-seo-read-more' ),
+      filterCloseBtn: $( '.filter-close' )
     }
 
     // TRANSPARENT LANDING : When a banner is present, add the transparent landing class to body so header goes transparent
@@ -51,6 +52,9 @@ theme.Collection = (function() {
         toggleFilterOpen();
       });
       ui.backingShadow.click( () => {
+        toggleFilterOpen();
+      });
+      ui.filterCloseBtn.click( () => {
         toggleFilterOpen();
       });
 
