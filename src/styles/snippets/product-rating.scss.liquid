@@ -456,3 +456,156 @@ button.bv-content-btn.bv-filter-control.bv-expand-filter-button.bv-focusable {
         padding-bottom: 35px;
     }
 }
+
+
+/* 27-08-19*/
+.BVRRContainer{
+    position: relative;
+    .BVDI_QTTitle{
+        &:before{display:none;}
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .BVDI_QTSummaryBox{
+        margin-left: 0 !important;
+        .BVRROverallRatingContainer{
+            .BVRRRatingNormalLabel{
+                display: none !important;
+            }
+        }
+    }
+    .BVRRDisplayContent{
+        padding: 0;
+        .BVRRDisplayContentHeader{
+            .BVRRDisplayContentHeaderContent{
+                padding: 20px 0 10px;
+                text-align: right;
+                @include mq('phone'){
+                    display: flex;
+                    text-align: unset;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .BVRRDisplayContentSubtitle{
+                    position: absolute;
+                    right: 0;
+                    top: 45px;
+                    @include mq('phone'){
+                        position: static;
+                        width: 100%;
+                        .BVRRDisplayContentLinkWrite{
+                            width: 100%;
+                            a{
+                                width:100%;
+                                margin: 0 0 10px; 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .BVRRDisplayContentBody{
+            .BVRRDisplayContentReview{
+                padding: 40px 0px 10px;
+                
+                .BVRRReviewDisplayStyle5{
+                    .BVRRReviewDisplayStyle5Header{
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+                        .BVRRReviewTitleContainer{
+                            @include mq('phone'){width: 100%;}
+                            .BVRRReviewTitle{font-size: 15px; color: #000000;}
+                        }
+                        .BVRRReviewDateContainer{
+                            position: absolute;
+                            right: 0;
+                            text-align: right;
+                        }
+                    }
+                    .BVRRReviewDisplayStyle5BodyUser{
+                        display: none;
+                    }
+                    .BVRRReviewDisplayStyle5BodyContent{
+                        .BVRRReviewDisplayStyle5BodyContentSecondary{
+                            display: none;
+                        }
+                        .BVRRReviewDisplayStyle5BodyContentPrimary{
+                            margin-right: 200px;
+                            @include mq('phone'){
+                                margin-right: 0;
+                            }
+                            .BVRRReviewDisplayStyle5Recommendations{
+                                .BVRRRecommendedContainerYes{
+                                    .BVRRRecommended{
+                                        padding-left: 18px;
+                                        display: inline-block;
+                                        position: relative;
+                                        &:before{
+                                            content: "";
+                                            width:13px;
+                                            height:13px;
+                                            background-image: url(https://cdn.shopify.com/s/files/1/0029/1232/1571/files/check.png?437767);
+                                            display: block;
+                                            background-size: 100%;
+                                            position: absolute;
+                                            left: 0;
+                                            top: 1px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .BVRRReviewDisplayStyle5Footer{
+                        padding: 0;
+                        @include mq('phone'){
+                            display: flex;
+                            justify-content: center;
+                        }
+                        &::before{
+                            content: "";
+                        }
+                        &::after{
+                            content: "";
+                            display: table;
+                            clear: both;
+                        }
+                        .BVDI_FV{
+                            float: right;
+                            .BVDI_FVVotesHelpfulness{
+                                .BVDIPrefix{
+                                    font-style: unset;
+                                    color: #000;
+                                    font-weight: 500;
+                                    line-height: 20px;
+                                }
+                                .BVDI_FVVote{
+                                    &:last-child{margin-right: 0;}
+                                    a{
+                                        padding: 0;
+                                        border: none;
+                                        .BVDILinkSpan{
+                                            line-height: 28px;
+                                            height: 28px;
+                                            .BVDILabel{text-decoration: underline}
+                                            .BVDINumber{
+                                                color: #999;
+                                                &:before{content: "("}
+                                                &::after{content: ")"}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .BVDI_FVReportLinkInappropriate{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .BVDI.BVDI_CO.BVDI_CONoComments{display: none;}
+            }
+        }
+    }
+} 
