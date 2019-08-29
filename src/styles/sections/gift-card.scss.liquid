@@ -1,0 +1,201 @@
+#forgot_password a{
+	margin-left: 10px;
+}
+
+div#customer_subscribe input#accepts_marketing {
+    width: 25px !important;
+    min-width: 25px;
+}
+
+/*gift-card*/
+
+#shopify-section-gift-card{margin-top: 15px;  
+
+width: 90%;
+
+@include mq('phone'){
+	width:100%;
+}
+
+}
+
+.gift_card{
+    .gift-card-inner.e-giftcard {
+		padding-left: 5%;
+		@include mq('mobile-potrait'){
+            padding-left:0%;
+		} 
+	}
+
+	.action-bottom {
+		margin: 15px 0px 12px 0 !important;
+		display: inline-block;
+
+		@include mq('mobile-potrait'){
+			margin:15px 0px 5px 0 !important;
+		}
+	}
+
+	.gift-card-inner.giftcard {
+		padding-right: 5%;
+
+		@include mq('mobile-potrait'){
+            padding-right:0%;
+		} 
+	}
+
+	.gift-card-inner {
+		width: 50% !important;
+		margin: 0px !important;
+
+		@include mq('mobile-potrait'){
+			width:100% !important;
+		    margin-bottom: 50px !IMPORTANT;
+
+			&:last-child{
+                margin-bottom: 0px !important;
+			}
+		}
+	}
+
+    #content{
+        @include secound-container;
+    }
+   
+    .gift-card-image {
+		background-size: 100%;
+		padding-bottom: 100%;
+		margin-bottom: 50px;
+
+		@include mq('mobile-potrait'){
+		   margin-bottom:30px;	
+		}
+	}
+
+	.card-title{
+	    @include heading-black;
+
+		@include mq('mobile-potrait'){
+			margin:0px 0 0px 0;
+		}
+	}
+
+	.balance-header{
+		@include heading-black;
+        margin-bottom: 35px;
+
+        @include mq('phone'){
+           margin-bottom:25px;
+        }
+	}
+
+	.gift-card-content ul li {
+		list-style: none;
+		@include black-paragraph-13-font;
+	}
+
+}
+
+
+
+.card-sub-title{
+   @include black-paragraph-14-font;
+   font-weight:$bold;
+   text-transform: uppercase;
+   margin: 12px 0 15px 0;
+
+   @include mq('mobile-potrait'){
+	  margin:3px 0 14px 0;
+   }
+}
+
+#shopify-section-gift-card .gift-product-link{
+	@include subscribe-button;
+	display: inline-block;
+    padding: 0 20px;
+	line-height: 47px;
+	margin-top:0px !important;
+}
+
+.gift-card-button {
+    margin-top: 45px;
+	@include mq('mobile-potrait'){
+        margin-top:35px;
+	}
+}
+
+.gift-bottom-section {
+    display: inline-block;
+    width: 100%;
+}
+
+.gift_card .gift-top-section {
+    display: inline-block;
+    padding-bottom:120px;
+	width: 100%;
+
+	@include mq('phone'){
+	   padding-bottom:80px;	
+	}
+
+	@include mq('mobile-potrait'){
+	   padding-bottom:60px;	
+	}
+}
+
+.gift-bottom-section {
+    display: inline-block;
+    width: 100%;
+
+	&::before {
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		background-color:#E2E2E2	;
+		left: 0;
+		content: "";
+	}
+
+	.gift-bottom-inner{
+		margin-top: 50px;
+        @include mq('mobile-potrait'){
+			margin-top: 40px;
+		}
+	}
+}
+
+
+.gift-balance-form .large-form:nth-of-type(2) {
+    float: right;
+}
+
+.gift-balance-form .large-form {
+    width: 45%;
+    padding: 0 0;
+    float: left;
+
+	@include mq('mobile-potrait'){
+		width:100%;
+	}
+}
+
+.balance-info-note{@include black-paragraph-13-font;}
+
+.gift_card #newsletter-social{
+	border-top:$border-grey-1;
+	margin-top: 75px;
+	padding-top: 75px;
+
+	@include mq('phone'){
+		margin-top: 56px;
+		padding-top: 56px;
+	}
+}
+
+.gift-card-label{
+   @include black-paragraph-14-font;
+   font-weight:$bold;
+   text-transform: uppercase;
+   margin: 30px 0 20px 0;
+   display: inline-block;
+}
