@@ -1222,6 +1222,42 @@
                     "tel_number": "18775285637",
                     "social_heading": "Follow Us"
                 }
+            },
+            "gift-card": {
+                "type": "gift-card",
+                "blocks": {
+                    "1567164349706": {
+                        "type": "physical-card",
+                        "settings": {
+                            "physical_image": "shopify:\/\/shop_images\/joes-gift-card-2.png",
+                            "physical_title": "Gift Card",
+                            "physical_sub-title": "Ship a gift card to a recipient Anywhere in the U.S",
+                            "physical_content": "<ul>\n   <li>Free Ground Shipping (expedited shipping also available).<\/li>\n   <li>No expiration date or maintenance fee.<\/li>\n   <li>Personal gift message included.<\/li>\n   <li>Redeem online or at any Frye Flagship store.<\/li>\n<\/ul>",
+                            "physical_link_page": "shopify:\/\/products\/gift-card",
+                            "physical_page_button_text": "Purchase Gift Card"
+                        }
+                    },
+                    "1567164352050": {
+                        "type": "e-card",
+                        "settings": {
+                            "e-card_image": "shopify:\/\/shop_images\/joes-gift-card.png",
+                            "e-card_title": "E-Gift Card",
+                            "e-card_sub-title": "can't decide on a gift? E-gift cards are always a good idea",
+                            "e-card_content": "<ul>\n   <li>Emailed within minutes of purchase.<\/li>\n   <li>No expiration date or maintenance fee.<\/li>\n   <li>Personal gift mesasge included.<\/li>\n   <li>Redeem online or at any Joe's boutique.<\/li>\n<\/ul>",
+                            "e-card_link_page": "shopify:\/\/products\/e-gift-card",
+                            "e-card_page_button_text": "Purchase E-Gift Card"
+                        }
+                    }
+                },
+                "block_order": [
+                    "1567164349706",
+                    "1567164352050"
+                ],
+                "settings": {
+                    "is_form_needed": false,
+                    "check_balance_title": "Check your balance",
+                    "form_note_content": "Please call customer service to check your balance"
+                }
             }
         },
         "content_for_index": [

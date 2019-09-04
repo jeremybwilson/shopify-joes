@@ -1,18 +1,91 @@
 <div class="gift-top-section">
-    {% if block.type == 'physical-card' %}
+    <div class="gift-top-inner">
+        {% case section.blocks.size %}
+            {% when 1 %}
+                {% assign collumn_width = 'desktop-full mobile-full' %}
+
+            {% when 2 %}
+                {% assign collumn_width = 'desktop-half mobile-full' %}
+        {% endcase %}
         {% for block in section.blocks %}
-            <p>{{ block.settings.physical_title }}</p>
+            {% if block.type == 'physical-card' %}
+                <div class="gift-card-inner giftcard {{ collumn_width }}">
+                    <div class="gift-card-image" style="background-image: url({{ block.settings.physical_image | img_url: '900x' }})"></div>
+                    <div class="gift-card-header">
+                        <div class="card-title">{{ block.settings.physical_title }}</div>
+                        <div class="card-sub-title">{{ block.settings.physical_sub-title }}</div>
+                    </div>
+                    <div class="gift-card-content">{{ block.settings.physical_content }}</div>
+                    <div class="gift-card-button"><a class="gift-product-link gift-product-view" href="{{ block.settings.physical_link_page }}">{{ block.settings.physical_page_button_text }}</a></div>
+                </div>
+            {% else %}
+                <div class="gift-card-inner e-giftcard {{ collumn_width }}">
+                    <div class="gift-card-image" style="background-image: url({{ block.settings.e-card_image | img_url: '900x' }})"></div>
+                    <div class="gift-card-header">
+                        <div class="card-title">{{ block.settings.e-card_title }}</div>
+                        <div class="card-sub-title">{{ block.settings.e-card_sub-title }}</div>
+                    </div>
+                    <div class="gift-card-content">{{ block.settings.e-card_content }}</div>
+                    <div class="gift-card-button"><a class="gift-product-link gift-product-view" href="{{ block.settings.e-card_link_page }}">{{ block.settings.e-card_page_button_text }}</a></div>
+                </div>
+            {% endif %}
         {% endfor %}
-    {% else %}
-        {% for block in section.blocks %}
-            <p>{{ block.settings.e-card_title }}</p>
-        {% endfor %}
-    {% endif %}
+    </div>
+</div>
+<div class="gift-bottom-section">
+    <div class="gift-bottom-inner">
+        <div class="balance-header">{{ section.settings.check_balance_title }}</div>
+        {% if section.settings.is_form_needed %}
+            <div class="gift-balance-form">
+                {% form 'customer_login' %}
+
+                    <div class="clearfix large-form">
+                        <input type="text" value="" Placeholder="Enter Gift Card Number" name="customer[email]" id="customer_email" class="large form-field" size="30" />
+                    </div>
+
+                    <div class="clearfix large-form">
+                        <input type="password" placeholder="Enter PIN" value="" name="customer[password]" id="customer_password" class="large password form-field" size="16" />
+                    </div>
+
+                    <div class="action-bottom">
+                        <input class="gift-product-link" type="submit" value="Check Balance" />
+                    </div>
+
+                {% endform %}
+            </div>
+        {% endif %}
+        <div class="{% if section.settings.is_form_needed %}balance-info-note{% else %}balance-info-note noform-content{% endif %}">{{ section.settings.form_note_content }}</div>
+    </div>
 </div>
 
 {% schema %}
 {
     "name": "Gift Cards",
+    "settings":[
+        {
+            "type": "header",
+            "content": "Balance Check Content"
+        },
+        {
+            "type": "checkbox",
+            "id": "is_form_needed",
+            "label": "Include Balance check Form",
+            "default": false
+        },
+        {
+            "type": "text",
+            "id": "check_balance_title",
+            "label": "Balance check title",
+            "default":"Check your balance"
+        },
+        {
+            "type": "textarea",
+            "id": "form_note_content",
+            "default": "Please call customer service to check your balance",
+            "label": "Balance check Note",
+            "info": "Also can be use to display message of contact us if not including Form"
+        }
+    ],
     "blocks":[
         {
             "type": "physical-card",
@@ -26,7 +99,8 @@
                 {
                     "type": "text",
                     "id": "physical_title",
-                    "label": "Title"
+                    "label": "Title",
+                    "default":"Gift Card"
                 },
                 {
                     "type": "text",
@@ -36,17 +110,19 @@
                 {
                     "type": "html",
                     "id": "physical_content",
-                    "label": "Content"
+                    "label": "Content",
+                    "default":"<ul><li>Content 1</li><li>Content 2</li></ul>"
                 },
                 {
-                    "type": "link_list",
+                    "type": "url",
                     "id": "physical_link_page",
                     "label": "Link"
                 },
                 {
                     "type": "text",
                     "id": "physical_page_button_text",
-                    "label": "Button Text"
+                    "label": "Button Text",
+                    "default":"Purchase Gift Card"
                 }
             ]
         },
@@ -55,14 +131,37 @@
             "name": "E-Card",
             "settings":[
                 {
-                    "type": "text",
-                    "id": "e-card_title",
-                    "label": "Title"
-                },
-                {
                     "type": "image_picker",
                     "id": "e-card_image",
                     "label": "Card Image"
+                },
+                {
+                    "type": "text",
+                    "id": "e-card_title",
+                    "label": "Title",
+                    "default":"E-Gift Card"
+                },
+                {
+                    "type": "text",
+                    "id": "e-card_sub-title",
+                    "label": "Sub title"
+                },
+                {
+                    "type": "html",
+                    "id": "e-card_content",
+                    "label": "Content",
+                    "default":"<ul><li>E-Gift Content 1</li><li>E-Gift Content 2</li></ul>"
+                },
+                {
+                    "type": "url",
+                    "id": "e-card_link_page",
+                    "label": "Link"
+                },
+                {
+                    "type": "text",
+                    "id": "e-card_page_button_text",
+                    "label": "Button Text",
+                    "default":"Purchase E-Gift Card"
                 }
             ]
         }
