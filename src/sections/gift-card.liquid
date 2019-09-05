@@ -55,6 +55,11 @@
             </div>
         {% endif %}
         <div class="{% if section.settings.is_form_needed %}balance-info-note{% else %}balance-info-note noform-content{% endif %}">{{ section.settings.form_note_content }}</div>
+        {% if section.settings.is_balance_link %}
+            <div class="balance_check_btn">
+                <a class="balance_check_link linkbutton" href="{{ section.settings.check_balance_link }}" target="_blank">{{ section.settings.check_balance_link_title }}</a>
+            </div>
+        {% endif %}
     </div>
 </div>
 
@@ -84,6 +89,24 @@
             "default": "Please call customer service to check your balance",
             "label": "Balance check Note",
             "info": "Also can be use to display message of contact us if not including Form"
+        },
+        {
+            "type": "checkbox",
+            "id": "is_balance_link",
+            "label": "Show Balance check link",
+            "default": true
+        },
+        {
+            "type": "url",
+            "id": "check_balance_link",
+            "label": "Link to check balance",
+            "info": "Only when Show Balance check link is Active"
+        },
+        {
+            "type": "text",
+            "id": "check_balance_link_title",
+            "label": "Show Balance title",
+            "default": "Check balance"
         }
     ],
     "blocks":[
