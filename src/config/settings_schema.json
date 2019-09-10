@@ -37,6 +37,15 @@
                 "label": "Enable Subscribing Newsletter",
                 "info": "You'll see the checkbox on our login/signup form",
                 "default": true
+            },
+            {
+                "type": "header",
+                "content": "Nosto"
+            },
+            {
+                "type": "text",
+                "id": "nosto_id",
+                "label": "ID"
             }
         ]
     },

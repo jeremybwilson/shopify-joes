@@ -121,8 +121,10 @@
 
   {{ content_for_header }}
 
-  {% comment %} :: Nosto :: {% endcomment %}
-  {% include 'nosto-library' %}
+  {% comment %} :: Nosto :: {% endcomment %}  
+  {% if settings.nosto_id != blank %}
+    {% include 'nosto-script' %}
+  {% endif %}
 
   {% comment %} :: True Fit :: {% endcomment %}
   {% include 'true-fit-library' %}
@@ -304,5 +306,10 @@
 
   <!-- FILTER APP (PLP) -->
   {% include 'bc-sf-filter' %}
+
+  <!-- Nosto -->
+  {% if settings.nosto_id != blank %}
+    {% include 'nosto-tagging' %}
+  {% endif %}
 </body>
 </html>
