@@ -1,1270 +1,1529 @@
 {
-    "presets": {},
-    "current": {
-        "favicon": "shopify:\/\/shop_images\/favicon.png",
-        "google_tag_manager_id": "GTM-56WJC9S",
-        "announcement_text_color": "#ffffff",
-        "announcement_bg_one": "#000000",
-        "announcement_bg_two": "#757575",
-        "nav_transparent_landing": true,
-        "header_background": "#ffffff",
-        "nav_header_color": "#000000",
-        "nav_sub_header_color": "#000000",
-        "nav_sub_sub_header_color": "#000000",
-        "nav_list_item_color": "#000000",
-        "background": "#fefffe",
-        "header_color": "#000000",
-        "text_color": "#000000",
-        "sale_color": "#bc0000",
-        "dotted_color": "#e5e5e5",
-        "error_text": "#cb0000",
-        "button_bg": "#000000",
-        "button_bg_hover": "#333333",
-        "button_text": "#ffffff",
-        "button_text_hover": "#ffffff",
-        "button_border_color": "rgba(0,0,0,0)",
-        "button_border_color_hover": "rgba(0,0,0,0)",
-        "button_border_width": 0,
-        "alt_button_bg": "#ffffff",
-        "alt_button_bg_hover": "#dddddd",
-        "alt_button_text": "#0b56a3",
-        "alt_button_text_hover": "#0b56a3",
-        "alt_button_border_color": "rgba(0,0,0,0)",
-        "alt_button_border_color_hover": "rgba(0,0,0,0)",
-        "alt_button_border_width": 0,
-        "homepage_instagram_header": "#000",
-        "homepage_instagram_text": "#000",
-        "filter_bg": "#ffffff",
-        "filter_title_color": "#000000",
-        "filter_text_color": "#000000",
-        "filter_bar_border_color": "#e2e2e2",
-        "filter_bar_border_width": 1,
-        "collection_seo_footer_bg": "#e6e6e6",
-        "collection_seo_footer_text": "#161616",
-        "product_badge_square_bg": "#1a1919",
-        "product_badge_circle_bg": "#1a1919",
-        "product_badge_diamond_bg": "#1a1919",
-        "product_badge_text_color": "#FFFFFF",
-        "fancybox_overlay_bg": "0,0,0,0.5",
-        "discount_modal_enable": false,
-        "discount_modal_config": "eyJjb29raWVFeHBpcmVJbkRheXMiOiA2MCwidGhyZXNob2xkRGlzY291bnRzIjogW3siZGlzY291bnRJZCI6IDEsImRpc3BsYXlOYW1lIjogIldpZ3dhbSBIYXQgKEJsYWNrKSIsImdpZnRJZCI6IDE1NDU5OTY0MDkyNTEwLCJncmFudFR5cGUiOiAicGljayIsImludmVudG9yeUlkIjogMTU0MDIyMTI5ODI4NzgsIm1pblNwZW5kIjogMjAwLCJwcm9kdWN0SGFuZGxlIjogIndpZ3dhbS13aW50ZXItaGF0In0seyJkaXNjb3VudElkIjogMiwiZGlzcGxheU5hbWUiOiAiV2lnd2FtIEhhdCAoR3JheSkiLCJnaWZ0SWQiOiAxNTQ1OTk2NTM3MDQ2MiwiZ3JhbnRUeXBlIjogInBpY2siLCJpbnZlbnRvcnlJZCI6IDE1NDAyMjEzMDE1NjQ2LCJtaW5TcGVuZCI6IDIwMCwicHJvZHVjdEhhbmRsZSI6ICJ3aWd3YW0td2ludGVyLWhhdCJ9LHsiZGlzY291bnRJZCI6IDMsImRpc3BsYXlOYW1lIjogIldpZ3dhbSBIYXQgKE5hdHVyYWwpIiwiZ2lmdElkIjogMTU0NTk5NjU1MDE1MzQsImdyYW50VHlwZSI6ICJwaWNrIiwiaW52ZW50b3J5SWQiOiAxNTQwMjIxMzA0ODQxNCwibWluU3BlbmQiOiAyMDAsInByb2R1Y3RIYW5kbGUiOiAid2lnd2FtLXdpbnRlci1oYXQifV19",
-        "discount_modal_bg": "#fefffe",
-        "discount_modal_text": "#000000",
-        "discount_modal_header": "#164732",
-        "discount_modal_button_bg": "#164732",
-        "discount_modal_button_text": "#fefffe",
-        "discount_modal_button_alt_bg": "#ab5232",
-        "discount_modal_button_alt_text": "#fefffe",
-        "gdpr_bg": "#e6e6e6",
-        "gdpr_text": "#000000",
-        "gdpr_border_color": "#0b56a3",
-        "gdpr_border_width": 0,
-        "gdpr_button_bg": "#000000",
-        "gdpr_button_text": "#ffffff",
-        "gdpr_button_bg_hover": "#3c3c3c",
-        "gdpr_alt_button_bg": "#ffffff",
-        "gdpr_alt_button_text": "#000000",
-        "gdpr_alt_button_bg_hover": "#d6d6d6",
-        "swatch_color": "#000000",
-        "swatch_background": "#ffffff",
-        "swatch_border": "#000000",
-        "swatch_selected_color": "#ffffff",
-        "swatch_selected_background": "#000000",
-        "swatch_selected_border": "#000000",
-        "new_background": "#222",
-        "new_text": "#ffffff",
-        "sale_background": "#af0000",
-        "sale_text": "#ffffff",
-        "soldout_background": "#222",
-        "soldout_text": "#ffffff",
-        "icons": "#333333",
-        "icons_hover": "#333333",
-        "newsletter_footer_background": "#000000",
-        "newsletter_footer_text": "#ffffff",
-        "social_footer_background": "#ffffff",
-        "social_footer_header": "#0d57a3",
-        "footer_background": "#000000",
-        "footer_color": "#ffffff",
-        "footer_border": "#ccd7d2",
-        "main_font": "karla_n4",
-        "nav_font": "karla_n4",
-        "heading_font": "montserrat_n7",
-        "announcement_text_size": 15,
-        "font_size": 13,
-        "h1_size": 24,
-        "h2_size": 20,
-        "h3_size": 18,
-        "h4_size": 16,
-        "h5_size": 14,
-        "nav_size": 13,
-        "dropdown_font_size": 13,
-        "navigation_transform": "uppercase",
-        "dropdown_transform": "uppercase",
-        "link_decoration": "none",
-        "section_title_border": "bottom_only_short",
-        "border_weight": "3px",
-        "breadcrumb": true,
-        "enable_nav_name_styling": true,
-        "quickview": true,
-        "vendor": false,
-        "show_collection_seo_block": false,
-        "details_align": "center",
-        "secondary_images_hover": "image_flip",
-        "cart_notes_enable": false,
-        "ajax_cart_method": "drawer",
-        "ajax_cart_remove_text": "This will remove the item from your cart. Continue?",
-        "ajax_cart_low_stock_text": "This item does not have enough stock to add to your cart.",
-        "twittername": "https:\/\/twitter.com\/joesjeans?lang=en",
-        "facebook_url": "https:\/\/www.facebook.com\/joesjeans\/",
-        "pinterest_url": "",
-        "tumblr_url": "",
-        "youtube_url": "https:\/\/www.youtube.com\/channel\/UCvyl_yZlxrxmn7SCvvUnvFg",
-        "googleplus_url": "",
-        "instagram_id": "joesjeans",
-        "popup": true,
-        "email_popup_title": "sign up for exclusive promotions & receive $25 off* your first order",
-        "email_popup_bottom_text": "Be the first to receive exclusive access<br>to sales and hear about our latest arrivals!",
-        "email_popup_input_placeholder": "Enter Your Email Address",
-        "dob_popup_input_placeholder": "Birthday DD\/MM (Optional)",
-        "email_popup_interested_text": "I’m interested in:",
-        "email_popup_error": "Please enter a valid e-mail address",
-        "email_popup_success": "<p>You have successfully joined our newsletter<\/p>",
-        "cookie_banner_mobile_text": "<p>This site uses cookies to simplify and improve your experience of this website. Further usage of the website implies acceptance of this usage.<\/p>",
-        "cookie_banner_mobile_button": "https:\/\/www.brandedonline.com\/privacy-policy.html",
-        "cookie_banner_mobile_button_text": "Learn More",
-        "cookie_banner_desktop_text": "<p>This site uses cookies to simplify and improve your usage and experience of this website. Cookies are small text files stored on the device you are using to access this website. If you ignore this message and continue without changing your browser settings, we will assume that you are consenting to our use of cookies. For further information on our use of cookies, please see our <a href=\"https:\/\/www.aquatalia.com\/privacy-policy\" target=\"_blank\">Privacy Statement<\/a><\/p>",
-        "cookie_banner_accept_button_text": "Accept",
-        "show_multiple_currencies": false,
-        "currency_format": "money_with_currency_format",
-        "supported_currencies": "INR GBP CAD USD AUD EUR JPY",
-        "default_currency": "USD",
-        "app_wk_enabled": true,
-        "app_wk_login_required": false,
-        "app_wk_icon": "heart",
-        "app_wk_icon_stroke": "#9e9e9e",
-        "app_wk_icon_fill": "#000000",
-        "app_wk_col_bg_shape": "square",
-        "app_wk_share_position": "top",
-        "app_wk_products_per_row": "4",
-        "shoprunner_enabled": true,
-        "shoprunner_retailer_id": "JJEANS",
-        "shoprunner_env": "dev",
-        "dashhudson_enabled": true,
-        "dashhudson_id": "6384088",
-        "dashhudson_name": "likeshop-carousel",
-        "checkout_header_image": "",
-        "checkout_logo_image": "shopify:\/\/shop_images\/checkout-logo.png",
-        "checkout_logo_position": "center",
-        "checkout_logo_size": "medium",
-        "checkout_body_background_image": "",
-        "checkout_body_background_color": "#ffffff",
-        "checkout_input_background_color_mode": "white",
-        "checkout_sidebar_background_image": "",
-        "checkout_sidebar_background_color": "#e6e6e6",
-        "checkout_heading_font": "Helvetica Neue",
-        "checkout_body_font": "Helvetica Neue",
-        "checkout_accent_color": "#000000",
-        "checkout_button_color": "#000000",
-        "checkout_error_color": "#dc2828",
-        "color_grey": "#9b9b9b",
-        "nav_transparent_landing_color": "#ffffff",
-        "share_facebook": true,
-        "share_twitter": true,
-        "share_pinterest": true,
-        "share_email": true,
-        "email_popup_error_birthdate": "Please enter a valid birthdate",
-        "international_store_version": "US",
-        "cart_links": "#000000",
-        "cart_links_hover": "#000000",
-        "newsletter_color": "#ffffff",
-        "newsletter_background": "#2f2f2f",
-        "newsletter_hover": "#ffffff",
-        "pre_footer_icon_color": "#e4e4e4",
-        "newsletter_button_color": "#ffffff",
-        "newsletter_button": "#000000",
-        "newsletter_button_hover": "#535353",
-        "alternate_colors": true,
-        "image_flip": true,
-        "font-size": 13,
-        "email_popup_image": false,
-        "megadropdown_link": "",
-        "nav_promo_image": false,
-        "nav_promo_link": "\/collections\/all",
-        "mega_1_show": false,
-        "mega_1_links": "",
-        "mega_2_show": false,
-        "mega_2_links": "",
-        "mega_3_show": false,
-        "mega_3_links": "",
-        "mega_4_show": false,
-        "mega_4_links": "",
-        "nav_center": true,
-        "nav_height": "40",
-        "linklist_breakpoint": "8",
-        "main_nav": "main-menu",
-        "password_bg": "no_password_bg",
-        "max-height": false,
-        "desktop-image-height": "",
-        "tablet-image-height": "",
-        "mobile-image-height": "",
-        "mailchimp": "",
-        "sections": {
-            "header": {
-                "type": "header",
-                "blocks": {
-                    "nav-item-1": {
-                        "type": "mega_menu",
-                        "settings": {
-                            "menu_item": "Women",
-                            "nav_image": "",
-                            "nav_image_link": "",
-                            "nav_image_title": "",
-                            "nav_image_sub_title": ""
-                        }
-                    },
-                    "nav-item-2": {
-                        "type": "mega_menu",
-                        "settings": {
-                            "menu_item": "Men",
-                            "nav_image": "",
-                            "nav_image_link": "",
-                            "nav_image_title": "",
-                            "nav_image_sub_title": ""
-                        }
-                    },
-                    "nav-item-3": {
-                        "type": "mega_menu",
-                        "settings": {
-                            "menu_item": "kids",
-                            "nav_image": "",
-                            "nav_image_link": "",
-                            "nav_image_title": "",
-                            "nav_image_sub_title": ""
-                        }
-                    },
-                    "nav-item-4": {
-                        "type": "mega_menu",
-                        "settings": {
-                            "menu_item": "sale",
-                            "nav_image": "",
-                            "nav_image_link": "",
-                            "nav_image_title": "",
-                            "nav_image_sub_title": ""
-                        }
-                    },
-                    "nav-item-5": {
-                        "type": "simple_menu",
-                        "settings": {
-                            "menu_item": "fit guide"
-                        }
-                    }
-                },
-                "block_order": [
-                    "nav-item-1",
-                    "nav-item-2",
-                    "nav-item-3",
-                    "nav-item-4",
-                    "nav-item-5"
-                ],
-                "settings": {
-                    "full_width_header": false,
-                    "show_announcement_text": true,
-                    "num_of_promo_banners": "1",
-                    "announcement_text_one": "Sign up & Receive $25 off your first order",
-                    "announcement_link_one": "\/account",
-                    "announcement_text_two": "Second banner text here",
-                    "announcement_link_two": "http:\/\/google.com",
-                    "announcement_height": 40,
-                    "announcement_swap_rate": 5,
-                    "show_header_left_text": true,
-                    "header_left_text": "Free U.S Shipping!",
-                    "header_left_url": "shopify:\/\/pages\/faq",
-                    "logo_image": "shopify:\/\/shop_images\/JOES-black.png",
-                    "account_icon": "text",
-                    "account_icon_text_value": "Login",
-                    "account_show_user_name": true,
-                    "cart_icon": "text",
-                    "cart_icon_text_value": "Bag",
-                    "show_search": true,
-                    "show_wishlist": true,
-                    "main_nav": "main-menu",
-                    "nav_center": true,
-                    "nav_height": 60,
-                    "megamenu_full_width": true,
-                    "linklist_breakpoint": 10
-                }
-            },
-            "collection-template": {
-                "type": "collection-template",
-                "blocks": {
-                    "Women": {
-                        "type": "collection_banner",
-                        "settings": {
-                            "collection_handle": "women-collection",
-                            "banner_image_desktop": "shopify:\/\/shop_images\/woemn-collection.jpg",
-                            "banner_image_mobile": "shopify:\/\/shop_images\/woemn-collection.jpg",
-                            "banner_text_header": "BOOTIES",
-                            "banner_text_body": "Sed ut predciptalis unde omnis iste natus sit voluptatem accusatium dolorem.",
-                            "banner_text_divider": true,
-                            "textbox_constrain": true,
-                            "textbox_horizontal": "left",
-                            "textbox_horizontal_nudge": 78,
-                            "textbox_vertical": "center",
-                            "textbox_vertical_nudge": -40,
-                            "textbox_text_align": "center",
-                            "textbox_color_text": "#ffffff",
-                            "textbox_color_divider": "#969696",
-                            "textbox_color_bg": "#000000",
-                            "textbox_opacity": "1"
-                        }
-                    },
-                    "1563519014702": {
-                        "type": "collection_banner",
-                        "settings": {
-                            "collection_handle": "men-collection",
-                            "banner_image_desktop": "shopify:\/\/shop_images\/men-collection.jpg",
-                            "banner_image_mobile": "shopify:\/\/shop_images\/men-collection.jpg",
-                            "banner_text_header": "Header",
-                            "banner_text_body": "Content here please. Sed ut predciptalis unde omnis iste natus sit voluptatem accusatium dolorem.",
-                            "banner_text_divider": true,
-                            "textbox_constrain": true,
-                            "textbox_horizontal": "center",
-                            "textbox_horizontal_nudge": 0,
-                            "textbox_vertical": "center",
-                            "textbox_vertical_nudge": 0,
-                            "textbox_text_align": "left",
-                            "textbox_color_text": "#ffffff",
-                            "textbox_color_divider": "#ffffff",
-                            "textbox_color_bg": "#000000",
-                            "textbox_opacity": "1"
-                        }
-                    }
-                },
-                "block_order": [
-                    "Women",
-                    "1563519014702"
-                ],
-                "settings": {
-                    "grid": 3,
-                    "rows": 8,
-                    "sort_by": true,
-                    "show_description": false,
-                    "nav_transparent_landing": true
-                }
-            },
-            "product-template": {
-                "type": "product-template",
-                "settings": {
-                    "vendor": false,
-                    "show_quantity": false,
-                    "show_sku": true,
-                    "product_variants": "swatches",
-                    "use_swatch_images": true,
-                    "swatch_shape": "rectangles",
-                    "show_payment_button": false,
-                    "disable_auto_select": true,
-                    "selection_label": "Select your Size",
-                    "show_controls": false,
-                    "show_zoom": true,
-                    "thumbnails": "left",
-                    "zoom_image_position": "zoom_over_main",
-                    "related_products": "show",
-                    "shipping_header_text": "Shipping & Returns",
-                    "shipping_text": "<p>Shoprunner Free 2 Day<\/p>\n<p>Shipping &amp; Free Returns<\/p>",
-                    "show_social": false,
-                    "size_chart_show": true,
-                    "size_chart_header_text": "Size Guide",
-                    "size_chart_page": "size-chart"
-                }
-            },
-            "blog-template": {
-                "type": "blog-template",
-                "settings": {
-                    "image": "",
-                    "text": "<p>Add some descriptive text to your Blog page.<\/p>",
-                    "show_date": true
-                }
-            },
-            "mobile-navigation": {
-                "type": "mobile-navigation",
-                "settings": {
-                    "main_nav": "main-menu"
-                }
-            },
-            "article-template": {
-                "type": "article-template",
-                "settings": {
-                    "show_date": true,
-                    "show_icons": true
-                }
-            },
-            "search-template": {
-                "type": "search-template",
-                "settings": {}
-            },
-            "password-template": {
-                "type": "password-template",
-                "settings": {
-                    "newsletter_details": "<p>Coming Soon<\/p><p>Signup for our newsletter and get updated when we launch our site <a href=\"https:\/\/example.com\/\">see our newsletter policy.<\/a><\/p>",
-                    "text_size": 18,
-                    "text_color": "#000000",
-                    "logo": "shopify:\/\/shop_images\/JOES-black.png",
-                    "logo_max_width": "500",
-                    "background_color": "#f5f5f5",
-                    "background_image": "",
-                    "show_overlay_color": true,
-                    "background_overlay_color": "#f5f5f5",
-                    "overlay_color_opacity": 40,
-                    "border_color": "#000000",
-                    "button_color": "#000000",
-                    "button_text_color": "#ffffff"
-                }
-            },
-            "newsletter": {
-                "type": "newsletter",
-                "settings": {
-                    "heading": "SIGN UP & RECEIVE $25 OFF YOUR FIRST ORDER!",
-                    "newsletter_subheading": "I want updates for:",
-                    "newsletter_placeholder": "Email Address",
-                    "newsletter_error": "Please enter a valid e-mail address",
-                    "newsletter_success": "<p>You have successfully joined our newsletter<\/p>",
-                    "social_heading": "Connect With Us"
-                }
-            },
-            "home-hero_slideshow": {
-                "type": "slideshow",
-                "blocks": {
-                    "home-hero_slideshow--slide-1": {
-                        "type": "image",
-                        "settings": {
-                            "image": "shopify:\/\/shop_images\/JOES_HomePage_1440x698_WWW.jpg",
-                            "mobile_image": "shopify:\/\/shop_images\/JOES_HomePage_Mobile_320x614_WWW.jpg",
-                            "heading": "",
-                            "subheading": "",
-                            "caption_text_align": "left",
-                            "cta_one_button_text": "SHOP NOW",
-                            "cta_one_link": "shopify:\/\/collections\/women-denim-fabric-flawless",
-                            "cta_one_line": "left",
-                            "caption_background": "rgba(0,0,0,0)",
-                            "caption_opacity": "0.2",
-                            "caption_color_scheme": "light",
-                            "custom_slider_header_color": "#ffffff",
-                            "custom_slider_sub_header_color": "#ffffff",
-                            "custom_slider_button_color": "#ed0a0a",
-                            "custom_slider_sub_button_hover_color": "#ffffff",
-                            "caption_horizontal": "left",
-                            "caption_vertical": 80
-                        }
-                    },
-                    "home-hero_slideshow--slide-2": {
-                        "type": "image",
-                        "settings": {
-                            "image": "shopify:\/\/shop_images\/JOES_HomePage_1440x698_JE.jpg",
-                            "mobile_image": "shopify:\/\/shop_images\/JOES_HomePage_Mobile_320x614_JE.jpg",
-                            "heading": "Julian’s Winning Picks",
-                            "subheading": "",
-                            "caption_text_align": "right",
-                            "cta_one_button_text": "Shop Now",
-                            "cta_one_link": "shopify:\/\/collections\/men-denim",
-                            "cta_one_line": "none",
-                            "caption_background": "rgba(0,0,0,0)",
-                            "caption_opacity": "0.2",
-                            "caption_color_scheme": "light",
-                            "custom_slider_header_color": "#ffffff",
-                            "custom_slider_sub_header_color": "#ffffff",
-                            "custom_slider_button_color": "#ed0a0a",
-                            "custom_slider_sub_button_hover_color": "#ffffff",
-                            "caption_horizontal": "right",
-                            "caption_vertical": 70
-                        }
-                    }
-                },
-                "block_order": [
-                    "home-hero_slideshow--slide-1",
-                    "home-hero_slideshow--slide-2"
-                ],
-                "settings": {
-                    "full_width": true,
-                    "show_nav_pagination": true,
-                    "slider_speed": 3
-                }
-            },
-            "home-twin_promos": {
-                "type": "twin-promos",
-                "blocks": {
-                    "promo-left": {
-                        "type": "text_block",
-                        "settings": {
-                            "image": "shopify:\/\/shop_images\/JOES_HomePage_708x650_Jeans-W.jpg",
-                            "mobile_image": "shopify:\/\/shop_images\/JOES_HomePage_708x650_Jeans-W.jpg",
-                            "link": "shopify:\/\/collections\/women-denim",
-                            "heading_text": "WOMEN'S JEANS",
-                            "body_text": "",
-                            "text_align": "left",
-                            "cta_type": "text",
-                            "cta_text": "",
-                            "cta_color_text": "#000000",
-                            "cta_color_bg": "rgba(0,0,0,0)",
-                            "cta_color_text_hover": "#616365",
-                            "cta_color_bg_hover": "rgba(0,0,0,0)",
-                            "cta_accent_mark": "left"
-                        }
-                    },
-                    "promo-right": {
-                        "type": "text_block",
-                        "settings": {
-                            "image": "shopify:\/\/shop_images\/JOES_HomePage_708x650_Jeans-M.jpg",
-                            "mobile_image": "shopify:\/\/shop_images\/JOES_HomePage_708x650_Jeans-M.jpg",
-                            "link": "shopify:\/\/collections\/men-denim",
-                            "heading_text": "MEN'S JEANS",
-                            "body_text": "",
-                            "text_align": "left",
-                            "cta_type": "text",
-                            "cta_text": "",
-                            "cta_color_text": "#000000",
-                            "cta_color_bg": "rgba(0,0,0,0)",
-                            "cta_color_text_hover": "#616365",
-                            "cta_color_bg_hover": "rgba(0,0,0,0)",
-                            "cta_accent_mark": "left"
-                        }
-                    }
-                },
-                "block_order": [
-                    "promo-left",
-                    "promo-right"
-                ],
-                "settings": {
-                    "full_width": true
-                }
-            },
-            "home-full_width_promo": {
-                "type": "full-width-single-promo",
-                "blocks": {
-                    "full-width-promo": {
-                        "type": "text_block",
-                        "settings": {
-                            "image": "shopify:\/\/shop_images\/JOES_HomePage_1440x753-Flawless.jpg",
-                            "mobile_image": "shopify:\/\/shop_images\/JOES_HomePage_Mobile_320x428_Flawless.jpg",
-                            "link": "shopify:\/\/collections\/women-denim-fabric-flawless",
-                            "heading_text": "FLAWLESS",
-                            "body_text": "<p>Gravity defying sleek silhouette<\/p>",
-                            "text_align": "left",
-                            "cta_type": "text",
-                            "cta_text": "",
-                            "cta_color_text": "#000000",
-                            "cta_color_bg": "rgba(0,0,0,0)",
-                            "cta_color_text_hover": "#616365",
-                            "cta_color_bg_hover": "rgba(0,0,0,0)",
-                            "cta_accent_mark": "left"
-                        }
-                    }
-                },
-                "block_order": [
-                    "full-width-promo"
-                ],
-                "settings": {
-                    "full_width": true
-                }
-            },
-            "home-instagram_feed": {
-                "type": "instagram",
-                "settings": {
-                    "heading": "As Seen On",
-                    "text": "",
-                    "link": "https:\/\/www.instagram.com\/joesjeans\/",
-                    "cta_text": "FOLLOW US"
-                }
-            },
-            "page-about-template": {
-                "type": "page-about-template",
-                "blocks": {
-                    "1560851184448": {
-                        "type": "image_picker",
-                        "settings": {
-                            "about_image_desktop": "shopify:\/\/shop_images\/JOES_About_Page_556x761_v2.jpg"
-                        }
-                    }
-                },
-                "block_order": [
-                    "1560851184448"
-                ],
-                "settings": {}
-            },
-            "columns-carousel": {
-                "type": "columns-carousel",
-                "blocks": {
-                    "1539638126458": {
-                        "type": "image",
-                        "settings": {
-                            "image": "shopify:\/\/shop_images\/home-column-carousel-desktop-slide-1.jpg",
-                            "mobile_image": "shopify:\/\/shop_images\/home-column-carousel-mobile-slide-1.jpg",
-                            "heading": "Commercial Fishing",
-                            "svg_icon": "",
-                            "png_icon": "",
-                            "link": "shopify:\/\/collections\/commercial-fishing",
-                            "cta_text": "Shop Now"
-                        }
-                    },
-                    "1539642501764": {
-                        "type": "image",
-                        "settings": {
-                            "image": "shopify:\/\/shop_images\/home-column-carousel-desktop-slide-2.jpg",
-                            "mobile_image": "shopify:\/\/shop_images\/home-column-carousel-mobile-slide-2.jpg",
-                            "heading": "Sport Fishing",
-                            "svg_icon": "",
-                            "png_icon": "",
-                            "link": "shopify:\/\/collections\/sport-fishing",
-                            "cta_text": "Shop Now"
-                        }
-                    },
-                    "1539642513779": {
-                        "type": "image",
-                        "settings": {
-                            "image": "shopify:\/\/shop_images\/home-column-carousel-desktop-slide-3.jpg",
-                            "mobile_image": "shopify:\/\/shop_images\/home-column-carousel-mobile-slide-3.jpg",
-                            "heading": "Water Sports",
-                            "svg_icon": "",
-                            "png_icon": "",
-                            "link": "shopify:\/\/collections\/water-sports",
-                            "cta_text": "Shop Now"
-                        }
-                    },
-                    "1539642524127": {
-                        "type": "image",
-                        "settings": {
-                            "image": "shopify:\/\/shop_images\/home-column-carousel-desktop-slide-4.jpg",
-                            "mobile_image": "shopify:\/\/shop_images\/home-column-carousel-mobile-slide-4.jpg",
-                            "heading": "Lifestyle",
-                            "svg_icon": "",
-                            "png_icon": "",
-                            "link": "shopify:\/\/collections\/lifestyle",
-                            "cta_text": "Shop Now"
-                        }
-                    }
-                },
-                "block_order": [
-                    "1539638126458",
-                    "1539642501764",
-                    "1539642513779",
-                    "1539642524127"
-                ],
-                "settings": {}
-            },
-            "page-faq-template": {
-                "type": "page-faq-template",
-                "blocks": {
-                  "1542219298126": {
-                    "type": "html",
-                    "settings": {
-                      "title": "HOW DO I MAKE A PURCHASE?",
-                      "answer": "<p>Shopping at <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> is easy:<\/p>\n<ul>\n<li>Please <a href=\"\/account\/login\" alt=\"Click to register for a new account\">REGISTER<\/a> to a new account or <a href=\"\/account\/login\" alt=\"Click to login with an existing account\">LOGIN<\/a> to your existing account (NOTE: Returning visitor to the new site will have to re-LOGIN i.e. REGISTER) by using the <a href=\"\/account\/login\" alt=\"Click to login with an existing account\">SIGN IN<\/a> links at the top of any page. You can also use your Facebook, Google+, Amazon or PayPal account for Signing In.<\/li>\n<li>If you know what you are looking for, please Click the WOMEN, MEN, KIDS Links provided at the left of each page to reveal their subcategory links. You can also shop using our Jean FIT GUIDE section or SEARCH by key words using our SEARCH tool <i class=\"icon-search\"><\/i> provided at the top of each page.<\/li>\n<li>Once you have found an item that you would like to purchase, select your size and quantity then click on the 'ADD TO CART' button provided.<\/li>\n<li>To Review the items you have selected for purchase hover over the 'MY CART' link at the top of each page and click the VIEW BAG button. You can use the 'REMOVE ITEM' button to delete items from your shopping CART.<\/li>\n<li>Click on 'CHECKOUT' to complete your order.<\/li>\n<\/ul>",
-                      "anchor": ""
-                    }
-                  },
-                  "1542220082322": {
-                    "type": "html",
-                    "settings": {
-                      "title": "DO I NEED TO SET UP AN ACCOUNT TO PLACE AN ORDER?",
-                      "answer": "<p>No, you can shop at JOE'S as a GUEST without creating an account. However, registering your details will allow you to:<\/p>\n\n<ul>\n<li>Track your order and review past purchases<\/li>\n<li>Build a personal wish list<\/li>\n<li>Shop without entering your address details<\/li>\n<\/ul>",
-                      "anchor": ""
-                    }
-                  },
-                  "1542220259294": {
-                    "type": "html",
-                    "settings": {
-                      "title": "I'VE FORGOTTEN MY PASSWORD?",
-                      "answer": "<p>If you have forgotten your password, click the <a href=\"\/account\/login\" alt=\"Click to retrieve for a forgotten password\">FORGOT PASSWORD<\/a> link in the Log In Window for instructions on resetting your Password.<\/p>",
-                      "anchor": ""
-                    }
-                  },
-                  "1542220285963": {
-                    "type": "html",
-                    "settings": {
-                      "title": "HOW DO I KNOW THAT THE PRODUCTS YOU SELL ARE AUTHENTIC?",
-                      "answer": "<p>We unconditionally guarantee that every item we sell is 100% authentic. Please note that we are unable to comment on the authenticity of any items not purchased from <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a>.<\/p>",
-                      "anchor": ""
-                    }
-                  },
-                  "1542220342731": {
-                    "type": "html",
-                    "settings": {
-                      "title": "WHICH SIZE SHOULD I CHOOSE?",
-                      "answer": "<ul>\n    <li><a href=\"#size-chart--popup\" data-toggle=\"faq-size-modal\" data-tab-target=\"womens\">women<\/a><\/li>\n    <li><a href=\"#size-chart--popup\" data-toggle=\"faq-size-modal\" data-tab-target=\"mens\">men<\/a><\/li>\n    <li><a href=\"#size-chart--popup\" data-toggle=\"faq-size-modal\" data-tab-target=\"kids\">kids<\/a><\/li>\n<\/ul>",
-                      "anchor": ""
-                    }
-                  },
-                  "1542220365959": {
-                    "type": "html",
-                    "settings": {
-                      "title": "HOW DO I KNOW IF AN ITEM IS IN STOCK?",
-                      "answer": "<p>All items are in stock unless the size or color is not displayed. Please be aware that even if an item is in your shopping cart, it can still be bought by another customer until you have completed your order.<\/p>",
-                      "anchor": ""
-                    }
-                  },
-                  "1542220387334": {
-                    "type": "html",
-                    "settings": {
-                      "title": "WHAT PAYMENT METHODS DOES JOE'S ACCEPT?",
-                      "answer": "<p>We accept Visa, MasterCard, American Express and Discover as well as Paypal, Apple Pay, Amazon Pay and Affirm. Please note that we do not accept any other methods of payment apart from those listed above.<\/p>",
-                      "anchor": ""
-                    }
-                  },
-                  "1542220434241": {
-                    "type": "html",
-                    "settings": {
-                      "title": "IS IT SAFE TO USE MY CREDIT CARD ONLINE AT JOE'S?",
-                      "answer": "<p>At JOE'S, your personal online security is important to us. We use the latest SSL encryption technology to store and safely transmit your personal and credit card information through our systems. All orders are processed through a secure checkout system provided by Authorize.net. Additionally, for your safety and protection, we will confirm that the billing address you provide matches the address on file with your credit card company.<\/p>",
-                      "anchor": ""
-                    }
-                  },
-                  "1542220460535": {
-                    "type": "html",
-                    "settings": {
-                      "title": "DOES JOE'S SHIP TO POST OFFICE BOXES?",
-                      "answer": "<p>Again, please note that we are unable to deliver to Post Office boxes (PO Box in shipping address) at this time.<\/p>",
-                      "anchor": ""
-                    }
-                  },
-                  "1542220481622": {
-                    "type": "html",
-                    "settings": {
-                      "title": "DOES JOE'S SHIP TO HAWAII OR ALASKA?",
-                      "answer": "<p>Free shipping services and expedited shipping fees at checkout includes Hawaii &amp; Alaska using the USPS service. At this time, Joe's does not include a USPS Return Mailing Label for orders shipped to Alaska or Hawaii.<\/p>",
-                      "anchor": ""
-                    }
-                  },
-                  "1542220502350": {
-                    "type": "html",
-                    "settings": {
-                      "title": "HOW MUCH TAX WILL I HAVE TO PAY?",
-                      "answer": "<p>Companies selling items on the Internet are subject to the same sales tax collection requirements as other retailers. Sales tax rates for <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> are obtained from a leading tax rate service provider.<\/p>\n<p><a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> reserves the right to apply sales tax where applicable. Specifically, items sold by <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> and shipped to destinations in the states of California, Illinois, New York, Florida, Texas, Washington, Nevada, Virginia, Massachusetts, Pennsylvania are subject to tax. The tax rate applied is calculated on the total selling price of each individual item in your shopping bag and will be the combined state and local rate for the shipping address of your order.<\/p>\n<p>No sales tax is charged when purchasing gift certificates though purchases paid with gift certificates will be subject to tax according to the shipping destination.<\/p>\n<p><strong>NOTE:<\/strong> Prices displayed on the website are exclusive of taxes. Additionally, JOE'S is not responsible for reporting or paying Use Tax to states.<\/p>",
-                      "anchor": ""
-                    }
-                  },
-                  "1542220523668": {
-                    "type": "html",
-                    "settings": {
-                      "title": "DOES JOE'S SHIP TO MULTIPLE ADDRESSES?",
-                      "answer": "<p>Unfortunately, you may only ship to one address per order. If your order contains gifts or items that require shipping to multiple locations, you will need to place separate orders for each address.<\/p>",
-                      "anchor": "orderstatus"
-                    }
-                  },
-                  "1542220577233": {
-                    "type": "html",
-                    "settings": {
-                      "title": "HOW SOON CAN I GET MY ORDER AND HOW MUCH WILL IT COST?",
-                      "answer": "<p>We offer different shipping options to meet your needs – as listed below:<\/p>\n\n<h6 class=\"text-center\">DOMESTIC SHIPPING COSTS &amp; METHODS (excludes Hawaii &amp; Alaska)<\/h6>\n<div class=\"table-responsive\">\n<table class=\"table-bordered text-center table-hover domestic-shipping-table\">\n<thead>\n<tr>\n<td style=\"padding: 5px;\">UPS Ground<\/td>\n<td style=\"padding: 5px;\">UPS 3-Day<\/td>\n<td style=\"padding: 5px;\">UPS 2-Day<\/td>\n<td style=\"padding: 5px;\">Overnight<\/td>\n<\/tr>\n<\/thead>\n<tbody>\n<tr>\n<td class=\"text-danger\"><strong>FREE<\/strong><\/td>\n<td>$15.00<\/td>\n<td>$20.00<\/td>\n<td>$30.00<\/td>\n<\/tr>\n<\/tbody>\n<\/table>\n<\/div>\n<p><\/p>\n<p>For UPS 3 day, UPS 2nd day and NEXT DAY delivery, please ensure you place your order before 3pm EST weekdays. All weekday (non-Holiday) orders placed before 3pm EST will ship that day* if your address is verified by 5pm EST. All orders from Mon-Fri (non-Holiday) placed after 3pm EST as well as all orders placed on Saturday and Sunday will be shipped the following business day once inventory is confirmed, address is verified and order is processed*.<\/p>\n<p>Orders will be delivered via UPS between 9am-5pm on weekdays only. Orders will not be delivered on national holidays. Processed and verified *orders placed on <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> can be expected to arrive within 7-10 business days* with UPS ground shipping method provided free of charge by <a href=\"\/\">JoesJeans.com<\/a>.<\/p>\n<p>Joe's does not deliver on Saturday, Sunday or Holidays.<\/p>\n<p>*Please note that your order will only be shipped once payment and delivery details have been verified and approved. Order cut-off times are provided as guidelines only, and do not take into account possible delays caused by verification. Shipping to other than the bill to address on any order may result in a delay. We cannot ship Paypal orders that have unconfirmed shipping addresses within the customers respective accounts. If an orders’ shipping address is not confirmed within a customers’ PayPal account within 96 hours of being placed at <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a>, those orders may be cancelled. Additionally, we reserve the right to ship at our discretion if an order's shipping address does not match the billing address.<\/p>\n<p>Questions? Call Toll Free: <a href=\"tel:+18775285637\" alt=\"Click to call customer service at 1.877.528.JOES\">1.877.528.JOES (5637)<\/a> | USA Hours of Operation: 6AM - 6PM PST, Monday - Sunday with the exception of New Year's Day and Christmas. Or email us at <a href=\"mailto:customerservice@shop.joesjeans.com\" alt=\"Click to e-mail customer service at customerservice@shop.joesjeans.com\">customerservice@shop.joesjeans.com<\/a>.<\/p>",
-                      "anchor": "militarydiscount"
-                    }
-                  },
-                  "1542220607549": {
-                    "type": "html",
-                    "settings": {
-                      "title": "DO YOU SHIP TO MILITARY ADDRESSES?",
-                      "answer": "<p>For security reasons, we do not currently ship APO\/FPO addresses.<\/p>",
-                      "anchor": "bulkdiscount"
-                    }
-                  },
-                  "1560849949295": {
-                    "type": "html",
-                    "settings": {
-                      "title": "DO YOU SHIP TO PO BOXES?",
-                      "answer": "<p>For security reasons, we do not currently ship to P.O. boxes.<\/p>",
-                      "anchor": ""
-                    }
-                  },
-                  "1560849977378": {
-                    "type": "html",
-                    "settings": {
-                      "title": "INTERNATIONAL SHIPPING",
-                      "answer": "<h6>Delivery Rates &amp; Services<\/h6>\n\n<p>JoesJeans.com currently ships to the following countries: Canada, United Kingdom, France, Mexico and Australia.<\/p>\n\n<h6>JoesJeans.com Expedited International Shipping Costs through UPS<\/h6>\n<p><\/p>\n\n<ul>\n<li>Canada 22.95 (USD)<\/li>\n<li>Australia 50.95 (USD)<\/li>\n<li>France 44.75 (USD)<\/li>\n<li>Germany 44.75 (USD)<\/li>\n<li>Mexico 40.45 (USD)<\/li>\n<li>UK 50.95 (USD)<\/li>\n<\/ul>\n<p>Your order will be delivered by UPS who will attempt to deliver the goods to you three (3) times. They will also leave a notice card after each delivery attempt to advise you what you can do to arrange the receipt of your package. Your signature will be required upon delivery.<\/p>\n<p>If you have any questions related to your delivery, please contact our Customer Care team.<\/p>\n<h6>Taxes and Duties<\/h6>\n<p><\/p>\n\n<ul>\n<li>All international orders may be subject to taxes and duties.<\/li>\n<li>Taxes and duties are still owed if the item is refused.<\/li>\n<li>We ship your package DDU, \"duties and taxes unpaid\", and we do not collect nor do we calculate the VAT, duties and\/or taxes during checkout.<\/li>\n<li>Any fees that are due will be collected upon delivery of the order.<\/li>\n<li>All applicable customs, taxes, import duties and collection fees are the responsibility of the customer (even if you refuse any shipments upon delivery).<\/li>\n<li>Customs authorities require that we state the value of your order directly on your package.<\/li>\n<li>Customs agents have the right to release or deny release of your package, and in rare cases, they may also delay delivery.<\/li>\n<li>Taxes and fees are based on many factors, including location, material, item value, etc.<\/li>\n<li>The amount of taxes due is determined solely by the government.<\/li>\n<li>Some countries may require additional fees paid Collect on Delivery (COD).<\/li>\n<li>If your order does require these additional charges, they must be paid by you in order for your package to clear customs.<\/li>\n<li>These fees are paid to the local carrier and are not collected by Joe's Jeans.<\/li>\n<li>Contact the customs office in the destination country for information about any applicable duties or taxes<\/li>\n<li>In the European Union, duties and taxes can be 30% or more of the total declared value of your order.<\/li>\n<\/ul>\n<h6>International Returns<\/h6>\n<p><\/p>\n<p>Your order will be delivered by UPS who will attempt to deliver the goods to you three (3) times. Please send items back to us at the address below using any trackable shipping method. Once we receive your package, we will promptly process your return. Please be sure that your package is insured and prepaid. Sorry, we cannot accept COD returns.<\/p>\n<p>If an order is placed on JoesJeans.com and then refused, you will be responsible for the original duties,taxes,shipping &amp; handling costs, as well as any duties, taxes and\/or customs charges that were incurred in shipping the package. These amounts will be subtracted from your merchandise refund.<\/p>\n<p>NOTE: Joe's Jeans has made every effort to minimize our international shipping charges. We only charge our cost for these services. We do not make any profit on our shipping services to international customers. Also, we are required by law to disclose the full value of the package contents and cannot alter this value. For further information on international customers, including our <a href=\"\/privacy\">Privacy Policy<\/a>, please visit our <a href=\"\/terms\">Terms and Conditions<\/a>.<\/p>",
-                      "anchor": ""
-                    }
-                  },
-                  "1560850144920": {
-                    "type": "html",
-                    "settings": {
-                      "title": "IS MY PACKAGE INSURED?",
-                      "answer": "<p>All items are insured against theft and accidental damage whilst in transit from JOE'S to the shipping address. Once your items have been delivered to the specified delivery address and signed for, they are no longer covered by insurance. If your box is damaged upon arrival, we recommend that you either refuse the delivery, or make a note when signing for it that you are accepting a damaged box.<\/p>",
-                      "anchor": ""
-                    }
-                  },
-                  "1560850188064": {
-                    "type": "html",
-                    "settings": {
-                      "title": "DO I NEED TO SIGN FOR MY ORDER?",
-                      "answer": "<p>Due to the high value of the goods that we sell, we require proof of delivery for orders over $500. This means we are unable to authorize packages to be delivered without a signature when the order is over $500.<\/p>",
-                      "anchor": ""
-                    }
-                  },
-                  "1560850275730": {
-                    "type": "html",
-                    "settings": {
-                      "title": "CAN I CHANGE MY SHIPPING ADDRESS AFTER MY ORDER HAS BEEN DISPATCHED?",
-                      "answer": "<p>We are unfortunately unable to redirect orders once your items have been dispatched. Therefore, please ensure you provide a suitable shipping address for the specified delivery times.<\/p>",
-                      "anchor": ""
-                    }
-                  },
-                  "1560850298547": {
-                    "type": "html",
-                    "settings": {
-                      "title": "HOW WILL I KNOW YOU RECEIVED MY ORDER & WHEN WILL PAYMENT BE DEDUCTED?",
-                      "answer": "<p>After you place your order, you will be sent an email confirming that it has been received. Your card will be debited at the time the order was placed. In the rare instance that any of the items you have ordered are not available, we will contact you by email and will only charge your credit card for the value of the items in stock.<\/p>",
-                      "anchor": ""
-                    }
-                  },
-                  "1560850354189": {
-                    "type": "html",
-                    "settings": {
-                      "title": "CAN I TRACK MY ORDER?",
-                      "answer": "<p>Once your order has been shipped, you will receive email confirmation of your shipping details and an UPS tracking number. If you have registered, you will be able to view and track the status of your shipment by signing in and selecting <a href=\"\/my-account\">My Account<\/a> followed by <a href=\"\/orders\/track\" alt=\"Click to track\/view your order\">TRACK\/VIEW<\/a> MY ORDERS.<\/p>",
-                      "anchor": ""
-                    }
-                  },
-                  "1560850375207": {
-                    "type": "html",
-                    "settings": {
-                      "title": "HOW DO I RETURN OR EXCHANGE AN ITEM?",
-                        "answer": "<p>In the event that you are unhappy with your purchase from either <a style=\"text-decoration:underline !important\" href=\"\/\">JoesJeans.com<\/a> or our retail store, we will gladly accept a return within 30 days of purchase.<\/p>\n\n<ul>\n\t<li>Your product(s) must be returned new, unused with all garment tags still attached and within thirty days of the receipt of your order. We are unable to accept merchandise which is not received with these specified conditions.<\/li>\n\t<ul>\n\t\t<li>Also, please remember to send all return\/exchanges directly to JOESJEANS ONLINE STORE, 19801 S. Santa Fe Ave., Rancho Dominguez, CA 90221 if you decide to not use the return label.<\/li>\n\t<\/ul>\n\t<li>If you wish to exchange your purchase from <a style=\"text-decoration:underline !important\" href=\"\/\">JoesJeans.com<\/a> for a completely new item or a different size, just follow the steps in the returns process.<\/li>\n\t<li>To ensure that your return is adequately protected in transit, we recommend you send your items back to us in the original packaging provided. <\/li>\n\t<li>Please click here to start the return process<\/li>\n\t<ul>\n\t\t<li><a target=\"_blank\" style=\"text-decoration:underline !important\" href=\"https:\/\/joesjeans.returnly.com\/\"><strong>START YOUR RETURN<\/strong><\/a><\/li>\n\t<\/ul>\n\t<li>We will inspect and process your return. Your refund will be applied to your original method of payment within 14 business days of receipt to JOESJEANS ONLINE STORE, 19801 S. Santa Fe Ave., Rancho Dominguez, CA 90221. Posting to your credit card account could take an additional 10 days depending on your credit card company.<\/li>\n\t<li>You will receive email notification once your return has been received and processed.<\/li>\n\t<li>Items purchased at any of JOE'S brick and mortar stores including JOE'S full price retail stores, JOE'S Outlet stores or at over 1,200 retail doors carrying JOE'S Jeans products in the U.S. and abroad cannot be returned to <a style=\"text-decoration:underline !important\" href=\"\/\">JoesJeans.com<\/a>. Please contact <a style=\"text-decoration:underline !important\" href=\"mailto:customerservice@joesjeans.com?subject=Joe's%20Jeans%20Customer%20Service\">customerservice@joesjeans.com<\/a> or call please call Toll Free: <a style=\"text-decoration:underline !important\" href=\"tel:+18775285637\">1-877-528-JOES (5637)<\/a> regarding problems with items not purchased at <a style=\"text-decoration:underline !important\" href=\"\/\">JoesJeans.com<\/a>.<\/li>\n\t<li>All promotional offers listed at <a style=\"text-decoration:underline !important\" href=\"\/\">JoesJeans.com<\/a> cannot be combined with any other offers or previous promotions and cannot be applied to previous purchases.<\/li>\n<\/ul>",
-                      "anchor": ""
-                    }
-                  },
-                  "1560850516906": {
-                    "type": "html",
-                    "settings": {
-                      "title": "WILL I BE REFUNDED THE FULL VALUE OF MY ORDER?",
-                      "answer": "<p>All correctly returned products purchased through <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> will either be refunded to the purchaser's credit card or JOE'S account, and will exclude any expedited shipping costs. All applicable sales taxes will be refunded. Outside the United States, customs duties and sales taxes are non-refundable. However, you may be able to recover these by contacting your local customs bureau directly.<\/p>",
-                      "anchor": ""
-                    }
-                  },
-                  "1560850537196": {
-                    "type": "html",
-                    "settings": {
-                      "title": "IS MY PERSONAL INFORMATION KEPT PRIVATE?",
-                      "answer": "<p>Please be assured that all the information you share with us is private and confidential. At no point will we share, rent or sell your personal information without your consent. To register at JOE'S, we will need to know your name, mailing address and email address. To process credit card orders online we also require your billing address, shipping address, telephone number, credit card number and expiration date. JOE'S only keeps a record of your transactions; your credit card details are not held on our website. Please note that JOE'S may also use the information you provide to inform you of new goods and services via email. If you prefer not to receive these emails, please send an email to <a href=\"mailto:unsubscribe@joesjeans.com\" alt=\"Click to send an e-mail to unsubscribe@joesjeans.com\">unsubscribe@joesjeans.com<\/a>. click here to read our <a href=\"\/privacy\" alt=\"Click to view JOE'S Jeans Privacy Policy\">PRIVACY POLICY<\/a> in full.<\/p>",
-                      "anchor": ""
-                    }
-                  }
-                },
-                "block_order": [
-                  "1542219298126",
-                  "1542220082322",
-                  "1542220259294",
-                  "1542220285963",
-                  "1542220342731",
-                  "1542220365959",
-                  "1542220387334",
-                  "1542220434241",
-                  "1542220460535",
-                  "1542220481622",
-                  "1542220502350",
-                  "1542220523668",
-                  "1542220577233",
-                  "1542220607549",
-                  "1560849949295",
-                  "1560849977378",
-                  "1560850144920",
-                  "1560850188064",
-                  "1560850275730",
-                  "1560850298547",
-                  "1560850354189",
-                  "1560850375207",
-                  "1560850516906",
-                  "1560850537196"
-                ],
-                "settings": {
-                  "anchor_top_offset": -100,
-                  "size_chart_show": true,
-                  "size_chart_page": "size-chart",
-                  "before_content": "<h1>FREQUENTLY ASKED QUESTIONS<\/h1>",
-                  "after_content": ""
-                }
-            },
-            "outlet-stores": {
-                "type": "outlet-stores",
-                "blocks": {
-                    "1561098776075": {
-                        "type": "image",
-                        "settings": {
-                            "state_name": "CALIFORNIA",
-                            "store_name": "JOE'S® CAMARILLO PREMIUM OUTLETS",
-                            "store_address": "850 E. Ventura Blvd. Suite # 724 Camarillo, CA 93010",
-                            "store_map_url": "https:\/\/goo.gl\/IomYaz",
-                            "store_phone": "805.445.6690 \/\/ 805.445.6609 \/\/ 805.445.6604",
-                            "store_hours": "Mon - Sat 10-9p | Sun 10-8p"
-                        }
-                    },
-                    "1561098830924": {
-                        "type": "image",
-                        "settings": {
-                            "state_name": "CALIFORNIA",
-                            "store_name": "JOE'S® CARLSBAD PREMIUM OUTLETS",
-                            "store_address": "5630 Paseo Del Norte, #D144 Carlsbad, CA 92008",
-                            "store_map_url": "",
-                            "store_phone": "760.603.8520 \/\/ 760.603.8502 \/\/ 760.603.8550",
-                            "store_hours": "Mon - Sat 10-9p | Sun 10-7p"
-                        }
-                    },
-                    "1561098857242": {
-                        "type": "image",
-                        "settings": {
-                            "state_name": "CALIFORNIA",
-                            "store_name": "JOE'S® DESERT HILLS PREMIUM OUTLETS",
-                            "store_address": "48650 Seminole Drive, #108B Cabazon, CA 92230",
-                            "store_map_url": "https:\/\/goo.gl\/gmVdlN",
-                            "store_phone": "951.849.7459 \/\/ 951.849.7458",
-                            "store_hours": "Mon - Sat 10-9p | Sun 10-8p"
-                        }
-                    },
-                    "1561098890081": {
-                        "type": "image",
-                        "settings": {
-                            "state_name": "CALIFORNIA",
-                            "store_name": "JOE'S® SAN FRANCISCO PREMIUM OUTLETS",
-                            "store_address": "2958 Livermore Outlets Drive Livermore, CA 94551",
-                            "store_map_url": "https:\/\/goo.gl\/mVEVVs",
-                            "store_phone": "925.961.9847 \/\/ 925.961.9848",
-                            "store_hours": "Mon - Sat 10-9p | Sun 10-7p"
-                        }
-                    },
-                    "1561098923417": {
-                        "type": "image",
-                        "settings": {
-                            "state_name": "ILLINOIS",
-                            "store_name": "JOE'S® FASHION OUTLETS OF CHICAGO",
-                            "store_address": "5220 Outlets Way, Space 2069 Rosemont, IL 60018",
-                            "store_map_url": "https:\/\/goo.gl\/AanHvv",
-                            "store_phone": "847.447.3330 \/\/ 847.447.3340",
-                            "store_hours": "Mon - Sat 10-9p | Sun 10-7p"
-                        }
-                    },
-                    "1561098954569": {
-                        "type": "image",
-                        "settings": {
-                            "state_name": "NEVADA",
-                            "store_name": "JOE'S® LAS VEGAS PREMIUM OUTLETS",
-                            "store_address": "755 South Grand Central Parkway, #1150 Las Vegas, NV 89106",
-                            "store_map_url": "https:\/\/goo.gl\/J1jq8d",
-                            "store_phone": "702.382.5510 \/\/ 702.382.5523 \/\/ 702.382.5529",
-                            "store_hours": "Mon - Sat 9-10p | Sun 9-8p"
-                        }
-                    },
-                    "1561098990960": {
-                        "type": "image",
-                        "settings": {
-                            "state_name": "NEW YORK",
-                            "store_name": "JOE'S® WOODBURY COMMON PREMIUM OUTLETS",
-                            "store_address": "644 Blue Bird Court Central Valley, NY 10917",
-                            "store_map_url": "https:\/\/goo.gl\/fkWsdT",
-                            "store_phone": "845.928.7661 \/\/ 845.928.7664 \/\/ 845.928.7673",
-                            "store_hours": "Mon - Sun 10-9p"
-                        }
-                    },
-                    "1561099021913": {
-                        "type": "image",
-                        "settings": {
-                            "state_name": "PENNSYLVANIA",
-                            "store_name": "JOE'S® PHILADELPHIA PREMIUM OUTLETS",
-                            "store_address": "18 West Lightcap Road, #1113 Pottstown, PA 19464",
-                            "store_map_url": "https:\/\/goo.gl\/47ed1y",
-                            "store_phone": "610.970.3816 \/\/ 610.970.9817 \/\/ 610.970.3818",
-                            "store_hours": "Mon - Sat 10-9p | Sun 10-7p"
-                        }
-                    },
-                    "1561099056510": {
-                        "type": "image",
-                        "settings": {
-                            "state_name": "VIRGINIA",
-                            "store_name": "JOE'S® LEESBURG CORNER PREMIUM OUTLETS",
-                            "store_address": "241 Fort Evans Rd. NE #1135 Leesburg, VA 20176",
-                            "store_map_url": "https:\/\/goo.gl\/5UUXiw",
-                            "store_phone": "703.771.7150 \/\/ 703.771.7151 \/\/ 703.771.7152",
-                            "store_hours": "Mon - Sat 10-9p | Sun 10-7p"
-                        }
-                    },
-                    "1561099093151": {
-                        "type": "image",
-                        "settings": {
-                            "state_name": "WASHINGTON",
-                            "store_name": "JOE'S® SEATTLE PREMIUM OUTLETS",
-                            "store_address": "10600 Qull Ceda Blvd., #618 Tulalip, WA 98271",
-                            "store_map_url": "https:\/\/goo.gl\/jquJj8",
-                            "store_phone": "360.716.2315 \/\/ 360.716.2316",
-                            "store_hours": "Mon - Sat 10-9p | Sun 10-7p"
-                        }
-                    }
-                },
-                "block_order": [
-                    "1561098776075",
-                    "1561098830924",
-                    "1561098857242",
-                    "1561098890081",
-                    "1561098923417",
-                    "1561098954569",
-                    "1561098990960",
-                    "1561099021913",
-                    "1561099056510",
-                    "1561099093151"
-                ],
-                "settings": {}
-            },
-            "women-fit-guide": {
-                "type": "women-fit-guide",
-                "blocks": {
-                    "1561700619107": {
-                        "type": "image",
-                        "settings": {
-                            "fit_guide_title": "Skinny",
-                            "description": "8 3\/4\" rise, 10\" leg opening, 28\" inseam. A versatile mid rise skinny that stops at the ankle and is figure flattering to all shapes. A classic, wardrobe staple.",
-                            "collection": "women-denim-fit-skinny",
-                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Skinny-W.jpg",
-                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Skinny-W_2fa09d5a-7170-4b8a-b695-d249d64b05ec.jpg",
-                            "desktop_fit_image": "shopify:\/\/shop_images\/skinny.png",
-                            "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Skinny-W.jpg"
-                        }
-                    },
-                    "1561700763172": {
-                        "type": "image",
-                        "settings": {
-                            "fit_guide_title": "Straight",
-                            "description": "9 1\/2” rise, 11” leg opening, 28” inseam. A slightly more relaxed alternative to a skinny fit, this mid-rise has an overall slim fit and stops at the ankle for a comfortable, versatile wear.",
-                            "collection": "women-denim-fit-straight",
-                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Straight-W.jpg",
-                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Straight-W_a957632f-9df1-4e13-b88c-64e40fcc35a3.jpg",
-                            "desktop_fit_image": "shopify:\/\/shop_images\/skinny-pro-img.png",
-                            "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Straight-W.jpg"
-                        }
-                    },
-                    "1561700801684": {
-                        "type": "image",
-                        "settings": {
-                            "fit_guide_title": "Bootcut",
-                            "description": "8 3\/4\" rise, 17\" leg opening, 34\" inseam. A versatile bootcut fit designed to elevate any wardrobe. Contoured waistband curves with the hips to lift and shape the backside.",
-                            "collection": "women-denim-fit-bootcut",
-                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Bootcut-W.jpg",
-                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Bootcut-W_5f3f61b4-3d05-4945-8bbb-8aee4c6d7e9d.jpg",
-                            "desktop_fit_image": "shopify:\/\/shop_images\/bootcut.png",
-                            "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Bootcut-W.jpg"
-                        }
-                    },
-                    "1561700858807": {
-                        "type": "image",
-                        "settings": {
-                            "fit_guide_title": "Flare",
-                            "description": "8 3\/4\" rise, 17\" leg opening, 26\" inseam. Add a little kick to your step with a cropped flare that is fitted through the hips and thighs and opens up at the ankle.",
-                            "collection": "women-denim-fit-flare",
-                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Flare-W.jpg",
-                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Flare-W_32749c5b-a350-4884-9c28-4bd2b734aad5.jpg",
-                            "desktop_fit_image": "shopify:\/\/shop_images\/flare.png",
-                            "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Flare-W.jpg"
-                        }
-                    },
-                    "1561700917267": {
-                        "type": "image",
-                        "settings": {
-                            "fit_guide_title": "Petite",
-                            "description": "8 1\/4” rise, 9 1\/2” leg opening, 29” inseam. Perfectly tailored to fit a petite frame.",
-                            "collection": "women-denim-fit-petite",
-                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Petite-W.jpg",
-                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Petite-W_d231350d-e31f-46af-9782-14ee647d8d64.jpg",
-                            "desktop_fit_image": "shopify:\/\/shop_images\/petite.png",
-                            "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Petite-W.jpg"
-                        }
-                    },
-                    "1561700960992": {
-                        "type": "image",
-                        "settings": {
-                            "fit_guide_title": "Curvy",
-                            "description": "8 1\/2\" rise, 10 1\/2\" leg opening, 31\" inseam. Full length contoured curvy skinny with extra ease through the hip and thigh area. Designed specifically for a sexy, curvy figure.",
-                            "collection": "women-denim-fit-curvy",
-                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Curvy-W.jpg",
-                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Curvy-W_b75f25a2-3eb4-449c-b84b-bed192af0ca1.jpg",
-                            "desktop_fit_image": "shopify:\/\/shop_images\/curvy.png",
-                            "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Curvy-W.jpg"
-                        }
-                    },
-                    "1563517424761": {
-                        "type": "image",
-                        "settings": {
-                            "fit_guide_title": "Boyfriend",
-                            "description": "9\" rise, 12\" leg opening. A mid rise boyfriend fir that is easy at the hips and slim through the legs. A sexy alternative to a loose fitting boyfriend cut. Available in a crop (23 1\/2\" inseam) and ankle (23 1\/2\" inseam) length.",
-                            "collection": "women-denim-fit-boyfriend",
-                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Boyfriend-W.jpg",
-                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Boyfriend-W_6b63c1e3-c199-42f9-93e0-04ee5fa2bd74.jpg",
-                            "desktop_fit_image": "shopify:\/\/shop_images\/women-skinny.jpg",
-                            "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Boyfriend-W.jpg"
-                        }
-                    },
-                    "1563517483912": {
-                        "type": "image",
-                        "settings": {
-                            "fit_guide_title": "Cigarette",
-                            "description": "Cigarette Description will here.",
-                            "collection": "women-collection",
-                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Cigarette-W.jpg",
-                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Cigarette-W_57853574-87af-4290-8815-5a2757b12449.jpg",
-                            "desktop_fit_image": "shopify:\/\/shop_images\/women-skinny.jpg",
-                            "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Cigarette-W.jpg"
-                        }
-                    }
-                },
-                "block_order": [
-                    "1561700619107",
-                    "1561700763172",
-                    "1561700801684",
-                    "1561700858807",
-                    "1561700917267",
-                    "1561700960992",
-                    "1563517424761",
-                    "1563517483912"
-                ],
-                "settings": {
-                }
-            },
-            "men-fit-guide": {
-                "type": "men-fit-guide",
-                "blocks": {
-                    "1561704027169": {
-                        "type": "image",
-                        "settings": {
-                            "fit_guide_title": "skinny",
-                            "description": "9 3\/4\" rise, 13 1\/4\" leg opening, 33\" inseam. Our most narrow, skinny fit that hugs the body from hip to ankle. Specifically made for the modern guy who is looking for a sleek daily essential.",
-                            "collection": "men-denim-fit-skinny",
-                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Skinny-M.jpg",
-                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Skinny_ba21e0aa-e084-4c38-8234-c7be24745087.jpg",
-                            "desktop_fit_image": "shopify:\/\/shop_images\/skinny-men-desktop_ceb4ba93-12df-476e-813e-ec773fc91de6.jpg",
-                            "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Skinny_605bd65d-963f-43e9-b176-8a466788cdbb.jpg"
-                        }
-                    },
-                    "1561706120320": {
-                        "type": "image",
-                        "settings": {
-                            "fit_guide_title": "Slim",
-                            "description": "10\" rise, 14 1\/2\" leg opening, 34\" inseam. Created for the man looking for something slightly narrower but not quite a skinny fit. A slim leg from hip to knee and tapered at ankle.",
-                            "collection": "men-denim-fit-slim",
-                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Slim-M.jpg",
-                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Slim_512df4da-3e37-49d4-889e-7bea83dbad3f.jpg",
-                            "desktop_fit_image": "shopify:\/\/shop_images\/slim-desktop-men.jpg",
-                            "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Slim.jpg"
-                        }
-                    },
-                    "1563454773939": {
-                        "type": "image",
-                        "settings": {
-                            "fit_guide_title": "STRAIGHT",
-                            "description": "10 1\/2\" rise, 17\" leg opening, 34\" inseam. Easily dressed up or down for Joe's most versatile straight leg fit. Straight fit from hip to ankle.",
-                            "collection": "men-denim-straight-leg",
-                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Straight-M.jpg",
-                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Straight_a33a7b0f-590e-4b0d-ae4e-d1cada032e2a.jpg",
-                            "desktop_fit_image": "shopify:\/\/shop_images\/straight-men-desktop.jpg",
-                            "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Straight_c891d164-8fa2-4f3f-b71d-1d06f7261868.jpg"
-                        }
-                    },
-                    "1563455212718": {
-                        "type": "image",
-                        "settings": {
-                            "fit_guide_title": "STRAIGHT + NARROW",
-                            "description": "10 1\/4\" rise, 15 1\/2\" leg opening, 34\" inseam. Casual yet refined, for any occasion. Our fan favorite fit. Straight fit from hip with a tailored narrow leg.",
-                            "collection": "men-denim-straight-narrow",
-                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Straight_Narrow-M.jpg",
-                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Straight_Narrow_931fedef-81a1-4cfd-9541-8e834b6237e0.jpg",
-                            "desktop_fit_image": "shopify:\/\/shop_images\/straight-narrow-men-desktop.jpg",
-                            "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Skinny.jpg"
-                        }
-                    },
-                    "1563455312383": {
-                        "type": "image",
-                        "settings": {
-                            "fit_guide_title": "Athletic slim",
-                            "description": "10 5\/8\" rise, 18\" leg opening, 34\" inseam. Our most relaxed jean designed for an athletic build. A relaxed fit from hip to ankle and ease in the thigh.",
-                            "collection": "men-denim-fit-athletic",
-                            "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716_Athletic-M.jpg",
-                            "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Athletic_23a916e7-d3f4-42d1-b60f-d31b07acf7d0.jpg",
-                            "desktop_fit_image": "shopify:\/\/shop_images\/AthlETIC-SLIM.jpg",
-                            "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Athletic_bec58c36-2d7e-42e2-9fac-3e6e6ca06b9e.jpg"
-                        }
-                    }
-                },
-                "block_order": [
-                    "1561704027169",
-                    "1561706120320",
-                    "1563454773939",
-                    "1563455212718",
-                    "1563455312383"
-                ],
-                "settings": {
-                }
-            },
-            "footer": {
-                "type": "footer",
-                "blocks": {
-                    "1563958350916": {
-                        "type": "link_list",
-                        "settings": {
-                            "footer_menu_id": "footer",
-                            "show_headings": true
-                        }
-                    },
-                    "1563958363924": {
-                        "type": "link_list",
-                        "settings": {
-                            "footer_menu_id": "footer-secound-menu",
-                            "show_headings": true
-                        }
-                    }
-                },
-                "block_order": [
-                    "1563958350916",
-                    "1563958363924"
-                ],
-                "settings": {
-                    "tel_text": "1-877-528-JOES (5637)",
-                    "tel_number": "18775285637",
-                    "social_heading": "Follow Us"
-                }
-            },
-            "gift-card": {
-                "type": "gift-card",
-                "blocks": {
-                    "1567164349706": {
-                        "type": "physical-card",
-                        "settings": {
-                            "physical_image": "shopify:\/\/shop_images\/joes-gift-card-2.png",
-                            "physical_title": "Gift Card",
-                            "physical_sub-title": "Ship a gift card to a recipient Anywhere in the U.S",
-                            "physical_content": "<ul>\n   <li>Free Ground Shipping (expedited shipping also available).<\/li>\n   <li>No expiration date or maintenance fee.<\/li>\n   <li>Personal gift message included.<\/li>\n   <li>Redeem online or at any Frye Flagship store.<\/li>\n<\/ul>",
-                            "physical_link_page": "shopify:\/\/products\/gift-card",
-                            "physical_page_button_text": "Purchase Gift Card"
-                        }
-                    },
-                    "1567164352050": {
-                        "type": "e-card",
-                        "settings": {
-                            "e-card_image": "shopify:\/\/shop_images\/joes-gift-card.png",
-                            "e-card_title": "E-Gift Card",
-                            "e-card_sub-title": "can't decide on a gift? E-gift cards are always a good idea",
-                            "e-card_content": "<ul>\n   <li>Emailed within minutes of purchase.<\/li>\n   <li>No expiration date or maintenance fee.<\/li>\n   <li>Personal gift mesasge included.<\/li>\n   <li>Redeem online or at any Joe's boutique.<\/li>\n<\/ul>",
-                            "e-card_link_page": "shopify:\/\/products\/e-gift-card",
-                            "e-card_page_button_text": "Purchase E-Gift Card"
-                        }
-                    }
-                },
-                "block_order": [
-                    "1567164349706",
-                    "1567164352050"
-                ],
-                "settings": {
-                    "is_form_needed": false,
-                    "check_balance_title": "Check your balance",
-                    "form_note_content": "Please call customer service to check your balance"
-                }
+  "presets": {
+  },
+  "current": {
+    "favicon": "shopify:\/\/shop_images\/favicon.png",
+    "google_tag_manager_id": "GTM-56WJC9S",
+    "data_layer_debugging": false,
+    "enable_newsletter_subscribe": true,
+    "announcement_text_color": "#ffffff",
+    "announcement_bg_one": "#000000",
+    "announcement_bg_two": "#757575",
+    "nav_transparent_landing": true,
+    "header_background": "#ffffff",
+    "nav_header_color": "#000000",
+    "nav_sub_header_color": "#000000",
+    "nav_sub_sub_header_color": "#000000",
+    "nav_list_item_color": "#000000",
+    "background": "#fefffe",
+    "header_color": "#000000",
+    "text_color": "#000000",
+    "link_color": "#000000",
+    "sale_color": "#bc0000",
+    "dotted_color": "#e5e5e5",
+    "error_text": "#cb0000",
+    "button_bg": "#000000",
+    "button_bg_hover": "#333333",
+    "button_text": "#ffffff",
+    "button_text_hover": "#ffffff",
+    "button_border_color": "rgba(0,0,0,0)",
+    "button_border_color_hover": "rgba(0,0,0,0)",
+    "button_border_width": 0,
+    "alt_button_bg": "#ffffff",
+    "alt_button_bg_hover": "#dddddd",
+    "alt_button_text": "#0b56a3",
+    "alt_button_text_hover": "#0b56a3",
+    "alt_button_border_color": "rgba(0,0,0,0)",
+    "alt_button_border_color_hover": "rgba(0,0,0,0)",
+    "alt_button_border_width": 0,
+    "homepage_instagram_header": "#000",
+    "homepage_instagram_text": "#000",
+    "filter_bg": "#ffffff",
+    "filter_title_color": "#000000",
+    "filter_text_color": "#000000",
+    "filter_bar_border_color": "#e2e2e2",
+    "filter_bar_border_width": 1,
+    "collection_seo_footer_bg": "#e6e6e6",
+    "collection_seo_footer_text": "#161616",
+    "product_badge_square_bg": "#1a1919",
+    "product_badge_circle_bg": "#1a1919",
+    "product_badge_diamond_bg": "#1a1919",
+    "product_badge_text_color": "#ffffff",
+    "fancybox_overlay_bg": "0,0,0,0.5",
+    "discount_modal_enable": false,
+    "discount_modal_config": "eyJjb29raWVFeHBpcmVJbkRheXMiOiA2MCwidGhyZXNob2xkRGlzY291bnRzIjogW3siZGlzY291bnRJZCI6IDEsImRpc3BsYXlOYW1lIjogIldpZ3dhbSBIYXQgKEJsYWNrKSIsImdpZnRJZCI6IDE1NDU5OTY0MDkyNTEwLCJncmFudFR5cGUiOiAicGljayIsImludmVudG9yeUlkIjogMTU0MDIyMTI5ODI4NzgsIm1pblNwZW5kIjogMjAwLCJwcm9kdWN0SGFuZGxlIjogIndpZ3dhbS13aW50ZXItaGF0In0seyJkaXNjb3VudElkIjogMiwiZGlzcGxheU5hbWUiOiAiV2lnd2FtIEhhdCAoR3JheSkiLCJnaWZ0SWQiOiAxNTQ1OTk2NTM3MDQ2MiwiZ3JhbnRUeXBlIjogInBpY2siLCJpbnZlbnRvcnlJZCI6IDE1NDAyMjEzMDE1NjQ2LCJtaW5TcGVuZCI6IDIwMCwicHJvZHVjdEhhbmRsZSI6ICJ3aWd3YW0td2ludGVyLWhhdCJ9LHsiZGlzY291bnRJZCI6IDMsImRpc3BsYXlOYW1lIjogIldpZ3dhbSBIYXQgKE5hdHVyYWwpIiwiZ2lmdElkIjogMTU0NTk5NjU1MDE1MzQsImdyYW50VHlwZSI6ICJwaWNrIiwiaW52ZW50b3J5SWQiOiAxNTQwMjIxMzA0ODQxNCwibWluU3BlbmQiOiAyMDAsInByb2R1Y3RIYW5kbGUiOiAid2lnd2FtLXdpbnRlci1oYXQifV19",
+    "discount_modal_bg": "#fefffe",
+    "discount_modal_text": "#000000",
+    "discount_modal_header": "#164732",
+    "discount_modal_button_bg": "#164732",
+    "discount_modal_button_text": "#fefffe",
+    "discount_modal_button_alt_bg": "#ab5232",
+    "discount_modal_button_alt_text": "#fefffe",
+    "gdpr_bg": "#e6e6e6",
+    "gdpr_text": "#000000",
+    "gdpr_border_color": "#0b56a3",
+    "gdpr_border_width": 0,
+    "gdpr_button_bg": "#000000",
+    "gdpr_button_text": "#ffffff",
+    "gdpr_button_bg_hover": "#3c3c3c",
+    "gdpr_alt_button_bg": "#ffffff",
+    "gdpr_alt_button_text": "#000000",
+    "gdpr_alt_button_bg_hover": "#d6d6d6",
+    "swatch_color": "#000000",
+    "swatch_background": "#ffffff",
+    "swatch_border": "#000000",
+    "swatch_selected_color": "#ffffff",
+    "swatch_selected_background": "#000000",
+    "swatch_selected_border": "#000000",
+    "new_background": "#222",
+    "new_text": "#ffffff",
+    "sale_background": "#af0000",
+    "sale_text": "#ffffff",
+    "soldout_background": "#222",
+    "soldout_text": "#ffffff",
+    "icons": "#333333",
+    "icons_hover": "#333333",
+    "newsletter_footer_background": "#000000",
+    "newsletter_footer_text": "#ffffff",
+    "social_footer_background": "#ffffff",
+    "social_footer_header": "#0d57a3",
+    "footer_background": "#000000",
+    "footer_color": "#ffffff",
+    "footer_border": "#ccd7d2",
+    "main_font": "karla_n4",
+    "nav_font": "karla_n4",
+    "heading_font": "montserrat_n7",
+    "announcement_text_size": 15,
+    "font_size": 13,
+    "h1_size": 24,
+    "h2_size": 20,
+    "h3_size": 18,
+    "h4_size": 16,
+    "h5_size": 14,
+    "nav_size": 13,
+    "dropdown_font_size": 13,
+    "navigation_transform": "uppercase",
+    "dropdown_transform": "uppercase",
+    "link_decoration": "none",
+    "section_title_border": "bottom_only_short",
+    "border_weight": "3px",
+    "breadcrumb": true,
+    "enable_nav_name_styling": true,
+    "quickview": true,
+    "vendor": false,
+    "show_collection_seo_block": false,
+    "details_align": "center",
+    "secondary_images_hover": "image_flip",
+    "cart_notes_enable": false,
+    "ajax_cart_method": "drawer",
+    "ajax_cart_remove_text": "This will remove the item from your cart. Continue?",
+    "ajax_cart_low_stock_text": "This item does not have enough stock to add to your cart.",
+    "twittername": "https:\/\/twitter.com\/joesjeans?lang=en",
+    "facebook_url": "https:\/\/www.facebook.com\/joesjeans\/",
+    "pinterest_url": "",
+    "tumblr_url": "",
+    "youtube_url": "https:\/\/www.youtube.com\/channel\/UCvyl_yZlxrxmn7SCvvUnvFg",
+    "googleplus_url": "",
+    "instagram_id": "joesjeans",
+    "popup": true,
+    "email_popup_title": "sign up for exclusive promotions & receive $25 off* your first order",
+    "email_popup_bottom_text": "Be the first to receive exclusive access<br>to sales and hear about our latest arrivals!",
+    "email_popup_input_placeholder": "Enter Your Email Address",
+    "dob_popup_input_placeholder": "Birthday DD\/MM (Optional)",
+    "email_popup_interested_text": "I’m interested in:",
+    "email_popup_error": "Please enter a valid e-mail address",
+    "email_popup_success": "<p>You have successfully joined our newsletter<\/p>",
+    "cookie_banner_mobile_text": "<p>This site uses cookies to simplify and improve your experience of this website. Further usage of the website implies acceptance of this usage.<\/p>",
+    "cookie_banner_mobile_button": "https:\/\/www.brandedonline.com\/privacy-policy.html",
+    "cookie_banner_mobile_button_text": "Learn More",
+    "cookie_banner_desktop_text": "<p>This site uses cookies to simplify and improve your usage and experience of this website. Cookies are small text files stored on the device you are using to access this website. If you ignore this message and continue without changing your browser settings, we will assume that you are consenting to our use of cookies. For further information on our use of cookies, please see our <a href=\"https:\/\/www.aquatalia.com\/privacy-policy\" target=\"_blank\">Privacy Statement<\/a><\/p>",
+    "cookie_banner_accept_button_text": "Accept",
+    "show_multiple_currencies": false,
+    "currency_format": "money_with_currency_format",
+    "supported_currencies": "INR GBP CAD USD AUD EUR JPY",
+    "default_currency": "USD",
+    "app_wk_enabled": true,
+    "app_wk_login_required": false,
+    "app_wk_icon": "heart",
+    "app_wk_icon_stroke": "#9e9e9e",
+    "app_wk_icon_fill": "#000000",
+    "app_wk_col_bg_shape": "square",
+    "app_wk_share_position": "top",
+    "app_wk_products_per_row": "4",
+    "shoprunner_enabled": true,
+    "shoprunner_retailer_id": "JJEANS",
+    "shoprunner_env": "prod",
+    "dashhudson_enabled": true,
+    "dashhudson_id": "6384088",
+    "dashhudson_name": "likeshop-carousel",
+    "checkout_shipping_state_exclusions": "Armed Forces Americas\nArmed Forces Europe\nArmed Forces Pacific\nAlaska\nAmerican Samoa\nFederated States of Micronesia\nGuam\nHawaii\nMarshall Islands\nNorthern Mariana Islands\nPalau\nPuerto Rico\nVirgin Islands",
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/logo-new_162bd349-75e5-49df-b043-38e3e65e355b.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#ffffff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#e6e6e6",
+    "checkout_heading_font": "Helvetica Neue",
+    "checkout_body_font": "Helvetica Neue",
+    "checkout_accent_color": "#000000",
+    "checkout_button_color": "#000000",
+    "checkout_error_color": "#dc2828",
+    "color_grey": "#9b9b9b",
+    "nav_transparent_landing_color": "#ffffff",
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "share_email": true,
+    "email_popup_error_birthdate": "Please enter a valid birthdate",
+    "international_store_version": "US",
+    "cart_links": "#000000",
+    "cart_links_hover": "#000000",
+    "newsletter_color": "#ffffff",
+    "newsletter_background": "#2f2f2f",
+    "newsletter_hover": "#ffffff",
+    "pre_footer_icon_color": "#e4e4e4",
+    "newsletter_button_color": "#ffffff",
+    "newsletter_button": "#000000",
+    "newsletter_button_hover": "#535353",
+    "alternate_colors": true,
+    "image_flip": true,
+    "font-size": 13,
+    "email_popup_image": false,
+    "megadropdown_link": "",
+    "nav_promo_image": false,
+    "nav_promo_link": "\/collections\/all",
+    "mega_1_show": false,
+    "mega_1_links": "",
+    "mega_2_show": false,
+    "mega_2_links": "",
+    "mega_3_show": false,
+    "mega_3_links": "",
+    "mega_4_show": false,
+    "mega_4_links": "",
+    "nav_center": true,
+    "nav_height": "40",
+    "linklist_breakpoint": "8",
+    "main_nav": "main-menu",
+    "password_bg": "no_password_bg",
+    "max-height": false,
+    "desktop-image-height": "",
+    "tablet-image-height": "",
+    "mobile-image-height": "",
+    "mailchimp": "",
+    "sections": {
+      "header": {
+        "type": "header",
+        "blocks": {
+          "nav-item-1": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "Women",
+              "nav_image": "",
+              "nav_image_link": "",
+              "nav_image_title": "",
+              "nav_image_sub_title": ""
             }
+          },
+          "nav-item-2": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "Men",
+              "nav_image": "",
+              "nav_image_link": "",
+              "nav_image_title": "",
+              "nav_image_sub_title": ""
+            }
+          },
+          "nav-item-3": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "kids",
+              "nav_image": "",
+              "nav_image_link": "",
+              "nav_image_title": "",
+              "nav_image_sub_title": ""
+            }
+          },
+          "nav-item-4": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "sale",
+              "nav_image": "",
+              "nav_image_link": "",
+              "nav_image_title": "",
+              "nav_image_sub_title": ""
+            }
+          },
+          "nav-item-5": {
+            "type": "simple_menu",
+            "settings": {
+              "menu_item": "fit guide"
+            }
+          }
         },
-        "content_for_index": [
-            "home-hero_slideshow",
-            "home-twin_promos",
-            "home-full_width_promo",
-            "home-instagram_feed"
-        ]
-    }
+        "block_order": [
+          "nav-item-1",
+          "nav-item-2",
+          "nav-item-3",
+          "nav-item-4",
+          "nav-item-5"
+        ],
+        "settings": {
+          "full_width_header": false,
+          "show_announcement_text": true,
+          "num_of_promo_banners": "1",
+          "announcement_text_one": "Sign up & receive $25 off your first order",
+          "announcement_link_one": "\/account",
+          "announcement_text_two": "Second banner text here",
+          "announcement_link_two": "http:\/\/google.com",
+          "announcement_height": 40,
+          "announcement_swap_rate": 5,
+          "show_header_left_text": true,
+          "header_left_text": "Free U.S Shipping!",
+          "header_left_url": "shopify:\/\/pages\/faq",
+          "logo_image": "shopify:\/\/shop_images\/JOES-black.png",
+          "account_icon": "text",
+          "account_icon_text_value": "Login",
+          "account_show_user_name": true,
+          "cart_icon": "text",
+          "cart_icon_text_value": "Bag",
+          "show_search": true,
+          "show_wishlist": true,
+          "main_nav": "main-menu",
+          "nav_center": true,
+          "nav_height": 60,
+          "megamenu_full_width": true,
+          "linklist_breakpoint": 10
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "blocks": {
+          "1565618854142": {
+            "type": "collection_banner",
+            "settings": {
+              "collection_handle": "women-collection",
+              "banner_image_desktop": "shopify:\/\/shop_images\/JOES_HP_Slider_W_1920x829_Desktop.png",
+              "banner_image_mobile": "shopify:\/\/shop_images\/JOES_HP_Slider_W_1920x829_Desktop.png",
+              "banner_text_header": "",
+              "banner_text_body": "",
+              "banner_text_divider": true,
+              "textbox_constrain": true,
+              "textbox_horizontal": "center",
+              "textbox_horizontal_nudge": 0,
+              "textbox_vertical": "center",
+              "textbox_vertical_nudge": 0,
+              "textbox_text_align": "left",
+              "textbox_color_text": "#ffffff",
+              "textbox_color_divider": "#ffffff",
+              "textbox_color_bg": "#000000",
+              "textbox_opacity": "0.1"
+            }
+          },
+          "1565619137853": {
+            "type": "collection_banner",
+            "settings": {
+              "collection_handle": "men-collection",
+              "banner_image_desktop": "shopify:\/\/shop_images\/JOES_HP_Slider_M_1920x829_Desktop.jpg",
+              "banner_image_mobile": "shopify:\/\/shop_images\/JOES_HP_Slider_M_1920x829_Desktop.jpg",
+              "banner_text_header": "",
+              "banner_text_body": "",
+              "banner_text_divider": true,
+              "textbox_constrain": true,
+              "textbox_horizontal": "center",
+              "textbox_horizontal_nudge": 0,
+              "textbox_vertical": "center",
+              "textbox_vertical_nudge": 0,
+              "textbox_text_align": "left",
+              "textbox_color_text": "#ffffff",
+              "textbox_color_divider": "#ffffff",
+              "textbox_color_bg": "#000000",
+              "textbox_opacity": "0.1"
+            }
+          }
+        },
+        "block_order": [
+          "1565618854142",
+          "1565619137853"
+        ],
+        "settings": {
+          "numrows": 20,
+          "sort_by": true,
+          "nav_transparent_landing": true
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "vendor": false,
+          "show_quantity": false,
+          "show_sku": true,
+          "variant_display_type": "swatches",
+          "use_swatch_images": true,
+          "swatch_shape": "rectangles",
+          "show_payment_button": false,
+          "disable_auto_select": true,
+          "selection_label": "Select your Size",
+          "show_controls": false,
+          "show_zoom": true,
+          "thumbnails": "left",
+          "zoom_image_position": "zoom_over_main",
+          "related_products": "show",
+          "shipping_header_text": "Shipping & Returns",
+          "shipping_text": "<p>Shoprunner Free 2 Day<\/p>\n<p>Shipping &amp; Free Returns<\/p>",
+          "shipping_learn_more_link": "",
+          "shipping_show_account_link": false,
+          "show_social": false,
+          "size_chart_show": true,
+          "size_chart_header_text": "Size Guide",
+          "size_chart_page": "size-chart"
+        }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "image": "",
+          "text": "<p>Add some descriptive text to your Blog page.<\/p>",
+          "show_date": true
+        }
+      },
+      "mobile-navigation": {
+        "type": "mobile-navigation",
+        "settings": {
+          "main_nav": "main-menu"
+        }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "show_date": true,
+          "show_icons": true
+        }
+      },
+      "search-template": {
+        "type": "search-template",
+        "settings": {
+        }
+      },
+      "password-template": {
+        "type": "password-template",
+        "settings": {
+          "newsletter_details": "<p>Coming Soon<\/p><p>Signup for our newsletter and get updated when we launch our site <a href=\"https:\/\/example.com\/\">see our newsletter policy.<\/a><\/p>",
+          "text_size": 18,
+          "text_color": "#000000",
+          "logo": "shopify:\/\/shop_images\/JOES-black.png",
+          "logo_max_width": "500",
+          "background_color": "#f5f5f5",
+          "background_image": "",
+          "show_overlay_color": true,
+          "background_overlay_color": "#f5f5f5",
+          "overlay_color_opacity": 40,
+          "border_color": "#000000",
+          "button_color": "#000000",
+          "button_text_color": "#ffffff"
+        }
+      },
+      "newsletter": {
+        "type": "newsletter",
+        "settings": {
+          "heading": "SIGN UP & RECEIVE $25 OFF YOUR FIRST ORDER!",
+          "newsletter_subheading": "I want updates for:",
+          "newsletter_placeholder": "Email Address",
+          "newsletter_error": "Please enter a valid e-mail address",
+          "newsletter_success": "<p>You have successfully joined our newsletter<\/p>"
+        }
+      },
+      "home-hero_slideshow": {
+        "type": "slideshow",
+        "blocks": {
+          "1566232995599": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/mens-new-arrivals-hp_95988786-ce0d-4ddf-bd68-5dc30f5b4834.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/mens-new-arrivals-hp-mobile_680282b7-05c1-41a4-b9a9-c30d33b7f398.jpg",
+              "heading": "Men's <br>New Arrivals",
+              "subheading": "",
+              "caption_text_align": "left",
+              "cta_one_button_text": "Shop Now",
+              "cta_one_link": "shopify:\/\/collections\/men-new-arrivals",
+              "cta_two_button_text": "Add a button",
+              "cta_two_link": "",
+              "caption_background": "rgba(0,0,0,0)",
+              "caption_opacity": "0.1",
+              "caption_color_scheme": "light",
+              "custom_slider_header_color": "#000000",
+              "custom_slider_sub_header_color": "#000000",
+              "custom_slider_button_color": "#000000",
+              "custom_slider_sub_button_hover_color": "#ed0a0a",
+              "caption_horizontal": "left",
+              "caption_vertical": 44
+            }
+          },
+          "1566233033912": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/womens-new-arrivals-hp_fe7a2bf3-c059-4b7c-b60d-630000503af0.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/womens-new-arrivals-hp-mobile_cf3eb85f-3790-4df7-accc-8da260a0d7f7.jpg",
+              "heading": "Women's <br>New Arrivals",
+              "subheading": "",
+              "caption_text_align": "left",
+              "cta_one_button_text": "Shop Now",
+              "cta_one_link": "shopify:\/\/collections\/women-new-arrivals",
+              "cta_two_button_text": "Add a button",
+              "cta_two_link": "",
+              "caption_background": "rgba(0,0,0,0)",
+              "caption_opacity": "0.1",
+              "caption_color_scheme": "dark",
+              "custom_slider_header_color": "#ffffff",
+              "custom_slider_sub_header_color": "#676767",
+              "custom_slider_button_color": "#000000",
+              "custom_slider_sub_button_hover_color": "#ed0a0a",
+              "caption_horizontal": "left",
+              "caption_vertical": 44
+            }
+          },
+          "1565613564330": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/JOES_HP_Slider_HH_1920x930_Desktop.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/JOES_MainBanner_HH_767x1472_mobile.jpg",
+              "heading": "",
+              "subheading": "",
+              "caption_text_align": "left",
+              "cta_one_button_text": "Shop now",
+              "cta_one_link": "shopify:\/\/collections\/women-denim-fit-curvy",
+              "cta_two_button_text": "Add a button",
+              "cta_two_link": "",
+              "caption_background": "rgba(0,0,0,0)",
+              "caption_opacity": "0.1",
+              "caption_color_scheme": "dark",
+              "custom_slider_header_color": "#ffffff",
+              "custom_slider_sub_header_color": "#ffffff",
+              "custom_slider_button_color": "#000000",
+              "custom_slider_sub_button_hover_color": "#ed0a0a",
+              "caption_horizontal": "right",
+              "caption_vertical": 63
+            }
+          }
+        },
+        "block_order": [
+          "1566232995599",
+          "1566233033912",
+          "1565613564330"
+        ],
+        "settings": {
+          "full_width": true,
+          "show_nav_pagination": true,
+          "slider_speed": 3
+        }
+      },
+      "home-twin_promos": {
+        "type": "twin-promos",
+        "blocks": {
+          "promo-left": {
+            "type": "text_block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/JOES_W_Jeans_947x869_Desktop.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/JOES_W_Jeans_947x869_mobile.jpg",
+              "link": "shopify:\/\/collections\/women-denim",
+              "heading_text": "WOMEN'S JEANS",
+              "body_text": "",
+              "text_align": "left",
+              "cta_type": "text",
+              "cta_text": "",
+              "cta_color_text": "#000000",
+              "cta_color_bg": "rgba(0,0,0,0)",
+              "cta_color_text_hover": "#616365",
+              "cta_color_bg_hover": "rgba(0,0,0,0)",
+              "cta_accent_mark": "left"
+            }
+          },
+          "promo-right": {
+            "type": "text_block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/JOES_M_Jeans_947x869_Desktop.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/JOES_M_Jeans_947x869_mobile.jpg",
+              "link": "shopify:\/\/collections\/men-denim",
+              "heading_text": "MEN'S JEANS",
+              "body_text": "",
+              "text_align": "left",
+              "cta_type": "text",
+              "cta_text": "",
+              "cta_color_text": "#000000",
+              "cta_color_bg": "rgba(0,0,0,0)",
+              "cta_color_text_hover": "#616365",
+              "cta_color_bg_hover": "rgba(0,0,0,0)",
+              "cta_accent_mark": "left"
+            }
+          }
+        },
+        "block_order": [
+          "promo-left",
+          "promo-right"
+        ],
+        "settings": {
+          "full_width": true
+        }
+      },
+      "home-full_width_promo": {
+        "type": "full-width-single-promo",
+        "blocks": {
+          "full-width-promo": {
+            "type": "text_block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/JOES_Flawless_1920x1003_Desktop.png",
+              "mobile_image": "shopify:\/\/shop_images\/JOES_Flawless_767x1472_Mobile.jpg",
+              "link": "shopify:\/\/collections\/women-denim-fabric-flawless",
+              "heading_text": "FLAWLESS",
+              "body_text": "<p>Gravity defying sleek silhouette<\/p>",
+              "text_align": "left",
+              "cta_type": "text",
+              "cta_text": "",
+              "cta_color_text": "#000000",
+              "cta_color_bg": "rgba(0,0,0,0)",
+              "cta_color_text_hover": "#616365",
+              "cta_color_bg_hover": "rgba(0,0,0,0)",
+              "cta_accent_mark": "left"
+            }
+          }
+        },
+        "block_order": [
+          "full-width-promo"
+        ],
+        "settings": {
+          "full_width": true
+        }
+      },
+      "home-instagram_feed": {
+        "type": "instagram",
+        "settings": {
+          "heading": "Shop our feed",
+          "text": "",
+          "link": "https:\/\/www.instagram.com\/joesjeans\/",
+          "cta_text": "FOLLOW US"
+        }
+      },
+      "page-about-template": {
+        "type": "page-about-template",
+        "blocks": {
+          "1560851184448": {
+            "type": "image_picker",
+            "settings": {
+              "about_image_desktop": "shopify:\/\/shop_images\/JOES_About_Page_556x761_v2.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "1560851184448"
+        ],
+        "settings": {
+        }
+      },
+      "columns-carousel": {
+        "type": "columns-carousel",
+        "blocks": {
+          "1539638126458": {
+            "type": "image",
+            "settings": {
+              "image": "",
+              "mobile_image": "",
+              "heading": "Commercial Fishing",
+              "svg_icon": "",
+              "png_icon": "",
+              "link": "shopify:\/\/collections\/commercial-fishing",
+              "cta_text": "Shop Now"
+            }
+          },
+          "1539642501764": {
+            "type": "image",
+            "settings": {
+              "image": "",
+              "mobile_image": "",
+              "heading": "Sport Fishing",
+              "svg_icon": "",
+              "png_icon": "",
+              "link": "shopify:\/\/collections\/sport-fishing",
+              "cta_text": "Shop Now"
+            }
+          },
+          "1539642513779": {
+            "type": "image",
+            "settings": {
+              "image": "",
+              "mobile_image": "",
+              "heading": "Water Sports",
+              "svg_icon": "",
+              "png_icon": "",
+              "link": "shopify:\/\/collections\/water-sports",
+              "cta_text": "Shop Now"
+            }
+          },
+          "1539642524127": {
+            "type": "image",
+            "settings": {
+              "image": "",
+              "mobile_image": "",
+              "heading": "Lifestyle",
+              "svg_icon": "",
+              "png_icon": "",
+              "link": "shopify:\/\/collections\/lifestyle",
+              "cta_text": "Shop Now"
+            }
+          }
+        },
+        "block_order": [
+          "1539638126458",
+          "1539642501764",
+          "1539642513779",
+          "1539642524127"
+        ],
+        "settings": {
+        }
+      },
+      "page-faq-template": {
+        "type": "page-faq-template",
+        "blocks": {
+          "1542219298126": {
+            "type": "html",
+            "settings": {
+              "title": "HOW DO I MAKE A PURCHASE?",
+              "answer": "<p>Shopping at <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> is easy:<\/p>\n<ul>\n<li>Please <a href=\"\/account\/login\" alt=\"Click to register for a new account\">REGISTER<\/a> to a new account or <a href=\"\/account\/login\" alt=\"Click to login with an existing account\">LOGIN<\/a> to your existing account (NOTE: Returning visitor to the new site will have to re-LOGIN i.e. REGISTER) by using the <a href=\"\/account\/login\" alt=\"Click to login with an existing account\">SIGN IN<\/a> links at the top of any page. You can also use your Facebook, Google+, Amazon or PayPal account for Signing In.<\/li>\n<li>If you know what you are looking for, please Click the WOMEN, MEN, KIDS Links provided at the left of each page to reveal their subcategory links. You can also shop using our Jean FIT GUIDE section or SEARCH by key words using our SEARCH tool <i class=\"icon-search\"><\/i> provided at the top of each page.<\/li>\n<li>Once you have found an item that you would like to purchase, select your size and quantity then click on the 'ADD TO CART' button provided.<\/li>\n<li>To Review the items you have selected for purchase hover over the 'MY CART' link at the top of each page and click the VIEW BAG button. You can use the 'REMOVE ITEM' button to delete items from your shopping CART.<\/li>\n<li>Click on 'CHECKOUT' to complete your order.<\/li>\n<\/ul>",
+              "anchor": ""
+            }
+          },
+          "1542220082322": {
+            "type": "html",
+            "settings": {
+              "title": "DO I NEED TO SET UP AN ACCOUNT TO PLACE AN ORDER?",
+              "answer": "<p>No, you can shop at JOE'S as a GUEST without creating an account. However, registering your details will allow you to:<\/p>\n\n<ul>\n<li>Track your order and review past purchases<\/li>\n<li>Build a personal wish list<\/li>\n<li>Shop without entering your address details<\/li>\n<\/ul>",
+              "anchor": ""
+            }
+          },
+          "1542220259294": {
+            "type": "html",
+            "settings": {
+              "title": "I'VE FORGOTTEN MY PASSWORD?",
+              "answer": "<p>If you have forgotten your password, click the <a href=\"\/account\/login\" alt=\"Click to retrieve for a forgotten password\">FORGOT PASSWORD<\/a> link in the Log In Window for instructions on resetting your Password.<\/p>",
+              "anchor": ""
+            }
+          },
+          "1542220285963": {
+            "type": "html",
+            "settings": {
+              "title": "HOW DO I KNOW THAT THE PRODUCTS YOU SELL ARE AUTHENTIC?",
+              "answer": "<p>We unconditionally guarantee that every item we sell is 100% authentic. Please note that we are unable to comment on the authenticity of any items not purchased from <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a>.<\/p>",
+              "anchor": ""
+            }
+          },
+          "1542220342731": {
+            "type": "html",
+            "settings": {
+              "title": "WHICH SIZE SHOULD I CHOOSE?",
+              "answer": "<ul>\n    <li><a href=\"#size-chart--popup\" data-toggle=\"faq-size-modal\" data-tab-target=\"womens\">women<\/a><\/li>\n    <li><a href=\"#size-chart--popup\" data-toggle=\"faq-size-modal\" data-tab-target=\"mens\">men<\/a><\/li>\n    <li><a href=\"#size-chart--popup\" data-toggle=\"faq-size-modal\" data-tab-target=\"kids\">kids<\/a><\/li>\n<\/ul>",
+              "anchor": ""
+            }
+          },
+          "1542220365959": {
+            "type": "html",
+            "settings": {
+              "title": "HOW DO I KNOW IF AN ITEM IS IN STOCK?",
+              "answer": "<p>All items are in stock unless the size or color is not displayed. Please be aware that even if an item is in your shopping cart, it can still be bought by another customer until you have completed your order.<\/p>",
+              "anchor": ""
+            }
+          },
+          "1542220387334": {
+            "type": "html",
+            "settings": {
+              "title": "WHAT PAYMENT METHODS DOES JOE'S ACCEPT?",
+              "answer": "<p>We accept Visa, MasterCard, American Express and Discover as well as Paypal, Apple Pay, Amazon Pay and Affirm. Please note that we do not accept any other methods of payment apart from those listed above.<\/p>",
+              "anchor": ""
+            }
+          },
+          "1542220434241": {
+            "type": "html",
+            "settings": {
+              "title": "IS IT SAFE TO USE MY CREDIT CARD ONLINE AT JOE'S?",
+              "answer": "<p>At JOE'S, your personal online security is important to us. We use the latest SSL encryption technology to store and safely transmit your personal and credit card information through our systems. All orders are processed through a secure checkout system provided by Authorize.net. Additionally, for your safety and protection, we will confirm that the billing address you provide matches the address on file with your credit card company.<\/p>",
+              "anchor": ""
+            }
+          },
+          "1542220460535": {
+            "type": "html",
+            "settings": {
+              "title": "DOES JOE'S SHIP TO POST OFFICE BOXES?",
+              "answer": "<p>Again, please note that we are unable to deliver to Post Office boxes (PO Box in shipping address) at this time.<\/p>",
+              "anchor": ""
+            }
+          },
+          "1542220481622": {
+            "type": "html",
+            "settings": {
+              "title": "DOES JOE'S SHIP TO HAWAII OR ALASKA?",
+              "answer": "<p>Free shipping services and expedited shipping fees at checkout includes Hawaii &amp; Alaska using the USPS service. At this time, Joe's does not include a USPS Return Mailing Label for orders shipped to Alaska or Hawaii.<\/p>",
+              "anchor": ""
+            }
+          },
+          "1542220502350": {
+            "type": "html",
+            "settings": {
+              "title": "HOW MUCH TAX WILL I HAVE TO PAY?",
+              "answer": "<p>Companies selling items on the Internet are subject to the same sales tax collection requirements as other retailers. Sales tax rates for <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> are obtained from a leading tax rate service provider.<\/p>\n<p><a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> reserves the right to apply sales tax where applicable. Specifically, items sold by <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> and shipped to destinations in the states of California, Illinois, New York, Florida, Texas, Washington, Nevada, Virginia, Massachusetts, Pennsylvania are subject to tax. The tax rate applied is calculated on the total selling price of each individual item in your shopping bag and will be the combined state and local rate for the shipping address of your order.<\/p>\n<p>No sales tax is charged when purchasing gift certificates though purchases paid with gift certificates will be subject to tax according to the shipping destination.<\/p>\n<p><strong>NOTE:<\/strong> Prices displayed on the website are exclusive of taxes. Additionally, JOE'S is not responsible for reporting or paying Use Tax to states.<\/p>",
+              "anchor": ""
+            }
+          },
+          "1542220523668": {
+            "type": "html",
+            "settings": {
+              "title": "DOES JOE'S SHIP TO MULTIPLE ADDRESSES?",
+              "answer": "<p>Unfortunately, you may only ship to one address per order. If your order contains gifts or items that require shipping to multiple locations, you will need to place separate orders for each address.<\/p>",
+              "anchor": "orderstatus"
+            }
+          },
+          "1542220577233": {
+            "type": "html",
+            "settings": {
+              "title": "HOW SOON CAN I GET MY ORDER AND HOW MUCH WILL IT COST?",
+              "answer": "<p>We offer different shipping options to meet your needs – as listed below:<\/p>\n\n<h6 class=\"text-center\">DOMESTIC SHIPPING COSTS &amp; METHODS (excludes Hawaii &amp; Alaska)<\/h6>\n<div class=\"table-responsive\">\n<table class=\"table-bordered text-center table-hover domestic-shipping-table\">\n<thead>\n<tr>\n<td style=\"padding: 5px;\">UPS Ground<\/td>\n<td style=\"padding: 5px;\">UPS 3-Day<\/td>\n<td style=\"padding: 5px;\">UPS 2-Day<\/td>\n<td style=\"padding: 5px;\">Overnight<\/td>\n<\/tr>\n<\/thead>\n<tbody>\n<tr>\n<td class=\"text-danger\"><strong>FREE<\/strong><\/td>\n<td>$15.00<\/td>\n<td>$20.00<\/td>\n<td>$30.00<\/td>\n<\/tr>\n<\/tbody>\n<\/table>\n<\/div>\n<p><\/p>\n<p>For UPS 3 day, UPS 2nd day and NEXT DAY delivery, please ensure you place your order before 3pm EST weekdays. All weekday (non-Holiday) orders placed before 3pm EST will ship that day* if your address is verified by 5pm EST. All orders from Mon-Fri (non-Holiday) placed after 3pm EST as well as all orders placed on Saturday and Sunday will be shipped the following business day once inventory is confirmed, address is verified and order is processed*.<\/p>\n<p>Orders will be delivered via UPS between 9am-5pm on weekdays only. Orders will not be delivered on national holidays. Processed and verified *orders placed on <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> can be expected to arrive within 7-10 business days* with UPS ground shipping method provided free of charge by <a href=\"\/\">JoesJeans.com<\/a>.<\/p>\n<p>Joe's does not deliver on Saturday, Sunday or Holidays.<\/p>\n<p>*Please note that your order will only be shipped once payment and delivery details have been verified and approved. Order cut-off times are provided as guidelines only, and do not take into account possible delays caused by verification. Shipping to other than the bill to address on any order may result in a delay. We cannot ship Paypal orders that have unconfirmed shipping addresses within the customers respective accounts. If an orders’ shipping address is not confirmed within a customers’ PayPal account within 96 hours of being placed at <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a>, those orders may be cancelled. Additionally, we reserve the right to ship at our discretion if an order's shipping address does not match the billing address.<\/p>\n<p>Questions? Call Toll Free: <a href=\"tel:+18775285637\" alt=\"Click to call customer service at 1.877.528.JOES\">1.877.528.JOES (5637)<\/a> | USA Hours of Operation: 6AM - 6PM PST, Monday - Sunday with the exception of New Year's Day and Christmas. Or email us at <a href=\"mailto:customerservice@shop.joesjeans.com\" alt=\"Click to e-mail customer service at customerservice@shop.joesjeans.com\">customerservice@shop.joesjeans.com<\/a>.<\/p>",
+              "anchor": "militarydiscount"
+            }
+          },
+          "1542220607549": {
+            "type": "html",
+            "settings": {
+              "title": "DO YOU SHIP TO MILITARY ADDRESSES?",
+              "answer": "<p>For security reasons, we do not currently ship APO\/FPO addresses.<\/p>",
+              "anchor": "bulkdiscount"
+            }
+          },
+          "1560849949295": {
+            "type": "html",
+            "settings": {
+              "title": "DO YOU SHIP TO PO BOXES?",
+              "answer": "<p>For security reasons, we do not currently ship to P.O. boxes.<\/p>",
+              "anchor": ""
+            }
+          },
+          "1560849977378": {
+            "type": "html",
+            "settings": {
+              "title": "INTERNATIONAL SHIPPING",
+              "answer": "<h6>Delivery Rates &amp; Services<\/h6>\n\n<p>JoesJeans.com currently ships to the following countries: Canada, United Kingdom, France, Mexico and Australia.<\/p>\n\n<h6>JoesJeans.com Expedited International Shipping Costs through UPS<\/h6>\n<p><\/p>\n\n<ul>\n<li>Canada 22.95 (USD)<\/li>\n<li>Australia 50.95 (USD)<\/li>\n<li>France 44.75 (USD)<\/li>\n<li>Germany 44.75 (USD)<\/li>\n<li>Mexico 40.45 (USD)<\/li>\n<li>UK 50.95 (USD)<\/li>\n<\/ul>\n<p>Your order will be delivered by UPS who will attempt to deliver the goods to you three (3) times. They will also leave a notice card after each delivery attempt to advise you what you can do to arrange the receipt of your package. Your signature will be required upon delivery.<\/p>\n<p>If you have any questions related to your delivery, please contact our Customer Care team.<\/p>\n<h6>Taxes and Duties<\/h6>\n<p><\/p>\n\n<ul>\n<li>All international orders may be subject to taxes and duties.<\/li>\n<li>Taxes and duties are still owed if the item is refused.<\/li>\n<li>We ship your package DDU, \"duties and taxes unpaid\", and we do not collect nor do we calculate the VAT, duties and\/or taxes during checkout.<\/li>\n<li>Any fees that are due will be collected upon delivery of the order.<\/li>\n<li>All applicable customs, taxes, import duties and collection fees are the responsibility of the customer (even if you refuse any shipments upon delivery).<\/li>\n<li>Customs authorities require that we state the value of your order directly on your package.<\/li>\n<li>Customs agents have the right to release or deny release of your package, and in rare cases, they may also delay delivery.<\/li>\n<li>Taxes and fees are based on many factors, including location, material, item value, etc.<\/li>\n<li>The amount of taxes due is determined solely by the government.<\/li>\n<li>Some countries may require additional fees paid Collect on Delivery (COD).<\/li>\n<li>If your order does require these additional charges, they must be paid by you in order for your package to clear customs.<\/li>\n<li>These fees are paid to the local carrier and are not collected by Joe's Jeans.<\/li>\n<li>Contact the customs office in the destination country for information about any applicable duties or taxes<\/li>\n<li>In the European Union, duties and taxes can be 30% or more of the total declared value of your order.<\/li>\n<\/ul>\n<h6>International Returns<\/h6>\n<p><\/p>\n<p>Your order will be delivered by UPS who will attempt to deliver the goods to you three (3) times. Please send items back to us at the address below using any trackable shipping method. Once we receive your package, we will promptly process your return. Please be sure that your package is insured and prepaid. Sorry, we cannot accept COD returns.<\/p>\n<p>If an order is placed on JoesJeans.com and then refused, you will be responsible for the original duties,taxes,shipping &amp; handling costs, as well as any duties, taxes and\/or customs charges that were incurred in shipping the package. These amounts will be subtracted from your merchandise refund.<\/p>\n<p>NOTE: Joe's Jeans has made every effort to minimize our international shipping charges. We only charge our cost for these services. We do not make any profit on our shipping services to international customers. Also, we are required by law to disclose the full value of the package contents and cannot alter this value. For further information on international customers, including our <a href=\"\/privacy\">Privacy Policy<\/a>, please visit our <a href=\"\/terms\">Terms and Conditions<\/a>.<\/p>",
+              "anchor": ""
+            }
+          },
+          "1560850144920": {
+            "type": "html",
+            "settings": {
+              "title": "IS MY PACKAGE INSURED?",
+              "answer": "<p>All items are insured against theft and accidental damage whilst in transit from JOE'S to the shipping address. Once your items have been delivered to the specified delivery address and signed for, they are no longer covered by insurance. If your box is damaged upon arrival, we recommend that you either refuse the delivery, or make a note when signing for it that you are accepting a damaged box.<\/p>",
+              "anchor": ""
+            }
+          },
+          "1560850188064": {
+            "type": "html",
+            "settings": {
+              "title": "DO I NEED TO SIGN FOR MY ORDER?",
+              "answer": "<p>Due to the high value of the goods that we sell, we require proof of delivery for orders over $500. This means we are unable to authorize packages to be delivered without a signature when the order is over $500.<\/p>",
+              "anchor": ""
+            }
+          },
+          "1560850275730": {
+            "type": "html",
+            "settings": {
+              "title": "CAN I CHANGE MY SHIPPING ADDRESS AFTER MY ORDER HAS BEEN DISPATCHED?",
+              "answer": "<p>We are unfortunately unable to redirect orders once your items have been dispatched. Therefore, please ensure you provide a suitable shipping address for the specified delivery times.<\/p>",
+              "anchor": ""
+            }
+          },
+          "1560850298547": {
+            "type": "html",
+            "settings": {
+              "title": "HOW WILL I KNOW YOU RECEIVED MY ORDER & WHEN WILL PAYMENT BE DEDUCTED?",
+              "answer": "<p>After you place your order, you will be sent an email confirming that it has been received. Your card will be debited at the time the order was placed. In the rare instance that any of the items you have ordered are not available, we will contact you by email and will only charge your credit card for the value of the items in stock.<\/p>",
+              "anchor": ""
+            }
+          },
+          "1560850354189": {
+            "type": "html",
+            "settings": {
+              "title": "CAN I TRACK MY ORDER?",
+              "answer": "<p>Once your order has been shipped, you will receive email confirmation of your shipping details and an UPS tracking number. If you have registered, you will be able to view and track the status of your shipment by signing in and selecting <a href=\"\/my-account\">My Account<\/a> followed by <a href=\"\/orders\/track\" alt=\"Click to track\/view your order\">TRACK\/VIEW<\/a> MY ORDERS.<\/p>",
+              "anchor": ""
+            }
+          },
+          "1560850375207": {
+            "type": "html",
+            "settings": {
+              "title": "HOW DO I RETURN OR EXCHANGE AN ITEM?",
+              "answer": "<p>In the event that you are unhappy with your purchase from either <a style=\"text-decoration:underline !important\" href=\"\/\">JoesJeans.com<\/a> or our retail store, we will gladly accept a return within 30 days of purchase.<\/p>\n\n<ul>\n\t<li>Your product(s) must be returned new, unused with all garment tags still attached and within thirty days of the receipt of your order. We are unable to accept merchandise which is not received with these specified conditions.<\/li>\n\t<ul>\n\t\t<li>Also, please remember to send all return\/exchanges directly to JOESJEANS ONLINE STORE, 19801 S. Santa Fe Ave., Rancho Dominguez, CA 90221 if you decide to not use the return label.<\/li>\n\t<\/ul>\n\t<li>If you wish to exchange your purchase from <a style=\"text-decoration:underline !important\" href=\"\/\">JoesJeans.com<\/a> for a completely new item or a different size, just follow the steps in the returns process.<\/li>\n\t<li>To ensure that your return is adequately protected in transit, we recommend you send your items back to us in the original packaging provided. <\/li>\n\t<li>Please click here to start the return process<\/li>\n\t<ul>\n\t\t<li><a target=\"_blank\" style=\"text-decoration:underline !important\" href=\"https:\/\/returns.joesjeans.com\/\"><strong>START YOUR RETURN<\/strong><\/a><\/li>\n\t<\/ul>\n\t<li>We will inspect and process your return. Your refund will be applied to your original method of payment within 14 business days of receipt to JOESJEANS ONLINE STORE, 19801 S. Santa Fe Ave., Rancho Dominguez, CA 90221. Posting to your credit card account could take an additional 10 days depending on your credit card company.<\/li>\n\t<li>You will receive email notification once your return has been received and processed.<\/li>\n\t<li>Items purchased at any of JOE'S brick and mortar stores including JOE'S full price retail stores, JOE'S Outlet stores or at over 1,200 retail doors carrying JOE'S Jeans products in the U.S. and abroad cannot be returned to <a style=\"text-decoration:underline !important\" href=\"\/\">JoesJeans.com<\/a>. Please contact <a style=\"text-decoration:underline !important\" href=\"mailto:customerservice@joesjeans.com?subject=Joe's%20Jeans%20Customer%20Service\">customerservice@joesjeans.com<\/a> or call please call Toll Free: <a style=\"text-decoration:underline !important\" href=\"tel:+18775285637\">1-877-528-JOES (5637)<\/a> regarding problems with items not purchased at <a style=\"text-decoration:underline !important\" href=\"\/\">JoesJeans.com<\/a>.<\/li>\n\t<li>All promotional offers listed at <a style=\"text-decoration:underline !important\" href=\"\/\">JoesJeans.com<\/a> cannot be combined with any other offers or previous promotions and cannot be applied to previous purchases.<\/li>\n<\/ul>",
+              "anchor": ""
+            }
+          },
+          "1560850516906": {
+            "type": "html",
+            "settings": {
+              "title": "WILL I BE REFUNDED THE FULL VALUE OF MY ORDER?",
+              "answer": "<p>All correctly returned products purchased through <a href=\"\/\" alt=\"Click to go to homepage of JOE'S Jeans\">JoesJeans.com<\/a> will either be refunded to the purchaser's credit card or JOE'S account, and will exclude any expedited shipping costs. All applicable sales taxes will be refunded. Outside the United States, customs duties and sales taxes are non-refundable. However, you may be able to recover these by contacting your local customs bureau directly.<\/p>",
+              "anchor": ""
+            }
+          },
+          "1560850537196": {
+            "type": "html",
+            "settings": {
+              "title": "IS MY PERSONAL INFORMATION KEPT PRIVATE?",
+              "answer": "<p>Please be assured that all the information you share with us is private and confidential. At no point will we share, rent or sell your personal information without your consent. To register at JOE'S, we will need to know your name, mailing address and email address. To process credit card orders online we also require your billing address, shipping address, telephone number, credit card number and expiration date. JOE'S only keeps a record of your transactions; your credit card details are not held on our website. Please note that JOE'S may also use the information you provide to inform you of new goods and services via email. If you prefer not to receive these emails, please send an email to <a href=\"mailto:unsubscribe@joesjeans.com\" alt=\"Click to send an e-mail to unsubscribe@joesjeans.com\">unsubscribe@joesjeans.com<\/a>. click here to read our <a href=\"\/privacy\" alt=\"Click to view JOE'S Jeans Privacy Policy\">PRIVACY POLICY<\/a> in full.<\/p>",
+              "anchor": ""
+            }
+          }
+        },
+        "block_order": [
+          "1542219298126",
+          "1542220082322",
+          "1542220259294",
+          "1542220285963",
+          "1542220342731",
+          "1542220365959",
+          "1542220387334",
+          "1542220434241",
+          "1542220460535",
+          "1542220481622",
+          "1542220502350",
+          "1542220523668",
+          "1542220577233",
+          "1542220607549",
+          "1560849949295",
+          "1560849977378",
+          "1560850144920",
+          "1560850188064",
+          "1560850275730",
+          "1560850298547",
+          "1560850354189",
+          "1560850375207",
+          "1560850516906",
+          "1560850537196"
+        ],
+        "settings": {
+          "anchor_top_offset": -100,
+          "size_chart_show": true,
+          "size_chart_page": "size-chart",
+          "before_content": "<h1>FREQUENTLY ASKED QUESTIONS<\/h1>",
+          "after_content": ""
+        }
+      },
+      "outlet-stores": {
+        "type": "outlet-stores",
+        "blocks": {
+          "1561098776075": {
+            "type": "image",
+            "settings": {
+              "state_name": "CALIFORNIA",
+              "store_name": "JOE'S® CAMARILLO PREMIUM OUTLETS",
+              "store_address": "850 E. Ventura Blvd. Suite # 724 Camarillo, CA 93010",
+              "store_map_url": "https:\/\/goo.gl\/IomYaz",
+              "store_phone": "805.445.6690 \/\/ 805.445.6609 \/\/ 805.445.6604",
+              "store_hours": "Mon - Sat 10-9p | Sun 10-8p"
+            }
+          },
+          "1561098830924": {
+            "type": "image",
+            "settings": {
+              "state_name": "CALIFORNIA",
+              "store_name": "JOE'S® CARLSBAD PREMIUM OUTLETS",
+              "store_address": "5630 Paseo Del Norte, #D144 Carlsbad, CA 92008",
+              "store_map_url": "",
+              "store_phone": "760.603.8520 \/\/ 760.603.8502 \/\/ 760.603.8550",
+              "store_hours": "Mon - Sat 10-9p | Sun 10-7p"
+            }
+          },
+          "1561098857242": {
+            "type": "image",
+            "settings": {
+              "state_name": "CALIFORNIA",
+              "store_name": "JOE'S® DESERT HILLS PREMIUM OUTLETS",
+              "store_address": "48650 Seminole Drive, #108B Cabazon, CA 92230",
+              "store_map_url": "https:\/\/goo.gl\/gmVdlN",
+              "store_phone": "951.849.7459 \/\/ 951.849.7458",
+              "store_hours": "Mon - Sat 10-9p | Sun 10-8p"
+            }
+          },
+          "1561098890081": {
+            "type": "image",
+            "settings": {
+              "state_name": "CALIFORNIA",
+              "store_name": "JOE'S® SAN FRANCISCO PREMIUM OUTLETS",
+              "store_address": "2958 Livermore Outlets Drive Livermore, CA 94551",
+              "store_map_url": "https:\/\/goo.gl\/mVEVVs",
+              "store_phone": "925.961.9847 \/\/ 925.961.9848",
+              "store_hours": "Mon - Sat 10-9p | Sun 10-7p"
+            }
+          },
+          "1561098923417": {
+            "type": "image",
+            "settings": {
+              "state_name": "ILLINOIS",
+              "store_name": "JOE'S® FASHION OUTLETS OF CHICAGO",
+              "store_address": "5220 Outlets Way, Space 2069 Rosemont, IL 60018",
+              "store_map_url": "https:\/\/goo.gl\/AanHvv",
+              "store_phone": "847.447.3330 \/\/ 847.447.3340",
+              "store_hours": "Mon - Sat 10-9p | Sun 10-7p"
+            }
+          },
+          "1561098954569": {
+            "type": "image",
+            "settings": {
+              "state_name": "NEVADA",
+              "store_name": "JOE'S® LAS VEGAS PREMIUM OUTLETS",
+              "store_address": "755 South Grand Central Parkway, #1150 Las Vegas, NV 89106",
+              "store_map_url": "https:\/\/goo.gl\/J1jq8d",
+              "store_phone": "702.382.5510 \/\/ 702.382.5523 \/\/ 702.382.5529",
+              "store_hours": "Mon - Sat 9-10p | Sun 9-8p"
+            }
+          },
+          "1561098990960": {
+            "type": "image",
+            "settings": {
+              "state_name": "NEW YORK",
+              "store_name": "JOE'S® WOODBURY COMMON PREMIUM OUTLETS",
+              "store_address": "644 Blue Bird Court Central Valley, NY 10917",
+              "store_map_url": "https:\/\/goo.gl\/fkWsdT",
+              "store_phone": "845.928.7661 \/\/ 845.928.7664 \/\/ 845.928.7673",
+              "store_hours": "Mon - Sun 10-9p"
+            }
+          },
+          "1561099021913": {
+            "type": "image",
+            "settings": {
+              "state_name": "PENNSYLVANIA",
+              "store_name": "JOE'S® PHILADELPHIA PREMIUM OUTLETS",
+              "store_address": "18 West Lightcap Road, #1113 Pottstown, PA 19464",
+              "store_map_url": "https:\/\/goo.gl\/47ed1y",
+              "store_phone": "610.970.3816 \/\/ 610.970.9817 \/\/ 610.970.3818",
+              "store_hours": "Mon - Sat 10-9p | Sun 10-7p"
+            }
+          },
+          "1561099056510": {
+            "type": "image",
+            "settings": {
+              "state_name": "VIRGINIA",
+              "store_name": "JOE'S® LEESBURG CORNER PREMIUM OUTLETS",
+              "store_address": "241 Fort Evans Rd. NE #1135 Leesburg, VA 20176",
+              "store_map_url": "https:\/\/goo.gl\/5UUXiw",
+              "store_phone": "703.771.7150 \/\/ 703.771.7151 \/\/ 703.771.7152",
+              "store_hours": "Mon - Sat 10-9p | Sun 10-7p"
+            }
+          },
+          "1561099093151": {
+            "type": "image",
+            "settings": {
+              "state_name": "WASHINGTON",
+              "store_name": "JOE'S® SEATTLE PREMIUM OUTLETS",
+              "store_address": "10600 Qull Ceda Blvd., #618 Tulalip, WA 98271",
+              "store_map_url": "https:\/\/goo.gl\/jquJj8",
+              "store_phone": "360.716.2315 \/\/ 360.716.2316",
+              "store_hours": "Mon - Sat 10-9p | Sun 10-7p"
+            }
+          }
+        },
+        "block_order": [
+          "1561098776075",
+          "1561098830924",
+          "1561098857242",
+          "1561098890081",
+          "1561098923417",
+          "1561098954569",
+          "1561098990960",
+          "1561099021913",
+          "1561099056510",
+          "1561099093151"
+        ],
+        "settings": {
+        }
+      },
+      "women-fit-guide": {
+        "type": "women-fit-guide",
+        "blocks": {
+          "1561700619107": {
+            "type": "image",
+            "settings": {
+              "fit_guide_title": "Skinny",
+              "description": "",
+              "collection": "women-denim-fit-skinny",
+              "desktop_fit_image": "shopify:\/\/shop_images\/skinny.png",
+              "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Skinny-W.jpg"
+            }
+          },
+          "1561700763172": {
+            "type": "image",
+            "settings": {
+              "fit_guide_title": "Straight",
+              "description": "",
+              "collection": "women-denim-fit-straight",
+              "desktop_fit_image": "shopify:\/\/shop_images\/skinny-pro-img.png",
+              "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Straight-W.jpg"
+            }
+          },
+          "1561700801684": {
+            "type": "image",
+            "settings": {
+              "fit_guide_title": "Bootcut",
+              "description": "",
+              "collection": "women-denim-fit-bootcut",
+              "desktop_fit_image": "shopify:\/\/shop_images\/bootcut.png",
+              "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Bootcut-W.jpg"
+            }
+          },
+          "1561700858807": {
+            "type": "image",
+            "settings": {
+              "fit_guide_title": "Flare",
+              "description": "",
+              "collection": "women-denim-fit-flare",
+              "desktop_fit_image": "shopify:\/\/shop_images\/flare.png",
+              "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Flare-W.jpg"
+            }
+          },
+          "1561700917267": {
+            "type": "image",
+            "settings": {
+              "fit_guide_title": "Petite",
+              "description": "",
+              "collection": "women-denim-fit-petite",
+              "desktop_fit_image": "shopify:\/\/shop_images\/petite.png",
+              "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Petite-W.jpg"
+            }
+          },
+          "1561700960992": {
+            "type": "image",
+            "settings": {
+              "fit_guide_title": "Curvy",
+              "description": "",
+              "collection": "women-denim-fit-curvy",
+              "desktop_fit_image": "shopify:\/\/shop_images\/curvy.png",
+              "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Curvy-W.jpg"
+            }
+          },
+          "1563517424761": {
+            "type": "image",
+            "settings": {
+              "fit_guide_title": "Boyfriend",
+              "description": "",
+              "collection": "women-denim-fit-boyfriend",
+              "desktop_fit_image": "shopify:\/\/shop_images\/women-skinny.jpg",
+              "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Boyfriend-W.jpg"
+            }
+          },
+          "1563517483912": {
+            "type": "image",
+            "settings": {
+              "fit_guide_title": "Cigarette",
+              "description": "",
+              "collection": "women-denim-fit-cigarette",
+              "desktop_fit_image": "shopify:\/\/shop_images\/women-skinny.jpg",
+              "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465_Cigarette-W.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "1561700619107",
+          "1561700763172",
+          "1561700801684",
+          "1561700858807",
+          "1561700917267",
+          "1561700960992",
+          "1563517424761",
+          "1563517483912"
+        ],
+        "settings": {
+        }
+      },
+      "men-fit-guide": {
+        "type": "men-fit-guide",
+        "blocks": {
+          "1561704027169": {
+            "type": "image",
+            "settings": {
+              "fit_guide_title": "skinny",
+              "description": "",
+              "collection": "men-denim-fit-skinny",
+              "desktop_fit_image": "shopify:\/\/shop_images\/skinny-men-desktop_ceb4ba93-12df-476e-813e-ec773fc91de6.jpg",
+              "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Skinny_605bd65d-963f-43e9-b176-8a466788cdbb.jpg"
+            }
+          },
+          "1561706120320": {
+            "type": "image",
+            "settings": {
+              "fit_guide_title": "Slim",
+              "description": "",
+              "collection": "men-denim-fit-slim",
+              "desktop_fit_image": "shopify:\/\/shop_images\/slim-desktop-men.jpg",
+              "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Slim.jpg"
+            }
+          },
+          "1563454773939": {
+            "type": "image",
+            "settings": {
+              "fit_guide_title": "STRAIGHT",
+              "description": "",
+              "collection": "men-denim-straight-leg",
+              "desktop_fit_image": "shopify:\/\/shop_images\/straight-men-desktop.jpg",
+              "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Straight_c891d164-8fa2-4f3f-b71d-1d06f7261868.jpg"
+            }
+          },
+          "1563455212718": {
+            "type": "image",
+            "settings": {
+              "fit_guide_title": "STRAIGHT + NARROW",
+              "description": "",
+              "collection": "men-denim-straight-narrow",
+              "desktop_fit_image": "shopify:\/\/shop_images\/straight-narrow-men-desktop.jpg",
+              "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Skinny.jpg"
+            }
+          },
+          "1563455312383": {
+            "type": "image",
+            "settings": {
+              "fit_guide_title": "Athletic slim",
+              "description": "",
+              "collection": "men-denim-fit-athletic",
+              "desktop_fit_image": "shopify:\/\/shop_images\/AthlETIC-SLIM.jpg",
+              "mobile_fit_image": "shopify:\/\/shop_images\/JOES_FitGuide_320x465-M_Athletic_bec58c36-2d7e-42e2-9fac-3e6e6ca06b9e.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "1561704027169",
+          "1561706120320",
+          "1563454773939",
+          "1563455212718",
+          "1563455312383"
+        ],
+        "settings": {
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "1563958350916": {
+            "type": "link_list",
+            "settings": {
+              "footer_menu_id": "footer",
+              "show_headings": true
+            }
+          },
+          "1563958363924": {
+            "type": "link_list",
+            "settings": {
+              "footer_menu_id": "footer-secound-menu",
+              "show_headings": true
+            }
+          }
+        },
+        "block_order": [
+          "1563958350916",
+          "1563958363924"
+        ],
+        "settings": {
+          "tel_text": "1-877-528-JOES (5637)",
+          "tel_number": "18775285637",
+          "social_heading": "Follow Us"
+        }
+      },
+      "men-fit-guide-slider": {
+        "type": "men-fit-guide-slider",
+        "blocks": {
+          "1565791568426": {
+            "type": "slider_image",
+            "settings": {
+              "title": "SKI - Legend",
+              "collection": "men-denim-fit-skinny",
+              "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716-M_LEGEND.jpg",
+              "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_767x1114_W-Hero_Mobile_legend.jpg"
+            }
+          },
+          "1565791739104": {
+            "type": "slider_image",
+            "settings": {
+              "title": "SLI - Asher",
+              "collection": "men-denim-fit-slim",
+              "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716-M_Asher.jpg",
+              "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_767x1114_W-Hero_Mobile_asher.jpg"
+            }
+          },
+          "1565791764779": {
+            "type": "slider_image",
+            "settings": {
+              "title": "STR - Classic",
+              "collection": "men-denim-straight-leg",
+              "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716-M_Classic.jpg",
+              "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_767x1114_W-Hero_Mobile_classic.jpg"
+            }
+          },
+          "1565791802553": {
+            "type": "slider_image",
+            "settings": {
+              "title": "ST+NA - Brixton",
+              "collection": "men-denim-straight-narrow",
+              "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716-M_Brixton.jpg",
+              "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_767x1114_W-Hero_Mobile_brixton.jpg"
+            }
+          },
+          "1565791823120": {
+            "type": "slider_image",
+            "settings": {
+              "title": "ATH - Folsom",
+              "collection": "men-denim-fit-athletic",
+              "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716-M_folosom.jpg",
+              "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_767x1114_W-Hero_Mobile_folsom.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "1565791568426",
+          "1565791739104",
+          "1565791764779",
+          "1565791802553",
+          "1565791823120"
+        ],
+        "settings": {
+        }
+      },
+      "women-fit-guide-slider": {
+        "type": "women-fit-guide-slider",
+        "blocks": {
+          "1565792221114": {
+            "type": "slider_image",
+            "settings": {
+              "title": "SKI - Hi-Rise Honey",
+              "collection": "women-denim-fit-skinny",
+              "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716-W_honey-skinny.jpg",
+              "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_767x1114_W-Hero_Mobile_HONEY-skinny.jpg"
+            }
+          },
+          "1565792346744": {
+            "type": "slider_image",
+            "settings": {
+              "title": "SKI - Bella",
+              "collection": "women-denim-fit-skinny",
+              "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716-W_bella.jpg",
+              "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_767x1114_W-Hero_Mobile_BELLA.jpg"
+            }
+          },
+          "1565792422004": {
+            "type": "slider_image",
+            "settings": {
+              "title": "SKI - Charlie",
+              "collection": "women-denim-fit-skinny",
+              "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716-W_charlie.jpg",
+              "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_767x1114_W-Hero_Mobile_CHARLIE.jpg"
+            }
+          },
+          "1565792447962": {
+            "type": "slider_image",
+            "settings": {
+              "title": "SKI - Icon",
+              "collection": "women-denim-fit-skinny",
+              "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716-W_ICON_3b19d789-ff60-4368-8ef3-a24e219f87a4.jpg",
+              "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_767x1114_W-Hero_Mobile_ICON_c1d2a1c0-0fd0-44d3-8ec9-80809d39f234.jpg"
+            }
+          },
+          "1565792472964": {
+            "type": "slider_image",
+            "settings": {
+              "title": "STR - Lara",
+              "collection": "women-denim-fit-straight",
+              "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716-W_lara.jpg",
+              "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_767x1114_W-Hero_Mobile_LARA.jpg"
+            }
+          },
+          "1565792681612": {
+            "type": "slider_image",
+            "settings": {
+              "title": "BOOT - Provocateur",
+              "collection": "women-denim-fit-bootcut",
+              "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716-W_provo.jpg",
+              "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_767x1114_W-Hero_Mobile_provo.jpg"
+            }
+          },
+          "1565792755204": {
+            "type": "slider_image",
+            "settings": {
+              "title": "BOOT - Molly",
+              "collection": "women-denim-fit-bootcut",
+              "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716-W_molly.jpg",
+              "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_767x1114_W-Hero_Mobile_molly.jpg"
+            }
+          },
+          "1565792735659": {
+            "type": "slider_image",
+            "settings": {
+              "title": "BOOT - Hi-Honey",
+              "collection": "women-denim-fit-bootcut",
+              "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716-W_honey-bootcut.jpg",
+              "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_767x1114_W-Hero_Mobile_HoneyBootcut.jpg"
+            }
+          },
+          "1565792798294": {
+            "type": "slider_image",
+            "settings": {
+              "title": "BOOT - Callie",
+              "collection": "women-denim-fit-bootcut",
+              "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716-W_callie.jpg",
+              "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_767x1114_W-Hero_Mobile_CALLIE.jpg"
+            }
+          },
+          "1565792830645": {
+            "type": "slider_image",
+            "settings": {
+              "title": "FLR - Provocateur",
+              "collection": "women-denim-fit-flare",
+              "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716-W_provo.jpg",
+              "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_767x1114_W-Hero_Mobile_provo_748917ef-c7d1-42a1-980e-a9ac8655f964.jpg"
+            }
+          },
+          "1565792846860": {
+            "type": "slider_image",
+            "settings": {
+              "title": "FLR - Hi-Honey",
+              "collection": "women-denim-fit-flare",
+              "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716-W_honey-bootcut.jpg",
+              "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_767x1114_W-Hero_Mobile_HoneyBootcut_4b5e3ec7-971f-4d34-b429-6b4be9faa942.jpg"
+            }
+          },
+          "1565792864797": {
+            "type": "slider_image",
+            "settings": {
+              "title": "FLR - Molly",
+              "collection": "women-denim-fit-flare",
+              "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716-W_molly.jpg",
+              "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_767x1114_W-Hero_Mobile_molly_a14df7d4-8745-4db9-899b-46d3b57679ea.jpg"
+            }
+          },
+          "1565792880774": {
+            "type": "slider_image",
+            "settings": {
+              "title": "FLR - Callie",
+              "collection": "women-denim-fit-flare",
+              "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716-W_callie.jpg",
+              "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_767x1114_W-Hero_Mobile_CALLIE_4e7000a8-4587-478d-8a13-8f5d406c30a7.jpg"
+            }
+          },
+          "1565903236221": {
+            "type": "slider_image",
+            "settings": {
+              "title": "PET - Provocateur",
+              "collection": "women-denim-fit-petite",
+              "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716-W_provo_f4e04cda-bda0-420a-9612-1a33bbee79fd.jpg",
+              "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_767x1114_W-Hero_Mobile_provo_3b2ad14a-e85f-4513-bb83-090814b2abdd.jpg"
+            }
+          },
+          "1565903369229": {
+            "type": "slider_image",
+            "settings": {
+              "title": "CRV - Hi-Honey Sk",
+              "collection": "women-denim-fit-curvy",
+              "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716-W_honey-skinny_b1d26095-2492-4e48-bd46-f1f4c128b0b9.jpg",
+              "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_767x1114_W-Hero_Mobile_HONEY-skinny_116f7855-9cc4-446b-875b-695cd49729e8.jpg"
+            }
+          },
+          "1565903466360": {
+            "type": "slider_image",
+            "settings": {
+              "title": "CRV - Hi-Honey Bt",
+              "collection": "women-denim-fit-curvy",
+              "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716-W_honey-bootcut_e72b0ff2-8eb1-4867-9cc6-3442de831991.jpg",
+              "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_767x1114_W-Hero_Mobile_HoneyBootcut_ee6b9a77-461f-484f-869d-84c117a24eba.jpg"
+            }
+          },
+          "1565792935856": {
+            "type": "slider_image",
+            "settings": {
+              "title": "BYF - Niki",
+              "collection": "women-denim-fit-boyfriend",
+              "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716-W_niki_7528b5e0-78c8-441a-9cfc-2632a599cb40.jpg",
+              "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_767x1114_W-Hero_Mobile_niki_8ff54183-db0e-4498-8752-dcc6fea9f71c.jpg"
+            }
+          },
+          "1565792553632": {
+            "type": "slider_image",
+            "settings": {
+              "title": "CIG - Lara",
+              "collection": "women-denim-fit-cigarette",
+              "desktop_banner": "shopify:\/\/shop_images\/JOES_FitGuide_1340x716-W_lara.jpg",
+              "mobile_banner": "shopify:\/\/shop_images\/JOES_FitGuide_767x1114_W-Hero_Mobile_LARA_b67dbe62-fb2a-485f-a480-e25593475ea2.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "1565792221114",
+          "1565792346744",
+          "1565792422004",
+          "1565792447962",
+          "1565792472964",
+          "1565792681612",
+          "1565792755204",
+          "1565792735659",
+          "1565792798294",
+          "1565792830645",
+          "1565792846860",
+          "1565792864797",
+          "1565792880774",
+          "1565903236221",
+          "1565903369229",
+          "1565903466360",
+          "1565792935856",
+          "1565792553632"
+        ],
+        "settings": {
+        }
+      },
+      "gift-card": {
+        "type": "gift-card",
+        "blocks": {
+          "1567627408430": {
+            "type": "physical-card",
+            "settings": {
+              "physical_image": "shopify:\/\/shop_images\/joes-gift-card-2.png",
+              "physical_title": "Gift Card",
+              "physical_sub-title": "Ship a gift card to a recipient anywhere in the U.S.",
+              "physical_content": "<ul>\n   <li>Free Ground Shipping (expedited shipping also available).<\/li>\n   <li>No expiration date or maintenance fee.<\/li>\n   <li>Personal gift message included.<\/li>\n   <li>Redeem online or at any Joe's boutique.<\/li>\n<\/ul>",
+              "physical_link_page": "shopify:\/\/products\/gift-card",
+              "physical_page_button_text": "Purchase Gift Card"
+            }
+          },
+          "1567627486747": {
+            "type": "e-card",
+            "settings": {
+              "e-card_image": "shopify:\/\/shop_images\/joes-gift-card.png",
+              "e-card_title": "E-Gift Card",
+              "e-card_sub-title": "Can't decide on a gift? E-gift cards are always a good idea",
+              "e-card_content": "<ul>\n   <li>Emailed within minutes of purchase.<\/li>\n   <li>No expiration date or maintenance fee.<\/li>\n   <li>Personal gift mesasge included.<\/li>\n   <li>Redeem online or at any Joe's boutique.<\/li>\n<\/ul>",
+              "e-card_link_page": "shopify:\/\/products\/e-gift-card",
+              "e-card_page_button_text": "Purchase E-Gift Card"
+            }
+          }
+        },
+        "block_order": [
+          "1567627408430",
+          "1567627486747"
+        ],
+        "settings": {
+          "is_form_needed": false,
+          "check_balance_title": "Check your balance",
+          "form_note_content": "Please call customer service at <strong><a href=\"tel:+18775385637\">1-877-538-JOES (5637)<\/a><\/strong> to check your balance.",
+          "is_balance_link": true,
+          "check_balance_link": "https:\/\/balance.clutch.com\/joesjeans",
+          "check_balance_link_title": "Check balance"
+        }
+      }
+    },
+    "content_for_index": [
+      "home-hero_slideshow",
+      "home-twin_promos",
+      "home-full_width_promo",
+      "home-instagram_feed"
+    ]
+  }
 }

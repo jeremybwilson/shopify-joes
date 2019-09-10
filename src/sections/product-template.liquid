@@ -228,8 +228,10 @@
     {% if section.settings.related_products == 'show' %}
       <div class="container-fluid">
         <div id="related" class="bottom-related">
-          <hr class="product-hr product-hr--large">
-          {% include 'related-products' %}
+          {% if settings.nosto_id != blank %}
+            {% include 'nosto-element' with 'productpage-nosto-1' %}
+            {% include 'nosto-element' with 'productpage-nosto-2' %}
+          {% endif %}
         </div>
       </div>
       <div class="clear"></div>
@@ -244,7 +246,7 @@
     {% comment %} {% include 'script-infinite-variant' %} {% endcomment %}
   {% endunless %}
 </div>
-{% include 'nosto-tag' %}
+<!-- {% include 'nosto-tag' %} -->
 {% unless template == 'product.quick' %}
   {% comment %} :: SIZE CHART PAGE ADD AT BOTTOM OF THE PAGE :: {% endcomment %}
   {% if section.settings.size_chart_show and has_audience %}
