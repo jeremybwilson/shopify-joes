@@ -129,7 +129,11 @@
                 .flex-caption.slide-{{ block.id }} {
                   top: {{ block.settings.caption_vertical }}%;
                 }
-
+                @media screen and (max-width: 768px) {
+                  .flex-caption.slide-{{ block.id }} {
+                    top: {{ block.settings.caption_vertical_mobile }}%;
+                  }
+                }
                 .flex-caption.slide-{{ block.id }} .caption-inners {
                   {% assign caption_opacity = block.settings.caption_opacity | plus: 0 %}
                   
@@ -473,9 +477,18 @@
           "max": 90,
           "step": 1,
           "unit": "%",
-          "label": "Vertical Box Position",
-          "info": "*Check mobile & desktop to ensure no text clipping occurs.",
+          "label": "Vertical Box Position - Desktop",          
           "default": 44
+        },
+        {
+          "type": "range",
+          "id": "caption_vertical_mobile",
+          "min": 5,
+          "max": 90,
+          "step": 1,
+          "unit": "%",
+          "label": "Vertical Box Position - Mobile",          
+          "default": 43
         }
       ]
     }
