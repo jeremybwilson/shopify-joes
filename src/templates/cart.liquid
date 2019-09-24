@@ -70,7 +70,7 @@
               </td>
 
               <td class="cart-remove">
-                <a href="#" onclick="theme.utils.cartUtils.removeItem( this ); return false;"><i class="fa fa-times"></i><span class="remove-text">{{ 'cart.general.remove' | t }}</span></a>
+                <a href="#" onclick="theme.utils.cartUtils.removeItem( this ); return false;"  data-id="{{item.variant.id}}"><i class="fa fa-times"></i><span class="remove-text">{{ 'cart.general.remove' | t }}</span></a>
               </td>
               <td class="cart-price">
                 <span class="money bfx-list-price">{{ item.price | money }}</span>{% if item.variant.compare_at_price > item.price %}&nbsp;<del><span class="money">{{ item.variant.compare_at_price | money }}</span></del>{% endif %}

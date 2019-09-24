@@ -38,8 +38,7 @@ module.exports = (function() {
 
   // Remove product from cart
   const removeItem = function ( el ) {
-    function successCallback( cart ) {
-
+    function successCallback( cart ) {    
       // REMOVE : Line item we removed via api
       $( '#cart-line-item-' + line_item ).remove();
 
@@ -77,7 +76,8 @@ module.exports = (function() {
 
     // REMOVE : Use API from ajax-cart.js.liquid to set item quantity to 0 for a removal
     var line_item = $(el).closest('.cart-line-item').index() + 1;
-    ShopifyAPI.changeItem( line_item, 0, successCallback );
+    var Vid = $(el).data('id');
+    ShopifyAPI.changeItem( Vid, 0, successCallback );
   };
 
 

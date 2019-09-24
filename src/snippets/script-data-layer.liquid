@@ -248,7 +248,7 @@ __bva__.helpers = (function () {
       return cartItem;
     };
 
-    if (typeof ShopifyAPI.changeItem !== 'undefined') {
+    if (typeof ShopifyAPI.changeItem === 'undefined') {
       var changeItemMethod = ShopifyAPI.changeItem;
       ShopifyAPI.changeItem = function () {
 
