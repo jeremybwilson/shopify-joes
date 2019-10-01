@@ -37,8 +37,12 @@ var bcSfFilterTemplate = {
                                         '<h3 class="product-title">{{itemTitle}}</h3>' +
                                     '</a>' +
                                     '{{wishlistButton}}' +
-				    '<div class="product-swatch-wrap">{{jjeansSwatch}}</div>' +
-                                    '<div class="product-price-wrap bfx-price">{{itemPrice}}</div>' +
+                                    '<a href="{{itemUrl}}"> '+             
+                                       '<div class="product-swatch-wrap">{{jjeansSwatch}}</div>' +
+                                     '</a>'+  
+                                     '<a href="{{itemUrl}}"> '+  
+                                        '<div class="product-price-wrap bfx-price">{{itemPrice}}</div>' +
+                                     '</a>'+   
                                     '{{itemSwatch}}' +
                                 '</div>' +
                             '</div>',
