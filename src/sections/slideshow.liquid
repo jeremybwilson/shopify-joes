@@ -35,13 +35,14 @@
                         {% assign mobile_img_url = block.settings.mobile_image | img_url: '767x' %}
                         <source srcset="{{ mobile_img_url }}" media="(max-width: 767px)">
                       {% endif %}
-
+                      <a href="{{ block.settings.cta_one_link }}">
                       {% assign desktop_img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
                       <img class="slideshow-image slideshow__image__{{ block.id }} lazyload lazyload-fade" 
                         data-src="{{ desktop_img_url }}" 
                         data-sizes="auto"
                         data-parent-fit="cover"
                         alt="{{ block.settings.image.alt | escape }}">
+                      </a>  
                     </picture>
 
                     <noscript>
