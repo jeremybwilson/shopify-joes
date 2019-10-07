@@ -1,0 +1,81 @@
+{% if product %}
+    <script>
+    window.bvCallback = function (BV) {
+        BV.pixel.trackConversion({
+            "type" : "ProductDetail",
+            "label" : "Product Detail Page",
+            "value" : "{{product.title}}",
+            {% if customer.first_name %}
+                "nickname" : "{{ customer.first_name }}",
+                "email" : "{{ customer.email }}",
+            {% endif %}
+             "locale" : "en_US"
+        });
+    };
+    </script>
+
+{% elsif request.path contains "apps/store-locator" %}
+    <script>
+    window.bvCallback = function (BV) {
+        BV.pixel.trackConversion({
+            "type" : "StoreLocator",
+            "label" : "Store Locator Page",
+            "value" : "Store Locator Page",
+            {% if customer.first_name %}
+                "nickname" : "{{ customer.first_name }}",
+                "email" : "{{ customer.email }}",
+            {% endif %}
+            "locale" : "en_US"
+        });
+    };
+    </script>
+
+{% elsif request.path contains "pages/stores" %}
+    <script>
+    window.bvCallback = function (BV) {
+        BV.pixel.trackConversion({
+            "type" : "StoreLocator",
+            "label" : "Store List Page",
+            "value" : "Store List Page",
+            {% if customer.first_name %}
+                "nickname" : "{{ customer.first_name }}",
+                "email" : "{{ customer.email }}",
+            {% endif %}
+            "locale" : "en_US"
+        });
+    };
+    </script>
+
+{% elsif request.path contains "pages/outlet-stores" %}
+    <script>
+    window.bvCallback = function (BV) {
+        BV.pixel.trackConversion({
+            "type" : "StoreLocator",
+            "label" : "Outlet Page",
+            "value" : "Outlet Page",
+            {% if customer.first_name %}
+                "nickname" : "{{ customer.first_name }}",
+                "email" : "{{ customer.email }}",
+            {% endif %}
+            "locale" : "en_US"
+        });
+    };
+    </script>
+
+{% elsif request.path contains "pages/contact-us" %}
+        <script>
+        window.bvCallback = function (BV) {
+            BV.pixel.trackConversion({
+                "type" : "ContactUs",
+                "label" : "Contact Us Page",
+                "value" : "Contact Us Page",
+                {% if customer.first_name %}
+                    "nickname" : "{{ customer.first_name }}",
+                    "email" : "{{ customer.email }}",
+                {% endif %}
+                "locale" : "en_US"
+            });
+        };
+        </script>
+
+{% endif %}
