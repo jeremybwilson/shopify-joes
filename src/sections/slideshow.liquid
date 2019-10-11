@@ -98,11 +98,15 @@
 
                   <div class="caption-inners">
                     {% if block.settings.heading != blank %}
-                      <div class="slide-title">{{ block.settings.heading }}</div>
+                      <a href="{{ block.settings.cta_one_link }}">
+                        <div class="slide-title">{{ block.settings.heading }}</div>
+                      </a>  
                     {% endif %}
                     
                     {% if block.settings.subheading != blank %}
+                     <a href="{{ block.settings.cta_one_link }}"> 
                       <div class="caption">{{ block.settings.subheading }}</div>
+                     </a> 
                     {% endif %}
 
                     {% comment %} :: CTA BUTTONS :: {% endcomment %}
