@@ -41,12 +41,16 @@
           {% comment %} :: HEADER - TEXT :: {% endcomment %}
           <div class="text-promo-content text-on-images align-promo-text-{{ block.settings.text_align }}">
             {% if block.settings.heading_text != blank %}
-              <h1 class="heading-text">{{ block.settings.heading_text | escape }}</h1>
+              {% if block.settings.link != blank %}<a href="{{ block.settings.link }}">{% endif %}
+                <h1 class="heading-text">{{ block.settings.heading_text | escape }}</h1>
+              {% if block.settings.link != blank %}</a>{% endif %}  
             {% endif %}
             
             {% comment %} :: BODY - TEXT :: {% endcomment %}
             {% if block.settings.body_text != blank %}
-              <div class="body-text">{{ block.settings.body_text }}</div>
+              {% if block.settings.link != blank %}<a href="{{ block.settings.link }}">{% endif %}
+                <div class="body-text">{{ block.settings.body_text }}</div>
+              {% if block.settings.link != blank %}</a>{% endif %}  
             {% endif %}
 
             {% comment %} :: CTA - BUTTON :: {% endcomment %}
