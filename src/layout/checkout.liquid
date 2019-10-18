@@ -128,5 +128,12 @@
       {% include 'shoprunner-checkout-body' %}
     {% endif %}
     <div class="tfc-order-notify " data-userid="{% if customer %}{{ customer.id }}{% endif %}" data-orderid="{{ checkout.order_number }}"></div>
+    <script>
+      // Show Product Summary
+      $(document).ready( function() {
+        $('.order-summary-toggle').hide(); 
+        $('div.order-summary').removeClass('order-summary--is-collapsed');
+      });
+    </script>
   </body>
 </html>
