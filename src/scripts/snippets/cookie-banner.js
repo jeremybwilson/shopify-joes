@@ -20,7 +20,7 @@ $(document).ready(function () {
       });
 
       // ACCEPT : Close gdpr banner and accept terms
-      $('.button-close').click(function () {
+      $('#cookie-banner--popup .button-close').click(function () {
         $.cookie('gdpr_banner_read', 'true', { expires: 180,path:"/" }); // make the cookie, expires in 180 days
         parent.$.fancybox.close();
       });
