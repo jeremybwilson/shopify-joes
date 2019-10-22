@@ -325,6 +325,17 @@
   {% endif %}
 </style>
 
+{% if customer %}
+<script type="text/javascript">
+  window.addEventListener('load', function(event) {
+    var findTrueFitSize = document.querySelector('.find-your-true-fit .tfc-size.tfc-cfg-size').innerHTML;
+    if(findTrueFitSize){
+      document.querySelector('#swatch-1-'+findTrueFitSize).checked = true;
+    }
+  });
+</script>
+{% endif %}
+
 {% schema %}
   {
     "name": "Product",
