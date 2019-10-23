@@ -187,10 +187,16 @@
   {% endfor %}
 
   {% comment %} :: HEADER - SIZE CHART :: {% endcomment %}
+    {% assign avail_size = '' %}
+    {% for size_option in product.options_by_name['size'].values %}
+      {% assign avail_size = avail_size | append: size_option | append: ':' %}
+    {% endfor %}
+    {% assign avail_size_strsize = avail_size | size | minus: 1 %}
+    {% assign avail_size = avail_size | slice: 0, avail_size_strsize %}
     {% if template != 'product.quick' and section.settings.size_chart_show and has_audience and lowercase_option_name contains 'size' %}
-      <div class="size-guide">
+      <div class="size-guide" data-size="{{avail_size_strsize}}">
          <a href="#size-chart--popup" class="fancybox size-chart--trigger">{{ section.settings.size_chart_header_text }}</a>
-        <div class="tfc-fitrec-product find-your-true-fit" id="{{product.id}}" data-userid="{% if customer %}{{ customer.id }}{% endif %}"></div>
+        <div class="tfc-fitrec-product find-your-true-fit" id="{{product.id}}" data-userid="{% if customer %}{{ customer.id }}{% endif %}" data-styleid="{{ current_variant.sku | split: '-' | first }}" data-colorid="9999" data-availablesizes="{{avail_size}}"></div>
       </div>
     {% endif %}
 </div>

@@ -97,11 +97,7 @@
   {% comment %} :: REVIEWS - STAR RATING :: {% endcomment %}
   {% if settings.app_wk_enabled %}
     <div class="product-star-rating">
-      <div class="product-star-rating__write-review" data-bv-show="rating_summary" data-bv-product-Id="{{product.id}}">
-        {% if product.metafields.bazaarvoice.reviews-aggregate-ratings %}
-          {{ product.metafields.bazaarvoice.reviews-aggregate-ratings }}
-        {% endif %}
-      </div>
+      {% include 'bazarvoice-reviews-aggregate' %}
     </div>
   {% endif %}
 
