@@ -56,6 +56,8 @@ jobs:
               theme_id: "39294304291"
               store: joesjeans.myshopify.com
               ignore_files:
+                - "*.shogun*.liquid"
+                - shogun-*.liquid
                 # - settings_data.json #This is commented out so we keep in sync with repo' > ./config.yml
       - run:
           name: Deploy
@@ -80,6 +82,8 @@ jobs:
               ignore_files:
                 # COMMENTED OUT UNTIL STORE LAUNCH
                 - settings_data.json
+                - "*.shogun*.liquid"
+                - shogun-*.liquid
                 - en.default.json' > ./config.yml
       - run:
           name: Deploy
