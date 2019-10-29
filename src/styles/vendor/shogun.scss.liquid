@@ -1,5 +1,145 @@
-#shogun-landing {
+#shogun-landing { 
+
+	//tools 
+
+	.margin-center {
+		margin: 0 auto;
+	}
+	
+	.mobile-asset {
+		display: none;
+
+		@include mq("phone") {
+			display: block;
+		}
+	}
+
+	.desktop-asset {
+		display: block;
+		
+		@include mq("phone") {
+			display: none;
+		}
+	}
+
+	//layout
+
+	.shg-row {
+		margin: 15px 0;
+	}
+
+	//elements
+
+	.shogun-heading-component {
+
+		h1 {
+		    font-size: 32px;
+		    font-weight: $bold;
+		    letter-spacing: 0px;
+		    margin-bottom: 0px;
+		    color: $white-color;
+		    line-height: 35px;
+		    text-transform: uppercase;
+  			line-height: inherit;
+			border-bottom: none;
+			padding: 0;
+		}
+
+		h2 {
+		    font-weight: $bold;
+		    letter-spacing: 0px;
+		    margin-bottom: 0px;
+		    color: $white-color;
+		    line-height: 35px;
+		    text-transform: uppercase;
+		}
+
+		p {
+			@include p;
+		}
+
+	}
+
+	.shg-btn-wrapper {
+		a {
+		    min-width: 163px;
+		    height: 48px;
+		    text-align: center;
+		    line-height: 28px;
+		    font-size: 15px;
+		    font-weight: bold;
+		    letter-spacing: 0px;
+		    text-transform: uppercase;
+		    background: $black-color;
+		    color: $white-color;
+		    border: 0px solid rgba(0,0,0,0);
+		    text-decoration: none;
+		    text-align: center;
+		    cursor: pointer;
+		    letter-spacing: 0.3px;
+		    margin-bottom: 0px;
+		}
+	}
+
+	// modules
+
+	.main-hero {
+		margin: 15px 0;
+	}
+
+	.twin-promo {
+		.shg-btn-wrapper {
+
+	      	a {
+		      	min-width: 145px;
+			    height: 35px;
+			    border: 1px solid $black-color;
+			    text-align: center;
+			    line-height: 15px;
+			    background: transparent;
+			    font-size: 12px;
+			    font-weight: $weight-normal;
+			    color: $black-color;
+			    text-transform: uppercase;
+			    letter-spacing: 0.5px;
+			    text-decoration: none !important;
+			    margin: 35px auto 0px auto;
+			    display: inline-block;
+
+			    &:hover {
+			    	background-color: $black-color !important;
+    				color: $white-color;
+			    }
+		     }
+		}
+
+	}
+
+	.trio-promo {
+
+	}
+
+	.img-txt {
+
+		[class*="shg-c-"] {
+			display: flex;
+		    justify-content: center;
+		    align-items: center;
+		}
+
+		.shogun-image-container {
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		.text-container {
+		    min-height: auto !important;
+		    height: auto;
+		    width: 100%;
+		    padding: 50px;
+		    text-align: center;
+		}
+
+	}
 
 }
-
-
