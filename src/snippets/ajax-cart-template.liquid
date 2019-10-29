@@ -123,7 +123,6 @@
                         </a>
                     {% endraw %}
                 {% else %}
-                	{% comment %}
                     {% raw %}
                         <button type="submit" class="cart__checkout bfx-checkout" name="checkout">
                             {% endraw %}{{ 'cart.general.checkout' | t }}{% raw %}
@@ -132,12 +131,7 @@
                             <button class="cart__checkout">CART</button>
                         </a>
                     {% endraw %}
-                    {% endcomment %}
-                    {% raw %}
-                        <a href="/cart" class="cart__checkout" aria-label="checkout">
-                            <button class="cart__checkout">Checkout</button>
-                        </a>                    
-                    {% endraw %}
+
                     
                 {% endif %}
                 {% comment %}
