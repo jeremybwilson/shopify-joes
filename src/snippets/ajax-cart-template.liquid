@@ -131,10 +131,14 @@
                             <button class="cart__checkout">CART</button>
                         </a>
                     {% endraw %}
+
+                    
                 {% endif %}
+                {% comment %}
                 {% if additional_checkout_buttons %}
                     <div class="additional_checkout_buttons">{{ content_for_additional_checkout_buttons }}</div>
                 {% endif %}
+                {% endcomment %}
                 <p class="affirm-as-low-as" data-amount="{{cart.total_price}}" data-page-type="cart"></p>
                 {% raw %}
             </div>

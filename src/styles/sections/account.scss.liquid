@@ -257,3 +257,135 @@
     max-width: 45%;
     margin: 75px auto;
 }
+
+
+//
+
+.template-order{
+   #content{
+      @include container;
+      margin-bottom:89px;
+
+      @include mq('laptop'){
+          @include padding-left-right-mobile15;
+      }
+   }
+
+   .newsletter-newsletter{
+      border-top:$border-grey-1;
+      padding-top: 65px;
+   }
+
+   .section-title  h2{
+     text-align: left;
+     margin-bottom: 5px;
+   }
+
+   .order_date {
+      width: 100%;
+      display: inline-block;
+      margin-bottom: 30px;
+   }
+
+   #order_address {
+      width:25%;
+      display: inline-block;
+      vertical-align: top;
+
+      @include mq('phone-and-tablet'){
+        width:100%;
+      }
+
+      .address-part {
+          margin-top:0px;
+          margin-bottom:20px;
+
+          &:last-child{
+            margin-bottom:0px;
+          }
+      }
+   }
+
+   #order_details {
+      width:100%;
+   }
+
+   .overflow-scroll {
+        width: 100%;
+        max-height: 350px;
+        overflow: auto;
+        max-width: 70%;
+        display: inline-block;
+        margin-right: 4.5%;
+
+        @include mq('phone-and-tablet'){
+          max-width:100%;
+          margin-right:0%;
+          margin-bottom:20px;
+        }
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        border:$border-grey-1;
+
+        thead{
+          tr{
+            border-bottom:$border-grey-1;
+          }
+        }
+
+        tfoot{
+          border-top:$border-grey-1;
+          .order_total{
+            border-top:$border-grey-1;
+          }
+        }
+
+        th{
+          @include black-paragraph-13-font;
+          font-weight:$bold;
+          text-align: left;
+          padding: 10px 15px;
+          border:0px;
+          min-width: 125px;
+
+          @include mq('laptop'){
+             min-width: 147px;
+          }
+        }
+
+        td{
+          border-right:0px;
+          min-width: 125px;
+          @include black-paragraph-13-font;
+          padding: 10px 15px;
+
+          &.product {
+            @include mq('phone'){
+              min-width: 300px !important;
+            }
+          }
+          
+          .note{
+            margin-bottom:0px;
+          }
+          
+          @include mq('laptop'){
+             min-width: 147px;
+          }
+ 
+          span,a{
+            @include black-paragraph-13-font;
+            margin-bottom: 0px;
+            text-align: left;
+            padding:0px 0px;
+          }
+
+          &.sku{
+            display: block;
+          }
+        }
+    }
+}

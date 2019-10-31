@@ -138,6 +138,8 @@
     // Use your live public API Key and https://cdn1.affirm.com/js/v2/affirm.js script to point to Affirm production environment.
   </script>
   <!-- End Affirm -->
+
+  {% include 'script-bazaarvoice' %}
 </head>
 
 <body class="template-{{ template.name }} gridlock shifter {% if template contains 'product' %}product{% elsif template contains 'collection' %}collection {% elsif template contains 'page' %}{{ template | split: '.' | last }}{% elsif template contains 'customers' %}{{ template | split: '/' | first }}-{{ template | split: '/' | last }}{% else %}{{ template }}{% endif %}">
