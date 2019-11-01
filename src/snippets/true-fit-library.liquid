@@ -81,5 +81,28 @@
         });
     }
 {% endif %}
+
+if ($('html.page--thank-you').length) {
+    tfcapi('track', 'checkout', {
+        userId: "{{ order.customer.id }}",
+        orderId : "{{ order.order_number }}",
+        locale: 'en_US',
+        products : [
+            {% for item in order.line_items %}
+            {
+                productId : "{{ item.product_id }}",
+                quantity : "{{ item.quantity }}",
+                price : "{{ item.price | money_without_currency | remove: "," }}",
+                currency: 'USD',
+                {% for option in item.options_with_values %}
+                {{ option.name | downcase }}: "{{ option.value }}",
+                {% endfor %}
+                sku: "{{ item.sku }}"
+            }
+            {% if forloop.last != true %},{% endif %}
+            {% endfor %}
+        ]
+    });
+}
 </script>
 {% endif %}
