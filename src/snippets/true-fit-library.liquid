@@ -1,3 +1,4 @@
+{% if settings.true_fit_enabled %}
 <script type="text/JavaScript">
     (function(){
         var a={};
@@ -22,5 +23,6 @@
         return a;
         // Don't change anything above this line
     })().
-    fitrec('joe','prod');
+    fitrec('{{ settings.true_fit_id }}', '{{ settings.true_fit_env }}');
 </script>
+{% endif %}
