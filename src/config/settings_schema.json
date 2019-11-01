@@ -1339,6 +1339,43 @@
         ]
     },
     {
+        "name": "True Fit",
+        "settings": [
+            {
+                "type": "checkbox",
+                "id": "true_fit_enabled",
+                "label": "Enable True Fit",
+                "default": true
+            },
+            {
+                "type": "text",
+                "id": "true_fit_id",
+                "label": "True Fit ID",
+                "default": "joe"
+            },
+            {
+                "type": "select",
+                "id": "true_fit_env",
+                "label": "True Fit Environment",
+                "default": "dev",
+                "options": [
+                    {
+                        "value": "dev",
+                        "label": "Dev"
+                    },
+                    {
+                        "value": "staging",
+                        "label": "Staging"
+                    },
+                    {
+                        "value": "prod",
+                        "label": "Production"
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "name": "Checkout - Custom",
         "settings": [
             {
