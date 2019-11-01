@@ -24,5 +24,62 @@
         // Don't change anything above this line
     })().
     fitrec('{{ settings.true_fit_id }}', '{{ settings.true_fit_env }}');
+
+{% if product %}
+    function fitrec_selectSize(fitsize = 0, fitscore = 0){
+        var selected_fitsize;
+        switch (fitsize){
+            case "Small":
+                selected_fitsize = "S";
+                break;
+            case "Medium":
+                selected_fitsize = "M";
+                break;
+            case "Large":
+                selected_fitsize = "L";
+                break;
+            case "2XL":
+                selected_fitsize = "XXL";
+                break;
+            default:
+                selected_fitsize = fitsize;
+        }
+
+        $(".swatch.size input[name='size'][value='"+selected_fitsize+"']").click();
+        return true; // Returning false to avoid further action
+    }
+
+    // Call site-specific hook to select the recommended size
+    tfcapi('event', 'tfc-fitrec-product', 'success', function(context) {
+        if (typeof fitrec_selectSize === 'function') {
+            fitrec_selectSize(context.fitRecommendation.size, context.fitRecommendation.score);
+        }
+    });
+
+    tfcapi('event','tfc-fitrec-register','addtobag',function(e) {
+        var tfSize = e.size;
+
+        // First try to select the size
+        if(!fitrec_selectSize(tfSize)) {
+            // This case, typically points to a data/catalog issue
+            console.log("No Match Find");
+        }
+        else {
+            // Add the item to cart ...
+            $("#product-add .AddtoCart").click();
+        }
+    });
+
+    function fitrec_setColorId(newColorId, newAvailableSizes) {
+        tfcapi('update', 'tfc-fitrec-product', {
+            products: {
+                'the-style-id': {
+                    colorId: newColorId,
+                    availableSizes: newAvailableSizes
+                }
+            }
+        });
+    }
+{% endif %}
 </script>
 {% endif %}
