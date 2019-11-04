@@ -325,6 +325,28 @@
   {% endif %}
 </style>
 
+{% if customer %}
+  <script type="text/javascript">
+    window.addEventListener('load', function(event) {
+      var findTrueFitElem = document.querySelector('.find-your-true-fit .tfc-size');
+      if(findTrueFitElem){
+        document.querySelector('body').classList.add('hasTrufit');
+        var findTrueFitSize = findTrueFitElem.innerHTML.toLowerCase();
+        document.querySelector('#swatch-1-'+findTrueFitSize).checked = true;
+        var pantSizes = document.querySelectorAll('.pant--size');
+        if(pantSizes){
+          for(var key in pantSizes){
+            var size = pantSizes[key].getAttribute('data-size').toLowerCase();
+            if(size.includes(findTrueFitSize)){
+              pantSizes[key].parentNode.classList.add('trufit-tr');
+            }
+          }
+        }
+      }
+    });
+  </script>
+{% endif %}
+
 {% schema %}
   {
     "name": "Product",

@@ -327,3 +327,18 @@ input.add {
      margin-bottom: 18px;
      width: 100%;
 }
+body.hasTrufit {
+  .swatch-element {
+    label:hover,
+    input:checked + label {
+      border: 2px solid $trufit-red;
+    }
+  }
+  .trufit-tr {
+    border: 2px solid $trufit-red !important;
+    background-image: url({{'truefit-logo-red.svg' | file_url}});
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: -1px 50%;
+  }
+}
