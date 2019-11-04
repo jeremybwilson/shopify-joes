@@ -336,9 +336,12 @@
         var pantSizes = document.querySelectorAll('.pant--size');
         if(pantSizes){
           for(var key in pantSizes){
-            var size = pantSizes[key].getAttribute('data-size').toLowerCase();
-            if(size.includes(findTrueFitSize)){
-              pantSizes[key].parentNode.classList.add('trufit-tr');
+            var size = pantSizes[key].getAttribute('data-size').toLowerCase().split(',');
+            for(let key in size){
+              if(size[key].includes(findTrueFitSize)){
+                pantSizes[key].parentNode.classList.add('trufit-tr');
+                break;
+              }
             }
           }
         }
