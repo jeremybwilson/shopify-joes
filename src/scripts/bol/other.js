@@ -73,3 +73,7 @@ $(document).ready(function () {
     $('.no-fouc').removeClass('no-fouc');
     $('.load-wait').addClass('hide');
 });
+
+$(document).on('click','.hidden_div',function(){
+    $('.js-drawer-close').click();
+});

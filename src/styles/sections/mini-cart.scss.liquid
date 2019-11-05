@@ -294,6 +294,9 @@ button.cart__checkout {
 .js-drawer-open.js-drawer-open-right {
     position: fixed;
     width:100%; 
+   @include mq('phone'){
+     position: relative;    
+   } 
 }
 
 
@@ -313,6 +316,19 @@ button.cart__checkout {
     }
 }
 
+.js-drawer-open.js-drawer-open-right .hidden_div {
+    display: block;
+}
+.hidden_div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    width: calc(100% - 275px);
+    height: 100%;
+    z-index: 99999;
+    display: none;
+}
 
 
 
