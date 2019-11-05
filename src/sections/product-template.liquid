@@ -325,13 +325,15 @@
   {% endif %}
 </style>
 
-{% if customer %}
-  <script type="text/javascript">
-    window.addEventListener('load', function(event) {
+<script type="text/javascript">
+  window.addEventListener('load', function(event) {
+    {% if customer %}
       var findTrueFitElem = document.querySelector('.find-your-true-fit .tfc-size');
       if(findTrueFitElem){
         document.querySelector('body').classList.add('hasTrufit');
-        var findTrueFitSize = findTrueFitElem.innerHTML.toLowerCase();
+        var findTrueFitSize = findTrueFitElem.innerHTML;
+        document.querySelector('.trufit-popup-info .trufit-size').innerHTML = findTrueFitSize;
+        findTrueFitSize = findTrueFitSize.toLowerCase();
         document.querySelector('#swatch-1-'+findTrueFitSize).checked = true;
         var pantSizes = document.querySelectorAll('.pant--size');
         if(pantSizes){
@@ -346,9 +348,21 @@
           }
         }
       }
-    });
-  </script>
-{% endif %}
+    {% else %} 
+      var findTrueFitLinkElem = document.querySelector('.find-your-true-fit .tfc-popup-click-open');
+      if(findTrueFitLinkElem){ 
+        var popupLink = document.querySelector('.trufit-popup-link');
+        document.querySelector('body').classList.add('cust-false-show-link');
+        if(popupLink){
+          popupLink.addEventListener('click',function(){
+            $.fancybox.close();
+            findTrueFitLinkElem.click();
+          });
+        }
+      }
+    {% endif %}
+  });
+</script>
 
 {% schema %}
   {
