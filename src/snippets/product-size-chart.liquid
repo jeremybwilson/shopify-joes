@@ -24,5 +24,17 @@
 {% endfor %}
 
 <div id="size-chart--popup" class="product-page-popup" style="display: none" data-size-chart-type="{{ size_chart_type }}">
+  <div class="trufit-popup-link trufit-elem">
+    <div class="trufit-elem-inner">
+      <span class="trufit-logo"></span>
+      <span class="trufit-content">Find your true fit</span>
+    </div>
+  </div>
+  <div class="trufit-popup-info trufit-elem">
+    <div class="trufit-elem-inner">
+      <span class="trufit-logo"></span>
+      <span class="trufit-content">Your True Fit Size: <span class="trufit-size"></span></span>
+    </div>
+  </div>
   {{ pages[section.settings.size_chart_page].content }}
 </div>
