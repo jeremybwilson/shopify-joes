@@ -38,10 +38,13 @@ $gdprAltButtonBgHover: {{ settings.gdpr_alt_button_bg_hover }};
 }
 
 #cookie-banner--popup--inner {
+  .text-container{
+    width:100%;
+  }
   @include flexbox;
   @include flex-direction(column);
 
-  @include mq('tablet-and-up') {
+  @include mq('lap-and-up') {
     @include justify-content(space-between);
     @include flex-direction(row);
     @include align-items(center);
@@ -60,11 +63,14 @@ $gdprAltButtonBgHover: {{ settings.gdpr_alt_button_bg_hover }};
     }
   }
   .desktop-text {
-    max-width: 880px;
+    max-width: 100%;
     @include fontDim(12px,20px,.04em);
 
     @include mq('phone') {
       display: none;
+    }
+    @include mq('tablet') {
+      text-align:center;
     }
 
     a {
@@ -76,9 +82,8 @@ $gdprAltButtonBgHover: {{ settings.gdpr_alt_button_bg_hover }};
     @include flexbox;
     @include justify-content(space-between);
     @include mq('tablet-and-up') {
-      margin-left: 40px;
+      margin-top:10px;
     }
-
     a {
       text-decoration: none;
       letter-spacing: .25em;
@@ -104,7 +109,13 @@ $gdprAltButtonBgHover: {{ settings.gdpr_alt_button_bg_hover }};
       }
 
       @include mq('tablet-and-up') {
-        display: none;
+        width: 210px;
+        height: 55px;    
+        line-height: 55px;
+        margin-right:10px;
+      }
+      @include mq('tablet') {
+        width:50%;
       }
     }
     .button-close {
@@ -120,6 +131,9 @@ $gdprAltButtonBgHover: {{ settings.gdpr_alt_button_bg_hover }};
         width: 210px;
         height: 55px;    
         line-height: 55px;  
+      }
+      @include mq('tablet') {
+        width:50%;
       }
     }
   }
