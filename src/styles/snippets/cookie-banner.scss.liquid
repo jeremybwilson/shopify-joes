@@ -38,6 +38,9 @@ $gdprAltButtonBgHover: {{ settings.gdpr_alt_button_bg_hover }};
 }
 
 #cookie-banner--popup--inner {
+  .text-container{
+    width:100%;
+  }
   @include flexbox;
   @include flex-direction(column);
 
@@ -60,7 +63,7 @@ $gdprAltButtonBgHover: {{ settings.gdpr_alt_button_bg_hover }};
     }
   }
   .desktop-text {
-    max-width: 880px;
+    max-width: 100;
     @include fontDim(12px,20px,.04em);
 
     @include mq('phone') {
