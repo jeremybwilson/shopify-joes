@@ -29,7 +29,7 @@ $gdprAltButtonBgHover: {{ settings.gdpr_alt_button_bg_hover }};
 
   .fancybox-skin {
     background-color: $gdprBg;
-  } 
+  }
 
   p {
     margin-bottom: 0;
@@ -37,47 +37,52 @@ $gdprAltButtonBgHover: {{ settings.gdpr_alt_button_bg_hover }};
   }
 }
 
-#cookie-banner--popup--inner {
-  .text-container{
-    width:100%;
-  }
-  @include flexbox;
-  @include flex-direction(column);
-
-  @include mq('lap-and-up') {
-    @include justify-content(space-between);
-    @include flex-direction(row);
-    @include align-items(center);
-    margin-top: 25px;
-    margin-bottom: 25px;
-  }
-}
 #cookie-banner--popup {
-  .mobile-text {
-    width: 100%;
-    margin: 15px 0;
-    text-align: center;
 
-    @include mq('tablet-and-up') {
-      display: none;
+  #cookie-banner--popup--inner {
+    @include flexbox;
+    @include flex-direction(column);
+
+    @include mq('lap-and-up') {
+      @include justify-content(space-between);
+      @include flex-direction(row);
+      @include align-items(center);
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+
+    .text-container {
+      width: 100%;
+
+      .mobile-text {
+        width: 100%;
+        margin: 15px 0;
+        text-align: center;
+
+        @include mq('tablet-and-up') {
+          display: none;
+        }
+      }
+
+      .desktop-text {
+        width: 100%;
+        @include fontDim(12px,20px,.04em);
+
+        @include mq('phone') {
+          display: none;
+        }
+        @include mq('tablet') {
+          text-align:center;
+        }
+
+        a {
+          color: $gdprText;
+          text-decoration: underline;
+        }
+      }
     }
   }
-  .desktop-text {
-    max-width: 100%;
-    @include fontDim(12px,20px,.04em);
 
-    @include mq('phone') {
-      display: none;
-    }
-    @include mq('tablet') {
-      text-align:center;
-    }
-
-    a {
-      color: $gdprText;
-      text-decoration: underline;
-    }
-  }
   .buttons {
     @include flexbox;
     @include justify-content(space-between);
@@ -99,6 +104,7 @@ $gdprAltButtonBgHover: {{ settings.gdpr_alt_button_bg_hover }};
         border: solid 2px transparent;
       }
     }
+
     .more-info {
       @include altButton;
       background: $gdprAltButtonBg;
@@ -110,7 +116,7 @@ $gdprAltButtonBgHover: {{ settings.gdpr_alt_button_bg_hover }};
 
       @include mq('tablet-and-up') {
         width: 210px;
-        height: 55px;    
+        height: 55px;
         line-height: 55px;
         margin-right:10px;
       }
@@ -118,6 +124,7 @@ $gdprAltButtonBgHover: {{ settings.gdpr_alt_button_bg_hover }};
         width:50%;
       }
     }
+
     .button-close {
       @include mainButton;
       background: $gdprButtonBg;
@@ -129,8 +136,8 @@ $gdprAltButtonBgHover: {{ settings.gdpr_alt_button_bg_hover }};
 
       @include mq('tablet-and-up') {
         width: 210px;
-        height: 55px;    
-        line-height: 55px;  
+        height: 55px;
+        line-height: 55px;
       }
       @include mq('tablet') {
         width:50%;
