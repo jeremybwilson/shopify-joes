@@ -275,6 +275,10 @@ button.cart__checkout {
     transition: all 1s;
     z-index: 10000; // Header floating nav bar is set to 9999, must be higher than that
 
+    &::-webkit-scrollbar{
+      display: none;
+    }
+
     @include mq('phone'){
       overflow-y:hidden;
     }
@@ -291,13 +295,13 @@ button.cart__checkout {
 
 .js-drawer-open-right .my-cart-popup{right:0;}
 
-.js-drawer-open.js-drawer-open-right {
+/*.js-drawer-open.js-drawer-open-right {
     position: fixed;
     width:100%; 
    @include mq('phone'){
      position: relative;    
    } 
-}
+}*/
 
 
 .drawer__close{
