@@ -446,8 +446,7 @@
                 "label": "Secondary button Text",
                 "default": "#fefffe"
             },
-
-
+            
 
             {
                 "type": "header",
