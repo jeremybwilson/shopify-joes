@@ -327,3 +327,68 @@ input.add {
      margin-bottom: 18px;
      width: 100%;
 }
+/* 
+  PDM-1127 -- Start
+  Trufit logo in sizechart popup and show truFIt size text and link
+*/
+.trufit-tr, .trufit-elem .trufit-logo {
+  background-image: url({{'truefit-logo-red.svg' | file_url}});
+  background-repeat: no-repeat;
+}
+.trufit-tr {
+  border: 2px solid $trufit-red !important;
+  background-size: 30px;
+  background-position: -1px 50%;
+}
+.trufit-elem {
+  .trufit-logo {
+    width: 20px;
+    height: 15px;
+    background-size: 15px;
+    background-position: 50% 50%;
+  }
+  .trufit-elem-inner {
+    @include flexbox;
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+    @include align-items(center);
+  }
+  .trufit-content {
+    @include fontSize( 12px );
+    margin-left: 3px;
+  }
+  &.trufit-popup-link {
+    padding: 4px;
+    border: 1px solid $border-gray;
+    cursor: pointer;
+  }
+}
+#size-chart--popup {
+  .trufit-elem {
+    margin-left: 15px;
+    display: none;
+  }
+}
+body {
+  &.hasTrufit {
+    .swatch-element {
+      label:hover,
+      input:checked + label {
+        border: 2px solid $trufit-red;
+      }
+    }
+    #size-chart--popup {
+      .trufit-popup-info {
+        display:inline-block;
+      }
+    }
+  }
+  &.cust-false-show-link {
+    #size-chart--popup {
+      .trufit-popup-link {
+        display:inline-block;
+      }
+    }
+  }
+}
+// PDM-1127 -- End

@@ -324,7 +324,59 @@
     }
   {% endif %}
 </style>
-
+{% comment %}
+  **Ticket : PDM-1127 - Start
+  Auto select size based on TruFit size & Show Trufit size text and link in
+  sizechart popup.
+{% endcomment %}
+<script type="text/javascript">
+  window.addEventListener('load', function(event) {
+    var findTrueFitElem = document.querySelector('.find-your-true-fit .tfc-size');
+    {% if customer %}
+      if(findTrueFitElem){
+        showTrufitSizeInSizeChart();
+      } else {
+        showTruFitPopupLinkInSizeChart();
+      }
+    {% else %} 
+        showTruFitPopupLinkInSizeChart();
+    {% endif %}
+  });
+  function showTrufitSizeInSizeChart(){
+    var findTrueFitElem = document.querySelector('.find-your-true-fit .tfc-size');
+    document.querySelector('body').classList.add('hasTrufit');
+    var findTrueFitSize = findTrueFitElem.innerHTML;
+    document.querySelector('.trufit-popup-info .trufit-size').innerHTML = findTrueFitSize;
+    findTrueFitSize = findTrueFitSize.toLowerCase();
+    document.querySelector('#swatch-1-'+findTrueFitSize).checked = true;
+    var pantSizes = document.querySelectorAll('.pant--size');
+    if(pantSizes){
+      for(var key in pantSizes){
+        var size = pantSizes[key].getAttribute('data-size').toLowerCase().split(',');
+        for(let subkey in size){
+          if(size[subkey].includes(findTrueFitSize)){
+            pantSizes[key].parentNode.classList.add('trufit-tr');
+            break;
+          }
+        }
+      }
+    }
+  } 
+  function showTruFitPopupLinkInSizeChart(){
+    var findTrueFitLinkElem = document.querySelector('.find-your-true-fit .tfc-popup-click-open');
+    if(findTrueFitLinkElem){ 
+      var popupLink = document.querySelector('.trufit-popup-link');
+      document.querySelector('body').classList.add('cust-false-show-link');
+      if(popupLink){
+        popupLink.addEventListener('click',function(){
+          $.fancybox.close();
+          findTrueFitLinkElem.click();
+        });
+      }
+    }
+  }
+</script>
+{% comment %} **Ticket : PDM-1127 - END {% endcomment %}
 {% schema %}
   {
     "name": "Product",
