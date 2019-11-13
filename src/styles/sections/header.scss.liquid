@@ -242,6 +242,7 @@ ul{padding:0 0px; margin: 0px;}
            line-height:18px;
            float:right;
            flex:unset;
+           align-items: center;
         }
 
         li{
@@ -253,7 +254,11 @@ ul{padding:0 0px; margin: 0px;}
           @include mq('laptop-up'){
              margin: 0 9px;
           }
-
+          &.nav-search {
+            @include mq(phone){
+              margin-right: 3px;
+            }
+          }
           .icon.icon-cart-text {
              display: inline-block;
             }
@@ -367,7 +372,7 @@ ul{padding:0 0px; margin: 0px;}
     }
 
     @include mq('phone'){
-      width:13px;
+      width:16px;
     }
 
     img {
@@ -666,8 +671,8 @@ ul{padding:0 0px; margin: 0px;}
  @include mq('phone-and-tablet'){
  .navbar-toggle {
     display:block;
-    width:16px;
-    height:15px;
+    width:22px;
+    height:14px;
     background-color: #f4f4f4;
     border: 0px;
     line-height: 28px;
@@ -687,13 +692,14 @@ ul{padding:0 0px; margin: 0px;}
       position: absolute;
       top: 0;
       left: 0;
+      @include transform(scale(1,1.5));
 
       &:nth-child(2){
-         top:5px;
+         top:6px;
       }
 
       &:nth-child(3){
-         top:10px;
+         top:12px;
       }
       
       @include mq('tablet'){
