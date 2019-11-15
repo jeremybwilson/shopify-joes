@@ -135,5 +135,10 @@
         $('div.order-summary').removeClass('order-summary--is-collapsed');
       });
     </script>
+
+    <!-- Mention me -->
+    {% if settings.enable_mention_me %}
+      {% include 'script-mention-me-checkout' %}
+    {% endif %}
   </body>
 </html>
