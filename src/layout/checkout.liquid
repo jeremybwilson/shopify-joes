@@ -57,13 +57,6 @@
     {% include 'script-bazaarvoice' %}
   {% endif %}
 
-  {% comment %} :: True Fit :: {% endcomment %}
-  {%- if request.path contains 'thank_you' %}
-    {% if first_time_accessed %}
-      {% include 'true-fit-library' %}
-    {% endif %}
-  {% endif %}
-
   {% comment %}
   <!-- Sailthru
   ================================================== -->
