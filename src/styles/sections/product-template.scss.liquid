@@ -755,3 +755,20 @@
     padding: 0 0px;
     margin-top: 16px;
 }
+
+
+.size-not-sure-popup{
+  @include mq('phone'){
+    .modal-content{
+        width: calc(100% - 30px) !important;
+    }
+  }
+
+  .popup-logo{
+      margin-bottom: 50px;
+  }
+
+  div#button-footer-newsletter-submit-popup {
+      margin-top: 45px;
+  }
+}
