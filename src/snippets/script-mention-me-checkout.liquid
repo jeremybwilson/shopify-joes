@@ -9,8 +9,11 @@
 
 <script>
   $(document).ready( function() {
-    $('.order-summary__section--product-list')
-      .after('<!-- Begin Mention Me referee placeholder div --><div id="mmWrapper" style="padding: 10px 0;"></div><!-- End Mention Me referee placeholder div -->');
+    if (Shopify && Shopify.Checkout && (Shopify.Checkout.step === 'contact_information' ||
+      Shopify.Checkout.step === 'shipping_method' || Shopify.Checkout.step === 'payment_method')) {
+      $('.order-summary__section--product-list')
+        .after('<!-- Begin Mention Me referee placeholder div --><div id="mmWrapper" style="padding: 10px 0;"></div><!-- End Mention Me referee placeholder div -->');
+    }
   });
 </script>
 
