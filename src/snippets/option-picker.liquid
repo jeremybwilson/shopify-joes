@@ -192,5 +192,28 @@
          <a href="#size-chart--popup" class="fancybox size-chart--trigger">{{ section.settings.size_chart_header_text }}</a>
         <div class="tfc-fitrec-product find-your-true-fit" id="{{product.id}}" data-userid="{% if customer %}{{ customer.id }}{% endif %}"></div>
       </div>
+
+      {% assign has_unavailable = false %}
+
+      {% for variant in productVariants %}
+      {% unless variant.available %}
+      {% assign has_unavailable = true %}
+      {% break %}
+      {% endunless %}
+      {% endfor %}
+
+      {% if has_unavailable %}
+      <a class="link" href="#" id="BIS_trigger">Is your size out of stock?</a>
+
+      <script type="text/javascript">
+        var domainLocale = window.theme.Utils.domainCookie();
+
+        if(domainLocale == 'de'){
+            var bisLink = document.querySelector('#BIS_trigger');
+            bisLink = bisLink.classList.add("hide");
+        }
+      </script>
+      {% endif %}
+
     {% endif %}
 </div>
