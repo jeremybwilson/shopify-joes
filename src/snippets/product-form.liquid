@@ -286,6 +286,31 @@
     {% endif %}{% endcomment %}
 
 
+  {% assign has_unavailable = false %}
+
+  {% for variant in productVariants %}
+    {% unless variant.available %}
+      {% assign has_unavailable = true %}
+      {% break %}
+    {% endunless %}
+  {% endfor %}
+
+  {% if has_unavailable %}
+     <a class="link" href="#" id="BIS_trigger">Is your size out of stock?</a>
+
+     <script type="text/javascript">
+      // Check to see which domain we are currently on
+      var domainLocale = window.theme.Utils.domainCookie();
+
+      // BUILD : Append the 'hide' class if we are on DE
+      if(domainLocale == 'de'){
+        var bisLink = document.querySelector('#BIS_trigger');
+        bisLink = bisLink.classList.add("hide");
+      }
+    </script>
+  {% endif %}
+
+
   {% comment %} :: ADD TO CART ::{% endcomment %}
   {% if product.available %}{% endif %}
     <div id="product-add">
@@ -312,12 +337,12 @@
     readonly
     type="hidden"
     name="properties[_collection_private]"
-    value="{{ collection.title }}">
+    value="{{ collection.title }}" />
 
   <input
     readonly
     type="hidden"
     name="properties[_collection_handle_private]"
-    value="{{ collection.handle }}">
+    value="{{ collection.handle }}" />
 
 {% endform %}
