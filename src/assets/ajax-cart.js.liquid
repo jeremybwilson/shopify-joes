@@ -480,10 +480,9 @@ var ajaxCart = (function(module, $) {
           $('.modal-content .close').click(function() {           
             $(this).closest('#truefitModal.subscribe-modal').fadeOut();
           });
-          $('#truefit-size-submit-popup.truefit-button').on('click',function(){
+          $('#truefitModal .tfc-cfg-basic-button').on('click',function(){
             $('.hidden_div').click()
             $('#truefitModal.subscribe-modal').fadeOut();
-            $('.tfc-cfg-basic-button, .tfc-popup-click-open').click();
             $.cookie('true_fit_size_delay_popup', 1, { expires : 2 });                        
           });
         }
