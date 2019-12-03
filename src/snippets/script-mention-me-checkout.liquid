@@ -1,0 +1,28 @@
+{% comment %}
+  ::  Order confirming page tag, Checkout page tag  ::
+{% endcomment %}
+
+{%- assign tag_name = 'tag-demo' -%}
+{%- if settings.mention_me_production -%}
+  {%- assign tag_name = 'tag' -%}
+{%- endif -%}
+
+<script>
+  $(document).ready( function() {
+    if (Shopify && Shopify.Checkout && (Shopify.Checkout.step === 'contact_information' ||
+      Shopify.Checkout.step === 'shipping_method' || Shopify.Checkout.step === 'payment_method')) {
+      $('.order-summary__section--product-list')
+        .after('<!-- Begin Mention Me referee placeholder div --><div id="mmWrapper" style="padding: 10px 0;"></div><!-- End Mention Me referee placeholder div -->');
+    }
+  });
+</script>
+
+<!-- Begin Mention Me referee integration -->
+<script type="text/javascript" src="https://{{- tag_name -}}.mention-me.com/api/v2/refereefind/{{- settings.mention_me_partner_code -}}?situation=checkout"></script>
+<!-- End Mention Me referee integration -->
+
+{%- unless checkout != blank -%}
+  <!-- Begin Mention Me referrer integration -->
+  <script type="text/javascript" src="https://{{- tag_name -}}.mention-me.com/api/v2/referreroffer/{{- settings.mention_me_partner_code -}}?firstname={{ customer.first_name | url_encode }}&surname={{ customer.last_name | url_encode }}&email={{ customer.email | url_encode }}&order_number={{ checkout.order_number | url_encode }}&order_total={{ order.total_price | money_without_currency | url_encode }}&order_currency={{ shop.currency | url_encode }}&situation=postpurchase"></script>
+  <!-- End Mention Me referrer integration -->
+{%- endunless -%}

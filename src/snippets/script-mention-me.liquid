@@ -1,0 +1,20 @@
+{% comment %}
+  :: Landing page tag, Dashboard script  ::
+{% endcomment %}
+
+{%- assign tag_name = 'tag-demo' -%}
+{%- if settings.mention_me_production -%}
+  {%- assign tag_name = 'tag' -%}
+{%- endif -%}
+
+{%- if template == 'page' and page.handle == 'mention-me' -%}
+  <!-- Begin Mention Me referrer integration -->
+  <script type="text/javascript" src="https://{{- tag_name -}}.mention-me.com/api/v2/referreroffer/{{- settings.mention_me_partner_code -}}?situation=landingpage"></script>
+  <!-- End Mention Me referrer integration -->
+{%- endif -%}
+
+{%- if template == 'customers/account' -%}
+<!-- Begin Mention Me dashboard integration -->
+<script type="text/javascript" src="https://{{- tag_name -}}.mention-me.com/api/v2/dashboard/{{- settings.mention_me_partner_code -}}/{{ customer.email | url_encode }}?implementation=embed&situation=dashboard&surname={{customer.last_name | url_encode }}&firstname={{customer.first_name | url_encode }}"></script>
+<!-- End Mention Me dashboard integration -->
+{%- endif -%}

@@ -313,5 +313,10 @@
   {% if settings.nosto_id != blank %}
     {% include 'nosto-tagging' %}
   {% endif %}
+
+  <!-- Mention me -->
+  {% if settings.enable_mention_me %}
+    {% include 'script-mention-me' %}
+  {% endif %}
 </body>
 </html>

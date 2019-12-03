@@ -17,7 +17,8 @@
     },
     {
         "name": "Analytics + Marketing",
-        "settings": [{
+        "settings": [
+            {
                 "type": "text",
                 "id": "google_tag_manager_id",
                 "label": "Google Tag Manger ID",
@@ -46,6 +47,30 @@
                 "type": "text",
                 "id": "nosto_id",
                 "label": "ID"
+            },
+            {
+                "type": "header",
+                "content": "Mention Me"
+            },
+            {
+                "type": "checkbox",
+                "id": "enable_mention_me",
+                "label": "Enable Mention Me",
+                "default": false
+            },
+            {
+                "type": "text",
+                "id": "mention_me_partner_code",
+                "label": "Mention Me partner code",
+                "info": "(Ex: mmd0xxxxxx)",
+                "default": "mmd0ef5c09"
+            },
+            {
+                "type": "checkbox",
+                "id": "mention_me_production",
+                "label": "Enable Production Tag for Mention Me",
+                "info": "You can toggle the production/demo by this checkbox",
+                "default": false
             }
         ]
     },
