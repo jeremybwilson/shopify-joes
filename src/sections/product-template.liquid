@@ -337,22 +337,6 @@
         showTrufitSizeInSizeChart();
       }
     {% endif %}
-    var sizeChartElem = document.querySelector('.size-guide .size-chart--trigger');
-    if(sizeChartElem){
-      sizeChartElem.addEventListener('click',function(){
-        $.fancybox({
-          href:'#size-chart--popup',
-          helpers: {
-            overlay: {
-              locked: false
-            }
-          },
-          beforeShow: function(){
-           showTrufitSizeInSizeChart(); 
-          }
-        });
-      });
-    }
   });
   function showTrufitSizeInSizeChart(){
     var findTrueFitElem = document.querySelector('.find-your-true-fit .tfc-size');
