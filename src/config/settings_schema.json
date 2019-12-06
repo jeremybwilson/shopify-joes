@@ -1383,7 +1383,12 @@
               "id": "truefitsize_popup_subtitle",
               "label": "Adjacent Size Sub-Title",
               "default": "Try True Fit to find out what size is just right - just for you."
-            }
+            },
+            {
+                "type": "image_picker",
+                "id": "truefitsize_popup_logo",
+                "label": "Logo"
+              }
         ]
     },
     {

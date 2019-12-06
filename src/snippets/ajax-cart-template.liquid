@@ -179,7 +179,7 @@
   <div class="page-center-modal">
     <div class="modal-content">
         <span class="close"></span>
-        <img class="popup-logo" src="{{ 'JOES-black_193x.png' | file_url }}" >
+        <img class="popup-logo" src="{{ settings.truefitsize_popup_logo | img_url: '193x' }}" >
         <h2>{{ settings.truefitsize_popup_title }}</h2>
         <p>{{ settings.truefitsize_popup_subtitle }}</p>
         <div class="tfc-fitrec-product find-your-true-fit" id="{{product.id}}" data-userid="{% if customer %}{{ customer.id }}{% endif %}" ></div>
