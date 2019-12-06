@@ -223,7 +223,7 @@ var ajaxCart = (function(module, $) {
   var $formContainer, $addToCart, $cartCountSelector, $cartCostSelector, $cartContainer, $drawerContainer;
 
   // Private functions
-  var updateCountPrice, formOverride, itemAddedCallback, itemErrorCallback, trackCartStart, cartUpdateCallback, buildCart, cartCallback, adjustCart, adjustCartCallback, createQtySelectors, qtySelectors, validateQty;
+  var updateCountPrice, checkSizeSelection, sizeSwatchClickEvent, formOverride, itemAddedCallback, itemErrorCallback, trackCartStart, cartUpdateCallback, buildCart, cartCallback, adjustCart, adjustCartCallback, createQtySelectors, qtySelectors, validateQty;
 
   /*============================================================================
               Bind new addToCart buttons for cases like "Quickview" 
@@ -320,6 +320,9 @@ var ajaxCart = (function(module, $) {
 
     // Run this function in case we're using the quantity selector outside of the cart
     adjustCart();
+
+    //check if size swatch is selected or not
+    sizeSwatchClickEvent();
   };
 
   loadCart = function () {
@@ -343,6 +346,24 @@ var ajaxCart = (function(module, $) {
     }
   };
 
+  checkSizeSelection = function() {
+    let not_selected = false;
+    if($('.swatch.size').find('input[type=radio]').is(":checked") == false){
+      not_selected = true;
+      $('.no-size-wrapper').removeClass('hide');
+    }
+    else{
+      not_selected = false;
+      $('.no-size-wrapper').addClass('hide');
+    }
+    return not_selected;
+  };
+  sizeSwatchClickEvent = function() {
+    $('.swatch.size').find('.swatch-element').closest('.swatch-element').on('click',function(){
+      checkSizeSelection();
+    }); 
+  };
+
   formOverride = function () {
     $formContainer.on('submit', function(evt) {
       evt.preventDefault();
@@ -352,6 +373,13 @@ var ajaxCart = (function(module, $) {
 
       // Remove any previous quantity errors
       $('.qty-error').remove();
+
+      if(!$('.gift_card_details').length > 0){
+        if(checkSizeSelection()){
+          return false;
+        }
+      }
+
       ShopifyAPI.addItemFromForm(evt.target, itemAddedCallback, itemErrorCallback);
     });
   };
