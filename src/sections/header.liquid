@@ -40,8 +40,14 @@
         {% if section.settings.show_search %}
           <li class="nav-item nav-search">
             {% include 'nav-search-input' %}
-          </li>
+          </li> 
         {% endif %}
+
+        <li class="nav-item nav-account nav-account-text-mode">
+          <a {% unless section.settings.refer_link == blank %} href="{{ section.settings.refer_link }}"{% endunless %}>
+            <div class="account-text">Refer a friend</div>
+          </a>
+        </li>
 
         <li class="nav-item nav-account nav-account-text-mode subscribe-li">
             <a href="javascript:void(0);">
@@ -352,8 +358,16 @@
         "label": "Show search bar",
         "default": true
       },
-
-
+      
+      {
+        "type": "header",
+        "content": "Refer a friend"
+      },
+      {
+        "type": "url",
+        "id": "refer_link",
+        "label": "Refer a friend link"
+      },
       {
         "type": "header",
         "content": "Nav Wishlist"

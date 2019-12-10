@@ -162,7 +162,15 @@ theme.Header = (function() {
         $('html, body').animate({scrollTop : 0},800);
         return false;
       });
+
+      //--PDM-1428
+      $('.search-button').click(function (e) {
+        e.preventDefault(); 
+        $(".search-header").toggle("slide");
+      });         
+
     });
+     
   }
 
   Header.prototype = _.assignIn({}, Header.prototype, {
