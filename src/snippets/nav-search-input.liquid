@@ -1,4 +1,4 @@
-<div class="search_bar">
+<div class="search_bar search_bar_form">
     <form class="search" action="/search">
         <input type="hidden" name="type" value="product" />
         <input type="text" name="q" value="{{ search.terms | escape }}" class="search-header" />
@@ -7,3 +7,7 @@
         </button>
     </form>
 </div>
+
+<div class="search_bar_icon">
+  {% include 'svg-icon-search' %}
+</div> 

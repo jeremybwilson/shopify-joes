@@ -836,9 +836,16 @@ header#nav-bar-wrapper {
 
 /*header*/
 
-/*PDM-1428*/
-#header-section{
-  .search-header{
-    display: none;
+/* search form style start */
+.search_bar_form{
+  display: none;
+  &.active{
+    display: block;
   }
 }
+
+.search_bar_icon{
+  cursor: pointer;
+  width: auto;
+}
+/* search form style end */

@@ -1,6 +1,7 @@
 /*============================================================================
   Header on Index
 ==============================================================================*/
+
 theme.Header = (function() {
   function Header(container) {
     const $container = this.$container = $(container);
@@ -22,7 +23,8 @@ theme.Header = (function() {
       searchBar: $( '#nav-search-bar-wrapper' ),
       searchClose: $( '.nav-search-bar-close' ),
       swapRate: $container.attr( 'data-swap-rate' ),
-      scrolltop: $( '.scrollToTop')
+      scrolltop: $( '.scrollToTop'),
+      searBarForm : $('.search_bar_icon')
     }
 
     this.initStickyNav()
@@ -39,6 +41,21 @@ theme.Header = (function() {
         ui.desktopNavWrap.toggleClass( 'borderfree-open' );
       });
     }
+
+    // Search bar form 
+    if(ui.searBarForm){
+      ui.searBarForm.on('click', (e) => {
+        e.stopPropagation();
+        $(".search_bar_icon").hide();
+        $(".search_bar_form").addClass('active');
+        $(".search-header").focus();
+      });
+    }
+    $(document).on("click", "body", function(e){
+      e.stopPropagation();
+      $(".search_bar_icon").show();
+      $(".search_bar_form").removeClass('active');
+    });
 
     // MOBILE NAV : Attach menu toggle event
     if ( ui.mobileNavButton && ui.mobileNavMenu ) {
@@ -161,13 +178,7 @@ theme.Header = (function() {
       ui.scrolltop.click(() => {
         $('html, body').animate({scrollTop : 0},800);
         return false;
-      });
-
-      //--PDM-1428
-      $('.search-button').click(function (e) {
-        e.preventDefault(); 
-        $(".search-header").toggle("slide");
-      });         
+      });        
 
     });
      
