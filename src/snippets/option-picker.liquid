@@ -155,6 +155,10 @@
         {% endif %}
       {% endif %}
 
+      {% if product.handle contains 'e-gift-card' and forloop.index == 1 %}
+        {% assign checked = 'checked="checked"' %}
+      {% endif %}
+
       {% capture radio_button %}
         <input 
           id="{{ option_id }}"
