@@ -43,11 +43,13 @@
           </li> 
         {% endif %}
 
+        {% if section.settings.show_refer_friend %}
         <li class="nav-item nav-account nav-account-text-mode">
           <a {% unless section.settings.refer_link == blank %} href="{{ section.settings.refer_link }}"{% endunless %}>
             <div class="account-text">Refer a friend</div>
           </a>
         </li>
+        {% endif %}
 
         <li class="nav-item nav-account nav-account-text-mode subscribe-li">
             <a href="javascript:void(0);">
@@ -363,6 +365,12 @@
         "type": "header",
         "content": "Refer a friend"
       },
+      {
+        "type": "checkbox",
+        "id": "show_refer_friend",
+        "label": "Show Refer a friend icon on Nav Bar",
+        "default": false
+      }, 
       {
         "type": "url",
         "id": "refer_link",

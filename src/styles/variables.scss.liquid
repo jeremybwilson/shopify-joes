@@ -874,6 +874,7 @@ $desk-and-up:      "screen and (min-width: 1220px)";
 $lap-and-desk:     "screen and (min-width: 1024px) and (max-width: 1679px)";
 $laptop:           "screen and (max-width: 1199px)";
 $laptop-up:        "screen and (max-width: 1260px) and (min-width: 1200px)";
+$laptop-desktop:   "screen and (min-width: 1200px) and (max-width: 1350px)";
 $wide-and-up:      "screen and (min-width: 1680px)";
 $retina:           "(-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi)";
 
@@ -914,6 +915,11 @@ $retina:           "(-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi)
   } 
   @else if $alias == "laptop" {
     @media #{$laptop} {
+      @content;
+    }
+  }
+  @else if $alias == "laptop-desktop" {
+    @media #{$laptop-desktop} {
       @content;
     }
   } 

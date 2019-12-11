@@ -199,7 +199,7 @@ header#nav-bar-wrapper {
 
          @include mq('phone-and-tablet'){
             flex: unset;
-            width: calc(100% - 171px);
+            width: calc(100% - 186px); 
             display: inline-block;
          }
 
@@ -316,11 +316,15 @@ header#nav-bar-wrapper {
            text-transform: uppercase; 
 
            @include mq('laptop'){
-              font-size: $font-12;
+              font-size: $font-10-mo;
            }
 
            @include mq('phone'){
               font-size: $font-10-mo;
+           }
+           
+           @include mq('laptop-desktop'){
+              font-size: $font-11-mo;
            }
 
           } 
@@ -482,7 +486,7 @@ header#nav-bar-wrapper {
     display: none;
     background-color: #f9f9f9;
 }
-.nav-footer-item-mobile.nav-account.nav-account-text-mode {
+.nav-footer-item-mobile.nav-account.nav-account-text-mode, .nav-refer-a-friend {
     padding: 18px 30px;
     text-align: left;
     border-bottom: 1px solid #d7d7d7;
@@ -848,4 +852,5 @@ header#nav-bar-wrapper {
   cursor: pointer;
   width: auto;
 }
+
 /* search form style end */

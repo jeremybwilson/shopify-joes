@@ -101,6 +101,14 @@
             </div>
         {% endif %}
 
+        {% if section.settings.show_refer_friend %}
+        <div class="nav-refer-a-friend">        
+            <a {% unless section.settings.refer_link == blank %} href="{{ section.settings.refer_link }}"{% endunless %}>
+                <div class="account-text">Refer a friend</div>
+            </a>        
+        </div>
+        {% endif %}
+
         {% if section.settings.show_wishlist %}
             <div class="nav-footer-item-mobile nav-wishlist">
                 {% comment %} :: PLACEHOLDER HEART ICON ::
