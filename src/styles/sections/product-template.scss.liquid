@@ -755,3 +755,34 @@
     padding: 0 0px;
     margin-top: 16px;
 }
+
+
+.size-not-sure-popup{
+  @include mq('phone'){
+    .modal-content{
+        width: calc(100% - 30px) !important;
+    }
+  }
+
+  .popup-logo{
+      margin-bottom: 50px;
+  }
+
+  div#button-footer-newsletter-submit-popup {
+      margin-top: 45px;
+  }
+}
+.modal-content{
+  .find-your-true-fit{
+    position:relative;
+    bottom: -25px !important;
+    top: auto;
+  }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-wrapper {   
+    width: 170px;
+    margin: 0px auto !important;
+  }
+  {% comment %} .tfc-nouser-responsive{
+    display:none;
+  }  {% endcomment %}
+}
