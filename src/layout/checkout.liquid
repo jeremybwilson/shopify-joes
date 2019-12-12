@@ -35,10 +35,10 @@
 
   <!-- Shoprunner
   ================================================== -->
-    {% if settings.shoprunner_enabled %}
+  {% comment %} PDM-1398 Ticket:: Suggestion to remove default shop runner code :: we just commentted{% endcomment %}
+    {% comment %}{% if settings.shoprunner_enabled %}{% endif %}{% endcomment %}
       {% comment %}{% include 'shoprunner-init', isCheckout: true %}{% endcomment %}
-      {% include 'shoprunner-checkout-head' %}
-    {% endif %}
+      {% comment %}{% include 'shoprunner-checkout-head' %}{% endcomment %}
 
   <!-- Data Layer for GTM
   ================================================== -->
@@ -62,6 +62,12 @@
   ================================================== -->
     {% include 'sailthru-script' %}
   {% endcomment %}
+
+  {% comment %} PDM-1398 Shop-Runner script start{% endcomment %}
+  {% if settings.shoprunner_enabled %}
+    {% include 'sr_script' %}
+  {% endif %}
+  {% comment %} PDM-1398 Shop-Runner script end{% endcomment %}
 
   </head>
 
@@ -122,10 +128,10 @@
 
     {% comment %} :: Shop Runner :: {% endcomment %}
 
-
-    {% if settings.shoprunner_enabled %}
+    {% comment %} PDM-1398 Ticket:: Suggestion to remove default shop runner code :: we just commentted{% endcomment %}
+    {% comment %}{% if settings.shoprunner_enabled %}
       {% include 'shoprunner-checkout-body' %}
-    {% endif %}
+    {% endif %}{% endcomment %}
     
     <div class="tfc-order-notify " data-userid="{% if customer %}{{ customer.id }}{% endif %}" data-orderid="{{ checkout.order_number }}"></div>
     <script>
