@@ -35,17 +35,16 @@
 
   <!-- Shoprunner
   ================================================== -->
+    {% if settings.shoprunner_enabled %}
       {% comment %}{% include 'shoprunner-init', isCheckout: true %}{% endcomment %}
-   {% comment %} {% if settings.shoprunner_enabled %}
       {% include 'shoprunner-checkout-head' %}
-    {% endif %}{% endcomment %}
+    {% endif %}
 
   <!-- Data Layer for GTM
   ================================================== -->
     {% include 'script-data-layer' %}
     {% include 'script-google-tag-head' %}
     {% include 'script-smarterhq' %}
-    {% include 'shoprunner-init' %}
 
     {% if settings.favicon %}
       <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x' }}">
@@ -126,9 +125,10 @@
     {% comment %} :: Shop Runner :: {% endcomment %}
 
 
-    {% comment %}{% if settings.shoprunner_enabled %}
+    {% if settings.shoprunner_enabled %}
       {% include 'shoprunner-checkout-body' %}
-    {% endif %}{% endcomment %}
+    {% endif %}
+    
     <div class="tfc-order-notify " data-userid="{% if customer %}{{ customer.id }}{% endif %}" data-orderid="{{ checkout.order_number }}"></div>
     <script>
       // Show Product Summary

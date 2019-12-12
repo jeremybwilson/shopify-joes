@@ -140,8 +140,6 @@
   <!-- End Affirm -->
 
   {% include 'script-bazaarvoice' %}
-  {% include 'shoprunner-init' %}
-  {% include 'sr_script' %}
 </head>
 
 <body class="template-{{ template.name }} gridlock shifter {% if template contains 'product' %}product{% elsif template contains 'collection' %}collection {% elsif template contains 'page' %}{{ template | split: '.' | last }}{% elsif template contains 'customers' %}{{ template | split: '/' | first }}-{{ template | split: '/' | last }}{% else %}{{ template }}{% endif %}">
