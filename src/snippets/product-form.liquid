@@ -263,9 +263,9 @@
   {% comment %} :: END - OPTIONS LOGIC SETS :: {% endcomment %}
 
   {% comment %} :: Size not selected error ::{% endcomment %}
-  {% unless product.handle contains 'gift-card' %}  
+  {% unless product.handle contains 'gift-card' %}
   <div class="no-size-wrapper hide">
-    <p class="no-size-selected">Please select a size!</p>
+    <p class="no-size-selected">{{section.settings.no_size_err_msg}}</p>
   </div>
   {% endunless %}
 
