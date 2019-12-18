@@ -99,10 +99,11 @@
     {% include 'appmate-wishlist-king' %}
   {% endif %}
 
-  {% comment %} :: Shop Runner :: {% endcomment %}
+  {% comment %} :: Shop Runner :: 
   {% if settings.shoprunner_enabled %}
     {% include 'shoprunner-init', isCheckout: false %}
   {% endif %}
+  {% endcomment %}
 
   <!-- Favicons
 ================================================== -->
@@ -140,6 +141,11 @@
   <!-- End Affirm -->
 
   {% include 'script-bazaarvoice' %}
+  {% comment %} PDM-1398 Shop-Runner script start{% endcomment %}
+  {% if settings.shoprunner_enabled %}
+    {% include 'sr_script' %}
+  {% endif %}
+  {% comment %} PDM-1398 Shop-Runner script end{% endcomment %}
 </head>
 
 <body class="template-{{ template.name }} gridlock shifter {% if template contains 'product' %}product{% elsif template contains 'collection' %}collection {% elsif template contains 'page' %}{{ template | split: '.' | last }}{% elsif template contains 'customers' %}{{ template | split: '/' | first }}-{{ template | split: '/' | last }}{% else %}{{ template }}{% endif %}">
