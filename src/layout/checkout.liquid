@@ -63,12 +63,6 @@
     {% include 'sailthru-script' %}
   {% endcomment %}
 
-  {% comment %} PDM-1398 Shop-Runner script start{% endcomment %}
-  {% if settings.shoprunner_enabled %}
-    {% include 'sr_script' %}
-  {% endif %}
-  {% comment %} PDM-1398 Shop-Runner script end{% endcomment %}
-
   </head>
 
   <body>
@@ -146,5 +140,11 @@
     {% if settings.enable_mention_me %}
       {% include 'script-mention-me-checkout' %}
     {% endif %}
+
+  {% comment %} PDM-1398 Shop-Runner script start{% endcomment %}
+  {% if settings.shoprunner_enabled %}
+    {% include 'sr_script' %}
+  {% endif %}
+  {% comment %} PDM-1398 Shop-Runner script end{% endcomment %}
   </body>
 </html>

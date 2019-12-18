@@ -99,10 +99,11 @@
     {% include 'appmate-wishlist-king' %}
   {% endif %}
 
-  {% comment %} :: Shop Runner :: {% endcomment %}
+  {% comment %} :: Shop Runner :: 
   {% if settings.shoprunner_enabled %}
     {% include 'shoprunner-init', isCheckout: false %}
   {% endif %}
+  {% endcomment %}
 
   <!-- Favicons
 ================================================== -->
