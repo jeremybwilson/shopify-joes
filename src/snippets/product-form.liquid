@@ -97,7 +97,11 @@
   {% comment %} :: REVIEWS - STAR RATING :: {% endcomment %}
   {% if settings.app_wk_enabled %}
     <div class="product-star-rating">
-      {% include 'bazarvoice-reviews-aggregate' %}
+      <div class="product-star-rating__write-review" data-bv-show="rating_summary" data-bv-product-Id="{{product.id}}">
+        {% if product.metafields.bazaarvoice.reviews-aggregate-ratings %}
+          {{ product.metafields.bazaarvoice.reviews-aggregate-ratings }}
+        {% endif %}
+      </div>
     </div>
   {% endif %}
 
@@ -285,6 +289,7 @@
         <div class="clear"></div>
     {% endif %}{% endcomment %}
 
+
   {% comment %} :: ADD TO CART ::{% endcomment %}
   {% if product.available %}{% endif %}
     <div id="product-add">
@@ -311,12 +316,12 @@
     readonly
     type="hidden"
     name="properties[_collection_private]"
-    value="{{ collection.title }}" />
+    value="{{ collection.title }}">
 
   <input
     readonly
     type="hidden"
     name="properties[_collection_handle_private]"
-    value="{{ collection.handle }}" />
+    value="{{ collection.handle }}">
 
 {% endform %}
