@@ -24,17 +24,6 @@
 {% endfor %}
 
 <div id="size-chart--popup" class="product-page-popup" style="display: none" data-size-chart-type="{{ size_chart_type }}">
-  <div class="trufit-popup-link trufit-elem">
-    <div class="trufit-elem-inner">
-      <span class="trufit-logo"></span>
-      <span class="trufit-content">{{'general.trufit.findyourtruefit' | t }}</span>
-    </div>
-  </div>
-  <div class="trufit-popup-info trufit-elem">
-    <div class="trufit-elem-inner">
-      <span class="trufit-logo"></span>
-      <span class="trufit-content">Your True Fit Size: <span class="trufit-size"></span></span>
-    </div>
-  </div>
+  <div class="tfc-fitrec-product find-your-true-fit" id="{{product.id}}" data-userid="{% if customer %}{{ customer.id }}{% endif %}" ></div>
   {{ pages[section.settings.size_chart_page].content }}
 </div>
