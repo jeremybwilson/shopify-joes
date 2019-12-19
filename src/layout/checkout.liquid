@@ -32,6 +32,14 @@
     {{ 'vendor-checkout.js' | asset_url | script_tag }}
     {% endcomment %}
 
+      <!-- Shoprunner 
+  ================================================== -->  
+  {% comment %} PDM-1398 Ticket:: Suggestion to remove default shop runner code :: we just commentted{% endcomment %} 
+    {% if settings.shoprunner_enabled %}
+      {% include 'shoprunner-init', isCheckout: true %}
+      {% include 'shoprunner-checkout-head' %}
+    {% endif %}
+
   <!-- Data Layer for GTM
   ================================================== -->
     {% include 'script-data-layer' %}
@@ -111,6 +119,13 @@
     {% comment %} :: BOL - Checkout Customizations ::
     {{ 'checkout.js' | asset_url | script_tag }}
     {% endcomment %}
+
+    {% comment %} :: Shop Runner :: {% endcomment %}  
+
+    {% comment %} PDM-1398 Ticket:: Suggestion to remove default shop runner code :: we just commentted{% endcomment %} 
+    {% if settings.shoprunner_enabled %} 
+      {% include 'shoprunner-checkout-body' %}  
+    {% endif %}
     
     <div class="tfc-order-notify " data-userid="{% if customer %}{{ customer.id }}{% endif %}" data-orderid="{{ checkout.order_number }}"></div>
     <script>
