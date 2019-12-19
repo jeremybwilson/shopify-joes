@@ -223,7 +223,7 @@ var ajaxCart = (function(module, $) {
   var $formContainer, $addToCart, $cartCountSelector, $cartCostSelector, $cartContainer, $drawerContainer;
 
   // Private functions
-  var updateCountPrice, formOverride, itemAddedCallback, itemErrorCallback, trackCartStart, cartUpdateCallback, buildCart, cartCallback, adjustCart, adjustCartCallback, createQtySelectors, qtySelectors, validateQty;
+  var updateCountPrice, checkSizeSelection, sizeSwatchClickEvent, formOverride, itemAddedCallback, itemErrorCallback, trackCartStart, cartUpdateCallback, buildCart, cartCallback, adjustCart, adjustCartCallback, createQtySelectors, qtySelectors, validateQty;
 
   /*============================================================================
               Bind new addToCart buttons for cases like "Quickview" 
@@ -320,6 +320,9 @@ var ajaxCart = (function(module, $) {
 
     // Run this function in case we're using the quantity selector outside of the cart
     adjustCart();
+
+    //check if size swatch is selected or not
+    sizeSwatchClickEvent();
   };
 
   loadCart = function () {
@@ -343,6 +346,24 @@ var ajaxCart = (function(module, $) {
     }
   };
 
+  checkSizeSelection = function() {
+    let not_selected = false;
+    if($('.swatch.size').find('input[type=radio]').is(":checked") == false){
+      not_selected = true;
+      $('.no-size-wrapper').removeClass('hide');
+    }
+    else{
+      not_selected = false;
+      $('.no-size-wrapper').addClass('hide');
+    }
+    return not_selected;
+  };
+  sizeSwatchClickEvent = function() {
+    $('.swatch.size').find('.swatch-element').closest('.swatch-element').on('click',function(){
+      checkSizeSelection();
+    }); 
+  };
+
   formOverride = function () {
     $formContainer.on('submit', function(evt) {
       evt.preventDefault();
@@ -352,6 +373,17 @@ var ajaxCart = (function(module, $) {
 
       // Remove any previous quantity errors
       $('.qty-error').remove();
+      let location = window.location.href;
+      let isGiftPage = false;
+      if(location.includes('gift-card')){
+        isGiftPage = true;
+      }
+      if(!isGiftPage){
+        if(checkSizeSelection()){
+          return false;
+        }
+      }
+
       ShopifyAPI.addItemFromForm(evt.target, itemAddedCallback, itemErrorCallback);
     });
   };
@@ -432,6 +464,7 @@ var ajaxCart = (function(module, $) {
   buildCart = function (cart) {
     // Start with a fresh cart div
     $cartContainer.empty();
+
     // Show empty cart
     if (cart.item_count === 0) {
       $cartContainer
@@ -447,8 +480,6 @@ var ajaxCart = (function(module, $) {
         source = $("#CartTemplate").html(),
         template = Handlebars.compile(source);
 
-    var fit = [];
-    var variant_obj = [];
     // Add each item to our handlebars.js data
     $.each(cart.items, function(index, cartItem) {
 
@@ -458,35 +489,6 @@ var ajaxCart = (function(module, $) {
        *     - Create server relative link
        *   - A hard-coded url of no-image
       */
-      var product_id = cartItem.product_id;
-      var color_selection = cartItem.variant_options[1];
-      
-      if(jQuery.inArray(product_id, fit) === -1){
-         fit.push(product_id);
-         variant_obj.push(product_id);
-         if(!variant_obj[product_id]){
-          variant_obj[product_id] = [];
-         }
-         variant_obj[product_id].push(color_selection);
-      }else{
-        if(jQuery.inArray(color_selection, variant_obj[product_id]) !== -1){                             
-          var $popup = $('#truefitModal');
-          if (!$popup.length > 0) {
-              return false;
-          }
-          if(!$.cookie('true_fit_size_delay_popup')){
-            $('#truefitModal.subscribe-modal').fadeIn(200,'linear');
-          }          
-          $('.modal-content .close').click(function() {           
-            $(this).closest('#truefitModal.subscribe-modal').fadeOut();
-          });
-          $('#truefitModal .tfc-cfg-basic-button').on('click',function(){
-            $('.hidden_div').click()
-            $('#truefitModal.subscribe-modal').fadeOut();
-            $.cookie('true_fit_size_delay_popup', 1, { expires : 2 });                        
-          });
-        }
-      }
       if (cartItem.image != null){
         var prodImg = cartItem.image.replace(/(\.[^.]*)$/, "_medium$1").replace('http:', '');
       } else {
@@ -580,7 +582,6 @@ var ajaxCart = (function(module, $) {
 
     // remove the item (by making the quantity 0);
     $body.on('click', '.ajaxcart__remove', function() {
-      $.removeCookie('true_fit_size_delay_popup');
       var $el = $(this),
           line = $el.data('line'),
           vId = $el.data('id');
