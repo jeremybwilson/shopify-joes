@@ -32,14 +32,6 @@
     {{ 'vendor-checkout.js' | asset_url | script_tag }}
     {% endcomment %}
 
-
-  <!-- Shoprunner
-  ================================================== -->
-  {% comment %} PDM-1398 Ticket:: Suggestion to remove default shop runner code :: we just commentted{% endcomment %}
-    {% comment %}{% if settings.shoprunner_enabled %}{% endif %}{% endcomment %}
-      {% comment %}{% include 'shoprunner-init', isCheckout: true %}{% endcomment %}
-      {% comment %}{% include 'shoprunner-checkout-head' %}{% endcomment %}
-
   <!-- Data Layer for GTM
   ================================================== -->
     {% include 'script-data-layer' %}
@@ -119,13 +111,6 @@
     {% comment %} :: BOL - Checkout Customizations ::
     {{ 'checkout.js' | asset_url | script_tag }}
     {% endcomment %}
-
-    {% comment %} :: Shop Runner :: {% endcomment %}
-
-    {% comment %} PDM-1398 Ticket:: Suggestion to remove default shop runner code :: we just commentted{% endcomment %}
-    {% comment %}{% if settings.shoprunner_enabled %}
-      {% include 'shoprunner-checkout-body' %}
-    {% endif %}{% endcomment %}
     
     <div class="tfc-order-notify " data-userid="{% if customer %}{{ customer.id }}{% endif %}" data-orderid="{{ checkout.order_number }}"></div>
     <script>
@@ -140,11 +125,5 @@
     {% if settings.enable_mention_me %}
       {% include 'script-mention-me-checkout' %}
     {% endif %}
-
-  {% comment %} PDM-1398 Shop-Runner script start{% endcomment %}
-  {% if settings.shoprunner_enabled %}
-    {% include 'sr_script' %}
-  {% endif %}
-  {% comment %} PDM-1398 Shop-Runner script end{% endcomment %}
   </body>
 </html>
