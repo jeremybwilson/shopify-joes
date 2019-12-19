@@ -117,6 +117,20 @@
       </div>
     {% endif %}{% endcomment %}
   </header>
+
+  {% comment %} :: SEARCH INPUT :: Appears when user clicks search button on nav {% endcomment %}
+  {% if section.settings.show_search %}
+  <div id="nav-search-bar-wrapper">
+    <form class="search" action="/search">
+        <input type="hidden" name="type" value="product" />
+        <a class="search-button" aria-label="Search" style="background: transparent;"/>
+        {% include 'svg-icon-search' %}
+        </a>
+        <input type="text" name="q" value="{{ search.terms | escape }}" class="search-header" placeholder="{{ 'general.search.placeholder' | t }}"/>
+        <img src="{{'close.svg' | file_url}}" class="icon--close" alt="close icon"/>
+    </form>
+  {% endif %}
+
   <style>
     #top-bar, #top-bar-bg {
       height: {{ section.settings.announcement_height }}px;

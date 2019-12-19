@@ -847,10 +847,56 @@ header#nav-bar-wrapper {
     display: block;
   }
 }
-
 .search_bar_icon{
   cursor: pointer;
-  width: auto;
+  width: auto;  
 }
 
 /* search form style end */
+
+/* 1428 ticket scss Start */
+#nav-bar-wrapper{
+  #nav-bar{
+    .top-search-button{
+      cursor:pointer;
+    }
+    .desktop-show{
+      @include mq('phone'){
+        display:none;
+      }
+    }
+    .mobile-show{
+      @include mq('tablet-and-up'){
+        display:none;
+      }
+    }
+  }
+} 
+#nav-search-bar-wrapper{
+  display:none;
+  position: absolute;
+  top: 156px;
+  z-index: 99;
+  left: 50%;
+  background: white;
+  padding: 25px;
+  width: 50%;
+  margin: 0 auto;
+  transform: translateX(-50%);
+  @include mq('tablet'){
+    top: 114px;
+    width:90%;
+  }
+  .search-header{
+    max-width:100%;
+    height:auto;
+    border:0px;
+    display: block;
+    padding: 10px 20px;
+  }
+  .icon--close{
+    max-width:20px;
+    cursor:pointer;
+  }
+}
+/* 1428 ticket scss End */ 

@@ -178,10 +178,15 @@ theme.Header = (function() {
       ui.scrolltop.click(() => {
         $('html, body').animate({scrollTop : 0},800);
         return false;
-      });        
-
-    });
-     
+      });
+        // search icon click event 
+        $("#nav-bar .search_bar .top-search-button").click(function(){
+          $("#nav-search-bar-wrapper").fadeToggle();
+        });
+        $("#nav-search-bar-wrapper .icon--close").click(function(){
+          $("#nav-search-bar-wrapper").fadeOut();
+        });
+      });
   }
 
   Header.prototype = _.assignIn({}, Header.prototype, {
