@@ -325,16 +325,41 @@
   {% endif %}
 </style>
 
-{% if customer %}
+{% comment %}
+  **Ticket : PDM-1127 - Start
+  Auto select size based on TruFit size & Show Trufit size text and link in
+  sizechart popup.
+{% endcomment %}
 <script type="text/javascript">
   window.addEventListener('load', function(event) {
-    var findTrueFitSize = document.querySelector('.find-your-true-fit .tfc-size.tfc-cfg-size').innerHTML;
-    if(findTrueFitSize){
-      document.querySelector('#swatch-1-'+findTrueFitSize).checked = true;
-    }
+    var findTrueFitElem = document.querySelector('.find-your-true-fit .tfc-size');
+    {% if customer %}
+      if(findTrueFitElem){
+        showTrufitSizeInSizeChart();
+      }
+    {% endif %}
   });
+  function showTrufitSizeInSizeChart(){
+    var findTrueFitElem = document.querySelector('.find-your-true-fit .tfc-size');
+    document.querySelector('body').classList.add('hasTrufit');
+    var findTrueFitSize = findTrueFitElem.innerHTML;
+    findTrueFitSize = findTrueFitSize.toLowerCase();
+    document.querySelector('#swatch-1-'+findTrueFitSize).checked = true;
+    var pantSizes = document.querySelectorAll('.pant--size');
+    if(pantSizes){
+      for(var key in pantSizes){
+        var size = pantSizes[key].getAttribute('data-size').toLowerCase().split(',');
+        for(let subkey in size){
+          if(size[subkey].includes(findTrueFitSize)){
+            pantSizes[key].parentNode.classList.add('trufit-tr');
+            break;
+          }
+        }
+      }
+    }
+  } 
 </script>
-{% endif %}
+{% comment %} **Ticket : PDM-1127 - END {% endcomment %}
 
 {% schema %}
   {

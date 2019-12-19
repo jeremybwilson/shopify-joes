@@ -99,10 +99,11 @@
     {% include 'appmate-wishlist-king' %}
   {% endif %}
 
-  {% comment %} :: Shop Runner :: {% endcomment %}
+  {% comment %} :: Shop Runner :: 
   {% if settings.shoprunner_enabled %}
     {% include 'shoprunner-init', isCheckout: false %}
   {% endif %}
+  {% endcomment %}
 
   <!-- Favicons
 ================================================== -->
@@ -138,6 +139,13 @@
     // Use your live public API Key and https://cdn1.affirm.com/js/v2/affirm.js script to point to Affirm production environment.
   </script>
   <!-- End Affirm -->
+
+  {% include 'script-bazaarvoice' %}
+  {% comment %} PDM-1398 Shop-Runner script start{% endcomment %}
+  {% if settings.shoprunner_enabled %}
+    {% include 'sr_script' %}
+  {% endif %}
+  {% comment %} PDM-1398 Shop-Runner script end{% endcomment %}
 </head>
 
 <body class="template-{{ template.name }} gridlock shifter {% if template contains 'product' %}product{% elsif template contains 'collection' %}collection {% elsif template contains 'page' %}{{ template | split: '.' | last }}{% elsif template contains 'customers' %}{{ template | split: '/' | first }}-{{ template | split: '/' | last }}{% else %}{{ template }}{% endif %}">
@@ -216,8 +224,9 @@
       {% endif %}
       {% comment %} :: End of 'ALL OTHER PAGES' IF block :: {% endcomment %}
     </div>  <!-- close the page-wrap class -->
-
-
+    {% comment %} PDM-1242 :: GWP Functionality :: Start {% endcomment %}
+    {% section 'gift-with-purchase' %}
+    {% comment %} PDM-1242 :: GWP Functionality :: End {% endcomment %}
     {% section 'newsletter' %}
     {% section 'footer' %}
   </div> <!-- close the shifter-page class -->
@@ -309,6 +318,11 @@
   <!-- Nosto -->
   {% if settings.nosto_id != blank %}
     {% include 'nosto-tagging' %}
+  {% endif %}
+
+  <!-- Mention me -->
+  {% if settings.enable_mention_me %}
+    {% include 'script-mention-me' %}
   {% endif %}
 </body>
 </html>

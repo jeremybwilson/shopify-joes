@@ -142,6 +142,41 @@ theme.ProductForm = function (context, events) {
           // UPDATE : If matching exact variant found, set its availability
           const isAvailable = variantMatch && variantMatch.available;
           setAvailable( swatch, isAvailable );
+          if (swatchOption == 'option1' && variantMatch && variantMatch.available ){
+            var new_selected_fitsize;
+            switch (swatchValue){
+              case "S":
+                new_selected_fitsize = "Small";
+                break;
+              case "M":
+                new_selected_fitsize = "Medium";
+                break;
+              case "L":
+                new_selected_fitsize = "Large";
+                break;
+              case "XXL":
+                new_selected_fitsize = "2XL";
+                break;
+              default:
+                new_selected_fitsize = swatchValue;
+            }
+            var init_load_size =  $('#tf_available_sizes').val();
+            if ($('#tf_available_sizes').data('nodel') == 1){
+              $('#tf_available_sizes').val('nodata');
+            }
+            if (init_load_size == 'nodata'){
+              $('#tf_available_sizes').val(new_selected_fitsize);
+            }else {
+              if(init_load_size.indexOf(new_selected_fitsize) == -1){
+                $('#tf_available_sizes').val($('#tf_available_sizes').val() + ":" + new_selected_fitsize);
+              }
+            }
+            $('#tf_available_sizes').data('nodel', 2);
+          }
+          if (swatchOption == 'option2'){
+            //console.log($('#tf_available_sizes').data());
+            $('#tf_available_sizes').data('nodel', 1);
+          }
         });
       }
     }

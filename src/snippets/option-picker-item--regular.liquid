@@ -64,3 +64,19 @@
     {{ sold_out_image }}
   </label>
 </div>
+
+{% if available %}
+    {% assign variable_value = '' %}
+    {% if value == 'S' %}
+        {% assign variable_value = 'Small' %}
+    {% elsif value == 'M' %}
+        {% assign variable_value = 'Medium' %}
+    {% elsif value == 'L' %}
+         {% assign variable_value = 'Large' %}
+    {% elsif value == '2XL' %}
+         {% assign variable_value = 'XXL' %}
+    {% else %}
+        {% assign variable_value = value | escape %}
+    {% endif %}
+    {% assign tf_available_size = tf_available_size | append: ':' | append: variable_value %}
+{% endif %}

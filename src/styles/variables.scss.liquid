@@ -5,6 +5,9 @@ $black-color:#000;
 $white-color:#fff;
 $light-black:#4A4A4A;
 $back-gray:#f6f5f6;
+$trufit-red:#c22f49;
+$border-gray:#ddd;
+$border-gray-light:#e4e4e4;
 
 /*hover*/
 $hover-333333:#333333;
@@ -440,6 +443,14 @@ $container-fluid-width:1115px;
     text-overflow: '';
     min-width: 82px;
     width: 82px;
+}
+// generic transform
+@mixin transform($transforms) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+          transform: $transforms;
 }
 /*selectar*/
 

@@ -12,7 +12,9 @@
 body{overflow-x: hidden; font-weight:normal;}
 section{width:$full-width; float:$float-left;}
 ul{padding:0 0px; margin: 0px;}
-
+header#nav-bar-wrapper {
+  position:relative;
+}
 .cart #content{
    @include container;  
    padding-top:0px;
@@ -202,7 +204,7 @@ ul{padding:0 0px; margin: 0px;}
          }
 
          @include mq('phone'){
-            width: calc(100% - 85px);
+            width: calc(100% - 110px);
          }
 
         img{
@@ -242,6 +244,7 @@ ul{padding:0 0px; margin: 0px;}
            line-height:18px;
            float:right;
            flex:unset;
+           align-items: center;
         }
 
         li{
@@ -253,7 +256,11 @@ ul{padding:0 0px; margin: 0px;}
           @include mq('laptop-up'){
              margin: 0 9px;
           }
-
+          &.nav-search {
+            @include mq(phone){
+              margin-right: 3px;
+            }
+          }
           .icon.icon-cart-text {
              display: inline-block;
             }
@@ -367,7 +374,7 @@ ul{padding:0 0px; margin: 0px;}
     }
 
     @include mq('phone'){
-      width:13px;
+      width:16px;
     }
 
     img {
@@ -422,7 +429,7 @@ ul{padding:0 0px; margin: 0px;}
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
     position: absolute;
-    top: 84px;
+    top: 100%;
     z-index: 9999;
     width: 100%;
     background-color: #fff;
@@ -528,15 +535,12 @@ ul{padding:0 0px; margin: 0px;}
         background-color: #fff;
         padding:34px 15px;
         z-index: 9999;
-        top:156px;
+        top:100%;
         min-width: 180px;
         box-shadow: 0px 8px 8px hsla(0, 0%, 0%, 0.39);
         display:none;
         border-top: $border-grey-1;
 
-        @include mq('laptop'){
-            top: 151px;
-        }
 
         h5.nav-sub-header a {
             font-weight: bold;
@@ -666,8 +670,8 @@ ul{padding:0 0px; margin: 0px;}
  @include mq('phone-and-tablet'){
  .navbar-toggle {
     display:block;
-    width:16px;
-    height:15px;
+    width:28px;
+    height:14px;
     background-color: #f4f4f4;
     border: 0px;
     line-height: 28px;
@@ -687,13 +691,14 @@ ul{padding:0 0px; margin: 0px;}
       position: absolute;
       top: 0;
       left: 0;
+      @include transform(scale(1,1.5));
 
       &:nth-child(2){
-         top:5px;
+         top:6px;
       }
 
       &:nth-child(3){
-         top:10px;
+         top:12px;
       }
       
       @include mq('tablet'){
@@ -792,7 +797,7 @@ ul{padding:0 0px; margin: 0px;}
           top: -2px;
           background-color: #fff;
           display: none;
-          width: 22px;
+          width: 32px;
          
           @include mq('tablet'){
              width: 25px;

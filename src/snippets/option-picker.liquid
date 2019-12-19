@@ -88,7 +88,7 @@
 
   </div><!-- .swatch-header-->
 
-
+  {% assign tf_available_size = '' %}
   {% comment %} :: LIST :: (Values on this option) {% endcomment %}
   {% for val in option_values %}
     {% assign value = val %}
@@ -155,6 +155,10 @@
         {% endif %}
       {% endif %}
 
+      {% if product.handle contains 'e-gift-card' and forloop.index == 1 %}
+        {% assign checked = 'checked="checked"' %}
+      {% endif %}
+
       {% capture radio_button %}
         <input 
           id="{{ option_id }}"
@@ -190,7 +194,8 @@
     {% if template != 'product.quick' and section.settings.size_chart_show and has_audience and lowercase_option_name contains 'size' %}
       <div class="size-guide">
          <a href="#size-chart--popup" class="fancybox size-chart--trigger">{{ section.settings.size_chart_header_text }}</a>
-        <div class="tfc-fitrec-product find-your-true-fit" id="{{product.id}}" data-userid="{% if customer %}{{ customer.id }}{% endif %}"></div>
+         <div class="tfc-fitrec-product find-your-true-fit" id="{{product.id}}" data-userid="{% if customer %}{{ customer.id }}{% endif %}" data-colorid="{{ newValuesArray | first | capitalize }}" data-availablesizes = "{{ tf_available_size | remove_first: ":" }}"></div>
+         <input type="hidden" id="tf_available_sizes" name="tf_available_sizes" value="nodata" data-nodel="1">
       </div>
 
       {% assign has_unavailable = false %}
@@ -217,3 +222,15 @@
 
     {% endif %}
 </div>
+{% if lowercase_option_name == 'color' and settings.true_fit_enabled %}
+<script>
+$(document).on('click', "input[type='radio'][name='color']", function(){
+        var new_tf_colorID = $(this).val().toLowerCase().replace(/\b[a-z]/g, function(txtVal) {
+            return txtVal.toUpperCase();
+        });
+        var new_tf_sizeAvailable = $("#tf_available_sizes").val();
+        fitrec_setColorId(new_tf_colorID, new_tf_sizeAvailable);
+
+    });
+</script>
+{% endif %}

@@ -35,16 +35,16 @@
 
   <!-- Shoprunner
   ================================================== -->
-    {% if settings.shoprunner_enabled %}
+  {% comment %} PDM-1398 Ticket:: Suggestion to remove default shop runner code :: we just commentted{% endcomment %}
+    {% comment %}{% if settings.shoprunner_enabled %}{% endif %}{% endcomment %}
       {% comment %}{% include 'shoprunner-init', isCheckout: true %}{% endcomment %}
-      {% include 'shoprunner-checkout-head' %}
-    {% endif %}
+      {% comment %}{% include 'shoprunner-checkout-head' %}{% endcomment %}
 
   <!-- Data Layer for GTM
   ================================================== -->
     {% include 'script-data-layer' %}
     {% include 'script-google-tag-head' %}
-    {% include 'script-smarterhq-checkout' %}
+    {% include 'script-smarterhq' %}
 
     {% if settings.favicon %}
       <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x' }}">
@@ -56,9 +56,6 @@
   {% if settings.reviews_enabled %}
     {% include 'script-bazaarvoice' %}
   {% endif %}
-
-  {% comment %} :: True Fit :: {% endcomment %}
-  {% include 'true-fit-library' %}
 
   {% comment %}
   <!-- Sailthru
@@ -124,9 +121,30 @@
     {% endcomment %}
 
     {% comment %} :: Shop Runner :: {% endcomment %}
-    {% if settings.shoprunner_enabled %}
+
+    {% comment %} PDM-1398 Ticket:: Suggestion to remove default shop runner code :: we just commentted{% endcomment %}
+    {% comment %}{% if settings.shoprunner_enabled %}
       {% include 'shoprunner-checkout-body' %}
-    {% endif %}
+    {% endif %}{% endcomment %}
+    
     <div class="tfc-order-notify " data-userid="{% if customer %}{{ customer.id }}{% endif %}" data-orderid="{{ checkout.order_number }}"></div>
+    <script>
+      // Show Product Summary
+      $(document).ready( function() {
+        $('.order-summary-toggle').hide(); 
+        $('div.order-summary').removeClass('order-summary--is-collapsed');
+      });
+    </script>
+
+    <!-- Mention me -->
+    {% if settings.enable_mention_me %}
+      {% include 'script-mention-me-checkout' %}
+    {% endif %}
+
+  {% comment %} PDM-1398 Shop-Runner script start{% endcomment %}
+  {% if settings.shoprunner_enabled %}
+    {% include 'sr_script' %}
+  {% endif %}
+  {% comment %} PDM-1398 Shop-Runner script end{% endcomment %}
   </body>
 </html>

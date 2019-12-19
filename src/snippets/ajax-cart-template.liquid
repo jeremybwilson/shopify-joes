@@ -131,10 +131,14 @@
                             <button class="cart__checkout">CART</button>
                         </a>
                     {% endraw %}
+
+                    
                 {% endif %}
+                {% comment %}
                 {% if additional_checkout_buttons %}
                     <div class="additional_checkout_buttons">{{ content_for_additional_checkout_buttons }}</div>
                 {% endif %}
+                {% endcomment %}
                 <p class="affirm-as-low-as" data-amount="{{cart.total_price}}" data-page-type="cart"></p>
                 {% raw %}
             </div>
@@ -171,3 +175,17 @@
         </div>
     {% endraw %}
 </script>
+<div id="truefitModal" class="modal subscribe-modal size-not-sure-popup">
+  <div class="page-center-modal">
+    <div class="modal-content">
+        <span class="close"></span>
+        <img class="popup-logo" src="{{ settings.truefitsize_popup_logo | img_url: '193x' }}" >
+        <h2>{{ settings.truefitsize_popup_title }}</h2>
+        <p>{{ settings.truefitsize_popup_subtitle }}</p>
+        <div class="tfc-fitrec-product find-your-true-fit" id="{{product.id}}" data-userid="{% if customer %}{{ customer.id }}{% endif %}" ></div>
+        {% comment %} <div id="button-footer-newsletter-submit-popup">
+            <input class="truefit-button" id="truefit-size-submit-popup" type="submit" value="find your true fit">
+        </div> {% endcomment %}
+    </div>
+  </div>
+</div>

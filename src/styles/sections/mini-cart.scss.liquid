@@ -264,7 +264,7 @@ button.cart__checkout {
     background-color: #fff;
     max-width:275px;
     height: 100%;
-    padding: 10px;
+    padding: 10px;    
     position:fixed;
     overflow-y: auto;
     overflow-x: hidden;
@@ -274,6 +274,14 @@ button.cart__checkout {
     -o-transition: all 1s;
     transition: all 1s;
     z-index: 10000; // Header floating nav bar is set to 9999, must be higher than that
+
+    &::-webkit-scrollbar{
+      display: none;
+    }
+
+    @include mq('phone'){
+      overflow-y:hidden;
+    }
 
     .ajaxcart.row {
         width: 100% !important;
@@ -287,10 +295,13 @@ button.cart__checkout {
 
 .js-drawer-open-right .my-cart-popup{right:0;}
 
-.js-drawer-open.js-drawer-open-right {
+/*.js-drawer-open.js-drawer-open-right {
     position: fixed;
     width:100%; 
-}
+   @include mq('phone'){
+     position: relative;    
+   } 
+}*/
 
 
 .drawer__close{
@@ -309,6 +320,19 @@ button.cart__checkout {
     }
 }
 
+.js-drawer-open.js-drawer-open-right .hidden_div {
+    display: block;
+}
+.hidden_div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    width: calc(100% - 275px);
+    height: 100%;
+    z-index: 99999;
+    display: none;
+}
 
 
 

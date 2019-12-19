@@ -24,5 +24,6 @@
 {% endfor %}
 
 <div id="size-chart--popup" class="product-page-popup" style="display: none" data-size-chart-type="{{ size_chart_type }}">
+  <div class="tfc-fitrec-product find-your-true-fit" id="{{product.id}}" data-userid="{% if customer %}{{ customer.id }}{% endif %}" ></div>
   {{ pages[section.settings.size_chart_page].content }}
 </div>

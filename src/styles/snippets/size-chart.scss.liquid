@@ -101,7 +101,7 @@ table.size-chart {
   max-height: 80vh;
 
   @include mq('lap-and-up') {
-    max-width:800px;
+    max-width:1200px;
     width: 100%;
     padding-left:0px;
     padding-right:0px;
@@ -175,6 +175,7 @@ table.size-chart {
 
     .tab-pane {
       display: none;
+      overflow-x: auto;
     }
 
     .tab-pane.active {
@@ -205,6 +206,19 @@ table.size-chart {
            word-break: break-word;
          }
       }
+    }
+
+    .inline-class {
+      width: 100%;
+      border-collapse: collapse;
+      tr {
+        display: table-row;
+        border: none;
+      }
+    }
+    .inline-class,
+    .inline-class td {
+      border: 1px solid $border-gray-light;
     }
   }
 }

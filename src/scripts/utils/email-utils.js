@@ -10,18 +10,21 @@ module.exports = (function() {
             return false;
         }
 
-        $.cookie('mailing_list_delay_popup', 'expires_seven_days', { expires: 7 });
-        $.fancybox({
-            href: "#myModal",
-            helpers: {
-                overlay: null
-            },
-            openEffect: 'elastic',
-            closeEffect: 'fade'
+        $('#myModal.subscribe-modal').fadeIn(200,'linear',function(){
+            $.cookie('mailing_list_delay_popup', 'expires_seven_days', { expires: 7 });
         });
+        // $.fancybox({
+        //     href: "#myModal",
+        //     helpers: {
+        //         overlay: null
+        //     },
+        //     openEffect: 'elastic',
+        //     closeEffect: 'fade'
+        // });
 
         $('.modal-content .close').click(function() {
-            parent.$.fancybox.close();
+            //parent.$.fancybox.close();
+            $(this).closest('#myModal.subscribe-modal').fadeOut();
         });
     };
 
