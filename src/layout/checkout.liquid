@@ -35,7 +35,7 @@
       <!-- Shoprunner 
   ================================================== -->  
     {% if settings.shoprunner_enabled %}
-      {% include 'shoprunner-init', isCheckout: true %}
+      {% include 'sr_script', isCheckout: true %}
       {% include 'shoprunner-checkout-head' %}
     {% endif %}
 
