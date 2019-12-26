@@ -197,6 +197,19 @@
          <div class="tfc-fitrec-product find-your-true-fit" id="{{product.id}}" data-userid="{% if customer %}{{ customer.id }}{% endif %}" data-colorid="{{ newValuesArray | first | capitalize }}" data-availablesizes = "{{ tf_available_size | remove_first: ":" }}"></div>
          <input type="hidden" id="tf_available_sizes" name="tf_available_sizes" value="nodata" data-nodel="1">
       </div>
+
+      {% assign has_unavailable = false %}
+      {% for variant in productVariants %}
+        {% unless variant.available %}
+          {% assign has_unavailable = true %}
+          {% break %}
+        {% endunless %}
+      {% endfor %}
+
+      {% if has_unavailable %}
+        <a class="link" href="#" id="BIS_trigger">Is your size out of stock?</a>
+      {% endif %}
+
     {% endif %}
 </div>
 {% if lowercase_option_name == 'color' and settings.true_fit_enabled %}
