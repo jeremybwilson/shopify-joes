@@ -24,6 +24,7 @@
   </div>
 
   <div id="customer_orders" class="customer-order">
+    <h5 id="refer-friend">Refer a Friend</h5>
     <h5 class="name">{{ 'customer.orders.title' | t }}</h5>
     {% if customer.orders.size != 0 %}
     <div class="overflow-scroll">
@@ -60,5 +61,21 @@
 </div>
 
 <!-- Begin Mention Me referee placeholder div -->
-<div id="mmWrapper"></div>
+<div id="refer-model" class="hide">
+  <div class="custom-model"> 
+    <div id="mmWrapper">
+      <span class="close">&times;</span>
+    </div>
+  </div>
+</div>
 <!-- End Mention Me referee placeholder div -->
+<script>
+  $(document).ready(function(){
+    $("#customer_orders #refer-friend").click(function(){
+      $("#refer-model").fadeIn("slow");
+    });
+    $("#refer-model #mmWrapper .close").click(function() {
+      $("#refer-model").fadeOut("slow");
+    });
+  });
+</script>

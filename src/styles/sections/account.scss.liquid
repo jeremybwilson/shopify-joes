@@ -423,12 +423,12 @@ body.customers-account{
     #mmWrapper{
       margin: auto;
       position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
       @include mq('tablet'){
         width:80%;
       }
       @include mq('phone'){
-        height: 90vh;
-        overflow-y: auto;
         width:90%;
       }
       .close{
