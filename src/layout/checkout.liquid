@@ -32,12 +32,6 @@
     {{ 'vendor-checkout.js' | asset_url | script_tag }}
     {% endcomment %}
 
-      <!-- Shoprunner 
-  ================================================== -->  
-    {% if settings.shoprunner_enabled %}
-      {% include 'sr_script', isCheckout: true %}
-      {% include 'shoprunner-checkout-head' %}
-    {% endif %}
 
   <!-- Data Layer for GTM
   ================================================== -->
@@ -72,6 +66,14 @@
       {{ checkout_stylesheets }}
       {{ checkout_scripts }}
     </p>
+
+  <!-- Shoprunner 
+  ================================================== -->  
+    {% if settings.shoprunner_enabled %}
+      {% include 'sr_script', isCheckout: true %}
+      {% comment %}{% include 'shoprunner-checkout-head' %}{% endcomment %}
+    {% endif %}
+
 
     {{ skip_to_content_link }}
 

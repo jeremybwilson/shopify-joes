@@ -1,3 +1,19 @@
+{% assign retailer_id = settings.shoprunner_retailer_id %}
+{% if retailer_id == blank %}
+  console.log( '[shoprunner_init] : Retailer ID was blank, please add one or disable shoprunner in settings.' );
+  {% assign retailer_id = 'retailer_id_missing' %}
+{% endif %}
+
+{% comment %} 
+  * @const (Integer field)
+  * 1 - Development/Staging
+  * 2 - Production
+{% endcomment %}
+{% assign env_id = 1 %}
+{% if settings.shoprunner_env == "prod" %}
+  {% assign env_id = 2 %}
+{% endif %}
+
 <script type="text/javascript">
 
 var _shoprunner_com = {
@@ -8,7 +24,7 @@ var _shoprunner_com = {
    */
   version : 2.0,
   enabled : true,
-  retailerID : 'JJEANS',
+  retailerID : '{{retailer_id}}',
 
   /*
    * MOV 
@@ -18,7 +34,7 @@ var _shoprunner_com = {
    * 1 - Development/Staging
    * 2 - Production
    */
-  environmentID : 1,
+  environmentID : {{env_id}},
   
   /*
    * true  - Disable for live theme
@@ -576,9 +592,10 @@ var _shoprunner_com = {
     
   }
   
-  
 }
 
-_shoprunner_com.init();
+  _shoprunner_com.init();
+// document.addEventListener("DOMContentLoaded", function(event) { 
+// });
 
 </script>
