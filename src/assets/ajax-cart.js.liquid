@@ -383,7 +383,12 @@ var ajaxCart = (function(module, $) {
           return false;
         }
       }
-
+      try{
+        _shoprunner_com.addCartItemToken();
+      }
+      catch(e){
+        console.log("Shop runner error");
+      }
       ShopifyAPI.addItemFromForm(evt.target, itemAddedCallback, itemErrorCallback);
     });
   };

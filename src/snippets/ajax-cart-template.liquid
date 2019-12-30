@@ -37,7 +37,9 @@
                                                                 {{#if_not_eq @key 'Recipient Email'}}
                                                                     {{#if_not_eq @key 'Message'}}
                                                                         {{#unless_contains @key '_private'}}
-                                                                            <span class="ajaxcart__product-meta">{{@key}}: {{this}}</span>
+                                                                            {{#unless_contains @key '_sr'}}
+                                                                                <span class="ajaxcart__product-meta">{{@key}}: {{this}}</span>
+                                                                            {{/unless_contains}}        
                                                                         {{/unless_contains}}
                                                                     {{/if_not_eq}}
                                                                 {{/if_not_eq}}
