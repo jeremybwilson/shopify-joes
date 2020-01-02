@@ -87,6 +87,13 @@ ShopifyAPI.addItemFromForm = function(form, callback, errorCallback) {
       } else {
         ajaxCart.itemAddedCallback( line_item );
       }
+
+      try{
+        _shoprunner_com.addCartItemToken();
+      }
+      catch(e){
+        console.log("Shop runner error");
+      }
     },
     error: function(XMLHttpRequest, textStatus) {
       if ((typeof errorCallback) === 'function') {
@@ -383,12 +390,12 @@ var ajaxCart = (function(module, $) {
           return false;
         }
       }
-      try{
-        _shoprunner_com.addCartItemToken();
-      }
-      catch(e){
-        console.log("Shop runner error");
-      }
+      // try{
+      //   _shoprunner_com.addCartItemToken();
+      // }
+      // catch(e){
+      //   console.log("Shop runner error");
+      // }
       ShopifyAPI.addItemFromForm(evt.target, itemAddedCallback, itemErrorCallback);
     });
   };
