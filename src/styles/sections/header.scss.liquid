@@ -199,7 +199,7 @@ header#nav-bar-wrapper {
 
          @include mq('phone-and-tablet'){
             flex: unset;
-            width: calc(100% - 171px);
+            width: calc(100% - 186px); 
             display: inline-block;
          }
 
@@ -316,11 +316,15 @@ header#nav-bar-wrapper {
            text-transform: uppercase; 
 
            @include mq('laptop'){
-              font-size: $font-12;
+              font-size: $font-10-mo;
            }
 
            @include mq('phone'){
               font-size: $font-10-mo;
+           }
+           
+           @include mq('laptop-desktop'){
+              font-size: $font-11-mo;
            }
 
           } 
@@ -482,7 +486,7 @@ header#nav-bar-wrapper {
     display: none;
     background-color: #f9f9f9;
 }
-.nav-footer-item-mobile.nav-account.nav-account-text-mode {
+.nav-footer-item-mobile.nav-account.nav-account-text-mode, .nav-refer-a-friend {
     padding: 18px 30px;
     text-align: left;
     border-bottom: 1px solid #d7d7d7;
@@ -835,3 +839,69 @@ header#nav-bar-wrapper {
 }}
 
 /*header*/
+
+/* search form style start */
+.search_bar_form{
+  display: none;
+  &.active{
+    display: block;
+  }
+}
+.search_bar_icon{
+  cursor: pointer;
+  width: auto;  
+}
+
+/* search form style end */
+
+/* 1428 ticket scss Start */
+#header-section{
+  position: relative;
+}
+#nav-bar-wrapper{
+  #nav-bar{
+    .top-search-button{
+      cursor:pointer;
+    }
+    .desktop-show{
+      @include mq('phone') {
+        display:none;
+      }
+    }
+    .mobile-show{
+      @include mq('tablet-and-up') {
+        display:none;
+      }
+    }
+  }
+} 
+#nav-search-bar-wrapper{
+  display:none;
+  position: absolute;
+  top: 100%;
+  z-index: 99;
+  left: 50%;
+  background: white;
+  padding: 15px;
+  width: 40%;
+  margin: 0 auto;
+  transform: translateX(-50%);
+  .search-header{
+    max-width:100%;
+    height:auto;
+    border:0px;
+    display: block;
+    padding: 10px 20px;
+  }
+  .icon--close{
+    max-width:20px;
+    cursor:pointer;
+  }
+  form{
+    box-shadow: 1px 1px 8px #dddddd;
+    border: 1px solid #9e9898;
+    padding: 0px 10px;
+    border-radius: 4px;
+  }
+}
+/* 1428 ticket scss End */ 

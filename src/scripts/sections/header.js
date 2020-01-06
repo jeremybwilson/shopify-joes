@@ -1,6 +1,7 @@
 /*============================================================================
   Header on Index
 ==============================================================================*/
+
 theme.Header = (function() {
   function Header(container) {
     const $container = this.$container = $(container);
@@ -22,7 +23,8 @@ theme.Header = (function() {
       searchBar: $( '#nav-search-bar-wrapper' ),
       searchClose: $( '.nav-search-bar-close' ),
       swapRate: $container.attr( 'data-swap-rate' ),
-      scrolltop: $( '.scrollToTop')
+      scrolltop: $( '.scrollToTop'),
+      searBarForm : $('.search_bar_icon')
     }
 
     this.initStickyNav()
@@ -39,6 +41,21 @@ theme.Header = (function() {
         ui.desktopNavWrap.toggleClass( 'borderfree-open' );
       });
     }
+
+    // Search bar form 
+    if(ui.searBarForm){
+      ui.searBarForm.on('click', (e) => {
+        e.stopPropagation();
+        $(".search_bar_icon").hide();
+        $(".search_bar_form").addClass('active');
+        $(".search-header").focus();
+      });
+    }
+    $(document).on("click", "body", function(e){
+      e.stopPropagation();
+      $(".search_bar_icon").show();
+      $(".search_bar_form").removeClass('active');
+    });
 
     // MOBILE NAV : Attach menu toggle event
     if ( ui.mobileNavButton && ui.mobileNavMenu ) {
@@ -162,7 +179,14 @@ theme.Header = (function() {
         $('html, body').animate({scrollTop : 0},800);
         return false;
       });
-    });
+        // search icon click event 
+        $("#nav-bar .search_bar .top-search-button").click(function(){
+          $("#nav-search-bar-wrapper").fadeToggle();
+        });
+        $("#nav-search-bar-wrapper .icon--close").click(function(){
+          $("#nav-search-bar-wrapper").fadeOut();
+        });
+      });
   }
 
   Header.prototype = _.assignIn({}, Header.prototype, {

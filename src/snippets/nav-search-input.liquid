@@ -1,9 +1,19 @@
-<div class="search_bar">
-    <form class="search" action="/search">
-        <button type="submit" value="Search" class="search-button" aria-label="Search" style="background: transparent;"/>
+<div class="search_bar desktop-show">
+    {% comment %}<form class="search" action="/search">{% endcomment %}
+        {% comment %}<input type="hidden" name="type" value="product" />{% endcomment %}
+        <a class="search-button top-search-button" aria-label="Search" style="background: transparent;"/>
         {% include 'svg-icon-search' %}
-        </button>
+        </a>
+        {% comment %}<input type="text" name="q" value="{{ search.terms | escape }}" class="search-header" />{% endcomment %}
+    {% comment %}</form>{% endcomment %} 
+</div>
+
+<div class="search_bar mobile-show">
+    <form class="search" action="/search">
         <input type="hidden" name="type" value="product" />
+        <a class="search-button top-search-button" aria-label="Search" style="background: transparent;"/>
+        {% include 'svg-icon-search' %}
+        </a>
         <input type="text" name="q" value="{{ search.terms | escape }}" class="search-header" />
-    </form>
+    </form> 
 </div>
