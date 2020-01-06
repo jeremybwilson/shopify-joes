@@ -99,11 +99,6 @@
     {% include 'appmate-wishlist-king' %}
   {% endif %}
 
-  {% comment %} :: Shop Runner ::  {% endcomment %}
-  {% if settings.shoprunner_enabled %}  
-    {% include 'sr_script', isCheckout: false %}
-  {% endif %} 
-
   <!-- Favicons
 ================================================== -->
   {% if settings.favicon %}
@@ -140,6 +135,12 @@
   <!-- End Affirm -->
 
   {% include 'script-bazaarvoice' %}
+
+  {% comment %} :: Shop Runner ::  {% endcomment %}
+  {% if settings.shoprunner_enabled %}  
+    {% include 'sr_script', isCheckout: false %}
+  {% endif %}
+  
 </head>
 
 <body class="template-{{ template.name }} gridlock shifter {% if template contains 'product' %}product{% elsif template contains 'collection' %}collection {% elsif template contains 'page' %}{{ template | split: '.' | last }}{% elsif template contains 'customers' %}{{ template | split: '/' | first }}-{{ template | split: '/' | last }}{% else %}{{ template }}{% endif %}">
