@@ -864,12 +864,12 @@ header#nav-bar-wrapper {
       cursor:pointer;
     }
     .desktop-show{
-      @include mq('phone'){
+      @include mq('phone') {
         display:none;
       }
     }
     .mobile-show{
-      @include mq('tablet-and-up'){
+      @include mq('tablet-and-up') {
         display:none;
       }
     }
@@ -886,10 +886,6 @@ header#nav-bar-wrapper {
   width: 40%;
   margin: 0 auto;
   transform: translateX(-50%);
-  @include mq('tablet'){
-    top: 114px;
-    width:90%;
-  }
   .search-header{
     max-width:100%;
     height:auto;
