@@ -67,3 +67,4 @@ secrets.json
 .ruby-version
 package-lock.json
 .jshintrc
+.editorconfig
